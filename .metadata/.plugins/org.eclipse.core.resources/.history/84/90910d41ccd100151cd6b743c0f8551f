@@ -1,0 +1,11 @@
+package marshallers;
+
+public class UniversalMarshaller {
+	
+	
+	public String toXML(Object ob){
+		
+	return "";	
+	}
+
+}

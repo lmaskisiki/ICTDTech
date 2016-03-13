@@ -1,0 +1,10 @@
+package webFrame.integration;
+
+import usergate.classes.Person;
+
+public class PersonWrapper {
+	
+	private Person p;
+	private String[] files;
+
+}

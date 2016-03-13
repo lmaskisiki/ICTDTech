@@ -1,0 +1,28 @@
+@CHARSET "UTF-8";
+
+ .feedsArea{
+ 
+ 	width: 50%;
+ 	margin-left:auto;
+ 	margin-right: auto;
+ 	 
+ }
+#feedHeader{
+	background-color: #d3d7cf;
+	border:10x solid #eeeeec;
+	border-style: outset;
+	height: 15px;
+	 
+	
+}
+#bodyRow{
+	color:black;
+	background-color: #729fcf;;
+	text-align: justify;
+}
+#feedSource{
+	font:italic;
+	font-size: xx-small;
+	text-align: center;
+	
+}

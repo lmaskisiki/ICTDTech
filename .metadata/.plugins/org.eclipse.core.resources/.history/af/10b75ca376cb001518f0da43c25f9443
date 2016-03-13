@@ -1,0 +1,17 @@
+package userGate.classes;
+
+public class groups {
+
+	
+	private String groupDN;
+	private String groupName;
+
+	public String getGroupDN() {
+		return groupDN;
+	}
+
+	public void setGroupDN(String groupDN) {
+		this.groupDN = groupDN;
+	}
+	
+}

@@ -1,0 +1,31 @@
+package intTest.beans;
+
+import org.apache.camel.Produce;
+import org.apache.camel.ProducerTemplate;
+import org.springframework.stereotype.Component;
+
+@Component
+public class ServiceStart {
+
+	@Produce(uri = "activemq:test1")
+	private ProducerTemplate procTemp;
+
+	public void start(String msg) {
+		
+		procTemp.asyncSendBody(procTemp.getDefaultEndpoint(), msg);
+
+	}
+
+	public ServiceStart() {
+	 
+	}
+
+	public static void main(String [] args) {
+
+		
+		ServiceStart svt=new ServiceStart();
+		System.out.println("Call Below");
+		 svt.start("lizo masikisiki");
+	}
+
+}

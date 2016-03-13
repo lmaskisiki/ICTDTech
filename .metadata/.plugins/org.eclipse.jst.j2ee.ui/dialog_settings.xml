@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<item value="true" key="J2EE_EXPORT_OVERWRITE"/>
+	<item value="DocManEAR" key="LASTEARNAME_"/>
+	<item value="true" key="J2EE_EXPORT_SOURCE"/>
+	<list key="J2EE_EXPORT_JST_EAR">
+		<item value="/home/lizo/ICTDLab/DocManEAR.ear"/>
+	</list>
+	<list key="J2EE_EXPORT_JST_WEB">
+		<item value="/home/lizo/ICTDLab/DocManEAR.war"/>
+	</list>
+	<list key="MRU_RUNTIME_STORE">
+		<item value="WildFly 8.x Runtime"/>
+	</list>
+	<list key="J2EE_EXPORT_JST_EJB">
+		<item value="/home/lizo/ICTDLab/DocMan.jar"/>
+	</list>
+</section>

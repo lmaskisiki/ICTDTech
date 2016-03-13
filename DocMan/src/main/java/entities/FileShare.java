@@ -1,0 +1,52 @@
+package entities;
+
+import java.io.Serializable;
+
+import javax.persistence.*;
+
+/**
+ * Entity implementation class for Entity: FileShare
+ *
+ */
+@Entity
+public class FileShare implements Serializable {
+	private static final long serialVersionUID = 1L;
+	@Id
+	@GeneratedValue(strategy = GenerationType.AUTO)
+	private int shareId;
+	private String sharedWith;
+		@ManyToOne(cascade=CascadeType.MERGE)
+	@JoinColumn(name="file")
+	private FileInfo file;
+
+	public FileInfo getFile() {
+		return file;
+	}
+
+	public void setFile(FileInfo file) {
+		this.file = file;
+	}
+
+	public int getShareId() {
+		return shareId;
+	}
+
+	public void setShareId(int shareId) {
+		this.shareId = shareId;
+	}
+
+	public String getSharedWith() {
+		return sharedWith;
+	}
+
+	public void setSharedWith(String sharedWith) {
+		this.sharedWith = sharedWith;
+	}
+
+ 
+
+	public FileShare() {
+		super();
+	}
+
+}

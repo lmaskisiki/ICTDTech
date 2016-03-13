@@ -1,0 +1,22 @@
+package webFrame.integration;
+
+import usergate.classes.Person;
+
+public class PersonWrapper {
+	
+	private Person p;
+	private String[] files;
+	public Person getP() {
+		return p;
+	}
+	public void setP(Person p) {
+		this.p = p;
+	}
+	public String[] getFiles() {
+		return files;
+	}
+	public void setFiles(String[] files) {
+		this.files = files;
+	}
+
+}

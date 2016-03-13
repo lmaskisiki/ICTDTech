@@ -1,0 +1,42 @@
+package messaging;
+
+import javax.annotation.Resource;
+import javax.ejb.ActivationConfigProperty;
+import javax.ejb.MessageDriven;
+import javax.enterprise.context.RequestScoped;
+import javax.inject.Inject;
+import javax.jms.JMSConnectionFactory;
+import javax.jms.JMSContext;
+import javax.jms.Message;
+import javax.jms.MessageListener;
+import javax.jms.Queue;
+
+@MessageDriven(name = "Messeger", activationConfig = {
+		@ActivationConfigProperty(propertyName = "destinationType", propertyValue = "javax.jms.Queue"),
+		@ActivationConfigProperty(propertyName = "destination", propertyValue = "/jms/queue/JMSBridgeTargetQ") })
+@RequestScoped
+public class UFinder implements MessageListener {
+	
+	@Inject
+	@JMSConnectionFactory("java:jboss/DefaultJMSConnectionFactory")
+	private JMSContext jcontext; 
+	
+	@Resource(mappedName = "/jms/queue/ExpiryQueuee")
+	private Queue findQueue;
+
+	public UFinder() {
+
+	}
+	
+	public void findRequest(String username){
+	  System.out.println(jcontext.getClientID());
+		//jcontext.createProducer().send(findQueue, username);
+		
+	}
+
+	public void onMessage(Message message) {
+		Message m;
+
+	}
+
+}

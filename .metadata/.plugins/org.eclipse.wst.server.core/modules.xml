@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<modules>
+  <module moduleId="org.eclipse.jst.jee.server:DocManager"/>
+  <module moduleId="org.eclipse.jst.jee.server:DocMan" serverId="WildFly 8.x1452434053657"/>
+</modules>

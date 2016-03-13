@@ -1,0 +1,20 @@
+import java.net.MalformedURLException;
+import java.net.URL;
+
+import javax.xml.namespace.QName;
+import javax.xml.ws.Service;
+
+
+public class App {
+
+	public static void main(String[] args) throws MalformedURLException {
+		Service ser=Service.create(new URL("http://localhost:8080/DocMan/FileService?wsdl"), 
+				new QName("http://sessionBeans/", "FileServiceService"));
+		person p;
+		System.out.println(ser.getServiceName());
+		
+		
+
+	}
+
+}

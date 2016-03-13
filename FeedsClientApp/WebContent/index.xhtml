@@ -1,0 +1,43 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:c="http://java.sun.com/jsp/jstl/core">
+
+<h:head>
+	<h:outputStylesheet library="css" name="indexStyles.css"></h:outputStylesheet>
+</h:head>
+
+<h:body>
+ 	<div class="feedsArea">
+		<table>
+			<ui:repeat var="feed" value="#{clientController.allFeeds}">
+
+
+				<tr id="feedHeader">
+					<td><h:outputText value="#{feed.title}" /></td>
+					<td><h:outputText value="#{feed.postDate}" /></td>
+				</tr>
+				<tr id="bodyRow">
+					<td colspan="2"><h:outputText value="#{feed.body}" /></td>
+				</tr>
+				<tr id="feedSource">
+					<td colspan="2"><h:outputText value="#{feed.writer}" /></td>
+
+				</tr>
+
+			</ui:repeat>
+		</table>
+
+
+	</div>
+<h:form>
+
+
+<h:commandButton action="#{homeContent.sendM()}" value="Send file" />
+</h:form>
+
+
+</h:body>
+</html>

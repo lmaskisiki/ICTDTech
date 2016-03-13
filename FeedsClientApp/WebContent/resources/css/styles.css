@@ -1,0 +1,26 @@
+@CHARSET "UTF-8";
+root{
+	
+	display:block;
+}
+
+
+.contentHeader{
+	
+	color: blue;
+	height: 30px;
+	width: 80%;
+	background-color:silver;
+	
+	
+}
+.button{
+	
+	color: red;
+	background-color: gray;
+}
+#storyHead{
+	background-color:maroon;
+	height:30px;
+	width: 80%;
+	background-color: gray;}

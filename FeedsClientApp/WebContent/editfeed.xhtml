@@ -1,0 +1,63 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:c="http://java.sun.com/jsp/jstl/core">
+
+<h:head></h:head>
+<h:body>
+	<h:outputText value="You can edit this record below" />
+	 
+	<h:form>
+		<h:dataTable value="#{clientController.currentFeed}"  var="current">
+ 				<h:column>  
+  					<f:facet name="header" >Title</f:facet>  
+ 					<h:inputText value="#{current.feed.title}" rendered="#{ current.enitable}" />  
+ 					<h:outputText value="#{ current.feed.title}" rendered="#{not current.enitable}"/>  
+ 				</h:column>  
+		<h:column>  
+  					<f:facet name="header" >Post Date</f:facet>  
+ 					<h:inputText value="#{clientController.String_toDate(current.feed.postDate)}" rendered="false" />  
+ 					<h:outputText value="#{clientController.String_toDate(current.feed.postDate)}" rendered="true">  
+ 					 	<f:convertDateTime pattern="yyyy-MM-dd" />
+ 					</h:outputText>
+ 				</h:column>  
+ 				<h:column>  
+  					<f:facet name="header" >Category</f:facet>  
+ 					<h:inputText value="#{ current.feed.category}" rendered="#{ current.enitable}" />  
+ 					<h:outputText value="#{ current.feed.title}" rendered="#{not current.enitable}" />  
+ 				</h:column>  
+ 				<h:column>  
+  					<f:facet name="header" >Creator</f:facet>  
+ 					<h:inputText value="#{ current.feed.writer}" rendered="#{ current.enitable}" />  
+ 					<h:outputText value="#{current.feed.writer}" rendered="#{not current.enitable}"/>  
+ 				</h:column>
+ 				  				 				
+ 				</h:dataTable>
+ 				 				
+ 					<h:dataTable value="#{clientController.currentFeed}" var="current">
+ 				 <h:column>  
+  					<f:facet name="header" >Body</f:facet>  
+ 					<h:inputText  value="#{ current.feed.body}" rendered="#{current.enitable}"   />  
+ 					<h:outputText  value="#{current.feed.body}" rendered="#{not current.enitable}" />  
+ 					 
+ 				</h:column>  
+		</h:dataTable >
+ 				 				 	 				
+ 				 <h:dataTable value="#{clientController.currentFeed}" var="current">
+ 				 <h:column>
+ 				  			 <h:commandButton action="#{clientController.editRow()}" value="Edit Record" />
+ 				 
+ 				 </h:column>
+ 				  <h:column>
+ 				  			 <h:commandButton action="#{clientController.saveChanges(current.feed)}" value="Save Changes" rendered="#{current.enitable}" />
+ 				 
+ 				 </h:column>
+		</h:dataTable>
+	
+	
+	</h:form>
+
+</h:body>
+</html>

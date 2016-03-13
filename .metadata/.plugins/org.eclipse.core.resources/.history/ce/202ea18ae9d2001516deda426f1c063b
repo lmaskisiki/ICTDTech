@@ -1,0 +1,65 @@
+import java.util.Properties;
+
+import javax.annotation.Resource;
+import javax.inject.Inject;
+import javax.jms.ConnectionFactory;
+import javax.jms.Destination;
+import javax.jms.JMSConsumer;
+import javax.jms.JMSContext;
+import javax.jms.JMSException;
+import javax.jms.Queue;
+import javax.naming.Context;
+import javax.naming.InitialContext;
+import javax.naming.NamingException;
+ 
+// @JMSConnectionFactoryDefinition(name = "AMQConnectionFactory",className="javax.jms.ConnectionFactory",user="guest",password="guest")
+public class jmsTest{
+	 private static String connectionFactory="jboss/exported/jms/RemoteConnectionFactory";
+	 private static String QueueDest="jms/queue/DLQ";
+	 private static String InitContFact="org.jboss.naming.remote.client.InitialContextFactory";
+	 private static String providerUrl="http-remoting://127.0.0.1:8080";
+	 
+	 
+	 
+	public jmsTest(){
+		Context namingContext=null;
+		JMSContext context=null;
+		
+		
+		 final Properties env=new Properties();
+		env.put(Context.INITIAL_CONTEXT_FACTORY, InitContFact);
+		env.put(Context.PROVIDER_URL, providerUrl);
+		env.put(Context.SECURITY_PRINCIPAL, "guest");
+		env.put(Context.SECURITY_CREDENTIALS, "guest");
+		env.put("jboss.naming.client.ejb.context", true);
+		try {
+			namingContext=new InitialContext(env);
+			 ConnectionFactory  cf=(ConnectionFactory) namingContext.lookup(InitContFact);
+			System.out.println("create destination");
+			Destination dest=(Destination) namingContext.lookup(QueueDest);
+			System.out.println("create context");
+			context=cf.createContext("guest", "guest");
+		 
+			
+		JMSConsumer consumer=	context.createConsumer(dest);
+			System.out.println(consumer.receiveBodyNoWait(String.class));
+			
+			
+			
+		 
+		} catch (NamingException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		//	System.out.println(context.createProducer());
+		
+	}
+	public static void main(String[] args ) throws JMSException{
+		jmsTest t=new jmsTest();
+		 
+		
+			 
+	}
+  
+	
+}

@@ -1,0 +1,13 @@
+package intTest.beans;
+
+import org.apache.camel.Produce;
+import org.apache.camel.ProducerTemplate;
+import org.springframework.stereotype.Component;
+
+@Component
+public class ServiceStart {
+
+	@Produce(uri = "activemq:test1")
+	private ProducerTemplate procTemp;
+
+}

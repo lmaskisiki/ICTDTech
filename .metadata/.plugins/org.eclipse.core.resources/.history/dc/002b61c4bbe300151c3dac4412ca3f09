@@ -1,0 +1,11 @@
+package wsApp;
+
+public class CustomerEndpoint implements CustomerService {
+
+	@Override
+	public Customer getCustomerById(String customerId) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

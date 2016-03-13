@@ -1,0 +1,5 @@
+package webFrame.integration;
+
+public class PersonWrapper {
+
+}

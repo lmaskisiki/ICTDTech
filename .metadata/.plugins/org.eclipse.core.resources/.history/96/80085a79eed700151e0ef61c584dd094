@@ -1,0 +1,44 @@
+package webFrame.ws.integration;
+
+import java.io.Serializable;
+
+import javax.xml.bind.annotation.XmlRootElement;
+
+import usergate.classes.Person;
+
+@XmlRootElement
+public class PersonWrapper implements Serializable {
+
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+	private Person p;
+	private String[] files;
+
+	public PersonWrapper() {
+
+	}
+
+	public PersonWrapper(Person psn, String[] files) {
+		this.p = psn;
+		this.files = files;
+	}
+
+	public Person getP() {
+		return p;
+	}
+
+	public void setP(Person p) {
+		this.p = p;
+	}
+
+	public String[] getFiles() {
+		return files;
+	}
+
+	public void setFiles(String[] files) {
+		this.files = files;
+	}
+
+}

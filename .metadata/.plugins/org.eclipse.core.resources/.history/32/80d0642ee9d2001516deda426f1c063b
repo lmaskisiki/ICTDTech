@@ -1,0 +1,29 @@
+import javax.annotation.Resource;
+ 
+import javax.inject.Inject;
+import javax.jms.JMSContext;
+import javax.jms.JMSException;
+import javax.jms.Queue;
+ 
+// @JMSConnectionFactoryDefinition(name = "AMQConnectionFactory",className="javax.jms.ConnectionFactory",user="guest",password="guest")
+public class jmsTest{
+	 private static String connectionFactory="jboss/exported/jms/RemoteConnectionFactory";
+	 private static String QueueDest="jms/queue/DLQ";
+	 private static String InitContFact="org.jboss.naming.remote.client.InitialContextFactory";
+	 private static String providerUrl="http-remoting://127.0.0.1:8080";
+	 
+	 
+	 
+	public jmsTest(){
+	//	System.out.println(context.createProducer());
+		
+	}
+	public static void main(String[] args ) throws JMSException{
+		jmsTest t=new jmsTest();
+		 
+		
+			 
+	}
+  
+	
+}

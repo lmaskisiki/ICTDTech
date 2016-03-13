@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename type &apos;ClietTest&apos; to &apos;ClietTests&apos;&#x0A;- Original project: &apos;DocClient&apos;&#x0A;- Original element: &apos;ClietTest&apos;&#x0A;- Renamed element: &apos;ClietTests&apos;&#x0A;- Update references to refactored element&#x0A;- Update textual occurrences in comments and strings" description="Rename type &apos;ClietTest&apos;" flags="589830" id="org.eclipse.jdt.ui.rename.type" input="/src&lt;{ClietTest.java[ClietTest" matchStrategy="1" name="ClietTests" qualified="false" references="true" similarDeclarations="false" stamp="1452319492329" textual="true" version="1.0"/>
+</session>

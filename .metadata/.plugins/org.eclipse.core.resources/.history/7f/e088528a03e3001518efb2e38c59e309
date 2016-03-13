@@ -1,0 +1,11 @@
+package intTest.beans;
+
+public class Tester implements testEndpoint {
+
+	@Override
+	public void sayHi() {
+		// TODO Auto-generated method stub
+
+	}
+
+}

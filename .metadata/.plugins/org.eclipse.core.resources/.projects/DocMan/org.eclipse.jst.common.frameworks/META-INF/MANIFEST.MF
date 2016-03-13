@@ -1,0 +1,9 @@
+Manifest-Version: 1.0
+Class-Path: lib/mysql-connector-java-5.1.23-bin.jar lib/spring-beans-4
+ .1.5.RELEASE.jar lib/spring-core-4.1.5.RELEASE.jar lib/commons-loggin
+ g-1.2.jar lib/jboss-jms-api_2.0_spec-1.0.0.Final.jar lib/junit-4.9.ja
+ r lib/hamcrest-core-1.1.jar
+Build-Jdk: 1.7.0_76
+Built-By: lizo
+Created-By: Maven Integration for Eclipse
+

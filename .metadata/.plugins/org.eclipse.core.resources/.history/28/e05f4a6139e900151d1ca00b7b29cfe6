@@ -1,0 +1,55 @@
+package intTest.beans;
+
+import org.apache.camel.CamelContext;
+import org.apache.camel.CamelContextAware;
+import org.apache.camel.Produce;
+import org.apache.camel.ProducerTemplate;
+import org.apache.camel.spring.SpringCamelContext;
+import org.apache.xbean.spring.context.ClassPathXmlApplicationContext;
+import org.springframework.context.ApplicationContext;
+import org.springframework.stereotype.Service;
+
+@Service
+public class ServiceStart  implements CamelContextAware{
+	protected CamelContext context;	
+	@Produce(uri = "activemq:test1")
+	private ProducerTemplate procTemp;
+
+
+	
+	public void start(String msg) {
+		procTemp=context.createProducerTemplate();
+		procTemp.asyncSendBody(procTemp.getDefaultEndpoint(), msg);
+
+	}
+
+	public ServiceStart() {
+	 	}
+
+	public static void main(String [] args) {
+		ServiceStart svt=new ServiceStart();
+		System.out.println("Call Below");
+	ApplicationContext appContext = new ClassPathXmlApplicationContext("META-INF/camel-config.xml");
+     try {
+		CamelContext camelContext = SpringCamelContext.springCamelContext(appContext, false);
+	} catch (Exception e) {
+		// TODO Auto-generated catch block
+		e.printStackTrace();
+	}
+
+	 
+	}
+
+	@Override
+	public CamelContext getCamelContext() {
+		// TODO Auto-generated method stub
+		return   context;
+	}
+
+	@Override
+	public void setCamelContext(CamelContext  context) {
+		this.context=context;
+		
+	}
+
+}

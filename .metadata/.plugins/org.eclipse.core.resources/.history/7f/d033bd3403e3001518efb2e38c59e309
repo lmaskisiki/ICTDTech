@@ -1,0 +1,6 @@
+package intTest.beans;
+
+public interface testEndpoint {
+
+	public sayHi();
+}

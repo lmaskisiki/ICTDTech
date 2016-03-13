@@ -1,0 +1,79 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:ui="http://java.sun.com/jsf/facelets">
+
+<h:head></h:head>
+<h:body>
+	<b>Below is the list of feeds</b>
+	<h:panelGrid border="1" columns="5">
+		<table>
+
+			<thead>
+				<tr style="background-color: gray; color: white;">
+					<th>Feed Id</th>
+					<th>Feed Title</th>
+					<th>Post Date</th>
+					<th>Category</th>
+					<th>Writer</th>
+				</tr>
+			</thead>
+			<ui:repeat var="feed" value="#{clientController.allFeeds}"
+				varStatus="status">
+				<tr>
+					<td><h:outputText value="#{feed.feedId}" /></td>
+					<td><h:outputText value="#{feed.title}" /></td>
+					<td><h:outputText value="#{feed.postDate}" /></td>
+					<td><h:outputText value="#{feed.category}" /></td>
+					<td><h:outputText value="#{feed.writer}" /></td>
+				</tr>
+			</ui:repeat>
+
+
+		</table>
+
+
+
+	</h:panelGrid>
+
+	<h:panelGrid>
+		<h:form>
+
+			<h:dataTable value="#{clientController.allFeeds}" var="feed">
+				<h:column>
+					<f:facet name="header">Title</f:facet>
+					<h:inputText value="#{feed.title}" rendered="#{clientController.editable}true" />
+					<h:outputText value="#{feed.title}" rendered="#{ not clientController.editable}" />
+				</h:column>
+				<h:column>
+
+					<f:facet name="header">Post Date</f:facet>
+					<h:inputText value="#{feed.postDate}" rendered="#{clientController.editable}" />
+					<h:outputText value="#{feed.postDate}" rendered="#{not clientController.editable}" />
+				</h:column>
+
+				<h:column>
+					<f:facet name="header">Category</f:facet>
+					<h:inputText value="#{feed.category}" rendered="#{clientController.editable}true" />
+					<h:outputText value="#{feed.category}" rendered="#{not clientController.editable}" />
+				</h:column>
+			 
+				<h:column>
+					<h:commandButton action="#{clientController.viewFeed(feed)}"
+						value="View" />
+				</h:column>
+				<h:column>
+					<h:commandButton action="#{clientController.removeRow(feed)}"
+						value="Remove" />
+				</h:column>
+
+			</h:dataTable>
+		</h:form>
+
+
+
+	</h:panelGrid>
+
+</h:body>
+</html>
