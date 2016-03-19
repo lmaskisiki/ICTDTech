@@ -1,11 +1,14 @@
 package messaging;
 
+import java.io.File;
+import java.util.List;
 import java.util.Properties;
 import java.util.UUID;
 
 import javax.annotation.PostConstruct;
 import javax.annotation.Resource;
 import javax.ejb.ActivationConfigProperty;
+import javax.ejb.EJB;
 import javax.ejb.MessageDriven;
 import javax.enterprise.context.ApplicationScoped;
 import javax.inject.Inject;
@@ -21,13 +24,16 @@ import javax.jms.TextMessage;
 import javax.naming.Context;
 import javax.naming.InitialContext;
 import javax.naming.NamingException;
-import javax.swing.text.html.HTMLDocument.HTMLReader.IsindexAction;
 
-import org.hamcrest.core.IsInstanceOf;
+import marshallers.UniversalMarshaller;
+import entities.FileInfo;
+import sessionBeans.FileService;
+ ;
+ 
 
 @MessageDriven(name = "Messeger", activationConfig = {
 		@ActivationConfigProperty(propertyName = "destinationType", propertyValue = "javax.jms.Queue"),
-		@ActivationConfigProperty(propertyName = "destination", propertyValue = "java:/jms/queue/ExpiryQueue")
+		@ActivationConfigProperty(propertyName = "destination", propertyValue = "test1")
 
 })
 public class UFinder implements MessageListener {
@@ -36,23 +42,29 @@ public class UFinder implements MessageListener {
 	@Resource(mappedName = "java:/jms/queue/SearchRequest")
 	private Queue findQueue;
 	
-	@Resource(mappedName = "java:/jms/queue/SearchRequest")
-	private Queue responseQ;
-
+	@Resource(mappedName = "java:/queue/SearchResponse")
+	private Queue response;
+	
+	@EJB
+	private FileService fs;
 	public UFinder() {
 	
 	}
 
 	public void findRequest(String username) {
-		username = "admin";
+		 
 		try {
-
+			System.out.println("what wthat");
 			TextMessage request = jcontext.createTextMessage();
 			request.setText(username);
-			request.setJMSReplyTo(responseQ);
+			List<FileInfo> userfiles=null;
+			userfiles=fs.getFilesByOwner(username);
+			 
+			System.out.println(userfiles.get(0).getFileName()+" is about to be sent");
+			request.setJMSReplyTo(response);
 			request.setJMSCorrelationID(UUID.randomUUID().toString());
-			jcontext.createProducer().send(findQueue, request);
-			System.out.println("Message Sent to: " + findQueue.getQueueName());
+			jcontext.createProducer().send(response, new UniversalMarshaller().toXML(userfiles.get(0)));
+			System.out.println("rEsponse Sent"+new UniversalMarshaller().toXML(userfiles.get(0)));
 
 		} catch (JMSException e) {
 			// TODO Auto-generated catch block
@@ -69,7 +81,9 @@ public class UFinder implements MessageListener {
 		System.out.println("Messege Recieved on Finder...!!!");
 		if(message instanceof TextMessage){
 			try {
-				System.out.println("\n Response:  "+ ( (TextMessage) message).getText() );
+			 String username=((TextMessage) message).getText();
+			 findRequest(username);
+				
 			} catch (JMSException e) {
 				// TODO Auto-generated catch block
 				e.printStackTrace();

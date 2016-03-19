@@ -16,81 +16,81 @@
   <path value="/home/lizo/dev-tools/Servers/wildfly-8.2.1.final/modules/system/layers/base/javax/xml/rpc/api/main/jboss-jaxrpc-api_1.1_spec-1.0.1.Final.jar"/>
   <path value="/home/lizo/dev-tools/Servers/wildfly-8.2.1.final/modules/system/layers/base/javax/security/jacc/api/main/jboss-jacc-api_1.5_spec-1.0.0.Final.jar"/>
   <path value="/home/lizo/ICTDLab/DocManWeb/WebContent/WEB-INF/lib/common-annotations.jar"/>
+  <path value="/home/lizo/ICTDLab/DocManWeb/WebContent/WEB-INF/lib/commons-logging.jar"/>
   <path value="/home/lizo/dev-tools/Servers/wildfly-8.2.1.final/modules/system/layers/base/javax/servlet/jstl/api/main/jboss-jstl-api_1.2_spec-1.1.2.Final.jar">
    <libraries>
     <library class="tld">
      <id class="model-object"
-      path="FileSystems/lib-jboss-jstl-api_1.2_spec-1.1.2.Final.jar/META-INF/c-1_0-rt.tld" project="CRMApplication"/>
+      path="FileSystems/lib-jboss-jstl-api_1.2_spec-1.1.2.Final.jar/META-INF/c-1_0-rt.tld" project="DocMan"/>
     </library>
     <library class="tld">
      <id class="model-object"
-      path="FileSystems/lib-jboss-jstl-api_1.2_spec-1.1.2.Final.jar/META-INF/c-1_0.tld" project="CRMApplication"/>
+      path="FileSystems/lib-jboss-jstl-api_1.2_spec-1.1.2.Final.jar/META-INF/c-1_0.tld" project="DocMan"/>
     </library>
     <library class="tld">
      <id class="model-object"
-      path="FileSystems/lib-jboss-jstl-api_1.2_spec-1.1.2.Final.jar/META-INF/c-1_1.tld" project="CRMApplication"/>
+      path="FileSystems/lib-jboss-jstl-api_1.2_spec-1.1.2.Final.jar/META-INF/c-1_1.tld" project="DocMan"/>
     </library>
     <library class="tld">
      <id class="model-object"
-      path="FileSystems/lib-jboss-jstl-api_1.2_spec-1.1.2.Final.jar/META-INF/c.tld" project="CRMApplication"/>
+      path="FileSystems/lib-jboss-jstl-api_1.2_spec-1.1.2.Final.jar/META-INF/c.tld" project="DocMan"/>
     </library>
     <library class="tld">
      <id class="model-object"
-      path="FileSystems/lib-jboss-jstl-api_1.2_spec-1.1.2.Final.jar/META-INF/fmt-1_0-rt.tld" project="CRMApplication"/>
+      path="FileSystems/lib-jboss-jstl-api_1.2_spec-1.1.2.Final.jar/META-INF/fmt-1_0-rt.tld" project="DocMan"/>
     </library>
     <library class="tld">
      <id class="model-object"
-      path="FileSystems/lib-jboss-jstl-api_1.2_spec-1.1.2.Final.jar/META-INF/fmt-1_0.tld" project="CRMApplication"/>
+      path="FileSystems/lib-jboss-jstl-api_1.2_spec-1.1.2.Final.jar/META-INF/fmt-1_0.tld" project="DocMan"/>
     </library>
     <library class="tld">
      <id class="model-object"
-      path="FileSystems/lib-jboss-jstl-api_1.2_spec-1.1.2.Final.jar/META-INF/fmt.tld" project="CRMApplication"/>
+      path="FileSystems/lib-jboss-jstl-api_1.2_spec-1.1.2.Final.jar/META-INF/fmt.tld" project="DocMan"/>
     </library>
     <library class="tld">
      <id class="model-object"
-      path="FileSystems/lib-jboss-jstl-api_1.2_spec-1.1.2.Final.jar/META-INF/fn.tld" project="CRMApplication"/>
+      path="FileSystems/lib-jboss-jstl-api_1.2_spec-1.1.2.Final.jar/META-INF/fn.tld" project="DocMan"/>
     </library>
     <library class="tld">
      <id class="model-object"
-      path="FileSystems/lib-jboss-jstl-api_1.2_spec-1.1.2.Final.jar/META-INF/permittedTaglibs.tld" project="CRMApplication"/>
+      path="FileSystems/lib-jboss-jstl-api_1.2_spec-1.1.2.Final.jar/META-INF/permittedTaglibs.tld" project="DocMan"/>
     </library>
     <library class="tld">
      <id class="model-object"
-      path="FileSystems/lib-jboss-jstl-api_1.2_spec-1.1.2.Final.jar/META-INF/scriptfree.tld" project="CRMApplication"/>
+      path="FileSystems/lib-jboss-jstl-api_1.2_spec-1.1.2.Final.jar/META-INF/scriptfree.tld" project="DocMan"/>
     </library>
     <library class="tld">
      <id class="model-object"
-      path="FileSystems/lib-jboss-jstl-api_1.2_spec-1.1.2.Final.jar/META-INF/sql-1_0-rt.tld" project="CRMApplication"/>
+      path="FileSystems/lib-jboss-jstl-api_1.2_spec-1.1.2.Final.jar/META-INF/sql-1_0-rt.tld" project="DocMan"/>
     </library>
     <library class="tld">
      <id class="model-object"
-      path="FileSystems/lib-jboss-jstl-api_1.2_spec-1.1.2.Final.jar/META-INF/sql-1_0.tld" project="CRMApplication"/>
+      path="FileSystems/lib-jboss-jstl-api_1.2_spec-1.1.2.Final.jar/META-INF/sql-1_0.tld" project="DocMan"/>
     </library>
     <library class="tld">
      <id class="model-object"
-      path="FileSystems/lib-jboss-jstl-api_1.2_spec-1.1.2.Final.jar/META-INF/sql.tld" project="CRMApplication"/>
+      path="FileSystems/lib-jboss-jstl-api_1.2_spec-1.1.2.Final.jar/META-INF/sql.tld" project="DocMan"/>
     </library>
     <library class="tld">
      <id class="model-object"
-      path="FileSystems/lib-jboss-jstl-api_1.2_spec-1.1.2.Final.jar/META-INF/x-1_0-rt.tld" project="CRMApplication"/>
+      path="FileSystems/lib-jboss-jstl-api_1.2_spec-1.1.2.Final.jar/META-INF/x-1_0-rt.tld" project="DocMan"/>
     </library>
     <library class="tld">
      <id class="model-object"
-      path="FileSystems/lib-jboss-jstl-api_1.2_spec-1.1.2.Final.jar/META-INF/x-1_0.tld" project="CRMApplication"/>
+      path="FileSystems/lib-jboss-jstl-api_1.2_spec-1.1.2.Final.jar/META-INF/x-1_0.tld" project="DocMan"/>
     </library>
     <library class="tld">
      <id class="model-object"
-      path="FileSystems/lib-jboss-jstl-api_1.2_spec-1.1.2.Final.jar/META-INF/x.tld" project="CRMApplication"/>
+      path="FileSystems/lib-jboss-jstl-api_1.2_spec-1.1.2.Final.jar/META-INF/x.tld" project="DocMan"/>
     </library>
    </libraries>
   </path>
-  <path value="/home/lizo/ICTDLab/DocManWeb/WebContent/WEB-INF/lib/commons-logging.jar"/>
   <path value="/home/lizo/dev-tools/Servers/wildfly-8.2.1.final/modules/system/layers/base/org/picketbox/main/picketbox-infinispan-4.0.21.Final.jar"/>
-  <path value="/home/lizo/dev-tools/Servers/wildfly-8.2.1.final/modules/system/layers/base/javax/ws/rs/api/main/jaxrs-api-3.0.10.Final.jar"/>
   <path value="/home/lizo/dev-tools/Servers/wildfly-8.2.1.final/modules/system/layers/base/javax/enterprise/concurrent/api/main/jboss-concurrency-api_1.0_spec-1.0.0.Final.jar"/>
+  <path value="/home/lizo/dev-tools/Servers/wildfly-8.2.1.final/modules/system/layers/base/javax/ws/rs/api/main/jaxrs-api-3.0.10.Final.jar"/>
   <path value="/home/lizo/dev-tools/Servers/wildfly-8.2.1.final/modules/system/layers/base/javax/batch/api/main/jboss-batch-api_1.0_spec-1.0.0.Final.jar"/>
-  <path value="/home/lizo/dev-tools/Servers/wildfly-8.2.1.final/modules/system/layers/base/javax/faces/api/main/jboss-jsf-api_2.2_spec-2.2.8.jar"/>
   <path value="/home/lizo/dev-tools/Servers/wildfly-8.2.1.final/modules/system/layers/base/org/jboss/resteasy/resteasy-jaxb-provider/main/resteasy-jaxb-provider-3.0.10.Final.jar"/>
+  <path value="/home/lizo/dev-tools/Servers/wildfly-8.2.1.final/modules/system/layers/base/javax/faces/api/main/jboss-jsf-api_2.2_spec-2.2.8.jar"/>
   <path value="/home/lizo/dev-tools/Servers/wildfly-8.2.1.final/modules/system/layers/base/org/picketbox/main/picketbox-commons-1.0.0.final.jar"/>
   <path value="/home/lizo/dev-tools/Servers/wildfly-8.2.1.final/modules/system/layers/base/javax/el/api/main/jboss-el-api_3.0_spec-1.0.3.Final.jar"/>
   <path value="/home/lizo/dev-tools/Servers/wildfly-8.2.1.final/modules/system/layers/base/javax/websocket/api/main/jboss-websocket-api_1.1_spec-1.1.0.Final.jar"/>
@@ -175,7 +175,6 @@
   <path value="/home/lizo/dev-tools/Servers/wildfly-8.2.1.final/modules/system/layers/base/javax/servlet/jsp/api/main/jboss-jsp-api_2.3_spec-1.0.1.Final.jar"/>
   <path value="/home/lizo/ICTDLab/DocManWeb/WebContent/WEB-INF/lib/commons-collections.jar"/>
   <path value="/home/lizo/dev-tools/Servers/wildfly-8.2.1.final/modules/system/layers/base/org/jboss/logging/main/jboss-logging-3.1.4.GA.jar"/>
-  <path value="/home/lizo/ICTDLab/DocProject/EarContent/lib/commons-net-3.3.jar"/>
   <path value="/DocManWeb/WebContent/WEB-INF/faces-config.xml">
    <libraries>
     <library class="faces-config">
@@ -192,14 +191,15 @@
   <path value="/home/lizo/ICTDLab/DocManWeb/WebContent/WEB-INF/lib/jstl.jar"/>
   <path value="/home/lizo/dev-tools/Servers/wildfly-8.2.1.final/modules/system/layers/base/javax/rmi/api/main/jboss-rmi-api_1.0_spec-1.0.4.Final.jar"/>
   <path value="/home/lizo/dev-tools/Servers/wildfly-8.2.1.final/modules/system/layers/base/org/glassfish/javax/json/main/javax.json-1.0.3.jar"/>
-  <path value="/home/lizo/dev-tools/Servers/wildfly-8.2.1.final/modules/system/layers/base/javax/security/auth/message/api/main/jboss-jaspi-api_1.1_spec-1.0.0.Final.jar"/>
   <path value="/home/lizo/dev-tools/Servers/wildfly-8.2.1.final/modules/system/layers/base/org/picketbox/main/picketbox-4.0.21.Final.jar"/>
+  <path value="/home/lizo/dev-tools/Servers/wildfly-8.2.1.final/modules/system/layers/base/javax/security/auth/message/api/main/jboss-jaspi-api_1.1_spec-1.0.0.Final.jar"/>
   <path value="/home/lizo/dev-tools/Servers/wildfly-8.2.1.final/modules/system/layers/base/org/jboss/dmr/main/jboss-dmr-1.2.0.Final.jar"/>
   <path value="/home/lizo/dev-tools/Servers/wildfly-8.2.1.final/modules/system/layers/base/javax/mail/api/main/javax.mail-1.5.1.jar"/>
   <path value="/home/lizo/ICTDLab/DocManWeb/WebContent/WEB-INF/lib/commons-beanutils.jar"/>
   <path value="/home/lizo/dev-tools/Servers/wildfly-8.2.1.final/modules/system/layers/base/javax/inject/api/main/javax.inject-1.jar"/>
  </paths>
  <validation>
+  <core validator-id="jboss.cdi.core"/>
   <el>
    <linked-el length="32" name="%0" offset="497" path="%1"/>
    <linked-el length="44" name="%0" offset="857" path="%2"/>
@@ -227,21 +227,21 @@
    <linked-el length="21" name="%8" offset="449" path="%9"/>
    <linked-el length="25" name="%8" offset="652" path="%9"/>
    <linked-el length="44" name="%10" offset="857" path="%2"/>
-   <linked-el length="25" name="%10" offset="742" path="%5"/>
    <linked-el length="18" name="%10" offset="576" path="%3"/>
-   <linked-el length="23" name="%10" offset="628" path="%1"/>
+   <linked-el length="25" name="%10" offset="742" path="%5"/>
    <linked-el length="46" name="%10" offset="524" path="%3"/>
+   <linked-el length="23" name="%10" offset="628" path="%1"/>
    <linked-el length="21" name="%10" offset="885" path="%1"/>
    <linked-el length="74" name="%10" offset="882" path="%5"/>
    <linked-el length="73" name="%10" offset="955" path="%1"/>
-   <linked-el length="27" name="%10" offset="616" path="%5"/>
    <linked-el length="19" name="%10" offset="785" path="%2"/>
+   <linked-el length="27" name="%10" offset="616" path="%5"/>
    <linked-el length="32" name="%11" offset="497" path="%1"/>
    <linked-el length="44" name="%11" offset="857" path="%2"/>
    <linked-el length="33" name="%11" offset="464" path="%2"/>
    <linked-el length="18" name="%11" offset="576" path="%3"/>
-   <linked-el length="25" name="%11" offset="454" path="%3"/>
    <linked-el length="38" name="%11" offset="807" path="%4"/>
+   <linked-el length="25" name="%11" offset="454" path="%3"/>
    <linked-el length="21" name="%11" offset="885" path="%1"/>
    <linked-el length="38" name="%11" offset="546" path="%2"/>
    <linked-el length="26" name="%11" offset="497" path="%5"/>
@@ -253,8 +253,8 @@
    <linked-el length="24" name="%11" offset="726" path="%2"/>
    <linked-el length="17" name="%11" offset="753" path="%1"/>
    <linked-el length="25" name="%11" offset="742" path="%5"/>
-   <linked-el length="23" name="%11" offset="628" path="%1"/>
    <linked-el length="46" name="%11" offset="524" path="%3"/>
+   <linked-el length="23" name="%11" offset="628" path="%1"/>
    <linked-el length="35" name="%11" offset="911" path="%4"/>
    <linked-el length="47" name="%11" offset="624" path="%2"/>
    <linked-el length="27" name="%11" offset="616" path="%5"/>

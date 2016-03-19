@@ -9,12 +9,14 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
+import javax.xml.bind.annotation.XmlRootElement;
 
 /**
  * Entity implementation class for Entity: FileInfo
  *
  */
 @Entity
+@XmlRootElement
 public class FileInfo implements Serializable {
 
 	private String fileName;

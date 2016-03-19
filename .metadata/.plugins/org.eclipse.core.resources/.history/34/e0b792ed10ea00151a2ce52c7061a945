@@ -1,0 +1,62 @@
+package intTest.beans;
+
+import org.apache.camel.CamelContext;
+import org.apache.camel.CamelContextAware;
+import org.apache.camel.ExchangePattern;
+import org.apache.camel.Produce;
+import org.apache.camel.ProducerTemplate;
+import org.apache.camel.spring.SpringCamelContext;
+import org.apache.xbean.spring.context.ClassPathXmlApplicationContext;
+import org.springframework.context.ApplicationContext;
+import org.springframework.stereotype.Service;
+
+@Service
+public class ServiceStart implements CamelContextAware {
+	ApplicationContext appContext = new ClassPathXmlApplicationContext(
+			"META-INF/camel-conf.xml");
+	private CamelContext camelContext;
+	private ProducerTemplate template;
+
+	public ServiceStart() {
+		this.camelContext = null;
+		this.template = null;
+	}
+
+	public void findUser(String byUsername) {
+		/*
+		 * get the camel integration context--invoke the direct route to start
+		 * messaging @JMS
+		 */
+		try {
+			camelContext = SpringCamelContext.springCamelContext(appContext,
+					false);
+			if (camelContext != null) {
+				template = camelContext.createProducerTemplate();
+				if (template != null) {
+					camelContext.start();
+					template.sendBody("direct:start", "admin");
+					Thread.sleep(2000);
+				}
+			}
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+	}
+
+	public static void main(String[] args) {
+
+	}
+
+	@Override
+	public CamelContext getCamelContext() {
+		// TODO Auto-generated method stub
+		return camelContext;
+	}
+
+	@Override
+	public void setCamelContext(CamelContext context) {
+		this.camelContext=context;	
+	}
+ 
+}
