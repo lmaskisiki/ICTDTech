@@ -1,0 +1,19 @@
+package birthtech.service.tests;
+
+import java.io.IOException;
+
+import javax.naming.NamingException;
+
+import org.junit.Test;
+ 
+
+public class ServiceTest {
+
+	
+	@Test
+	public void test() throws NamingException, IOException {
+	 System.out.print("Lizo");
+
+	}
+
+}

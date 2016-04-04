@@ -17,8 +17,8 @@
 	<bean id="jmsTemplate" class="org.springframework.jms.core.JmsTemplate">
 		<property name="connectionFactory" ref="connectionFactory" />
 	</bean>
-<!--    <jee:jndi-lookup id="connectionFactory" jndi-name="java:/ConnectionFactory" />
- -->
+	<!-- <jee:jndi-lookup id="connectionFactory" jndi-name="java:/ConnectionFactory" 
+		/> -->
 	<jee:jndi-lookup id="innRequest" jndi-name="java:/jms/queue/SearchRequest" />
 
 	<jee:jndi-lookup id="responseQueue" jndi-name="java:/jms/queue/SearchResponse" />
@@ -26,41 +26,39 @@
 	<bean id="connectionFactory" class="org.apache.activemq.ActiveMQConnectionFactory">
 		<constructor-arg index="0" value="tcp://localhost:61616" />
 	</bean>
-	 
-	 
-	 <bean id="innQuee"  class="org.apache.activemq.command.ActiveMQQueue">
-	 <constructor-arg index="0" value="test2" />
-	 </bean>
-	 
-	 <bean id="outQuee"  class="org.apache.activemq.command.ActiveMQQueue">
-     <constructor-arg index="0" value="test4" />
-      
-     </bean>
-     
-	 
-	 
+
+	<bean id="innQuee" class="org.apache.activemq.command.ActiveMQTopic">
+		<constructor-arg index="0" value="topic/clientSearch" />
+	</bean>
+
+	<bean id="outQuee" class="org.apache.activemq.command.ActiveMQQueue">
+		<constructor-arg index="0" value="topic/userInfo" />
+
+	</bean>
+	
+	<bean id="requestUserDocs" class="org.apache.activemq.command.ActiveMQQueue">
+        <constructor-arg index="0" value="queue.requestUserDocs" />
+
+    </bean>
+
+
+
 
 	<int:channel id="inChannel" />
-
-	<int-jms:message-driven-channel-adapter
-		id="messegeLister" channel="inChannel" destination="innQuee"
-		pub-sub-domain="false" />
-
-
-
 	<int:channel id="outChannel" />
-	<int-jms:outbound-channel-adapter id="jmsOut"
-		destination="outQuee" channel="outChannel" />
+	<!-- <int-jms:message-driven-channel-adapter id="messegeLister" channel="inChannel" 
+		destination="innQuee" pub-sub-domain="ture" /> <int-jms:outbound-channel-adapter 
+		id="jmsOut" destination-expression="headers['jms_replyTo']" channel="outChannel"> 
+		</int-jms:outbound-channel-adapter> -->
 
+ 
+	<int-jms:inbound-gateway request-channel="inChannel"
+		request-destination="innQuee" reply-channel="outChannel"
+		  />
+		
 	<bean id="remoteSearch" class="integration.RemoteSearch" />
-
 	<int:service-activator input-channel="inChannel"
-		ref="remoteSearch" method="getFullname" output-channel="outChannel" />
-
-
-
-
-
+		ref="remoteSearch" method="getFullname" output-channel="outChannel"/>
 
 
 </beans>

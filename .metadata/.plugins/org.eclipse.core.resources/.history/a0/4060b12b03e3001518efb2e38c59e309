@@ -1,6 +1,0 @@
-package intTest.beans;
-
-public interface testEndpoint {
-
-	
-}

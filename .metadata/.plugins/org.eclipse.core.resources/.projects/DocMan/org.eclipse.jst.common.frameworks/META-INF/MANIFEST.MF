@@ -1,8 +1,16 @@
 Manifest-Version: 1.0
 Class-Path: lib/mysql-connector-java-5.1.23-bin.jar lib/spring-beans-4
  .1.5.RELEASE.jar lib/spring-core-4.1.5.RELEASE.jar lib/commons-loggin
- g-1.2.jar lib/jboss-jms-api_2.0_spec-1.0.0.Final.jar lib/junit-4.9.ja
- r lib/hamcrest-core-1.1.jar
+ g-1.2.jar lib/activemq-core-5.7.0.jar lib/slf4j-api-1.6.6.jar lib/ger
+ onimo-jms_1.1_spec-1.1.1.jar lib/kahadb-5.7.0.jar lib/activemq-protob
+ uf-1.1.jar lib/mqtt-client-1.3.jar lib/hawtdispatch-transport-1.11.ja
+ r lib/hawtdispatch-1.11.jar lib/hawtbuf-1.9.jar lib/geronimo-j2ee-man
+ agement_1.1_spec-1.0.1.jar lib/spring-context-3.0.7.RELEASE.jar lib/s
+ pring-aop-3.0.7.RELEASE.jar lib/aopalliance-1.0.jar lib/spring-expres
+ sion-3.0.7.RELEASE.jar lib/spring-asm-3.0.7.RELEASE.jar lib/commons-n
+ et-3.1.jar lib/jasypt-1.9.0.jar lib/jboss-ejb3-ext-api-2.1.0.jar lib/
+ jboss-jms-api_2.0_spec-1.0.0.Final.jar lib/junit-4.9.jar lib/hamcrest
+ -core-1.1.jar
 Build-Jdk: 1.7.0_76
 Built-By: lizo
 Created-By: Maven Integration for Eclipse

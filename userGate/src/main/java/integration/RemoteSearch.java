@@ -30,10 +30,14 @@ public class RemoteSearch {
 
 	public String getFullname(String searchString) {
 		UniversalMarshaller marshal = new UniversalMarshaller();
+		
+		
+		
 		person psn = userService.findByUsername(searchString);
+		String responseMsg=marshal.toXML(psn);
 		String results = psn.getLast_name() + " " + psn.getFirst_name();
-		 System.out.println("your request wast processed and sent back to the queue");
-		return results;
+		 System.out.println("Response Created @Body | \n"+responseMsg);
+		return responseMsg;
 	}
 
 }

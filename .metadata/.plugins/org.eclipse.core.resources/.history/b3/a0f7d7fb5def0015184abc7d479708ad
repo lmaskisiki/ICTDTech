@@ -1,0 +1,15 @@
+package messaging;
+
+import javax.jms.JMSContext;
+
+import org.apache.activemq.ActiveMQConnectionFactory;
+
+public class MQjmsContext {
+
+	public JMSContext getJMSContextAMQ(){
+		ActiveMQConnectionFactory cf= new ActiveMQConnectionFactory("tcp://localhost:61616");
+		//JMSContext jcontext=cf.createConnection().c
+		return null;
+		
+	}
+}

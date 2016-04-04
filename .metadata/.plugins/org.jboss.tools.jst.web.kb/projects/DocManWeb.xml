@@ -199,7 +199,6 @@
   <path value="/home/lizo/dev-tools/Servers/wildfly-8.2.1.final/modules/system/layers/base/javax/inject/api/main/javax.inject-1.jar"/>
  </paths>
  <validation>
-  <core validator-id="jboss.cdi.core"/>
   <el>
    <linked-el length="32" name="%0" offset="497" path="%1"/>
    <linked-el length="44" name="%0" offset="857" path="%2"/>
@@ -227,21 +226,21 @@
    <linked-el length="21" name="%8" offset="449" path="%9"/>
    <linked-el length="25" name="%8" offset="652" path="%9"/>
    <linked-el length="44" name="%10" offset="857" path="%2"/>
-   <linked-el length="18" name="%10" offset="576" path="%3"/>
    <linked-el length="25" name="%10" offset="742" path="%5"/>
-   <linked-el length="46" name="%10" offset="524" path="%3"/>
+   <linked-el length="18" name="%10" offset="576" path="%3"/>
    <linked-el length="23" name="%10" offset="628" path="%1"/>
+   <linked-el length="46" name="%10" offset="524" path="%3"/>
    <linked-el length="21" name="%10" offset="885" path="%1"/>
    <linked-el length="74" name="%10" offset="882" path="%5"/>
    <linked-el length="73" name="%10" offset="955" path="%1"/>
-   <linked-el length="19" name="%10" offset="785" path="%2"/>
    <linked-el length="27" name="%10" offset="616" path="%5"/>
+   <linked-el length="19" name="%10" offset="785" path="%2"/>
    <linked-el length="32" name="%11" offset="497" path="%1"/>
    <linked-el length="44" name="%11" offset="857" path="%2"/>
    <linked-el length="33" name="%11" offset="464" path="%2"/>
    <linked-el length="18" name="%11" offset="576" path="%3"/>
-   <linked-el length="38" name="%11" offset="807" path="%4"/>
    <linked-el length="25" name="%11" offset="454" path="%3"/>
+   <linked-el length="38" name="%11" offset="807" path="%4"/>
    <linked-el length="21" name="%11" offset="885" path="%1"/>
    <linked-el length="38" name="%11" offset="546" path="%2"/>
    <linked-el length="26" name="%11" offset="497" path="%5"/>
@@ -253,8 +252,8 @@
    <linked-el length="24" name="%11" offset="726" path="%2"/>
    <linked-el length="17" name="%11" offset="753" path="%1"/>
    <linked-el length="25" name="%11" offset="742" path="%5"/>
-   <linked-el length="46" name="%11" offset="524" path="%3"/>
    <linked-el length="23" name="%11" offset="628" path="%1"/>
+   <linked-el length="46" name="%11" offset="524" path="%3"/>
    <linked-el length="35" name="%11" offset="911" path="%4"/>
    <linked-el length="47" name="%11" offset="624" path="%2"/>
    <linked-el length="27" name="%11" offset="616" path="%5"/>

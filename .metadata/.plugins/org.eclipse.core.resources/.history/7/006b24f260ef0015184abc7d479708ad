@@ -1,0 +1,18 @@
+package messaging;
+
+import javax.jms.Session;
+import javax.jms.TextMessage;
+
+public class TestCon {
+
+	public static void main(String[] args) {
+	new MQjmsContext().getJMSContextAMQ();
+	Session session= new MQjmsContext().getJMSContextAMQ();
+	TextMessage reply = session.createTextMessage();
+	//reply.setJMSCorrelationID(msg.getJMSCorrelationID());
+	reply.setText("lizo");
+	session.createProducer(session.createQueue("lizo")).send("",reply);
+	session.close();
+	}
+
+}

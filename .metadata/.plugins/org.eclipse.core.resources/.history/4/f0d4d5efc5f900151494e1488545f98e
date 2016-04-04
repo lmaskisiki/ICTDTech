@@ -1,0 +1,5 @@
+package birthtech.services;
+
+public interface IParentService {
+
+}

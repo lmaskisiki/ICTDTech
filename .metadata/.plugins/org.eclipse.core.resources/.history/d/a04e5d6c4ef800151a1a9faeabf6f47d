@@ -1,0 +1,23 @@
+package infosource.starters;
+
+import org.apache.camel.builder.RouteBuilder;
+
+public class RouteBuilserTest  extends RouteBuilder{
+
+	public RouteBuilserTest() {
+		// TODO Auto-generated constructor stub
+	}
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+	@Override
+	public void configure() throws Exception {
+		 
+		from("");
+		
+	}
+
+}

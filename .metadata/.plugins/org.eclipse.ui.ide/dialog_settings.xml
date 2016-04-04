@@ -156,19 +156,19 @@
 		<item value="org.sonatype.m2e.buildhelper.feature:0.15.0.201212120353"/>
 		<item value="org.sonatype.m2e.egit.feature:0.14.0.201406241643"/>
 		<item value="org.sonatype.m2e.mavenarchiver.feature:0.17.0.201502101659-signed-20150525172209"/>
-		<item value="org.springframework.ide.eclipse.ajdt.feature:3.7.2.201511260958-RELEASE"/>
-		<item value="org.springframework.ide.eclipse.aop.feature:3.7.2.201511260958-RELEASE"/>
-		<item value="org.springframework.ide.eclipse.autowire.feature:3.7.2.201511260958-RELEASE"/>
-		<item value="org.springframework.ide.eclipse.batch.feature:3.7.2.201511260958-RELEASE"/>
-		<item value="org.springframework.ide.eclipse.data.feature:3.7.2.201511260958-RELEASE"/>
-		<item value="org.springframework.ide.eclipse.feature:3.7.2.201511260958-RELEASE"/>
-		<item value="org.springframework.ide.eclipse.integration.feature:3.7.2.201511260958-RELEASE"/>
-		<item value="org.springframework.ide.eclipse.maven.feature:3.7.2.201511260958-RELEASE"/>
-		<item value="org.springframework.ide.eclipse.mylyn.feature:3.7.2.201511260958-RELEASE"/>
-		<item value="org.springframework.ide.eclipse.security.feature:3.7.2.201511260958-RELEASE"/>
-		<item value="org.springframework.ide.eclipse.webflow.feature:3.7.2.201511260958-RELEASE"/>
-		<item value="org.springsource.sts.package:3.7.2.201511261050-RELEASE-e44"/>
-		<item value="org.springsource.sts:3.7.2.201511261050-RELEASE"/>
+		<item value="org.springframework.ide.eclipse.ajdt.feature:3.7.3.201602250914-RELEASE"/>
+		<item value="org.springframework.ide.eclipse.aop.feature:3.7.3.201602250914-RELEASE"/>
+		<item value="org.springframework.ide.eclipse.autowire.feature:3.7.3.201602250914-RELEASE"/>
+		<item value="org.springframework.ide.eclipse.batch.feature:3.7.3.201602250914-RELEASE"/>
+		<item value="org.springframework.ide.eclipse.data.feature:3.7.3.201602250914-RELEASE"/>
+		<item value="org.springframework.ide.eclipse.feature:3.7.3.201602250914-RELEASE"/>
+		<item value="org.springframework.ide.eclipse.integration.feature:3.7.3.201602250914-RELEASE"/>
+		<item value="org.springframework.ide.eclipse.maven.feature:3.7.3.201602250914-RELEASE"/>
+		<item value="org.springframework.ide.eclipse.mylyn.feature:3.7.3.201602250914-RELEASE"/>
+		<item value="org.springframework.ide.eclipse.security.feature:3.7.3.201602250914-RELEASE"/>
+		<item value="org.springframework.ide.eclipse.webflow.feature:3.7.3.201602250914-RELEASE"/>
+		<item value="org.springsource.sts.package:3.7.3.201602250958-RELEASE-e44"/>
+		<item value="org.springsource.sts:3.7.3.201602250958-RELEASE"/>
 	</list>
 	<section name="ExternalProjectImportWizard">
 		<item value="false" key="WizardProjectsImportPage.STORE_ARCHIVE_SELECTED"/>

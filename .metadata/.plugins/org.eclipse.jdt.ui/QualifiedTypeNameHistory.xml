@@ -31,4 +31,6 @@
 <fullyQualifiedTypeName name="java.nio.file.Files"/>
 <fullyQualifiedTypeName name="java.util.Date"/>
 <fullyQualifiedTypeName name="javax.jws.WebService"/>
+<fullyQualifiedTypeName name="infosource.aggregators.SearchAggregation"/>
+<fullyQualifiedTypeName name="org.apache.camel.ExchangePattern"/>
 </qualifiedTypeNameHistroy>

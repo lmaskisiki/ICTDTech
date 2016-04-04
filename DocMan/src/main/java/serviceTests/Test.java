@@ -14,8 +14,7 @@ public class Test {
 	private UFinder uf;
 	@org.junit.Test
 	public void test() throws JMSException {
-		 
-		 uf.findRequest("admin");
+		  
 	}
 
 }

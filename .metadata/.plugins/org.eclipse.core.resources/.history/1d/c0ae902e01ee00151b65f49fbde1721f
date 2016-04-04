@@ -1,0 +1,8 @@
+package infosource.starters;
+
+
+public class MainApp {
+	
+public MainApp(){}
+
+}

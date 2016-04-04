@@ -1,0 +1,54 @@
+package birthtech.services.impl;
+
+import java.util.Date;
+import java.util.List;
+
+import javax.ejb.Stateless;
+import javax.persistence.EntityManager;
+import javax.persistence.PersistenceContext;
+
+import birthtech.entities.Parent;
+import birthtech.services.IParentService;
+
+
+@Stateless
+public class ParentService implements IParentService {
+	@PersistenceContext(unitName = "BirthTech")
+	private EntityManager em;
+	
+	
+	
+	
+	/////////////////////////////////////////////////////////
+	@Override
+	public Parent getParent(String fullname) {
+		System.out.printf("\n Please wait while I search for {0} parent",fullname);
+		
+		Parent parent=new Parent();
+		parent.setPid(2);
+		parent.setIdnumber(6009080);
+		parent.setNames(fullname);
+		em.persist(parent);
+		return null;
+	}
+
+	@Override
+	public boolean saveLocalParent(Parent parent) {
+		// TODO Auto-generated method stub
+		return false;
+	}
+
+	@Override
+	public List<Parent> listParents() {
+		// TODO Auto-generated method stub
+		return em.createQuery("SELECT e FROM  Parent e").getResultList();
+	}
+
+	@Override
+	public void addChild(String newbornName, String newbornSurname,
+			Date dateofbith, String birhnumber, String gender, String status) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

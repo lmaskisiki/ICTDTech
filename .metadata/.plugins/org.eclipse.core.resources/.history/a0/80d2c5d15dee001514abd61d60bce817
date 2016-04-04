@@ -1,0 +1,5 @@
+package infosource.aggregators;
+
+public class SearchAggregation {
+
+}
