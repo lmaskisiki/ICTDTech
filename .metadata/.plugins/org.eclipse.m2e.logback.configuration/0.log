@@ -24347,3 +24347,71 @@ java.io.InvalidClassException: org.eclipse.m2e.core.internal.project.registry.Ba
 2016-04-02 08:46:56,718 [Worker-23] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 2 resources
 2016-04-02 08:46:56,720 [Worker-23] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
 2016-04-02 08:46:56,720 [Worker-23] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/lizo/ICTDLab/InfoSource/src/test/resources
+2016-04-04 20:51:20,121 [Worker-4] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.maven.ide.eclipse.wtp.WarLifecycleMapping lifecycle mapping for MavenProject: BirthTech:BirthTech:0.0.1-SNAPSHOT @ /home/lizo/ICTDLab/BirthTech/pom.xml.
+2016-04-04 20:51:21,941 [Worker-4] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.maven.ide.eclipse.wtp.EjbLifecycleMapping lifecycle mapping for MavenProject: DocMan:DocMan:0.0.1-SNAPSHOT @ /home/lizo/ICTDLab/DocMan/pom.xml.
+2016-04-04 20:51:34,078 [Worker-4] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.maven.ide.eclipse.wtp.WarLifecycleMapping lifecycle mapping for MavenProject: InfoSource:InfoSource:0.0.1-SNAPSHOT @ /home/lizo/ICTDLab/InfoSource/pom.xml.
+2016-04-04 20:51:44,637 [Worker-4] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.maven.ide.eclipse.wtp.WarLifecycleMapping lifecycle mapping for MavenProject: RDwebFrameApp:RDwebFrameApp:0.0.1-SNAPSHOT @ /home/lizo/ICTDLab/RDwebFrameApp/pom.xml.
+2016-04-04 20:51:47,595 [Worker-4] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.maven.ide.eclipse.wtp.WarLifecycleMapping lifecycle mapping for MavenProject: userGate:userGate:0.0.1-SNAPSHOT @ /home/lizo/ICTDLab/userGate/pom.xml.
+2016-04-04 20:52:01,070 [Worker-35] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-04-04 20:52:01,074 [Worker-35] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2016-04-04 20:52:01,082 [Worker-35] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2016-04-04 20:52:01,086 [Worker-35] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-04-04 20:52:01,086 [Worker-35] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2016-04-04 20:52:03,308 [Worker-33] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-04-04 20:52:03,310 [Worker-33] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 7 resources
+2016-04-04 20:52:03,312 [Worker-33] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-04-04 20:52:03,312 [Worker-33] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/lizo/ICTDLab/DocMan/src/test/resources
+2016-04-04 20:52:10,905 [Worker-35] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-04-04 20:52:10,906 [Worker-35] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 2 resources
+2016-04-04 20:52:10,908 [Worker-35] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-04-04 20:52:10,908 [Worker-35] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/lizo/ICTDLab/InfoSource/src/test/resources
+2016-04-04 20:52:19,124 [Worker-0] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-04-04 20:52:19,124 [Worker-0] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2016-04-04 20:52:19,126 [Worker-0] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-04-04 20:52:19,126 [Worker-0] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2016-04-05 18:24:13,291 [Worker-0] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-04-05 18:24:13,291 [Worker-0] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 5 resources
+2016-04-05 18:24:13,293 [Worker-0] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-04-05 18:24:13,293 [Worker-0] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/lizo/ICTDLab/userGate/src/test/resources
+2016-04-05 19:06:08,307 [Worker-39] INFO  o.e.m.w.i.f.ResourceFilteringBuildParticipant - Cleaning filtered folder for BirthTech
+2016-04-05 19:06:08,392 [Worker-39] INFO  o.e.m.w.i.f.ResourceFilteringBuildParticipant - Cleaning filtered folder for InfoSource
+2016-04-05 19:06:08,408 [Worker-39] INFO  o.e.m.w.i.f.ResourceFilteringBuildParticipant - Cleaning filtered folder for RDwebFrameApp
+2016-04-05 19:06:08,416 [Worker-39] INFO  o.e.m.w.i.f.ResourceFilteringBuildParticipant - Cleaning filtered folder for userGate
+2016-04-05 19:06:09,464 [Worker-41] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-04-05 19:06:09,465 [Worker-41] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2016-04-05 19:06:09,466 [Worker-41] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2016-04-05 19:06:09,467 [Worker-41] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-04-05 19:06:09,467 [Worker-41] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2016-04-05 19:06:09,468 [Worker-41] INFO  o.e.m.w.i.f.ResourceFilteringBuildParticipant - Changed resources require a complete clean of filtered resources of BirthTech
+2016-04-05 19:06:09,468 [Worker-41] INFO  o.e.m.w.i.f.ResourceFilteringBuildParticipant - Executing resource filtering for BirthTech
+2016-04-05 19:06:09,527 [Worker-41] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-04-05 19:06:09,975 [Worker-28] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-04-05 19:06:09,975 [Worker-28] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 7 resources
+2016-04-05 19:06:09,977 [Worker-28] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-04-05 19:06:09,978 [Worker-28] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/lizo/ICTDLab/DocMan/src/test/resources
+2016-04-05 19:06:10,799 [Worker-0] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-04-05 19:06:10,799 [Worker-0] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 2 resources
+2016-04-05 19:06:10,801 [Worker-0] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-04-05 19:06:10,802 [Worker-0] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/lizo/ICTDLab/InfoSource/src/test/resources
+2016-04-05 19:06:10,802 [Worker-0] INFO  o.e.m.w.i.f.ResourceFilteringBuildParticipant - Changed resources require a complete clean of filtered resources of InfoSource
+2016-04-05 19:06:10,802 [Worker-0] INFO  o.e.m.w.i.f.ResourceFilteringBuildParticipant - Executing resource filtering for InfoSource
+2016-04-05 19:06:10,809 [Worker-0] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-04-05 19:06:12,368 [Worker-28] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-04-05 19:06:12,369 [Worker-28] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2016-04-05 19:06:12,370 [Worker-28] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-04-05 19:06:12,370 [Worker-28] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2016-04-05 19:06:12,371 [Worker-28] INFO  o.e.m.w.i.f.ResourceFilteringBuildParticipant - Changed resources require a complete clean of filtered resources of RDwebFrameApp
+2016-04-05 19:06:12,371 [Worker-28] INFO  o.e.m.w.i.f.ResourceFilteringBuildParticipant - Executing resource filtering for RDwebFrameApp
+2016-04-05 19:06:12,374 [Worker-28] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-04-05 19:06:13,502 [Worker-41] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-04-05 19:06:13,502 [Worker-41] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 5 resources
+2016-04-05 19:06:13,504 [Worker-41] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-04-05 19:06:13,504 [Worker-41] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/lizo/ICTDLab/userGate/src/test/resources
+2016-04-05 19:06:13,504 [Worker-41] INFO  o.e.m.w.i.f.ResourceFilteringBuildParticipant - Changed resources require a complete clean of filtered resources of userGate
+2016-04-05 19:06:13,504 [Worker-41] INFO  o.e.m.w.i.f.ResourceFilteringBuildParticipant - Executing resource filtering for userGate
+2016-04-05 19:06:13,508 [Worker-41] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-04-05 19:08:45,527 [Worker-0] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-04-05 19:08:45,530 [Worker-0] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2016-04-05 19:08:45,535 [Worker-0] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2016-04-05 19:08:45,536 [Worker-0] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-04-05 19:08:45,536 [Worker-0] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource

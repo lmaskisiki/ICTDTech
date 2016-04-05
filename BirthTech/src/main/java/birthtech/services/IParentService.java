@@ -3,12 +3,12 @@ package birthtech.services;
 import java.util.Date;
 import java.util.List;
 
-import birthtech.entities.Parent;
+import birthtech.entities.Martenal;
 
 public interface IParentService {
-	public Parent getParent(String fullname);
-	public boolean saveLocalParent(Parent parent);
-public List<Parent> listParents();
+	public Martenal getParent(String fullname);
+	public boolean saveLocalParent(Martenal parent);
+public List<Martenal> listParents();
 	public void addChild(String newbornName, String newbornSurname,
 			Date dateofbith, String birhnumber, String gender, String status);
 }

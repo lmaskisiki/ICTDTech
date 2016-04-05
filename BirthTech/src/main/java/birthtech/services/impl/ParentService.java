@@ -11,7 +11,7 @@ import javax.persistence.Persistence;
 
 import javax.persistence.PersistenceContext;
 
-import birthtech.entities.Parent;
+import birthtech.entities.Martenal;
 import birthtech.services.IParentService;
 
 @Stateless
@@ -26,11 +26,11 @@ public class ParentService implements IParentService {
 
 	// ///////////////////////////////////////////////////////
 	@Override
-	public Parent getParent(String fullname) {
+	public Martenal getParent(String fullname) {
 		System.out.printf("\n Please wait while I search for {0} parent",
 				fullname);
 
-		Parent parent = new Parent();
+		Martenal parent = new Martenal();
 		parent.setPid(2);
 		parent.setIdnumber(60090);
 		parent.setNames(fullname);
@@ -39,15 +39,15 @@ public class ParentService implements IParentService {
 	}
 
 	@Override
-	public boolean saveLocalParent(Parent parent) {
+	public boolean saveLocalParent(Martenal parent) {
 		// TODO Auto-generated method stub
 		return false;
 	}
 
 	@Override
-	public List<Parent> listParents() {
+	public List<Martenal> listParents() {
 		// TODO Auto-generated method stub
-		return em.createQuery("SELECT e FROM  Parent e").getResultList();
+		return em.createQuery("SELECT e FROM  Martenal e").getResultList();
 	}
 
 	@Override
