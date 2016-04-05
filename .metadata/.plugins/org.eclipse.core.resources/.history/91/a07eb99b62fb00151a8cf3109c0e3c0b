@@ -1,0 +1,5 @@
+package birthtech.repositories;
+
+public interface ChildRepository {
+
+}

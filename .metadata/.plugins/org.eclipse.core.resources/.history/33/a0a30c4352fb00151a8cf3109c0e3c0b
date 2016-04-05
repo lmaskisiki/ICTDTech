@@ -1,0 +1,7 @@
+package birthtech.entities;
+
+public enum BooleanEnum {
+	
+	YES,NO
+
+}

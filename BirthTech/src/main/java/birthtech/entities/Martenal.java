@@ -14,6 +14,7 @@ import javax.xml.bind.annotation.XmlRootElement;
 @XmlRootElement
 public class Martenal implements Serializable {  
 	@Id
+	@GeneratedValue(strategy=GenerationType.AUTO)
 	private int pid;
 	private String names;
 	private String surname;

@@ -1,0 +1,30 @@
+package birthtech.entities;
+
+import java.io.Serializable;
+import javax.persistence.*;
+
+/**
+ * Entity implementation class for Entity: Child
+ *
+ */
+@Entity
+
+public class Child implements Serializable {
+
+	   
+	@Id
+	private int childId;
+	private static final long serialVersionUID = 1L;
+
+	public Child() {
+		super();
+	}   
+	public int getChildId() {
+		return this.childId;
+	}
+
+	public void setChildId(int childId) {
+		this.childId = childId;
+	}
+   
+}

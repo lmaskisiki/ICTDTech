@@ -1,0 +1,38 @@
+package birthtech.entities;
+
+import java.io.Serializable;
+import javax.persistence.*;
+
+/**
+ * Entity implementation class for Entity: Child
+ *
+ */
+@Entity
+public class Child implements Serializable {
+
+	@Id
+	@GeneratedValue(strategy = GenerationType.AUTO)
+	private int childId;
+	private String name;
+	private String surname;
+	@JoinColumn(name = "martenalId")
+	private Martenal martenal;
+	@JoinColumn(name = "labourId")
+	private Labour labour;
+	private String gender;
+
+	private static final long serialVersionUID = 1L;
+
+	public Child() {
+		super();
+	}
+
+	public int getChildId() {
+		return this.childId;
+	}
+
+	public void setChildId(int childId) {
+		this.childId = childId;
+	}
+
+}

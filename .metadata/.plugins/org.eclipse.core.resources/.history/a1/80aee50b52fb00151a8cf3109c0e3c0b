@@ -1,0 +1,38 @@
+package birthtech.entities;
+
+import java.io.Serializable;
+import javax.persistence.*;
+
+/**
+ * Entity implementation class for Entity: Checkup
+ *
+ */
+@Entity
+
+public class Checkup implements Serializable {
+
+	   
+	@Id
+	private int checkupId;
+	private int MartenalId;
+	private static final long serialVersionUID = 1L;
+
+	public Checkup() {
+		super();
+	}   
+	public int getCheckupId() {
+		return this.checkupId;
+	}
+
+	public void setCheckupId(int checkupId) {
+		this.checkupId = checkupId;
+	}   
+	public int getMartenalId() {
+		return this.MartenalId;
+	}
+
+	public void setMartenalId(int MartenalId) {
+		this.MartenalId = MartenalId;
+	}
+   
+}

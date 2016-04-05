@@ -1,0 +1,10 @@
+package birthtech.repositories;
+
+import org.springframework.data.jpa.repository.JpaRepository;
+
+import birthtech.entities.Child;
+import birthtech.entities.Martenal;
+
+public interface ChildRepository extends JpaRepository<Child,Integer>{
+
+}

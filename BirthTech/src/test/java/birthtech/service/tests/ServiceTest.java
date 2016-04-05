@@ -1,12 +1,15 @@
 package birthtech.service.tests;
 
 import java.io.IOException;
+import java.util.Date;
 
 import javax.naming.NamingException;
 
 import org.junit.Test;
 
-import birthtech.services.impl.ParentService;
+import birthtech.entities.Martenal;
+import birthtech.services.MartenalService;
+ 
  
 
 public class ServiceTest {
@@ -14,8 +17,8 @@ public class ServiceTest {
 	
 	@Test
 	public void test() throws NamingException, IOException {
-		ParentService ser=new ParentService();
-		ser.getParent("Fata Nobahle");
+	 MartenalService ser=new MartenalService();
+	 ser.addMartenal("Lizo Masikisiki",new Date(), "Mabhulu");
 	 
 
 	}
