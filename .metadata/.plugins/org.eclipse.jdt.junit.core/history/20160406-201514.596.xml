@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?><testrun name="ServiceTest (2)" project="BirthTech" tests="1" started="1" failures="0" errors="0" ignored="0">
+  <testsuite name="birthtech.service.tests.ServiceTest" time="2.787">
+    <testcase name="test" classname="birthtech.service.tests.ServiceTest" time="2.787"/>
+  </testsuite>
+</testrun>

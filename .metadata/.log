@@ -575,3 +575,9 @@ java.net.UnknownHostException: spring.io: Name or service not known
 
 !ENTRY org.eclipse.m2e.logback.appender 2 0 2016-04-06 20:12:10.087
 !MESSAGE Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2016-04-06 20:15:00.304
+!MESSAGE Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2016-04-06 20:15:00.306
+!MESSAGE Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!

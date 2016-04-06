@@ -25254,3 +25254,8 @@ java.io.InvalidClassException: org.eclipse.m2e.core.internal.project.registry.Ba
 2016-04-06 20:12:10,085 [Worker-104] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
 2016-04-06 20:12:10,087 [Worker-104] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
 2016-04-06 20:12:10,087 [Worker-104] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2016-04-06 20:15:00,304 [Worker-92] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-04-06 20:15:00,305 [Worker-92] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2016-04-06 20:15:00,305 [Worker-92] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2016-04-06 20:15:00,306 [Worker-92] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-04-06 20:15:00,306 [Worker-92] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
