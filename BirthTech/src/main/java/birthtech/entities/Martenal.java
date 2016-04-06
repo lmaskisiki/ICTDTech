@@ -3,16 +3,22 @@ package birthtech.entities;
 import java.io.Serializable;
 import java.lang.String;
 
-import javax.persistence.*;
+ 
+
+
+
+
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
 import javax.xml.bind.annotation.XmlRootElement;
 
-/**
- * Entity implementation class for Entity: Martenal
- *
- */
+ 
 @Entity
 @XmlRootElement
 public class Martenal implements Serializable {  
+	 
 	@Id
 	@GeneratedValue(strategy=GenerationType.AUTO)
 	private int pid;

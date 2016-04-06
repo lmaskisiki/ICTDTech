@@ -85,6 +85,12 @@
   <artifactId>spring-test</artifactId>
   <version>4.1.6.RELEASE</version>
 </dependency>
+<!-- Spring Test -->
+<dependency>
+  <groupId>org.springframework</groupId>
+  <artifactId>spring-test</artifactId>
+  <version>3.2.3.RELEASE</version>
+</dependency>
         
         <!-- Spring MVC -->
         <dependency>
