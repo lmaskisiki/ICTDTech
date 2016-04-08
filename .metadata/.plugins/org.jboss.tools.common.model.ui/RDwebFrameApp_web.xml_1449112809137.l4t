@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<Layout resource="/RDwebFrameApp/WebContent/WEB-INF/web.xml">
+<Layout resource="/BirthTech/WebContent/WEB-INF/web.xml">
  <TreeFormPage>
   <Memento type="FileWebApp31">
    <Memento type="Deployment Descriptor"/>

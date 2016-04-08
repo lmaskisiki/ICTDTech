@@ -18,7 +18,6 @@ private MartenalRepository repo;
 	@Override
 	public boolean addMartenal(String fullname, Date date, String nurse) {
 		Martenal mat= new Martenal();
-		mat.setPid(2);
 		mat.setNames(fullname);
 		mat.setIdnumber(600);
 		mat.setSurname("masiksiki");

@@ -1,2 +1,0 @@
-//com.springsource.sts.config.flow.coordinates\:http\://www.springframework.org/schema/integration\:/userGate/src/main/resources/META-INF/springIntegration.xml=<?xml version\="1.0" encoding\="UTF-8"?>\n<graph>\n<element clazz\="ImplicitChannelModelElement" type\="channel">\n<structure end\="2987" endstart\="2987" start\="2836" startend\="2987"/>\n<bounds height\="124" width\="124" x\="19" y\="17"/>\n</element>\n</graph>
-eclipse.preferences.version=1

@@ -1,0 +1,8 @@
+package birthtech.interfaces;
+
+import org.springframework.stereotype.Service;
+
+@Service
+public interface ICheckupService {
+	public boolean addCheckup(boolean delivered,int martenal,String nurse,String place,String comment);
+}

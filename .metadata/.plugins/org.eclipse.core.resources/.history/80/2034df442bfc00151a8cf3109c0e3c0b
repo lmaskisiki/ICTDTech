@@ -1,0 +1,13 @@
+package birthtech.interfaces;
+
+import org.springframework.stereotype.Service;
+
+import birthtech.entities.Child;
+import birthtech.entities.Labour;
+import birthtech.entities.Martenal;
+
+@Service
+public interface IChildService {
+
+	public Child addChild(String gender,String name,String surname,Martenal mother,Labour labour);
+}

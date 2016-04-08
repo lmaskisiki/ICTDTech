@@ -2,7 +2,7 @@
 <aop-reference-model>
 <aop-project name="RDwebFrameApp"/>
 <aop-project name="userGate"/>
-<aop-project name="IntTest"/>
+<aop-project name="BirthTech"/>
 <aop-project name="InfoSource"/>
 <aop-project name="DocMan"/>
 </aop-reference-model>
