@@ -1,0 +1,11 @@
+package birthtech.enums;
+
+public enum LabourStatusEnum {
+
+	SUCCESS (1), FAIL (2);
+	private int value;
+	private LabourStatusEnum(int value){
+		this.value=value
+	}
+
+}

@@ -1,0 +1,42 @@
+package birthtech.services.rest;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RestController;
+
+import birthtech.entities.Checkup;
+import birthtech.entities.Child;
+import birthtech.entities.Martenal;
+import birthtech.services.CheckupService;
+import birthtech.services.MartenalService;
+
+@RestController
+public class RestServices {
+	@Autowired
+	private MartenalService matSer;
+
+	@Autowired
+	private CheckupService checkupService;
+	
+	@RequestMapping(value = "/home", method = RequestMethod.GET)
+	public List<Martenal> serviceTest(@PathVariable String name) {
+		return matSer.getMartenal();
+	}
+	
+	
+	@RequestMapping(value = "checkupbyfullname/{fullname}", method = RequestMethod.GET)
+	public Checkup getCheckup(@PathVariable String fullname) {
+		return checkupService.getCheckup(fullname);
+
+	}
+	@RequestMapping(value = "checkupbyid/{checkupid}", method = RequestMethod.GET)
+	public Checkup getCheckup(@PathVariable int checkupid) {
+		return checkupService.getCheckup(checkupid);
+
+	}
+
+}

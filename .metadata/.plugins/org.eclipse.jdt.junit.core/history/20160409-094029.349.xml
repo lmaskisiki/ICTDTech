@@ -1,0 +1,3 @@
+<?xml version="1.0" encoding="UTF-8"?><testrun name="ServiceTest.should_create_martenal" project="BirthTech" tests="1" started="1" failures="0" errors="0" ignored="0">
+  <testcase name="should_create_martenal" classname="birthtech.service.tests.ServiceTest" time="2.933"/>
+</testrun>

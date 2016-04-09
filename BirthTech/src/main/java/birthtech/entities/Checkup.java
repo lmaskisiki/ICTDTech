@@ -1,13 +1,16 @@
 package birthtech.entities;
 
 import java.io.Serializable;
+
 import javax.persistence.*;
+import javax.xml.bind.annotation.XmlRootElement;
 
 /**
  * Entity implementation class for Entity: Checkup
  *
  */
 @Entity
+@XmlRootElement
 public class Checkup implements Serializable {
 
 	   

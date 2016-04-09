@@ -12,9 +12,8 @@ public interface ICheckupService {
 			String place, String comment);
 
 	public List<Checkup> getCheckups();
-	public List<Checkup> getCheckups(int key);
 	public List<Checkup> getCheckups(String fullname);
-	public Checkup getCheckup(int key);
+	public Checkup getCheckupById(int key);
 	public Checkup getCheckup(String fullname);
 	
 }

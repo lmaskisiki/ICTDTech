@@ -12,3 +12,5 @@
 1459879750780	Rename package 'birthtech.services.impl'
 1459967223878	Rename type 'ChechupRepository'
 1460134958811	Move file
+1460146165539	Rename field 'matSer'
+1460176409151	Rename field 'ser'

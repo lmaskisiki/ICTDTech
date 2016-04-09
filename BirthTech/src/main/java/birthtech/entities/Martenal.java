@@ -1,12 +1,7 @@
 package birthtech.entities;
 
 import java.io.Serializable;
-import java.lang.String;
-
- 
-
-
-
+import java.util.Date;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -21,42 +16,63 @@ public class Martenal implements Serializable {
 	 
 	@Id
 	@GeneratedValue(strategy=GenerationType.AUTO)
-	private int pid;
+	private int mid;
 	private String names;
 	private String surname;
 	private int idnumber;
+	private String nurse;
+	private Date registration;
+	 
 	private static final long serialVersionUID = 1L;
 
-	public Martenal() {
-		super();
-	}   
-	public int getPid() {
-		return this.pid;
+	public int getMid() {
+		return mid;
 	}
 
-	public void setPid(int pid) {
-		this.pid = pid;
-	}   
+	public void setMid(int mid) {
+		this.mid = mid;
+	}
+
 	public String getNames() {
-		return this.names;
+		return names;
 	}
 
 	public void setNames(String names) {
 		this.names = names;
-	}   
+	}
+
 	public String getSurname() {
-		return this.surname;
+		return surname;
 	}
 
 	public void setSurname(String surname) {
 		this.surname = surname;
-	}   
+	}
+
 	public int getIdnumber() {
-		return this.idnumber;
+		return idnumber;
 	}
 
 	public void setIdnumber(int idnumber) {
 		this.idnumber = idnumber;
 	}
+
+	public String getNurse() {
+		return nurse;
+	}
+
+	public void setNurse(String nurse) {
+		this.nurse = nurse;
+	}
+
+	public Date getRegistration() {
+		return registration;
+	}
+
+	public void setRegistration(Date registration) {
+		this.registration = registration;
+	}
+
+ 
    
 }

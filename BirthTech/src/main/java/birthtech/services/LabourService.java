@@ -1,11 +1,13 @@
 package birthtech.services;
 
+import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import birthtech.entities.Child;
 import birthtech.entities.Labour;
 import birthtech.entities.Martenal;
 import birthtech.interfaces.ILabourService;
@@ -25,32 +27,48 @@ public class LabourService implements ILabourService {
 		labour.setMartenal(parent);
 		labour.setStatus(status);
 		labour.setNurse(nurse);
-		Labour labourSaved = repo.save(labour);
-		return labourSaved == null ? false : true;
+		   repo.save(labour);
+		   
+		return false;
 	}
 
 	@Override
 	public Labour getLabour(int lid) {
-		// TODO Auto-generated method stub
-		return null;
+		List<Labour> listLabour = new ArrayList<Labour>();
+		for (Labour labour : repo.findAll()) {
+			if (labour.getLabourId() == lid) {
+				listLabour.add(labour);
+			}
+		}
+		return listLabour.get(0);
 	}
 
 	@Override
 	public List<Labour> getLabour() {
-		// TODO Auto-generated method stub
+		System.out.println("Labour service method- list invoked...");
 		return repo.findAll();
 	}
 
 	@Override
 	public List<Labour> getLabour(Martenal martenal) {
-		// TODO Auto-generated method stub
-		return null;
+		List<Labour> listLabour = new ArrayList<Labour>();
+		for (Labour labour : repo.findAll()) {
+			if (labour.getMartenal() == martenal) {
+				listLabour.add(labour);
+			}
+		}
+		return listLabour;
 	}
 
 	@Override
 	public List<Labour> getLabour(Date date) {
-		// TODO Auto-generated method stub
-		return null;
+		List<Labour> listLabour = new ArrayList<Labour>();
+		for (Labour labour : repo.findAll()) {
+			if (labour.getLabourDate() == date) {
+				listLabour.add(labour);
+			}
+		}
+		return listLabour;
 	}
 
 }

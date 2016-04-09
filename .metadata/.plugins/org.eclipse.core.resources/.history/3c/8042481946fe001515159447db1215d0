@@ -1,0 +1,7 @@
+package birthtech.enums;
+
+public enum LabourStatusEnum {
+
+	SUCCESS, FAIL;
+
+}

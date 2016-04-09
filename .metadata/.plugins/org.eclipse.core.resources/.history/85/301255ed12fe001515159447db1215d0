@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence version="2.1"
+	xmlns="http://xmlns.jcp.org/xml/ns/persistence" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/persistence http://xmlns.jcp.org/xml/ns/persistence/persistence_2_1.xsd">
+	<persistence-unit name="BirthTech" transaction-type="RESOURCE_LOCAL">
+		<provider>org.hibernate.ejb.HibernatePersistence</provider>
+		<class>birthtech.entities.Checkup</class>
+		<class>birthtech.entities.Child</class>
+		<class>birthtech.entities.Martenal</class>
+		<class>birthtech.entities.Labour</class>
+		<shared-cache-mode>NONE</shared-cache-mode>
+		<properties>
+			<property name="hibernate.dialect" value="org.hibernate.dialect.MySQL5Dialect" />
+			<property name="hibernate.hbm2ddl.auto" value="update" />
+			<property name="hibernate.show_sql" value="true" />
+			<property name="current_session_context_class" value="thread" />
+			<property
+				name="javax.persistence.schema-generation.create-database-schemas"
+				value="false" />
+			<property name="current_session_context_class" value="thread" />
+			<property name="hibernate.enable_lazy_load_no_trans" value="true" />
+		</properties>
+
+	</persistence-unit>
+</persistence>

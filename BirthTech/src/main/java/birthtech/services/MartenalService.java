@@ -16,11 +16,13 @@ public class MartenalService implements IMartenalService {
 @Autowired	
 private MartenalRepository repo;
 	@Override
-	public boolean addMartenal(String fullname, Date date, String nurse) {
+	public boolean addMartenal(String names,String surname,int idnumber, Date registration,String nurse) {
 		Martenal mat= new Martenal();
-		mat.setNames(fullname);
-		mat.setIdnumber(600);
-		mat.setSurname("masiksiki");
+		mat.setNames(names);
+		mat.setSurname(surname);
+		mat.setRegistration(new Date());
+		mat.setNurse(nurse);
+		mat.setIdnumber(idnumber);
 		repo.save(mat);
 		System.out.println("New Martenal was successfully added...");
 		return true;
@@ -28,8 +30,7 @@ private MartenalRepository repo;
 
 	@Override
 	public List<Martenal> getMartenal() {
-		// TODO Auto-generated method stub
-		return repo.findAll();
+				return repo.findAll();
 	}
 
 

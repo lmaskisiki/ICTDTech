@@ -1,5 +1,6 @@
 package birthtech.services;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -37,14 +38,22 @@ public class ChildService implements IChildService {
 
 	@Override
 	public List<Child> getChildren(Martenal mother) {
-		 
-		
-		return null;
+		List<Child> children = new ArrayList<Child>();
+		for (Child child : repo.findAll()) {
+			if (child.getMartenal() == mother) {
+				children.add(child);
+			}
+		}
+		return children;
 	}
-
 	@Override
 	public Child getChil(int id) {
-		// TODO Auto-generated method stub
-		return null;
+		List<Child> children = new ArrayList<Child>();
+		for (Child child : repo.findAll()) {
+			if (child.getChildId() == id) {
+				children.add(child);
+			}
+		}
+		return children.get(0);
 	}
 }
