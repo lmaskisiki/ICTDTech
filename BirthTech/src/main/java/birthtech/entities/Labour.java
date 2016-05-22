@@ -10,12 +10,14 @@ import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
+import javax.xml.bind.annotation.XmlRootElement;
 
 /**
  * Entity implementation class for Entity: Labour
  *
  */
 @Entity
+@XmlRootElement
 public class Labour implements Serializable {
  
 	/**
@@ -28,7 +30,7 @@ public class Labour implements Serializable {
 	
 	 
 	@ManyToOne
-	private Martenal martenal;
+	private Maternity martenal;
 	private Date labourDate;
 	private int birthNo;
 	private String nurse;
@@ -49,11 +51,11 @@ public class Labour implements Serializable {
 
 
 
-	public Martenal getMartenal() {
+	public Maternity getMartenal() {
 		return martenal;
 	}
 
-	public void setMartenal(Martenal martenal) {
+	public void setMartenal(Maternity martenal) {
 		this.martenal = martenal;
 	}
 

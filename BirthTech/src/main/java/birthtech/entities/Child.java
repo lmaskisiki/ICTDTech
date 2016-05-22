@@ -16,7 +16,7 @@ public class Child implements Serializable {
 	private String name;
 	private String surname;
 	@JoinColumn(name = "martenalId")
-	private Martenal martenal;
+	private Maternity martenal;
 	@JoinColumn(name = "labourId")
 	private Labour labour;
 	private String gender;
@@ -51,11 +51,11 @@ public class Child implements Serializable {
 		this.surname = surname;
 	}
 
-	public Martenal getMartenal() {
+	public Maternity getMartenal() {
 		return martenal;
 	}
 
-	public void setMartenal(Martenal martenal) {
+	public void setMartenal(Maternity martenal) {
 		this.martenal = martenal;
 	}
 

@@ -1,0 +1,5 @@
+package infosource.soap.client.useraccounts;
+
+public class UserAccountClient {
+
+}

@@ -7,7 +7,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import birthtech.entities.Checkup;
-import birthtech.entities.Martenal;
+import birthtech.entities.Maternity;
 import birthtech.interfaces.ICheckupService;
 import birthtech.repositories.CheckupRepository;
 
@@ -20,16 +20,10 @@ public class CheckupService implements ICheckupService {
 	private MartenalService MartenalService;
 
 	@Override
-	public boolean addCheckup(boolean delivered, int martenal, String nurse,
-			String place, String comment) {
-		Checkup checkup = new Checkup();
-		checkup.setMartenalId(martenal);
-		checkup.setDelivered(delivered);
-		checkup.setNurse(nurse);
-		checkup.setPlace(place);
-		checkup.setComments(comment);
-		repo.save(checkup);
-		return false;
+	public Checkup addCheckup(Checkup checkup) {
+		Checkup savedCheckup=repo.save(checkup);
+		
+		return savedCheckup;
 	}
 
 	@Override
@@ -48,7 +42,19 @@ public class CheckupService implements ICheckupService {
 		}
 		return checkupsFound;
 	}
-
+	@Override
+	public List<Checkup> getCheckups(int maternalId) {
+		List<Checkup> checkups = repo.findAll();
+		List<Checkup> checkupsFound = new ArrayList<Checkup>();
+		if (checkups != null) {
+			for (Checkup checkup : checkups) {
+				if(checkup.getMartenalId()==maternalId){
+				checkupsFound.add(checkup);
+				}
+			}
+		}
+		return checkupsFound;
+	}
 	@Override
 	public Checkup getCheckupById(int key) {
 		List<Checkup> checkups = repo.findAll();
@@ -68,8 +74,8 @@ public class CheckupService implements ICheckupService {
 	public Checkup getCheckup(String fullname) {
 		int martenalId = 0;
 		Checkup checkup = null;
-		List<Martenal> martenal = MartenalService.getMartenal();
-		for (Martenal mat : martenal) {
+		List<Maternity> martenal = MartenalService.getMartenal();
+		for (Maternity mat : martenal) {
 			if ((mat.getNames() + " " + mat.getSurname()).equals(fullname)
 					|| (mat.getSurname() + " " + mat.getSurname())
 							.equals(fullname)) {

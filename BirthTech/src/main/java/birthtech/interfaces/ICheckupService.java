@@ -8,13 +8,14 @@ import birthtech.entities.Checkup;
 
 @Service
 public interface ICheckupService {
-	public boolean addCheckup(boolean delivered, int martenal, String nurse,
-			String place, String comment);
+	public Checkup addCheckup(Checkup checkup);
 
 	public List<Checkup> getCheckups();
 	public List<Checkup> getCheckups(String fullname);
 	public Checkup getCheckupById(int key);
 	public Checkup getCheckup(String fullname);
+
+	public List<Checkup> getCheckups(int maternalId);
 	
 }
 

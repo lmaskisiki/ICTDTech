@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Copy element &apos;UniversalMarshaller.java&apos; to &apos;InfoSource/src/main/java/infosource.routebuilders&apos;&#x0A;- Original project: &apos;DocMan&apos;&#x0A;- Destination element: &apos;InfoSource/src/main/java/infosource.routebuilders&apos;&#x0A;- Original element: &apos;marshallers.UniversalMarshaller.java&apos;" description="Copy compilation unit" destination="=InfoSource/src\/main\/java&lt;infosource.routebuilders" element1="/src\/main\/java&lt;marshallers{UniversalMarshaller.java" files="0" flags="589830" folders="0" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyResources" stamp="1461390176705" units="1" version="1.0"/>
+</session>

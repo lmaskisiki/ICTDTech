@@ -3,10 +3,10 @@ package birthtech.repositories;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
-import birthtech.entities.Martenal;
+import birthtech.entities.Maternity;
  
 
 @Repository
-public interface MartenalRepository  extends JpaRepository<Martenal,Integer>{
+public interface MartenalRepository  extends JpaRepository<Maternity,Integer>{
 
 }

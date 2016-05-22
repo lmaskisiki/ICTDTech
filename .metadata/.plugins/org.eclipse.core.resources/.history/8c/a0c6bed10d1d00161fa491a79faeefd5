@@ -1,0 +1,5 @@
+package infosource.services.remote.resources;
+
+public interface BCServiceResource {
+
+}

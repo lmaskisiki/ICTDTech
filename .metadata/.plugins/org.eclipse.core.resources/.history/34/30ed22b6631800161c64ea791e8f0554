@@ -1,0 +1,10 @@
+package birthcertificate.ws.rest;
+
+import org.springframework.stereotype.Component;
+
+@Component
+public interface IBCRestService {
+	
+ 
+	
+}

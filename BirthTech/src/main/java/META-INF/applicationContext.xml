@@ -27,6 +27,8 @@
 	 <context:component-scan base-package="birthtech.interfaces" />
  <context:component-scan base-package="birthtech.services" />
   <context:component-scan base-package="birthtech.services.rest" />
+  
+    <context:component-scan base-package="birthtech.web.controller" />
 	<context:annotation-config />
  
 	<!-- Database -->

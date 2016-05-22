@@ -1,0 +1,17 @@
+package birthtech.interfaces;
+
+import java.util.Date;
+import java.util.List;
+
+import org.springframework.stereotype.Service;
+
+import birthtech.entities.Martenal;
+@Service
+public interface IMartenalService {
+	public boolean addMaternity(Martenal mat);
+	public Martenal getMaternityById(int registeredId);
+	public Martenal getMartenalByFullname(String fullname);
+	public List<Martenal> getMartenal();
+}
+//savedCheckup
+//maternity

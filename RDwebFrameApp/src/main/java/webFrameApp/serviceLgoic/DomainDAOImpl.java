@@ -1,6 +1,10 @@
 package webFrameApp.serviceLgoic;
 
+import java.io.File;
+import java.io.FileWriter;
+import java.io.IOException;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 
 import javax.annotation.PostConstruct;
@@ -18,7 +22,8 @@ import webFrameApp.interfaces.DomainDAO;
 import webFrameApp.jdbcTemplate.DomainJDBC;
 import webFrameApp.repositories.DomainRepo;
 
-@WebService(endpointInterface = "webFrameApp.interfaces.DomainDAO")
+@WebService(endpointInterface = "webFrameApp.interfaces.DomainDAO",name="DomainService",serviceName="DomainService", portName= "SOAPOverHTTP"
+)
 @Service
 public class DomainDAOImpl extends SpringBeanAutowiringSupport implements
 		DomainDAO {
@@ -53,6 +58,8 @@ public class DomainDAOImpl extends SpringBeanAutowiringSupport implements
 	@Override
 	public List<Domain> getAllDomains() {
 
+		System.out.println("shit happens");
+		
 		return repository.findAll();
 
 	}

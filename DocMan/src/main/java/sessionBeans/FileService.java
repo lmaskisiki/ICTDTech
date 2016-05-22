@@ -29,7 +29,7 @@ import ftp.FTPConnection;
  */
 @Stateless
 @LocalBean
-@WebService(endpointInterface = "sessionBeans.FileServiceRemote")
+@WebService(endpointInterface = "sessionBeans.FileServiceRemote",portName="SOAPFileService", serviceName="FileService")
 public class FileService implements FileServiceRemote, FileServiceLocal {
 
 	@PersistenceContext(unitName = "DocMan")

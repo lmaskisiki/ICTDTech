@@ -1,7 +1,0 @@
-package birthtech.services;
-
-import birthtech.interfaces.IChildService;
-
-public class ChildService implements IChildService {
-
-}

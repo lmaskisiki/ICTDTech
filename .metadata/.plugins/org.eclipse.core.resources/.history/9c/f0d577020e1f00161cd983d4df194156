@@ -1,0 +1,13 @@
+package infosource.homeaffairs.services;
+
+
+
+public class BCProcessor {
+
+	
+	void getCertificateResponse(String jsonString){
+		Gson jsonMapper= new Gson();
+		
+	}
+	
+}

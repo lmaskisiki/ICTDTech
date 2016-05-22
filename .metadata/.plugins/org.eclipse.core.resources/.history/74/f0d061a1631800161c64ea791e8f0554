@@ -1,0 +1,6 @@
+package birthcertificate.ws.rest;
+
+public interface IBCRestService {
+	
+	
+}

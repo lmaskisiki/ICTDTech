@@ -1,0 +1,25 @@
+package ws.rs;
+
+v
+import javax.ws.rs.GET;
+import javax.ws.rs.Path;
+import javax.ws.rs.Produces;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import birthcertificate.services.BCService;
+
+@Path("/hello")
+@Service
+public class Hello implements Ihello {
+	@Autowired
+	private BCService service;
+	@Path("/sayhello")
+	@GET
+	@Produces("application/json")
+	@Override
+	public String saySomething() {
+		return "Hello User";
+	}
+}

@@ -8,11 +8,11 @@
 		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-3.2.xsd">
 
 
-<!-- Use @Controller annotations for MVC controller definitions -->
-<mvc:annotation-driven />
-<context:component-scan base-package="birthtech.services.rest"/>
- <context:annotation-config/>
- <mvc:resources  mapping="/resources/**" location="resources/"  />
+  
+<context:component-scan base-package="birthcertificate.services"/>
+<context:component-scan base-package="birthcertificate.processors"/>
+<context:component-scan base-package="bcmanager.web.controllers"/>
+ 
  
    <bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
       <property name="prefix" value="/WEB-INF/view/" />

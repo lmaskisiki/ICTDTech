@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?><testrun name="ServiceTest (2)" project="BirthTech" tests="4" started="4" failures="0" errors="0" ignored="0">
-  <testsuite name="birthtech.service.tests.ServiceTest" time="3.565">
-    <testcase name="should_add_checkup" classname="birthtech.service.tests.ServiceTest" time="3.148"/>
-    <testcase name="should_find_chechup_by_fullname" classname="birthtech.service.tests.ServiceTest" time="0.144"/>
-    <testcase name="should_create_martenal" classname="birthtech.service.tests.ServiceTest" time="0.161"/>
-    <testcase name="shoud_add_labour" classname="birthtech.service.tests.ServiceTest" time="0.111"/>
-  </testsuite>
-</testrun>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<section name="org.eclipse.jst.ws.jaxrs.ui.jaxrsFacetInstall">
+		<item value="JAX-RS Servlet" key="servletName"/>
+		<item value="javax.ws.rs.core.Application" key="runtime-library-providerservletClassname"/>
+		<section name="urlMappings">
+			<list key="pattern">
+				<item value="/rest/*"/>
+			</list>
+		</section>
+	</section>
+</section>

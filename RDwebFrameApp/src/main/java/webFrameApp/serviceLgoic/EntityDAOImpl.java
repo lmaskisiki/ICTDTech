@@ -24,7 +24,7 @@ import webFrameApp.jdbcTemplate.DomainJDBC;
 import webFrameApp.repositories.EntityRepo;
 
 @Service
-@WebService(endpointInterface="webFrameApp.interfaces.EntityDAO")
+@WebService( serviceName="EntityService",endpointInterface="webFrameApp.interfaces.EntityDAO",portName="SOAPOverHTTP")
 public class EntityDAOImpl implements EntityDAO {
 	@Autowired
 	private EntityRepo repository;

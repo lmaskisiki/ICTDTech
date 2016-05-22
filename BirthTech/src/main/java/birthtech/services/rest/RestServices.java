@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 import birthtech.entities.Checkup;
 import birthtech.entities.Labour;
-import birthtech.entities.Martenal;
+import birthtech.entities.Maternity;
 import birthtech.services.CheckupService;
 import birthtech.services.ChildService;
 import birthtech.services.LabourService;
@@ -33,7 +33,7 @@ public class RestServices {
 
 	/* Checkup Services */
 	@RequestMapping(value = "/home", method = RequestMethod.GET)
-	public List<Martenal> serviceTest(@PathVariable String name) {
+	public List<Maternity> serviceTest(@PathVariable String name) {
 		return martenalService.getMartenal();
 	}
 
@@ -59,7 +59,7 @@ public class RestServices {
 	/* Maternal Services*/
  	
 	@RequestMapping(value="/martenal", method=RequestMethod.GET)
-	public List<Martenal> getMartenal(){
+	public List<Maternity> getMartenal(){
 		return martenalService.getMartenal();
 		
 	}

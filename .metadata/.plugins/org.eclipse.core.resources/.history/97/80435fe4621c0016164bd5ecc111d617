@@ -1,0 +1,47 @@
+package infosource.routebuilders;
+
+import infosource.aggregators.SearchAggregation;
+import infosource.processors.ProcessSOAPOUT;
+import infosource.processors.ProcessSearchResponse;
+
+import org.apache.camel.Exchange;
+import org.apache.camel.ExchangePattern;
+import org.apache.camel.Message;
+import org.apache.camel.Processor;
+import org.apache.camel.builder.RouteBuilder;
+import org.apache.camel.component.cxf.common.message.CxfConstants;
+import org.apache.camel.model.dataformat.SoapJaxbDataFormat;
+import org.apache.camel.processor.aggregate.AggregationStrategy;
+import org.springframework.stereotype.Component;
+
+import webframeapp.interfaces.FindByCreator;
+
+@Component
+public class SearchRouteBuilder extends RouteBuilder {
+/*KEEP THIS
+        from("direct:go") 
+        .beanRef("domainServiceClient", "createDomain") 
+        .setHeader("operationName", constant("createDomainsss")) 
+        .setHeader("operationNamespace",constant("http://interfaces.webFrameApp/")).process(new ProcessSOAPOUT())
+        .to("cxf:bean:ws");*/
+	@Override
+	public void configure() throws Exception {
+		 String CXF_RS_ENDPOINT_URI ="cxfrs://http://localhost:8080/BCManager/certificates/all?birthcertificate.ws.rest.BCRestService";
+
+			from("direct:go").from(CXF_RS_ENDPOINT_URI).process(new Processor() {
+				
+				@Override
+				public void process(Exchange exchange) throws Exception {
+					Message inMessage = exchange.getIn();
+				System.out.println("this shit is not going to work    .......\n");
+				
+				Thread.sleep(6000);
+					// set the operation name
+					inMessage.setHeader(CxfConstants.OPERATION_NAME, "getCustomer");
+
+				}
+			}).to("stream:out");
+			
+	}
+
+}

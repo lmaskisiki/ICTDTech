@@ -12,7 +12,7 @@
 
 		<class>birthtech.entities.Checkup</class>
 		<class>birthtech.entities.Child</class>
-		<class>birthtech.entities.Martenal</class>
+		<class>birthtech.entities.Maternity</class>
 		<class>birthtech.entities.Labour</class>
          <shared-cache-mode>NONE</shared-cache-mode>
         <properties>

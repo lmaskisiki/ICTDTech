@@ -12,7 +12,7 @@ import javax.xml.bind.annotation.XmlRootElement;
  
 @Entity
 @XmlRootElement
-public class Martenal implements Serializable {  
+public class Maternity implements Serializable {  
 	 
 	@Id
 	@GeneratedValue(strategy=GenerationType.AUTO)

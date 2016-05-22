@@ -1,0 +1,14 @@
+package infosource.homeaffairs.services;
+
+import com.google.gson.Gson;
+
+public class BCProcessor {
+
+	BCertificate getCertificateResponse(String jsonString) {
+		Gson jsonMapper = new Gson();
+		BCertificate certificate = jsonMapper.fromJson(jsonString,
+				BCertificate.class);
+		return certificate;
+	}
+
+}

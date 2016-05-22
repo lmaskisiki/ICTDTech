@@ -1,7 +1,0 @@
-package birthtech.services;
-
-import birthtech.interfaces.ICheckupService;
-
-public class CheckupService implements ICheckupService {
-
-}

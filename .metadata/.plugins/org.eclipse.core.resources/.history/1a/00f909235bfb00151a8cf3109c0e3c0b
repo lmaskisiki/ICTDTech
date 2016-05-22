@@ -1,7 +1,0 @@
-package birthtech.interfaces;
-
-import java.util.Date;
-
-public interface IMartenalService {
-	public boolean addMartenal(String fullname, Date date,String nurse);
-}

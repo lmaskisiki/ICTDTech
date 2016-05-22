@@ -13,8 +13,8 @@ import org.springframework.beans.factory.BeanFactory;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
-import userGate.classes.person;
-import userGate.classes.personInterface;
+import useraccount.soap.services.person;
+import useraccount.soap.services.personInterface;
 
 @MessageDriven(name = "Messeger", activationConfig = {
 		@ActivationConfigProperty(propertyName = "destinationType", propertyValue = "javax.jms.Queue"),

@@ -21,7 +21,7 @@
 		<constructor-arg ref="contextSource" />
 	</bean>
 
-	<bean id="ldapUser" class="userGate.classes.personImpl">
+	<bean id="ldapUser" class="useraccount.soap.services.personImpl">
 		<property name="ldapTemp" ref="ldapTemplate" />
 	</bean>
 	

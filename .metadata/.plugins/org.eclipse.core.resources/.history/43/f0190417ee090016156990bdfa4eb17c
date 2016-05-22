@@ -1,0 +1,5 @@
+package infosource.customapp.services;
+
+public class DomainService {
+
+}

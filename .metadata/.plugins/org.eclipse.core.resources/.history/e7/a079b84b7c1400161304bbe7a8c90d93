@@ -1,0 +1,137 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+	pageEncoding="UTF-8"%>
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta charset="utf-8">
+<title>Basic Bootstrap Template</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" type="text/css"
+	href="/BirthTech/resources/bootstrap/css/bootstrap.min.css">
+<!-- Optional Bootstrap theme -->
+<link rel="stylesheet"
+	href="/BirthTech/resources/bootstrap/css/bootstrap-theme.min.css">
+
+<script type="text/javascript">
+	function showCheckupform() {
+		var el = document.getElementById("addCheckup");
+		var elhide = document.getElementById("addLabour");
+		if (el != null) {
+			elhide.style.display = "none";
+			el.style.display = "block";
+
+		}
+	}
+
+	function showLabourform() {
+		var el = document.getElementById("addLabour");
+		var elhide = document.getElementById("addCheckup");
+		if (el != null) {
+			elhide.style.display = "none";
+			el.style.display = "block";
+
+		}
+	}
+</script>
+</head>
+<body>
+	<div id="container">
+	 
+				<form  class="form-group" action="">
+					<input type="hidden" name="martenalId" value="${maternal.mid}"
+						readonly="readonly" />
+					<table>
+						<tr>
+							<td>Names</td>
+							<td><input type="text" value="${maternal.names}"
+								readonly="readonly" /></td>
+						</tr>
+						<tr>
+							<td>Surname</td>
+							<td><input type="text" value="${maternal.surname}"
+								readonly="readonly" /></td>
+						</tr>
+						<tr>
+							<td>Id Number</td>
+							<td><input type="text" value="${maternal.idnumber}"
+								readonly="readonly" /></td>
+						</tr>
+						<tr>
+							<td>Nurse</td>
+							<td><input type="text" value="${maternalt.nurse}"
+								readonly="readonly" /></td>
+						</tr>
+						<tr>
+							<td>Registration Date</td>
+							<td><input type="text" value="${maternal.registration}"
+								readonly="readonly" /></td>
+						</tr>
+
+					</table>
+
+				</form>
+
+			 
+				 
+					<input class="btn btn-primary" type="button" value="Show" onclick="showCheckupform()" /> 
+					<input class="btn btn-primary"
+						type="button" value="Hide" onclick="showLabourform()" />
+			 
+ 
+			<div id="formcheck">
+
+				<form action="/BirthTech/checkup/add" method="get" id="addCheckup"
+					style="display: none;">
+					<input type="hidden" name="martenalId" value="${maternal.mid}"
+						readonly="readonly" />
+					<table>
+
+						<tr>
+							<td>Nurse</td>
+							<td><input type="text" name="nurse" /></td>
+						</tr>
+
+						<tr>
+							<td>Place</td>
+							<td><input type="text" name="place" /></td>
+						</tr>
+						<tr>
+							<td>Comments</td>
+							<td><textarea rows="5" cols="20" name="comments">  </textarea>
+							</td>
+						</tr>
+						<tr>
+                            <td><input type="submit" /></td>
+						</tr>
+					</table>
+				</form>
+            	<form action="blaa" id="addLabour" style="display: none">
+					<table>
+						<tr>
+							<td>Names</td>
+							<td><input type="text" name="names" /></td>
+						</tr>
+						<tr>
+							<td>Surname</td>
+							<td><input type="text" name="surname" /></td>
+						</tr>
+						<tr>
+							<td>Gender</td>
+							<td><input type="text" name="gender" /></td>
+						</tr>
+						<tr>
+                            <td><input type="hidden" name="martenalId"
+								value="${maternal.mid}" /></td>
+						</tr>
+						<tr>
+                            <td><input type="submit" /></td>
+						</tr>
+					</table>
+				</form>
+ 
+			</div>
+	</div>
+		<script src="/BirthTech/resources/bootstrap/js/jquery-2.1.1.min.js"></script>
+		<script src="/BirthTech/resources/bootstrap/js/bootstrap.min.js"></script>
+</body>
+</html>

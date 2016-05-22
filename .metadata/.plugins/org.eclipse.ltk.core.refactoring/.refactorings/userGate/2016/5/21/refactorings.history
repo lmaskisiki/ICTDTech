@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename package &apos;userGate.classes&apos; to &apos;useraccount.soap.services&apos;&#x0A;- Original project: &apos;userGate&apos;&#x0A;- Original element: &apos;userGate/src/main/java/userGate.classes&apos;&#x0A;- Renamed element: &apos;userGate/src/main/java/useraccount.soap.services&apos;&#x0A;- Update references to refactored element&#x0A;- Update fully qualified names in &apos;*&apos; files&#x0A;- Update textual occurrences in comments and strings" description="Rename package &apos;userGate.classes&apos;" flags="589830" hierarchical="false" id="org.eclipse.jdt.ui.rename.package" input="/src\/main\/java&lt;userGate.classes" name="useraccount.soap.services" patterns="*" qualified="true" references="true" stamp="1463714124589" textual="true" version="1.0"/>
+</session>

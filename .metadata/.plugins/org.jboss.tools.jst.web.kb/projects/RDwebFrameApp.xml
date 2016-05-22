@@ -261,7 +261,6 @@
   <path value="/home/lizo/.m2/repository/org/springframework/spring-orm/3.1.2.RELEASE/spring-orm-3.1.2.RELEASE.jar"/>
  </paths>
  <validation>
-  <core validator-id="jsf-verification"/>
   <el>
    <linked-el length="11" name="%0" offset="6117" path="%1"/>
    <linked-el length="21" name="%2" offset="969" path="%3"/>

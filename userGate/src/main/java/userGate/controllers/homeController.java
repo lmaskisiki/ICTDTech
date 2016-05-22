@@ -8,6 +8,7 @@ import javax.servlet.http.HttpServletRequest;
 
 
 
+
 import org.springframework.beans.factory.BeanFactory;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
@@ -21,10 +22,10 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.servlet.ModelAndView;
 
-import userGate.classes.groups;
-import userGate.classes.person;
-import userGate.classes.personInterface;
-import userGate.classes.userRoles;
+import useraccount.soap.services.groups;
+import useraccount.soap.services.person;
+import useraccount.soap.services.personInterface;
+import useraccount.soap.services.userRoles;
 
 @Controller
 public class homeController {

@@ -1,0 +1,53 @@
+package birthtech.services;
+
+import java.util.Date;
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import birthtech.entities.Martenal;
+import birthtech.interfaces.IMartenalService;
+import birthtech.repositories.MartenalRepository;
+
+@Service
+public class MartenalService implements IMartenalService {
+
+	@Autowired
+	private MartenalRepository repo;
+
+	@Override
+	public boolean addMaternity(Martenal mat) {
+		repo.save(mat);
+		System.out.println("New Martenal was successfully added...");
+		return true;
+	}
+
+	@Override
+	public List<Martenal> getMartenal() {
+		return repo.findAll();
+	}
+
+	@Override
+	public Martenal getMaternityById(int id) {
+		Martenal found = null;
+		for (Martenal mat : repo.findAll()) {
+			if (mat.getIdnumber() == id) {
+				found = mat;
+				break;
+			}
+		}
+		return found;
+	}
+	@Override
+	public Martenal getMartenalByFullname(String fullname) {
+		Martenal found = null;
+		for (Martenal mat : repo.findAll()) {
+			if (mat.getSurname()+" "+mat.getNames() == fullname) {
+				found = mat;
+				break;
+			}
+		}
+		return found;
+	}
+}

@@ -8,7 +8,7 @@ import javax.xml.bind.JAXBContext;
 import javax.xml.bind.JAXBException;
 import javax.xml.bind.Marshaller;
 
-import userGate.classes.person;
+import useraccount.soap.services.person;
 
 public class UniversalMarshaller {
 

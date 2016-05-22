@@ -1,0 +1,8 @@
+package birthcertificate.ws.rest;
+
+import javax.ws.rs.core.Application;
+
+
+public class BCServiceActivator extends Application {
+
+}

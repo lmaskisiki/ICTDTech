@@ -1,5 +1,0 @@
-package birthtech.repositories;
-
-public interface MartenalRepository {
-
-}

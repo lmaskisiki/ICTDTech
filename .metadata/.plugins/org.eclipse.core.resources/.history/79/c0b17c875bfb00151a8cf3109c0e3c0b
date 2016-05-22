@@ -1,7 +1,0 @@
-package birthtech.services;
-
-import birthtech.interfaces.IMartenalService;
-
-public class MartenalService implements IMartenalService {
-
-}

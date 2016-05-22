@@ -9,7 +9,7 @@ import webFrameApp.entites.Domain;
 import webFrameApp.entites.OrgEntity;
 import webFrameApp.entites.SqldataTypes;
 
-@WebService
+@WebService(name="IEntityService")
 public interface EntityDAO {
 	
 

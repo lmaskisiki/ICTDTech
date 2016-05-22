@@ -1,3 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?><testrun name="ServiceTest.shoud_add_labour" project="BirthTech" tests="1" started="1" failures="0" errors="0" ignored="0">
-  <testcase name="shoud_add_labour" classname="birthtech.service.tests.ServiceTest" time="3.642"/>
-</testrun>
