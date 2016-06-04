@@ -81,6 +81,7 @@ public class homeController {
 		model.addAttribute("email", person.getEmail());
 		model.addAttribute("username", person.getUsername());
 		model.addAttribute("password", person.getPassword());
+		model.addAttribute("idNumber", person.getIdNumber());
 
 		ApplicationContext context = new ClassPathXmlApplicationContext(
 				"classpath:META-INF/applicationContext.xml");
@@ -101,6 +102,8 @@ public class homeController {
 		model.addAttribute("email", person.getEmail());
 		model.addAttribute("username", person.getUsername());
 		model.addAttribute("dn", person.getDn());
+		model.addAttribute("idNumber", person.getIdNumber());
+		
 
 		ApplicationContext context = new ClassPathXmlApplicationContext(
 				"classpath:META-INF/applicationContext.xml");

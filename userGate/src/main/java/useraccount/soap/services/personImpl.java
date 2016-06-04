@@ -69,7 +69,7 @@ public class personImpl extends SpringBeanAutowiringSupport implements
 		userAttributes.put("objectClass", "inetOrgPerson");
 		userAttributes.put("givenName", newPerson.getFirst_name());
 		userAttributes.put("sn", newPerson.getLast_name());
-		userAttributes.put("uid", newPerson.getUsername());
+	//	userAttributes.put("uidNumber", newPerson.getIdNumber());
 		userAttributes.put("mobile", newPerson.getCell());
 		userAttributes.put("mail", newPerson.getEmail());
 		userAttributes.put("userPassword", newPerson.getPassword());
@@ -306,7 +306,7 @@ public class personImpl extends SpringBeanAutowiringSupport implements
 	}
 
 	@Override
-	@Produces("application/xml")
+	@Produces("application/json")
 	public person findByUsername(String User) {
 
 		SearchControls controls = new SearchControls();

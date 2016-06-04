@@ -21,6 +21,7 @@ import javax.xml.bind.annotation.XmlType;
  *         &lt;element name="dn" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
  *         &lt;element name="email" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
  *         &lt;element name="first_name" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+ *         &lt;element name="idNumber" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
  *         &lt;element name="last_name" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
  *         &lt;element name="member" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
  *         &lt;element name="orgUnit" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
@@ -40,6 +41,7 @@ import javax.xml.bind.annotation.XmlType;
     "dn",
     "email",
     "firstName",
+    "idNumber",
     "lastName",
     "member",
     "orgUnit",
@@ -53,6 +55,7 @@ public class Person {
     protected String email;
     @XmlElement(name = "first_name")
     protected String firstName;
+    protected String idNumber;
     @XmlElement(name = "last_name")
     protected String lastName;
     protected String member;
@@ -154,6 +157,30 @@ public class Person {
      */
     public void setFirstName(String value) {
         this.firstName = value;
+    }
+
+    /**
+     * Gets the value of the idNumber property.
+     * 
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
+     */
+    public String getIdNumber() {
+        return idNumber;
+    }
+
+    /**
+     * Sets the value of the idNumber property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
+     */
+    public void setIdNumber(String value) {
+        this.idNumber = value;
     }
 
     /**

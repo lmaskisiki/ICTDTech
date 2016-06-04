@@ -15,6 +15,7 @@
 	<context:component-scan base-package="infosource.routebuilders" />
 
 	<bean id="birthbuilder" class="birthcertificate.routebuilders.RouteBuilder" />
+ 
 
 	<camelContext id="camelContext2" xmlns="http://camel.apache.org/schema/spring">
 		<camel:routeBuilder ref="birthbuilder" />

@@ -1,0 +1,94 @@
+package infosource.open.services.routing;
+
+import org.apache.camel.Exchange;
+import org.apache.camel.Processor;
+import org.apache.camel.builder.RouteBuilder;
+import org.apache.camel.processor.aggregate.AggregationStrategy;
+import org.springframework.stereotype.Component;
+
+@Component
+public class RouteManager extends RouteBuilder {
+	@Override
+	public void configure() throws Exception {
+		// News Feeds
+		from("direct:NewsFeeds").process(new Processor() {
+			@Override
+			public void process(Exchange exchange) throws Exception {
+				exchange.getOut().setHeader("OperationName",
+						exchange.getIn().getHeader("methodName"));
+				exchange.getOut().setBody(exchange.getIn().getBody());
+				exchange.getOut().setHeader("OperationNamespace",
+						"http://interfaces.webFrameApp/");
+			}
+		}).to("cxf:bean:NewsFeeds").marshal().json().to("stream:out");
+
+		// get file info
+		from("direct:DocManEndpoint").process(new Processor() {
+			@Override
+			public void process(Exchange exchange) throws Exception {
+				exchange.getOut().setHeader("OperationName",
+						exchange.getIn().getHeader("methodName"));
+				exchange.getOut().setBody(exchange.getIn().getBody());
+				exchange.getOut().setHeader("OperationNamespace",
+						"http://services.docman/");
+			}
+		}).to("cxf:bean:DocManEndpoint").marshal().json().to("stream:out");
+
+		// user account management
+		from("direct:UAService").process(new Processor() {
+			@Override
+			public void process(Exchange exchange) throws Exception {
+				exchange.getOut().setHeader("OperationName",
+						exchange.getIn().getHeader("methodName"));
+				exchange.getOut().setBody(exchange.getIn().getBody());
+				exchange.getOut().setHeader("OperationNamespace",
+						"http://services.soap.useraccount/");
+			}
+		}).to("cxf:bean:UAService").marshal().json().to("stream:out");
+		// user profile
+		from("direct:getProfile")
+				.multicast(new AggregationStrategy() {
+					@Override
+					public Exchange aggregate(Exchange Exchange1,
+							Exchange Exchange2) {
+						if (Exchange1 == null) {
+							return Exchange2;
+						} else {
+							String body1 = Exchange1.getIn().getBody(
+									String.class);
+							String body2 = Exchange2.getIn().getBody(
+									String.class);
+							String merged = (body1 == null) ? body2 : body1
+									+ " , " + body2;
+							Exchange2.getIn().setBody(merged);
+							return Exchange2;
+						}
+					}
+				}).parallelProcessing().timeout(200)
+				.to("direct:A", "direct:B").end().marshal().json()
+				.to("stream:out");
+		
+
+		from("direct:A").process(new Processor() {
+			@Override
+			public void process(Exchange arg0) throws Exception {
+				arg0.getOut().setHeader("operationName", "findByUsername");
+				arg0.getOut().setBody(arg0.getIn().getBody());
+				System.out.println("Message going outt "
+						+ arg0.getOut().getBody());
+			}
+		}).to("cxf:bean:UAService");
+
+		from("direct:B").process(new Processor() {
+			@Override
+			public void process(Exchange arg0) throws Exception {
+				arg0.getOut().setHeader("operationName", "getFilesByOwner");
+				arg0.getOut().setBody(arg0.getIn().getBody());
+				System.out.println("Message going outt "
+						+ arg0.getOut().getBody());
+			}
+		}).to("cxf:beanDocManEndpoint");
+
+	}
+
+}

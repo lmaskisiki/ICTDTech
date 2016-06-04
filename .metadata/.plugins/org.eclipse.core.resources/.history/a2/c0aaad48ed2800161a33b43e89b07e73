@@ -1,0 +1,25 @@
+package infosource.open.services.testing;
+
+import infosource.open.services.access.TransactionManager;
+
+import org.junit.Test;
+
+import com.google.gson.Gson;
+
+import useraccount.soap.services.Person;
+
+public class TransactionManagerTests {
+
+	
+	@Test
+	public void should_call_transaction_manager_invoker_service(){
+		TransactionManager ser=new TransactionManager();
+		System.out.println("Test running");
+		String resp=ser.getMyProfile();
+		Person psn;
+		Gson j=new Gson();
+		psn=j.fromJson(resp, Person.class);
+		System.out.println("test if values assigned");
+		
+	}
+}

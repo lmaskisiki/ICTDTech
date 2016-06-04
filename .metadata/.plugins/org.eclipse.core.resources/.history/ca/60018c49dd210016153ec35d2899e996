@@ -1,0 +1,31 @@
+package birthtech.services.soap.client;
+
+import javax.annotation.PostConstruct;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+import org.springframework.web.context.support.SpringBeanAutowiringSupport;
+
+import useraccount.soap.services.AccountService;
+import useraccount.soap.services.PersonInterface;
+@Service
+public class UAServiceInvoker extends SpringBeanAutowiringSupport{
+
+@Autowired
+public PersonInterface accountService;
+ 
+	 
+	public PersonInterface getAccountService() {
+		return accountService;
+	}
+
+	public void setAccountService(PersonInterface accountService) {
+		this.accountService = accountService;
+	}
+ 
+	 public void bonke(){
+		 
+		 accountService.getPersons();
+	 }
+
+ }

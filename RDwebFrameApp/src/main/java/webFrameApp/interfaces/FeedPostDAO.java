@@ -2,17 +2,20 @@ package webFrameApp.interfaces;
 
 import java.util.List;
 
-import javax.transaction.Transactional;
+ 
+  
 
-import webFrameApp.entites.FeedComment;
+import javax.jws.WebService;
+
 import webFrameApp.entites.FeedPost;
 
+@WebService
 public interface FeedPostDAO {
 	public void createPost(FeedPost post);
 	public List<FeedPost> listPosts();
-	@Transactional
+	 
 	public FeedPost findById(int id);
-	@Transactional
-	public List<FeedComment> getComments(FeedPost post);
+ 
+	public String sayHi(String name);
 
 }

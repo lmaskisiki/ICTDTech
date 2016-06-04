@@ -1,0 +1,16 @@
+package infosource.open.services.processors;
+
+import org.apache.camel.Exchange;
+import org.apache.camel.Processor;
+
+public class RemoteMethodHandler implements Processor{
+
+	@Override
+	public void process(Exchange exc) throws Exception {
+	 	exc.getOut().setHeader("OperationName", exc.getOut().getHeader("methodName"));
+System.out.println("check this out :"+exc.getIn().getHeader("methodName"));
+		exc.getOut().setHeader("OperationNamespace", "http://interfaces.webFrameApp/");
+		Thread.sleep(7000);
+	}
+
+}

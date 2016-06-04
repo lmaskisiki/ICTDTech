@@ -1,6 +1,7 @@
 //com.springsource.config.ui.prefs.activePageIndex\:/BCManager/src/main/java/META-INF/applicationContext.xml=<?xml version\="1.0" encoding\="UTF-8"?>\n<activePage index\="0"/>
 //com.springsource.config.ui.prefs.activePageIndex\:/BirthTech/src/main/java/META-INF/applicationContext.xml=<?xml version\="1.0" encoding\="UTF-8"?>\n<activePage index\="0"/>
 //com.springsource.config.ui.prefs.activePageIndex\:/BirthTech/src/main/java/META-INF/camel-context.xml=<?xml version\="1.0" encoding\="UTF-8"?>\n<activePage index\="0"/>
+//com.springsource.config.ui.prefs.activePageIndex\:/BirthTech/src/main/java/META-INF/cxf-context.xml=<?xml version\="1.0" encoding\="UTF-8"?>\n<activePage index\="0"/>
 //com.springsource.config.ui.prefs.activePageIndex\:/BirthTechHA/src/main/java/META-INF/camel-context.xml=<?xml version\="1.0" encoding\="UTF-8"?>\n<activePage index\="0"/>
 //com.springsource.config.ui.prefs.activePageIndex\:/InfoSource/WebContent/WEB-INF/dispatcher-servlet.xml=<?xml version\="1.0" encoding\="UTF-8"?>\n<activePage index\="0"/>
 //com.springsource.config.ui.prefs.activePageIndex\:/InfoSource/src/main/resources/META-INF/camel-cfx.xml=<?xml version\="1.0" encoding\="UTF-8"?>\n<activePage index\="0"/>

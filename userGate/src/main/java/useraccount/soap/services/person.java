@@ -12,7 +12,17 @@ public class person implements Serializable {
 	 * 
 	 */
 	private static final long serialVersionUID = 1L;
-	private String first_name, last_name, cell, email, username, password,orgUnit, dn,member;
+	private String first_name, last_name, cell, email, username, password,
+			orgUnit, dn, member, idNumber;
+
+	public String getIdNumber() {
+		return idNumber;
+	}
+
+	@XmlElement
+	public void setIdNumber(String idNumber) {
+		this.idNumber = idNumber;
+	}
 
 	public String getFirst_name() {
 		return first_name;

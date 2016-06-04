@@ -18,7 +18,7 @@ import org.junit.Before;
 import org.junit.BeforeClass;
 import org.junit.Test;
 
-import sessionBeans.FileService;
+import docman.services.FileService;
 import entities.FileInfo;
 
 public class ServiceTest {

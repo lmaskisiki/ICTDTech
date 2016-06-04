@@ -3,8 +3,7 @@ package webFrameApp.interfaces;
 import java.util.List;
 
 import javax.jws.WebService;
-
-import org.jboss.ws.api.annotation.WebContext;
+  
 
 import webFrameApp.entites.Domain;
 

@@ -23,8 +23,8 @@ import javax.jms.Queue;
 
 import javax.jms.TextMessage;
 
+import docman.services.FileService;
 import messaging.UFinder;
-import sessionBeans.FileService;
 import entities.FileInfo;
 import entities.FileRequest;
 import entities.FileShare;

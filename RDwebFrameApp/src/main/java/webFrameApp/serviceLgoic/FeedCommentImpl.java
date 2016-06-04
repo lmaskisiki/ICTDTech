@@ -7,14 +7,14 @@ import javax.transaction.Transactional;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.web.context.support.SpringBeanAutowiringSupport;
 
 import webFrameApp.entites.FeedComment;
 import webFrameApp.entites.FeedPost;
 import webFrameApp.interfaces.FeedCommentDAO;
 import webFrameApp.repositories.FeedCommentRepo;
-@Transactional
-@Service
-public class FeedCommentImpl implements FeedCommentDAO {
+ @Service
+public class FeedCommentImpl extends SpringBeanAutowiringSupport implements FeedCommentDAO {
 	@Autowired
 	private FeedCommentRepo repo;
 

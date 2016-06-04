@@ -5,80 +5,80 @@
  <paths>
   <path value="/home/lizo/.m2/repository/org/springframework/spring-aop/4.1.5.RELEASE/spring-aop-4.1.5.RELEASE.jar"/>
   <path value="/home/lizo/.m2/repository/commons-pool/commons-pool/1.6/commons-pool-1.6.jar"/>
-  <path value="/home/lizo/.m2/repository/org/apache/activemq/activemq-broker/5.11.1/activemq-broker-5.11.1.jar"/>
   <path value="/home/lizo/.m2/repository/org/apache/camel/camel-cxf/2.15.1/camel-cxf-2.15.1.jar"/>
+  <path value="/home/lizo/.m2/repository/org/apache/activemq/activemq-broker/5.11.1/activemq-broker-5.11.1.jar"/>
   <path value="/home/lizo/dev-tools/Servers/wildfly-8.2.1.final/modules/system/layers/base/javax/enterprise/api/main/cdi-api-1.1.jar"/>
   <path value="/home/lizo/dev-tools/Servers/wildfly-8.2.1.final/modules/system/layers/base/org/jboss/resteasy/resteasy-jaxrs/main/async-http-servlet-3.0-3.0.10.Final.jar"/>
   <path value="/home/lizo/dev-tools/Servers/wildfly-8.2.1.final/modules/system/layers/base/javax/security/jacc/api/main/jboss-jacc-api_1.5_spec-1.0.0.Final.jar"/>
-  <path value="/home/lizo/.m2/repository/org/eclipse/jetty/jetty-util/9.2.9.v20150224/jetty-util-9.2.9.v20150224.jar"/>
   <path value="/home/lizo/dev-tools/Servers/wildfly-8.2.1.final/modules/system/layers/base/javax/servlet/jstl/api/main/jboss-jstl-api_1.2_spec-1.1.2.Final.jar">
    <libraries>
     <library class="tld">
      <id class="model-object"
-      path="FileSystems/lib-jboss-jstl-api_1.2_spec-1.1.2.Final.jar/META-INF/c-1_0-rt.tld" project="InfoSource"/>
+      path="FileSystems/lib-jboss-jstl-api_1.2_spec-1.1.2.Final.jar/META-INF/c-1_0-rt.tld" project="BCManager"/>
     </library>
     <library class="tld">
      <id class="model-object"
-      path="FileSystems/lib-jboss-jstl-api_1.2_spec-1.1.2.Final.jar/META-INF/c-1_0.tld" project="InfoSource"/>
+      path="FileSystems/lib-jboss-jstl-api_1.2_spec-1.1.2.Final.jar/META-INF/c-1_0.tld" project="BCManager"/>
     </library>
     <library class="tld">
      <id class="model-object"
-      path="FileSystems/lib-jboss-jstl-api_1.2_spec-1.1.2.Final.jar/META-INF/c-1_1.tld" project="InfoSource"/>
+      path="FileSystems/lib-jboss-jstl-api_1.2_spec-1.1.2.Final.jar/META-INF/c-1_1.tld" project="BCManager"/>
     </library>
     <library class="tld">
      <id class="model-object"
-      path="FileSystems/lib-jboss-jstl-api_1.2_spec-1.1.2.Final.jar/META-INF/c.tld" project="InfoSource"/>
+      path="FileSystems/lib-jboss-jstl-api_1.2_spec-1.1.2.Final.jar/META-INF/c.tld" project="BCManager"/>
     </library>
     <library class="tld">
      <id class="model-object"
-      path="FileSystems/lib-jboss-jstl-api_1.2_spec-1.1.2.Final.jar/META-INF/fmt-1_0-rt.tld" project="InfoSource"/>
+      path="FileSystems/lib-jboss-jstl-api_1.2_spec-1.1.2.Final.jar/META-INF/fmt-1_0-rt.tld" project="BCManager"/>
     </library>
     <library class="tld">
      <id class="model-object"
-      path="FileSystems/lib-jboss-jstl-api_1.2_spec-1.1.2.Final.jar/META-INF/fmt-1_0.tld" project="InfoSource"/>
+      path="FileSystems/lib-jboss-jstl-api_1.2_spec-1.1.2.Final.jar/META-INF/fmt-1_0.tld" project="BCManager"/>
     </library>
     <library class="tld">
      <id class="model-object"
-      path="FileSystems/lib-jboss-jstl-api_1.2_spec-1.1.2.Final.jar/META-INF/fmt.tld" project="InfoSource"/>
+      path="FileSystems/lib-jboss-jstl-api_1.2_spec-1.1.2.Final.jar/META-INF/fmt.tld" project="BCManager"/>
     </library>
     <library class="tld">
      <id class="model-object"
-      path="FileSystems/lib-jboss-jstl-api_1.2_spec-1.1.2.Final.jar/META-INF/fn.tld" project="InfoSource"/>
+      path="FileSystems/lib-jboss-jstl-api_1.2_spec-1.1.2.Final.jar/META-INF/fn.tld" project="BCManager"/>
     </library>
     <library class="tld">
      <id class="model-object"
-      path="FileSystems/lib-jboss-jstl-api_1.2_spec-1.1.2.Final.jar/META-INF/permittedTaglibs.tld" project="InfoSource"/>
+      path="FileSystems/lib-jboss-jstl-api_1.2_spec-1.1.2.Final.jar/META-INF/permittedTaglibs.tld" project="BCManager"/>
     </library>
     <library class="tld">
      <id class="model-object"
-      path="FileSystems/lib-jboss-jstl-api_1.2_spec-1.1.2.Final.jar/META-INF/scriptfree.tld" project="InfoSource"/>
+      path="FileSystems/lib-jboss-jstl-api_1.2_spec-1.1.2.Final.jar/META-INF/scriptfree.tld" project="BCManager"/>
     </library>
     <library class="tld">
      <id class="model-object"
-      path="FileSystems/lib-jboss-jstl-api_1.2_spec-1.1.2.Final.jar/META-INF/sql-1_0-rt.tld" project="InfoSource"/>
+      path="FileSystems/lib-jboss-jstl-api_1.2_spec-1.1.2.Final.jar/META-INF/sql-1_0-rt.tld" project="BCManager"/>
     </library>
     <library class="tld">
      <id class="model-object"
-      path="FileSystems/lib-jboss-jstl-api_1.2_spec-1.1.2.Final.jar/META-INF/sql-1_0.tld" project="InfoSource"/>
+      path="FileSystems/lib-jboss-jstl-api_1.2_spec-1.1.2.Final.jar/META-INF/sql-1_0.tld" project="BCManager"/>
     </library>
     <library class="tld">
      <id class="model-object"
-      path="FileSystems/lib-jboss-jstl-api_1.2_spec-1.1.2.Final.jar/META-INF/sql.tld" project="InfoSource"/>
+      path="FileSystems/lib-jboss-jstl-api_1.2_spec-1.1.2.Final.jar/META-INF/sql.tld" project="BCManager"/>
     </library>
     <library class="tld">
      <id class="model-object"
-      path="FileSystems/lib-jboss-jstl-api_1.2_spec-1.1.2.Final.jar/META-INF/x-1_0-rt.tld" project="InfoSource"/>
+      path="FileSystems/lib-jboss-jstl-api_1.2_spec-1.1.2.Final.jar/META-INF/x-1_0-rt.tld" project="BCManager"/>
     </library>
     <library class="tld">
      <id class="model-object"
-      path="FileSystems/lib-jboss-jstl-api_1.2_spec-1.1.2.Final.jar/META-INF/x-1_0.tld" project="InfoSource"/>
+      path="FileSystems/lib-jboss-jstl-api_1.2_spec-1.1.2.Final.jar/META-INF/x-1_0.tld" project="BCManager"/>
     </library>
     <library class="tld">
      <id class="model-object"
-      path="FileSystems/lib-jboss-jstl-api_1.2_spec-1.1.2.Final.jar/META-INF/x.tld" project="InfoSource"/>
+      path="FileSystems/lib-jboss-jstl-api_1.2_spec-1.1.2.Final.jar/META-INF/x.tld" project="BCManager"/>
     </library>
    </libraries>
   </path>
+  <path value="/home/lizo/.m2/repository/org/eclipse/jetty/jetty-util/9.2.9.v20150224/jetty-util-9.2.9.v20150224.jar"/>
   <path value="/home/lizo/.m2/repository/asm/asm/3.3.1/asm-3.3.1.jar"/>
   <path value="/home/lizo/.m2/repository/org/eclipse/jetty/jetty-servlets/8.1.16.v20140903/jetty-servlets-8.1.16.v20140903.jar"/>
   <path value="/home/lizo/.m2/repository/org/eclipse/jetty/jetty-client/8.1.16.v20140903/jetty-client-8.1.16.v20140903.jar"/>
@@ -92,29 +92,31 @@
   <path value="/home/lizo/.m2/repository/org/apache/camel/camel-cxf-transport/2.15.1/camel-cxf-transport-2.15.1.jar"/>
   <path value="/home/lizo/.m2/repository/com/google/code/gson/gson/1.7.1/gson-1.7.1.jar"/>
   <path value="/home/lizo/dev-tools/Servers/wildfly-8.2.1.final/modules/system/layers/base/org/picketbox/main/picketbox-commons-1.0.0.final.jar"/>
+  <path value="/home/lizo/.m2/repository/com/fasterxml/jackson/module/jackson-module-jaxb-annotations/2.4.3/jackson-module-jaxb-annotations-2.4.3.jar"/>
   <path value="/home/lizo/.m2/repository/org/eclipse/jetty/jetty-continuation/9.2.9.v20150224/jetty-continuation-9.2.9.v20150224.jar"/>
-  <path value="/home/lizo/.m2/repository/org/fusesource/hawtbuf/hawtbuf/1.11/hawtbuf-1.11.jar"/>
+  <path value="/home/lizo/.m2/repository/com/fasterxml/jackson/core/jackson-databind/2.4.3/jackson-databind-2.4.3.jar"/>
   <path value="/home/lizo/dev-tools/Servers/wildfly-8.2.1.final/modules/system/layers/base/javax/xml/ws/api/main/jboss-jaxws-api_2.2_spec-2.0.2.Final.jar"/>
+  <path value="/home/lizo/.m2/repository/org/fusesource/hawtbuf/hawtbuf/1.11/hawtbuf-1.11.jar"/>
   <path value="/home/lizo/dev-tools/Servers/wildfly-8.2.1.final/modules/system/layers/base/javax/jws/api/main/jsr181-api-1.0-MR1.jar"/>
-  <path value="/home/lizo/.m2/repository/org/apache/camel/camel-restlet/2.15.1/camel-restlet-2.15.1.jar"/>
   <path value="/home/lizo/.m2/repository/org/apache/camel/camel-http/2.15.1/camel-http-2.15.1.jar"/>
+  <path value="/home/lizo/.m2/repository/org/apache/camel/camel-restlet/2.15.1/camel-restlet-2.15.1.jar"/>
   <path value="/home/lizo/.m2/repository/commons-httpclient/commons-httpclient/3.1/commons-httpclient-3.1.jar"/>
   <path value="/home/lizo/.m2/repository/org/slf4j/slf4j-log4j12/1.7.10/slf4j-log4j12-1.7.10.jar"/>
   <path value="/home/lizo/dev-tools/Servers/wildfly-8.2.1.final/modules/system/layers/base/org/jboss/resteasy/resteasy-multipart-provider/main/resteasy-multipart-provider-3.0.10.Final.jar"/>
   <path value="/home/lizo/.m2/repository/javax/ws/rs/javax.ws.rs-api/2.0.1/javax.ws.rs-api-2.0.1.jar"/>
-  <path value="/home/lizo/.m2/repository/org/restlet/jee/org.restlet/2.2.3/org.restlet-2.2.3.jar"/>
   <path value="/home/lizo/dev-tools/Servers/wildfly-8.2.1.final/modules/system/layers/base/javax/servlet/api/main/jboss-servlet-api_3.1_spec-1.0.0.Final.jar"/>
+  <path value="/home/lizo/.m2/repository/org/restlet/jee/org.restlet/2.2.3/org.restlet-2.2.3.jar"/>
   <path value="/home/lizo/dev-tools/Servers/wildfly-8.2.1.final/modules/system/layers/base/org/jboss/resteasy/resteasy-jaxrs/main/resteasy-client-3.0.10.Final.jar"/>
   <path value="/home/lizo/dev-tools/Servers/wildfly-8.2.1.final/modules/system/layers/base/org/jboss/ejb3/main/jboss-ejb3-ext-api-2.1.0.jar"/>
   <path value="/home/lizo/.m2/repository/org/apache/cxf/cxf-rt-frontend-jaxrs/3.0.4/cxf-rt-frontend-jaxrs-3.0.4.jar"/>
   <path value="/home/lizo/.m2/repository/org/springframework/spring-messaging/4.1.5.RELEASE/spring-messaging-4.1.5.RELEASE.jar"/>
-  <path value="/home/lizo/.m2/repository/org/springframework/spring-context/4.1.5.RELEASE/spring-context-4.1.5.RELEASE.jar"/>
   <path value="/home/lizo/dev-tools/Servers/wildfly-8.2.1.final/modules/system/layers/base/javax/validation/api/main/validation-api-1.1.0.Final.jar"/>
+  <path value="/home/lizo/.m2/repository/org/springframework/spring-context/4.1.5.RELEASE/spring-context-4.1.5.RELEASE.jar"/>
   <path value="/home/lizo/.m2/repository/org/apache/cxf/cxf-rt-features-clustering/3.0.4/cxf-rt-features-clustering-3.0.4.jar"/>
   <path value="/home/lizo/.m2/repository/org/restlet/jee/org.restlet.ext.httpclient/2.2.3/org.restlet.ext.httpclient-2.2.3.jar"/>
   <path value="/home/lizo/dev-tools/Servers/wildfly-8.2.1.final/modules/system/layers/base/javax/xml/soap/api/main/jboss-saaj-api_1.3_spec-1.0.3.Final.jar"/>
-  <path value="/home/lizo/.m2/repository/org/apache/camel/camel-spring/2.15.1/camel-spring-2.15.1.jar"/>
   <path value="/home/lizo/dev-tools/Servers/wildfly-8.2.1.final/modules/system/layers/base/javax/servlet/jsp/api/main/jboss-jsp-api_2.3_spec-1.0.1.Final.jar"/>
+  <path value="/home/lizo/.m2/repository/org/apache/camel/camel-spring/2.15.1/camel-spring-2.15.1.jar"/>
   <path value="/home/lizo/.m2/repository/org/springframework/spring-jms/4.1.5.RELEASE/spring-jms-4.1.5.RELEASE.jar"/>
   <path value="/home/lizo/dev-tools/Servers/wildfly-8.2.1.final/modules/system/layers/base/org/jboss/logging/main/jboss-logging-3.1.4.GA.jar"/>
   <path value="/home/lizo/.m2/repository/com/sun/xml/bind/jaxb-core/2.2.11/jaxb-core-2.2.11.jar"/>
@@ -147,153 +149,501 @@
   <path value="/home/lizo/dev-tools/Servers/wildfly-8.2.1.final/modules/system/layers/base/javax/management/j2ee/api/main/jboss-j2eemgmt-api_1.1_spec-1.0.1.Final.jar"/>
   <path value="/home/lizo/.m2/repository/org/apache/activemq/activemq-client/5.11.1/activemq-client-5.11.1.jar"/>
   <path value="/home/lizo/dev-tools/Servers/wildfly-8.2.1.final/modules/system/layers/base/org/jboss/resteasy/resteasy-multipart-provider/main/resteasy-multipart-provider-3.0.10.Final-jandex.jar"/>
+  <path value="/home/lizo/.m2/repository/org/apache/camel/camel-xstream/2.15.1/camel-xstream-2.15.1.jar"/>
   <path value="/home/lizo/dev-tools/Servers/wildfly-8.2.1.final/modules/system/layers/base/org/jboss/as/controller-client/main/wildfly-controller-client-8.2.1.Final.jar"/>
   <path value="/home/lizo/dev-tools/Servers/wildfly-8.2.1.final/modules/system/layers/base/javax/transaction/api/main/jboss-transaction-api_1.2_spec-1.0.0.Final.jar"/>
   <path value="/home/lizo/.m2/repository/com/sun/xml/bind/jaxb-impl/2.2.11/jaxb-impl-2.2.11.jar"/>
   <path value="/home/lizo/.m2/repository/org/apache/camel/camel-soap/2.15.1/camel-soap-2.15.1.jar"/>
   <path value="/home/lizo/dev-tools/Servers/wildfly-8.2.1.final/modules/system/layers/base/javax/xml/rpc/api/main/jboss-jaxrpc-api_1.1_spec-1.0.1.Final.jar"/>
+  <path value="/home/lizo/dev-tools/sts-bundle/sts-3.6.3.SR1/plugins/org.junit_4.11.0.v201303080030/junit.jar"/>
   <path value="/home/lizo/.m2/repository/org/eclipse/jetty/jetty-io/9.2.9.v20150224/jetty-io-9.2.9.v20150224.jar"/>
   <path value="/home/lizo/.m2/repository/org/apache/geronimo/specs/geronimo-j2ee-management_1.1_spec/1.0.1/geronimo-j2ee-management_1.1_spec-1.0.1.jar"/>
   <path value="/home/lizo/.m2/repository/org/eclipse/jetty/jetty-http/9.2.9.v20150224/jetty-http-9.2.9.v20150224.jar"/>
   <path value="/home/lizo/.m2/repository/commons-logging/commons-logging/1.2/commons-logging-1.2.jar"/>
   <path value="/home/lizo/.m2/repository/org/apache/activemq/activemq-jms-pool/5.11.1/activemq-jms-pool-5.11.1.jar"/>
   <path value="/home/lizo/dev-tools/Servers/wildfly-8.2.1.final/modules/system/layers/base/org/picketbox/main/picketbox-infinispan-4.0.21.Final.jar"/>
+  <path value="/home/lizo/.m2/repository/com/thoughtworks/xstream/xstream/1.4.7/xstream-1.4.7.jar"/>
   <path value="/home/lizo/dev-tools/Servers/wildfly-8.2.1.final/modules/system/layers/base/javax/enterprise/concurrent/api/main/jboss-concurrency-api_1.0_spec-1.0.0.Final.jar"/>
   <path value="/home/lizo/dev-tools/Servers/wildfly-8.2.1.final/modules/system/layers/base/javax/batch/api/main/jboss-batch-api_1.0_spec-1.0.0.Final.jar"/>
   <path value="/home/lizo/dev-tools/Servers/wildfly-8.2.1.final/modules/system/layers/base/javax/faces/api/main/jboss-jsf-api_2.2_spec-2.2.8.jar"/>
+  <path value="/home/lizo/.m2/repository/com/fasterxml/jackson/core/jackson-core/2.4.3/jackson-core-2.4.3.jar"/>
   <path value="/home/lizo/.m2/repository/javax/servlet/servlet-api/2.5/servlet-api-2.5-sources.jar"/>
   <path value="/home/lizo/.m2/repository/org/apache/cxf/cxf-core/3.1.0/cxf-core-3.1.0.jar"/>
-  <path value="/home/lizo/.m2/repository/org/apache/camel/camel-jetty8/2.15.1/camel-jetty8-2.15.1.jar"/>
+  <path value="/home/lizo/dev-tools/sts-bundle/sts-3.6.3.SR1/plugins/org.hamcrest.core_1.3.0.v201303031735.jar"/>
   <path value="/home/lizo/.m2/repository/org/apache/cxf/cxf-rt-transports-http/3.1.0/cxf-rt-transports-http-3.1.0.jar"/>
+  <path value="/home/lizo/.m2/repository/org/apache/camel/camel-jackson/2.15.1/camel-jackson-2.15.1.jar"/>
+  <path value="/home/lizo/.m2/repository/org/apache/camel/camel-jetty8/2.15.1/camel-jetty8-2.15.1.jar"/>
   <path value="/home/lizo/dev-tools/Servers/wildfly-8.2.1.final/modules/system/layers/base/javax/el/api/main/jboss-el-api_3.0_spec-1.0.3.Final.jar"/>
   <path value="/home/lizo/dev-tools/Servers/wildfly-8.2.1.final/modules/system/layers/base/javax/websocket/api/main/jboss-websocket-api_1.1_spec-1.1.0.Final.jar"/>
   <path value="/home/lizo/.m2/repository/javax/annotation/javax.annotation-api/1.2/javax.annotation-api-1.2.jar"/>
-  <path value="/home/lizo/.m2/repository/org/codehaus/woodstox/woodstox-core-asl/4.4.1/woodstox-core-asl-4.4.1.jar"/>
   <path value="/home/lizo/dev-tools/Servers/wildfly-8.2.1.final/modules/system/layers/base/org/jboss/resteasy/resteasy-jaxrs/main/resteasy-jaxrs-3.0.10.Final.jar"/>
+  <path value="/home/lizo/.m2/repository/org/codehaus/woodstox/woodstox-core-asl/4.4.1/woodstox-core-asl-4.4.1.jar"/>
   <path value="/home/lizo/.m2/repository/org/apache/cxf/cxf-rt-databinding-jaxb/3.0.4/cxf-rt-databinding-jaxb-3.0.4.jar"/>
-  <path value="/home/lizo/.m2/repository/org/eclipse/jetty/jetty-servlet/8.1.16.v20140903/jetty-servlet-8.1.16.v20140903.jar"/>
   <path value="/home/lizo/dev-tools/Servers/wildfly-8.2.1.final/modules/system/layers/base/javax/xml/bind/api/main/jboss-jaxb-api_2.2_spec-1.0.4.Final.jar"/>
+  <path value="/home/lizo/.m2/repository/org/eclipse/jetty/jetty-servlet/8.1.16.v20140903/jetty-servlet-8.1.16.v20140903.jar"/>
   <path value="/home/lizo/.m2/repository/wsdl4j/wsdl4j/1.6.3/wsdl4j-1.6.3.jar"/>
   <path value="/home/lizo/.m2/repository/javax/servlet/jstl/1.2/jstl-1.2.jar">
    <libraries>
     <library class="tld">
      <id class="model-object"
-      path="FileSystems/lib-jstl-1.2.jar/META-INF/c-1_0-rt.tld" project="InfoSource"/>
+      path="FileSystems/lib-jstl-1.2.jar/META-INF/c-1_0-rt.tld" project="BCManager"/>
     </library>
     <library class="tld">
      <id class="model-object"
-      path="FileSystems/lib-jstl-1.2.jar/META-INF/c-1_0.tld" project="InfoSource"/>
+      path="FileSystems/lib-jstl-1.2.jar/META-INF/c-1_0.tld" project="BCManager"/>
     </library>
     <library class="tld">
      <id class="model-object"
-      path="FileSystems/lib-jstl-1.2.jar/META-INF/c.tld" project="InfoSource"/>
+      path="FileSystems/lib-jstl-1.2.jar/META-INF/c.tld" project="BCManager"/>
     </library>
     <library class="tld">
      <id class="model-object"
-      path="FileSystems/lib-jstl-1.2.jar/META-INF/fmt-1_0-rt.tld" project="InfoSource"/>
+      path="FileSystems/lib-jstl-1.2.jar/META-INF/fmt-1_0-rt.tld" project="BCManager"/>
     </library>
     <library class="tld">
      <id class="model-object"
-      path="FileSystems/lib-jstl-1.2.jar/META-INF/fmt-1_0.tld" project="InfoSource"/>
+      path="FileSystems/lib-jstl-1.2.jar/META-INF/fmt-1_0.tld" project="BCManager"/>
     </library>
     <library class="tld">
      <id class="model-object"
-      path="FileSystems/lib-jstl-1.2.jar/META-INF/fmt.tld" project="InfoSource"/>
+      path="FileSystems/lib-jstl-1.2.jar/META-INF/fmt.tld" project="BCManager"/>
     </library>
     <library class="tld">
      <id class="model-object"
-      path="FileSystems/lib-jstl-1.2.jar/META-INF/fn.tld" project="InfoSource"/>
+      path="FileSystems/lib-jstl-1.2.jar/META-INF/fn.tld" project="BCManager"/>
     </library>
     <library class="tld">
      <id class="model-object"
-      path="FileSystems/lib-jstl-1.2.jar/META-INF/permittedTaglibs.tld" project="InfoSource"/>
+      path="FileSystems/lib-jstl-1.2.jar/META-INF/permittedTaglibs.tld" project="BCManager"/>
     </library>
     <library class="tld">
      <id class="model-object"
-      path="FileSystems/lib-jstl-1.2.jar/META-INF/scriptfree.tld" project="InfoSource"/>
+      path="FileSystems/lib-jstl-1.2.jar/META-INF/scriptfree.tld" project="BCManager"/>
     </library>
     <library class="tld">
      <id class="model-object"
-      path="FileSystems/lib-jstl-1.2.jar/META-INF/sql-1_0-rt.tld" project="InfoSource"/>
+      path="FileSystems/lib-jstl-1.2.jar/META-INF/sql-1_0-rt.tld" project="BCManager"/>
     </library>
     <library class="tld">
      <id class="model-object"
-      path="FileSystems/lib-jstl-1.2.jar/META-INF/sql-1_0.tld" project="InfoSource"/>
+      path="FileSystems/lib-jstl-1.2.jar/META-INF/sql-1_0.tld" project="BCManager"/>
     </library>
     <library class="tld">
      <id class="model-object"
-      path="FileSystems/lib-jstl-1.2.jar/META-INF/sql.tld" project="InfoSource"/>
+      path="FileSystems/lib-jstl-1.2.jar/META-INF/sql.tld" project="BCManager"/>
     </library>
     <library class="tld">
      <id class="model-object"
-      path="FileSystems/lib-jstl-1.2.jar/META-INF/x-1_0-rt.tld" project="InfoSource"/>
+      path="FileSystems/lib-jstl-1.2.jar/META-INF/x-1_0-rt.tld" project="BCManager"/>
     </library>
     <library class="tld">
      <id class="model-object"
-      path="FileSystems/lib-jstl-1.2.jar/META-INF/x-1_0.tld" project="InfoSource"/>
+      path="FileSystems/lib-jstl-1.2.jar/META-INF/x-1_0.tld" project="BCManager"/>
     </library>
     <library class="tld">
      <id class="model-object"
-      path="FileSystems/lib-jstl-1.2.jar/META-INF/x.tld" project="InfoSource"/>
+      path="FileSystems/lib-jstl-1.2.jar/META-INF/x.tld" project="BCManager"/>
     </library>
    </libraries>
   </path>
-  <path value="/home/lizo/.m2/repository/net/oauth/core/oauth/20100527/oauth-20100527.jar"/>
   <path value="/home/lizo/dev-tools/Servers/wildfly-8.2.1.final/modules/system/layers/base/javax/interceptor/api/main/jboss-interceptors-api_1.2_spec-1.0.0.Final.jar"/>
-  <path value="/home/lizo/.m2/repository/org/apache/activemq/activemq-spring/5.11.1/activemq-spring-5.11.1.jar"/>
+  <path value="/home/lizo/.m2/repository/net/oauth/core/oauth/20100527/oauth-20100527.jar"/>
   <path value="/home/lizo/.m2/repository/javax/servlet/jsp/jsp-api/2.2/jsp-api-2.2.jar"/>
+  <path value="/home/lizo/.m2/repository/org/apache/activemq/activemq-spring/5.11.1/activemq-spring-5.11.1.jar"/>
   <path value="/home/lizo/.m2/repository/org/apache/camel/camel-http4/2.15.1/camel-http4-2.15.1.jar"/>
   <path value="/home/lizo/.m2/repository/org/apache/geronimo/specs/geronimo-servlet_3.0_spec/1.0/geronimo-servlet_3.0_spec-1.0.jar"/>
+  <path value="/home/lizo/.m2/repository/org/codehaus/jettison/jettison/1.3.6/jettison-1.3.6.jar"/>
   <path value="/home/lizo/dev-tools/Servers/wildfly-8.2.1.final/modules/system/layers/base/org/hibernate/validator/main/hibernate-validator-5.1.3.Final.jar"/>
   <path value="/home/lizo/.m2/repository/net/oauth/core/oauth-provider/20100527/oauth-provider-20100527.jar"/>
-  <path value="/home/lizo/.m2/repository/org/apache/neethi/neethi/3.0.3/neethi-3.0.3.jar"/>
-  <path value="/home/lizo/.m2/repository/org/apache/cxf/cxf-rt-ws-addr/3.0.4/cxf-rt-ws-addr-3.0.4.jar"/>
+  <path value="/home/lizo/.m2/repository/xpp3/xpp3_min/1.1.4c/xpp3_min-1.1.4c.jar"/>
   <path value="/home/lizo/dev-tools/Servers/wildfly-8.2.1.final/modules/system/layers/base/javax/activation/api/main/activation-1.1.1.jar"/>
+  <path value="/home/lizo/.m2/repository/org/apache/cxf/cxf-rt-ws-addr/3.0.4/cxf-rt-ws-addr-3.0.4.jar"/>
+  <path value="/home/lizo/.m2/repository/org/apache/neethi/neethi/3.0.3/neethi-3.0.3.jar"/>
   <path value="/home/lizo/.m2/repository/org/apache/camel/camel-core/2.15.1/camel-core-2.15.1.jar"/>
   <path value="/home/lizo/.m2/repository/org/apache/geronimo/specs/geronimo-jta_1.0.1B_spec/1.0.1/geronimo-jta_1.0.1B_spec-1.0.1.jar"/>
   <path value="/home/lizo/.m2/repository/org/apache/httpcomponents/httpmime/4.3/httpmime-4.3.jar"/>
   <path value="/home/lizo/.m2/repository/org/apache/camel/camel-jetty-common/2.15.1/camel-jetty-common-2.15.1.jar"/>
+  <path value="/home/lizo/.m2/repository/stax/stax-api/1.0.1/stax-api-1.0.1.jar"/>
   <path value="/home/lizo/.m2/repository/org/eclipse/jetty/jetty-server/9.2.9.v20150224/jetty-server-9.2.9.v20150224.jar"/>
-  <path value="/home/lizo/.m2/repository/org/apache/camel/camel-jetty/2.15.1/camel-jetty-2.15.1.jar"/>
   <path value="/home/lizo/dev-tools/Servers/wildfly-8.2.1.final/modules/system/layers/base/org/jboss/resteasy/resteasy-jaxb-provider/main/resteasy-jaxb-provider-3.0.10.Final-jandex.jar"/>
+  <path value="/home/lizo/.m2/repository/org/apache/camel/camel-jetty/2.15.1/camel-jetty-2.15.1.jar"/>
   <path value="/home/lizo/.m2/repository/javax/servlet/javax.servlet-api/3.1.0/javax.servlet-api-3.1.0.jar"/>
   <path value="/home/lizo/.m2/repository/org/slf4j/slf4j-api/1.7.10/slf4j-api-1.7.10.jar"/>
   <path value="/home/lizo/.m2/repository/org/apache/camel/camel-stream/2.15.1/camel-stream-2.15.1.jar"/>
   <path value="/home/lizo/dev-tools/Servers/wildfly-8.2.1.final/modules/system/layers/base/javax/rmi/api/main/jboss-rmi-api_1.0_spec-1.0.4.Final.jar"/>
   <path value="/home/lizo/.m2/repository/org/apache/cxf/cxf-rt-bindings-xml/3.0.4/cxf-rt-bindings-xml-3.0.4.jar"/>
   <path value="/home/lizo/.m2/repository/org/eclipse/jetty/jetty-security/9.2.9.v20150224/jetty-security-9.2.9.v20150224.jar"/>
-  <path value="/home/lizo/.m2/repository/org/springframework/spring-web/4.1.5.RELEASE/spring-web-4.1.5.RELEASE.jar"/>
   <path value="/home/lizo/.m2/repository/org/apache/activemq/activemq-pool/5.11.1/activemq-pool-5.11.1.jar"/>
+  <path value="/home/lizo/.m2/repository/org/springframework/spring-web/4.1.5.RELEASE/spring-web-4.1.5.RELEASE.jar"/>
+  <path value="/home/lizo/dev-tools/Servers/wildfly-8.2.1.final/modules/system/layers/base/org/picketbox/main/picketbox-4.0.21.Final.jar"/>
   <path value="/home/lizo/.m2/repository/org/springframework/spring-webmvc/4.1.5.RELEASE/spring-webmvc-4.1.5.RELEASE.jar">
    <libraries>
     <library class="tld">
      <id class="model-object"
-      path="FileSystems/lib-spring-webmvc-4.1.5.RELEASE.jar/META-INF/spring-form.tld" project="InfoSource"/>
+      path="FileSystems/lib-spring-webmvc-4.1.5.RELEASE.jar/META-INF/spring-form.tld" project="BCManager"/>
     </library>
     <library class="tld">
      <id class="model-object"
-      path="FileSystems/lib-spring-webmvc-4.1.5.RELEASE.jar/META-INF/spring.tld" project="InfoSource"/>
+      path="FileSystems/lib-spring-webmvc-4.1.5.RELEASE.jar/META-INF/spring.tld" project="BCManager"/>
     </library>
    </libraries>
   </path>
-  <path value="/home/lizo/dev-tools/Servers/wildfly-8.2.1.final/modules/system/layers/base/org/picketbox/main/picketbox-4.0.21.Final.jar"/>
   <path value="/home/lizo/.m2/repository/org/apache/camel/camel-jaxb/2.15.1/camel-jaxb-2.15.1.jar"/>
-  <path value="/home/lizo/.m2/repository/org/springframework/spring-core/4.1.5.RELEASE/spring-core-4.1.5.RELEASE.jar"/>
   <path value="/home/lizo/.m2/repository/org/apache/cxf/cxf-rt-transports-http-jetty/3.1.0/cxf-rt-transports-http-jetty-3.1.0.jar"/>
+  <path value="/home/lizo/.m2/repository/org/springframework/spring-core/4.1.5.RELEASE/spring-core-4.1.5.RELEASE.jar"/>
   <path value="/home/lizo/.m2/repository/org/apache/httpcomponents/httpclient/4.3.6/httpclient-4.3.6.jar"/>
+  <path value="/home/lizo/.m2/repository/com/fasterxml/jackson/core/jackson-annotations/2.4.0/jackson-annotations-2.4.0.jar"/>
+  <path value="/home/lizo/.m2/repository/xmlpull/xmlpull/1.1.3.1/xmlpull-1.1.3.1.jar"/>
   <path value="/home/lizo/.m2/repository/org/apache/geronimo/specs/geronimo-jms_1.1_spec/1.1.1/geronimo-jms_1.1_spec-1.1.1.jar"/>
-  <path value="/home/lizo/.m2/repository/org/apache/cxf/cxf-rt-wsdl/3.0.4/cxf-rt-wsdl-3.0.4.jar"/>
   <path value="/home/lizo/.m2/repository/org/apache/cxf/cxf-rt-rs-security-oauth/3.0.4/cxf-rt-rs-security-oauth-3.0.4.jar"/>
+  <path value="/home/lizo/.m2/repository/org/apache/cxf/cxf-rt-wsdl/3.0.4/cxf-rt-wsdl-3.0.4.jar"/>
   <path value="/home/lizo/.m2/repository/org/apache/cxf/cxf-rt-frontend-simple/3.0.4/cxf-rt-frontend-simple-3.0.4.jar"/>
   <path value="/home/lizo/.m2/repository/org/apache/ws/xmlschema/xmlschema-core/2.2.1/xmlschema-core-2.2.1.jar"/>
  </paths>
  <validation>
   <core validator-id="jsf-verification"/>
-  <core validator-id="jboss.cdi.core"/>
+  <core validator-id="jboss.cdi.core">
+   <linked-resource
+    name="%1;%2;%3;%4;%5;%6;%7;%8;%9;%10;%11;%12;%13;%14;%15;%16;%17;%18;%19;%20;%21;%22;%23;%24;%25;%26;%27;%28;%29;%30;%31;%32;%33;%34;%35;%36;%37;%38;%39;%40;%41;%42;%43;%44;%45;%46;%47;%48;%49;%50;%51;%52;%53;%54;%55;%56;%57;%58;%59;%60;%61;%62;%63;%64;%65;%66;%67;%68;%69;%70;%71;%72;%73;%74;%75;%76;%77;%78;%79;%80;%81;%82;%83;%84;%85;%86;%87;%88;%89;%90;%91;%92;%93;" path="%0"/>
+   <linked-resource
+    name="%95;%96;%97;%98;%99;%100;%101;%102;%103;%104;%105;%106;%107;%108;%109;%110;%111;%112;%113;%114;%115;%116;%117;%118;%119;%120;%121;%122;%123;%124;%125;%126;%127;%128;%129;%130;%131;%132;%133;%134;%135;%136;%137;%138;%139;%140;%141;%142;%143;%144;%145;%146;%147;%148;%149;%150;%151;%152;%153;%154;%155;%156;%157;%158;%159;%160;%161;%162;%163;%164;%165;%166;%167;%168;%169;" path="%94"/>
+  </core>
   <core validator-id="jboss.jsf.core"/>
   <el/>
  </validation>
- <aliases/>
+ <aliases>
+  <alias
+   path="/InfoSource/src/main/java/useraccount/soap/services/UpdateUserResponse.java" value="%1"/>
+  <alias
+   path="/InfoSource/src/main/java/docman/services/AddFileResponse.class" value="%96"/>
+  <alias
+   path="/InfoSource/src/main/java/useraccount/soap/services/GetGroupDNfromResponse.class" value="%4"/>
+  <alias
+   path="/InfoSource/src/main/java/docman/services/RemoveFileResponse.java" value="%99"/>
+  <alias
+   path="/InfoSource/src/main/java/docman/services/InputStream.java" value="%98"/>
+  <alias path="/InfoSource/src/main/java/docman/services/AddFile.class" value="%100"/>
+  <alias
+   path="/InfoSource/src/main/java/useraccount/soap/services/Login.class" value="%9"/>
+  <alias
+   path="/InfoSource/src/main/java/useraccount/soap/services/CreatePerson.java" value="%10"/>
+  <alias
+   path="/InfoSource/src/main/java/useraccount/soap/services/PersonInterface.java" value="%12"/>
+  <alias
+   path="/InfoSource/src/main/java/docman/services/RemoveRequest.java" value="%103"/>
+  <alias
+   path="/InfoSource/src/main/java/useraccount/soap/services/FindSomeone.class" value="%13"/>
+  <alias
+   path="/InfoSource/src/main/java/useraccount/soap/services/RemoveRoleResponse.class" value="%14"/>
+  <alias
+   path="/InfoSource/src/main/java/useraccount/soap/services/RemoveRole.class" value="%15"/>
+  <alias
+   path="/InfoSource/src/main/java/docman/services/FileServiceRemote.class" value="%106"/>
+  <alias
+   path="/InfoSource/src/main/java/docman/services/DownloadFile.class" value="%109"/>
+  <alias
+   path="/InfoSource/src/main/java/docman/services/GetFileByUsernameResponse.class" value="%113"/>
+  <alias
+   path="/InfoSource/src/main/java/useraccount/soap/services/RemoveRole.java" value="%17"/>
+  <alias
+   path="/InfoSource/src/main/java/docman/services/DownloadFileResponse.java" value="%116"/>
+  <alias
+   path="/InfoSource/src/main/java/useraccount/soap/services/AddUserToGroupResponse.java" value="%21"/>
+  <alias
+   path="/InfoSource/src/main/java/docman/services/UpdateFileResponse.java" value="%117"/>
+  <alias
+   path="/InfoSource/src/main/java/useraccount/soap/services/GetOrgUnit.class" value="%22"/>
+  <alias
+   path="/InfoSource/src/main/java/useraccount/soap/services/Login.java" value="%24"/>
+  <alias
+   path="/InfoSource/src/main/java/useraccount/soap/services/UserProfile.class" value="%23"/>
+  <alias
+   path="/InfoSource/src/main/java/docman/services/FindByNameResponse.class" value="%118"/>
+  <alias
+   path="/InfoSource/src/main/java/docman/services/GetFilesByOwner.class" value="%122"/>
+  <alias
+   path="/InfoSource/src/main/java/docman/services/InputStream.class" value="%121"/>
+  <alias
+   path="/InfoSource/src/main/java/docman/services/FindRequestById.class" value="%120"/>
+  <alias
+   path="/InfoSource/src/main/java/useraccount/soap/services/AddUserToGroup.class" value="%26"/>
+  <alias
+   path="/InfoSource/src/main/java/useraccount/soap/services/UpdateUser.class" value="%28"/>
+  <alias
+   path="/InfoSource/src/main/java/useraccount/soap/services/FindByUsername.class" value="%32"/>
+  <alias
+   path="/InfoSource/src/main/java/docman/services/FileServiceRemote.java" value="%123"/>
+  <alias
+   path="/InfoSource/src/main/java/docman/services/GetFileByUsername.class" value="%124"/>
+  <alias
+   path="/InfoSource/src/main/java/useraccount/soap/services/PersonRolesResponse.java" value="%34"/>
+  <alias
+   path="/InfoSource/src/main/java/useraccount/soap/services/PersonRoles.java" value="%35"/>
+  <alias
+   path="/InfoSource/src/main/java/useraccount/soap/services/PersonRoles.class" value="%38"/>
+  <alias
+   path="/InfoSource/src/main/java/docman/services/FindRequestById.java" value="%127"/>
+  <alias
+   path="/InfoSource/src/main/java/docman/services/FindRequestByIdResponse.class" value="%128"/>
+  <alias
+   path="/InfoSource/src/main/java/useraccount/soap/services/GetPersons.java" value="%40"/>
+  <alias
+   path="/InfoSource/src/main/java/docman/services/ShareFileResponse.class" value="%131"/>
+  <alias
+   path="/InfoSource/src/main/java/useraccount/soap/services/AddUserAttribute.class" value="%43"/>
+  <alias
+   path="/InfoSource/src/main/java/useraccount/soap/services/GetOrgUnitResponse.class" value="%42"/>
+  <alias
+   path="/InfoSource/src/main/java/useraccount/soap/services/GetPersons.class" value="%44"/>
+  <alias
+   path="/InfoSource/src/main/java/docman/services/FindByName.class" value="%133"/>
+  <alias
+   path="/InfoSource/src/main/java/useraccount/soap/services/ObjectFactory.class" value="%47"/>
+  <alias
+   path="/InfoSource/src/main/java/useraccount/soap/services/GetOrgsResponse.java" value="%50"/>
+  <alias
+   path="/InfoSource/src/main/java/useraccount/soap/services/GetRoles.class" value="%52"/>
+  <alias
+   path="/InfoSource/src/main/java/useraccount/soap/services/UpdateUserResponse.class" value="%55"/>
+  <alias
+   path="/InfoSource/src/main/java/docman/services/DownloadFile.java" value="%139"/>
+  <alias
+   path="/InfoSource/src/main/java/docman/services/GetSahresResponse.java" value="%138"/>
+  <alias path="/InfoSource/src/main/java/docman/services/FileInfo.java" value="%141"/>
+  <alias
+   path="/InfoSource/src/main/java/useraccount/soap/services/UserGroup.class" value="%57"/>
+  <alias
+   path="/InfoSource/src/main/java/docman/services/GetRequests.java" value="%143"/>
+  <alias
+   path="/InfoSource/src/main/java/useraccount/soap/services/FindByUsernameResponse.java" value="%59"/>
+  <alias
+   path="/InfoSource/src/main/java/docman/services/RemoveRequestResponse.java" value="%144"/>
+  <alias
+   path="/InfoSource/src/main/java/useraccount/soap/services/GetRoleByName.class" value="%60"/>
+  <alias
+   path="/InfoSource/src/main/java/useraccount/soap/services/GetRoleByNameResponse.java" value="%61"/>
+  <alias
+   path="/InfoSource/src/main/java/useraccount/soap/services/FindSomeoneResponse.java" value="%62"/>
+  <alias
+   path="/InfoSource/src/main/java/useraccount/soap/services/GetRoleByName.java" value="%63"/>
+  <alias
+   path="/InfoSource/src/main/java/useraccount/soap/services/CreatePerson.class" value="%64"/>
+  <alias
+   path="/InfoSource/src/main/java/docman/services/GetFilesResponse.java" value="%148"/>
+  <alias
+   path="/InfoSource/src/main/java/docman/services/UpdateFile.class" value="%150"/>
+  <alias
+   path="/InfoSource/src/main/java/useraccount/soap/services/AddUserAttributeResponse.java" value="%66"/>
+  <alias
+   path="/InfoSource/src/main/java/docman/services/package-info.class" value="%151"/>
+  <alias
+   path="/InfoSource/src/main/java/docman/services/FindByName.java" value="%152"/>
+  <alias
+   path="/InfoSource/src/main/java/useraccount/soap/services/AccountService.java" value="%67"/>
+  <alias
+   path="/InfoSource/src/main/java/useraccount/soap/services/GetOrgsResponse.class" value="%69"/>
+  <alias
+   path="/InfoSource/src/main/java/useraccount/soap/services/Groups.java" value="%71"/>
+  <alias
+   path="/InfoSource/src/main/java/useraccount/soap/services/package-info.java" value="%0"/>
+  <alias
+   path="/InfoSource/src/main/java/useraccount/soap/services/AddUserToGroupResponse.class" value="%75"/>
+  <alias path="/InfoSource/src/main/java/docman/services/GetFiles.class" value="%156"/>
+  <alias
+   path="/InfoSource/src/main/java/docman/services/RemoveRequest.class" value="%155"/>
+  <alias
+   path="/InfoSource/src/main/java/docman/services/GetSahres.class" value="%157"/>
+  <alias
+   path="/InfoSource/src/main/java/useraccount/soap/services/FindRoleResponse.java" value="%76"/>
+  <alias
+   path="/InfoSource/src/main/java/useraccount/soap/services/UserGroupResponse.java" value="%77"/>
+  <alias
+   path="/InfoSource/src/main/java/useraccount/soap/services/FindSomeone.java" value="%79"/>
+  <alias
+   path="/InfoSource/src/main/java/useraccount/soap/services/UserRoles.class" value="%80"/>
+  <alias
+   path="/InfoSource/src/main/java/useraccount/soap/services/FindByUsername.java" value="%83"/>
+  <alias
+   path="/InfoSource/src/main/java/docman/services/DownloadFileResponse.class" value="%163"/>
+  <alias
+   path="/InfoSource/src/main/java/useraccount/soap/services/AddUserAttributeResponse.class" value="%85"/>
+  <alias
+   path="/InfoSource/src/main/java/useraccount/soap/services/LoginResponse.java" value="%87"/>
+  <alias
+   path="/InfoSource/src/main/java/useraccount/soap/services/AssignRole.java" value="%89"/>
+  <alias
+   path="/InfoSource/src/main/java/docman/services/SaveRequestResponse.class" value="%167"/>
+  <alias
+   path="/InfoSource/src/main/java/useraccount/soap/services/GetRoles.java" value="%92"/>
+  <alias path="/InfoSource/src/main/java/docman/services/ShareFile.java" value="%169"/>
+  <alias
+   path="/InfoSource/src/main/java/useraccount/soap/services/GetOrgs.class" value="%93"/>
+  <alias
+   path="/InfoSource/src/main/java/useraccount/soap/services/package-info.class" value="%3"/>
+  <alias
+   path="/InfoSource/src/main/java/useraccount/soap/services/AddUserToGroup.java" value="%2"/>
+  <alias
+   path="/InfoSource/src/main/java/docman/services/ObjectFactory.java" value="%95"/>
+  <alias
+   path="/InfoSource/src/main/java/useraccount/soap/services/FindRole.java" value="%5"/>
+  <alias
+   path="/InfoSource/src/main/java/docman/services/RemoveFile.class" value="%97"/>
+  <alias
+   path="/InfoSource/src/main/java/useraccount/soap/services/CreatePersonResponse.java" value="%7"/>
+  <alias
+   path="/InfoSource/src/main/java/useraccount/soap/services/FindByUsernameResponse.class" value="%6"/>
+  <alias
+   path="/InfoSource/src/main/java/useraccount/soap/services/GetRoleByNameResponse.class" value="%8"/>
+  <alias
+   path="/InfoSource/src/main/java/docman/services/GetFileById.class" value="%101"/>
+  <alias
+   path="/InfoSource/src/main/java/useraccount/soap/services/AccountService.class" value="%11"/>
+  <alias
+   path="/InfoSource/src/main/java/docman/services/GetSahresResponse.class" value="%102"/>
+  <alias
+   path="/InfoSource/src/main/java/docman/services/GetRequestsResponse.class" value="%104"/>
+  <alias
+   path="/InfoSource/src/main/java/docman/services/UpdateFile.java" value="%105"/>
+  <alias
+   path="/InfoSource/src/main/java/docman/services/RemoveFileResponse.class" value="%108"/>
+  <alias
+   path="/InfoSource/src/main/java/docman/services/GetFileById.java" value="%107"/>
+  <alias
+   path="/InfoSource/src/main/java/useraccount/soap/services/ObjectFactory.java" value="%16"/>
+  <alias path="/InfoSource/src/main/java/docman/services/FileShare.java" value="%111"/>
+  <alias
+   path="/InfoSource/src/main/java/docman/services/SaveRequest.java" value="%110"/>
+  <alias
+   path="/InfoSource/src/main/java/docman/services/ObjectFactory.class" value="%112"/>
+  <alias
+   path="/InfoSource/src/main/java/useraccount/soap/services/Person.class" value="%18"/>
+  <alias
+   path="/InfoSource/src/main/java/useraccount/soap/services/GetPersonsResponse.java" value="%19"/>
+  <alias
+   path="/InfoSource/src/main/java/docman/services/GetFilesByOwnerResponse.java" value="%115"/>
+  <alias path="/InfoSource/src/main/java/docman/services/GetFiles.java" value="%114"/>
+  <alias
+   path="/InfoSource/src/main/java/useraccount/soap/services/GetRolesResponse.java" value="%20"/>
+  <alias
+   path="/InfoSource/src/main/java/useraccount/soap/services/MigrateUser.class" value="%25"/>
+  <alias
+   path="/InfoSource/src/main/java/docman/services/GetFileByIdResponse.class" value="%119"/>
+  <alias
+   path="/InfoSource/src/main/java/useraccount/soap/services/FindRoleResponse.class" value="%27"/>
+  <alias
+   path="/InfoSource/src/main/java/useraccount/soap/services/GetPersonsResponse.class" value="%31"/>
+  <alias
+   path="/InfoSource/src/main/java/useraccount/soap/services/Groups.class" value="%30"/>
+  <alias
+   path="/InfoSource/src/main/java/useraccount/soap/services/GetOrgUnitResponse.java" value="%29"/>
+  <alias
+   path="/InfoSource/src/main/java/useraccount/soap/services/RemoveRoleResponse.java" value="%33"/>
+  <alias
+   path="/InfoSource/src/main/java/docman/services/FileRequest.class" value="%125"/>
+  <alias
+   path="/InfoSource/src/main/java/useraccount/soap/services/PersonInterface.class" value="%36"/>
+  <alias
+   path="/InfoSource/src/main/java/docman/services/FindRequestByIdResponse.java" value="%126"/>
+  <alias
+   path="/InfoSource/src/main/java/useraccount/soap/services/GetGroupDNfrom.class" value="%37"/>
+  <alias
+   path="/InfoSource/src/main/java/useraccount/soap/services/GetRolesResponse.class" value="%39"/>
+  <alias
+   path="/InfoSource/src/main/java/docman/services/ShareFile.class" value="%129"/>
+  <alias
+   path="/InfoSource/src/main/java/useraccount/soap/services/GetGroupDNfrom.java" value="%41"/>
+  <alias path="/InfoSource/src/main/java/docman/services/FileInfo.class" value="%130"/>
+  <alias
+   path="/InfoSource/src/main/java/docman/services/SaveRequestResponse.java" value="%132"/>
+  <alias
+   path="/InfoSource/src/main/java/useraccount/soap/services/GetOrgs.java" value="%45"/>
+  <alias
+   path="/InfoSource/src/main/java/docman/services/GetFilesByOwnerResponse.class" value="%134"/>
+  <alias
+   path="/InfoSource/src/main/java/useraccount/soap/services/UserProfileResponse.java" value="%46"/>
+  <alias
+   path="/InfoSource/src/main/java/docman/services/UpdateFileResponse.class" value="%135"/>
+  <alias
+   path="/InfoSource/src/main/java/useraccount/soap/services/UpdateUser.java" value="%48"/>
+  <alias
+   path="/InfoSource/src/main/java/useraccount/soap/services/Person.java" value="%49"/>
+  <alias
+   path="/InfoSource/src/main/java/useraccount/soap/services/AssignRoleResponse.class" value="%51"/>
+  <alias
+   path="/InfoSource/src/main/java/docman/services/RemoveFile.java" value="%136"/>
+  <alias
+   path="/InfoSource/src/main/java/useraccount/soap/services/GetGroupDNfromResponse.java" value="%53"/>
+  <alias
+   path="/InfoSource/src/main/java/useraccount/soap/services/FindRole.class" value="%54"/>
+  <alias
+   path="/InfoSource/src/main/java/docman/services/RemoveRequestResponse.class" value="%137"/>
+  <alias
+   path="/InfoSource/src/main/java/docman/services/GetFileByUsernameResponse.java" value="%140"/>
+  <alias
+   path="/InfoSource/src/main/java/useraccount/soap/services/GetOrgUnit.java" value="%56"/>
+  <alias
+   path="/InfoSource/src/main/java/docman/services/FileService.java" value="%142"/>
+  <alias
+   path="/InfoSource/src/main/java/useraccount/soap/services/UserProfile.java" value="%58"/>
+  <alias
+   path="/InfoSource/src/main/java/docman/services/GetRequests.class" value="%145"/>
+  <alias path="/InfoSource/src/main/java/docman/services/AddFile.java" value="%147"/>
+  <alias
+   path="/InfoSource/src/main/java/docman/services/FindByNameResponse.java" value="%146"/>
+  <alias
+   path="/InfoSource/src/main/java/useraccount/soap/services/LoginResponse.class" value="%65"/>
+  <alias
+   path="/InfoSource/src/main/java/docman/services/ShareFileResponse.java" value="%149"/>
+  <alias
+   path="/InfoSource/src/main/java/useraccount/soap/services/MigrateUser.java" value="%68"/>
+  <alias
+   path="/InfoSource/src/main/java/docman/services/GetFilesByOwner.java" value="%153"/>
+  <alias
+   path="/InfoSource/src/main/java/useraccount/soap/services/UserRoles.java" value="%70"/>
+  <alias
+   path="/InfoSource/src/main/java/useraccount/soap/services/FindSomeoneResponse.class" value="%72"/>
+  <alias path="/InfoSource/src/main/java/docman/services/GetSahres.java" value="%154"/>
+  <alias
+   path="/InfoSource/src/main/java/useraccount/soap/services/AssignRole.class" value="%73"/>
+  <alias
+   path="/InfoSource/src/main/java/useraccount/soap/services/MigrateUserResponse.class" value="%74"/>
+  <alias
+   path="/InfoSource/src/main/java/docman/services/package-info.java" value="%94"/>
+  <alias
+   path="/InfoSource/src/main/java/docman/services/SaveRequest.class" value="%158"/>
+  <alias
+   path="/InfoSource/src/main/java/docman/services/FileShare.class" value="%159"/>
+  <alias
+   path="/InfoSource/src/main/java/useraccount/soap/services/PersonRolesResponse.class" value="%78"/>
+  <alias
+   path="/InfoSource/src/main/java/docman/services/AddFileResponse.java" value="%160"/>
+  <alias
+   path="/InfoSource/src/main/java/useraccount/soap/services/UserGroup.java" value="%81"/>
+  <alias
+   path="/InfoSource/src/main/java/useraccount/soap/services/UserProfileResponse.class" value="%82"/>
+  <alias
+   path="/InfoSource/src/main/java/docman/services/GetFileByUsername.java" value="%162"/>
+  <alias
+   path="/InfoSource/src/main/java/docman/services/FileService.class" value="%161"/>
+  <alias
+   path="/InfoSource/src/main/java/useraccount/soap/services/CreatePersonResponse.class" value="%84"/>
+  <alias
+   path="/InfoSource/src/main/java/docman/services/GetRequestsResponse.java" value="%164"/>
+  <alias
+   path="/InfoSource/src/main/java/docman/services/GetFileByIdResponse.java" value="%165"/>
+  <alias
+   path="/InfoSource/src/main/java/useraccount/soap/services/AssignRoleResponse.java" value="%86"/>
+  <alias
+   path="/InfoSource/src/main/java/docman/services/GetFilesResponse.class" value="%166"/>
+  <alias
+   path="/InfoSource/src/main/java/useraccount/soap/services/UserGroupResponse.class" value="%88"/>
+  <alias
+   path="/InfoSource/src/main/java/useraccount/soap/services/AddUserAttribute.java" value="%90"/>
+  <alias
+   path="/InfoSource/src/main/java/useraccount/soap/services/MigrateUserResponse.java" value="%91"/>
+  <alias
+   path="/InfoSource/src/main/java/docman/services/FileRequest.java" value="%168"/>
+ </aliases>
  <includes/>
  <uris/>
 </kb-project>

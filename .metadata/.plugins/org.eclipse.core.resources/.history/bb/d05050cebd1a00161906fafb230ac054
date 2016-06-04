@@ -1,8 +1,0 @@
-package ws.rs;
-
-import javax.ws.rs.Path;
-
-@Path("hello")
-public class Hello implements Ihello {
-
-}

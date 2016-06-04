@@ -6,11 +6,14 @@ import org.junit.Ignore;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 import org.springframework.test.context.transaction.TransactionConfiguration;
 import org.springframework.transaction.annotation.Transactional;
 
+import useraccount.soap.services.Person;
+import useraccount.soap.services.PersonInterface;
 import birthtech.entities.Checkup;
 import birthtech.entities.Labour;
 import birthtech.entities.Maternity;
@@ -34,12 +37,30 @@ public class ServiceTest {
 
 	@Test
 	public void should_create_maternity() {
-		Maternity maternity= new Maternity();
-		maternity.setIdnumber(90101);
+		ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext(
+				"META-INF/cxf-context.xml");
+		PersonInterface service = (PersonInterface) context
+				.getBean("UAServiceClient");
+		Person psn = null;
+		Maternity maternity = new Maternity();
+		try {
+			psn = service.findByUsername("pnomngas");
+		} catch (Exception e) {
+		System.out.print(""+e.getClass()+" :was thrown\n");
+		}
+		if(psn !=null){
+			maternity.setIdnumber(90101);
+			maternity.setSurname(psn.getLastName());
+			maternity.setNames(psn.getFirstName());
+		  System.out.println("Ok.");
+		}
+		else{
+ 		maternity.setIdnumber(90101);
 		maternity.setNames("Persons Names");
 		maternity.setSurname("Surname");
 		maternity.setNurse("Nurses Fullname");
 		maternity.setRegistration(new Date());
+		}
 		martenalService.addMaternity(maternity);
 
 	}
@@ -47,10 +68,13 @@ public class ServiceTest {
 	@Test
 	public void should_add_checkup() {
 
-/*		Maternity mat = martenalService.getMartenal().get(0);
-		checkService.addCheckup(false, mat.getIdnumber(), "mabhule",
-				"holy cross", "Petient is fine, the baby is fine");
-		System.out.println("The size is :" + checkService.getCheckups().size());*/
+		/*
+		 * Maternity mat = martenalService.getMartenal().get(0);
+		 * checkService.addCheckup(false, mat.getIdnumber(), "mabhule",
+		 * "holy cross", "Petient is fine, the baby is fine");
+		 * System.out.println("The size is :" +
+		 * checkService.getCheckups().size());
+		 */
 	}
 
 	@Test
@@ -65,8 +89,8 @@ public class ServiceTest {
 		labour.setStatus(LabourStatusEnum.SUCCESS.getEnumInt());
 		System.out.println("Parent found....." + parent.getNames());
 		labourService.addLabour(labour.getLabourDate(), labour.getBirthPlace(),
-		labour.getStatus(), labour.getMartenal(), labour.getNurse(),
-		labour.getBirthNo());
+				labour.getStatus(), labour.getMartenal(), labour.getNurse(),
+				labour.getBirthNo());
 	}
 
 	@Test
@@ -74,4 +98,5 @@ public class ServiceTest {
 		Checkup c = checkService.getCheckup("Bahle Masikisiki");
 		System.out.println(c == null ? "yes null" : c.getComments());
 	}
+
 }

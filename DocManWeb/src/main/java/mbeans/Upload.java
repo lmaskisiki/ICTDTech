@@ -18,7 +18,7 @@ import javax.servlet.http.Part;
 import javax.xml.namespace.QName;
 import javax.xml.ws.Service;
 
-import sessionBeans.FileService;
+import docman.services.FileService;
 import usergate.classes.Person;
 import usergate.classes.PersonInterface;
 import entities.FileInfo;

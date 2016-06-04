@@ -1,9 +1,0 @@
-package ws.rs;
-
-import javax.ws.rs.ApplicationPath;
-import javax.ws.rs.core.Application;
-
-@ApplicationPath("hellouser")
-public class HelloServiceActivator extends Application{
-
-}

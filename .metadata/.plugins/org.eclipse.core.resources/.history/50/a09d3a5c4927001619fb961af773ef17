@@ -1,0 +1,20 @@
+package webFrameApp.interfaces;
+
+import java.util.List;
+
+import javax.jws.WebService;
+import javax.transaction.Transactional;
+
+import webFrameApp.entites.FeedComment;
+import webFrameApp.entites.FeedPost;
+
+@WebService
+public interface FeedPostDAO {
+	public void createPost(FeedPost post);
+	public List<FeedPost> listPosts();
+	 
+	public FeedPost findById(int id);
+ 	public List<FeedComment> getComments(FeedPost post);
+	public String sayHi(String name);
+
+}

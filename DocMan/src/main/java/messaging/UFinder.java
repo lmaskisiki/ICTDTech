@@ -19,8 +19,8 @@ import javax.jms.TextMessage;
 import org.apache.activemq.spring.ActiveMQConnectionFactory;
 import org.jboss.ejb3.annotation.ResourceAdapter;
 
+import docman.services.FileService;
 import marshallers.UniversalMarshaller;
-import sessionBeans.FileService;
 import entities.FileInfo;
 
 ;

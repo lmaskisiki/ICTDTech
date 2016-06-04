@@ -1,8 +1,0 @@
-package infosource.soap.client.useraccounts;
-
-import org.springframework.stereotype.Component;
-
-@Component
-public class UserAccountClient {
-
-}

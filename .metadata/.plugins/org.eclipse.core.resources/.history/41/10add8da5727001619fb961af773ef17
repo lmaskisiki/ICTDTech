@@ -1,0 +1,15 @@
+package infosource.open.services.routing;
+
+import org.apache.camel.builder.RouteBuilder;
+
+public class RouteManager extends RouteBuilder {
+
+	@Override
+	public void configure() throws Exception {
+	 
+		//get
+		from("direct:getNews").to("cxf:bean:NewsEndpoint");
+		
+	}
+
+}

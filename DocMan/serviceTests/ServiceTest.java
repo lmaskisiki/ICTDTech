@@ -13,7 +13,7 @@ import org.junit.Before;
 import org.junit.BeforeClass;
 import org.junit.Test;
 
-import sessionBeans.FileService;
+import docman.services.FileService;
 import entities.FileInfo;
 
 public class ServiceTest {
@@ -40,7 +40,7 @@ public class ServiceTest {
 	@Test
 	public void test() throws NamingException {
 		FileService fs = (FileService) ejbC.getContext()
-				.lookup("java:global/DocManager/FileService!sessionBeans.FileService");
+				.lookup("java:global/DocManager/FileService!docman.services.FileService");
 		String fil = "/home/lizo/Desktop/feedback.pdf";
 		FileInfo fi = new FileInfo();
 		fi.setFileName("facebookfile");

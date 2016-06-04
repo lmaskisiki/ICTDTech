@@ -1,0 +1,87 @@
+package infosource.open.services.access;
+
+import org.apache.camel.CamelContext;
+import org.apache.camel.ProducerTemplate;
+import org.apache.camel.spring.SpringCamelContext;
+import org.apache.cxf.message.MessageContentsList;
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
+
+import useraccount.soap.services.Person;
+
+public class TransactionManager implements ITransactionManager {
+	private ApplicationContext context;
+	private CamelContext camelContext;
+
+	private ProducerTemplate template = null;
+
+	public TransactionManager() {
+
+		try {
+			this.context = new ClassPathXmlApplicationContext(
+					"META-INF/service-endpoints.xml");
+			this.camelContext = SpringCamelContext.springCamelContext(context);
+
+			template = this.camelContext.createProducerTemplate();
+
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+
+	}
+
+	@Override
+	public boolean createAccount(Person person) {
+		try {
+			template.start();
+
+			template.stop();
+		} catch (Exception e) {
+ 			e.printStackTrace();
+		}
+
+		return false;
+	}
+
+	@Override
+	public String getNews() {  
+		
+		
+ 		return null;
+	}
+
+	@Override
+	public String getMyProfile(String username) {
+		String str = "";
+		try {
+			template.start();
+			MessageContentsList ms = new MessageContentsList();
+			str = template.requestBodyAndHeader("direct:UAService", ms,	"methodName", "getPersons", String.class);
+			template.stop();
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		return str;
+	}
+
+	@Override
+	public String getHealthInfo() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public String getHomeAffairInfo() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public String getMyDocuments() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

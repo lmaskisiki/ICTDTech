@@ -1,11 +1,4 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <typeInfoHistroy>
 <typeInfo handle="=DocMan/src\/main\/java&lt;entities{FileInfo.java[FileInfo" modifiers="1" timestamp="1458384762000"/>
-<typeInfo handle="=BirthTech/src\/main\/java&lt;birthtech.entities{Checkup.java[Checkup" modifiers="1" timestamp="1460143447000"/>
-<typeInfo handle="=BirthTech/src\/main\/java&lt;birthtech.entities{Child.java[Child" modifiers="1" timestamp="1463704706000"/>
-<typeInfo handle="=BirthTech/src\/main\/java&lt;birthtech.entities{Labour.java[Labour" modifiers="1" timestamp="1463704706000"/>
-<typeInfo handle="=BirthTech/src\/main\/java&lt;birthtech.interfaces{IMartenalService.java[IMartenalService" modifiers="513" timestamp="1463704706000"/>
-<typeInfo handle="=BirthTech/src\/main\/java&lt;birthtech.interfaces{ILabourService.java[ILabourService" modifiers="513" timestamp="1463704706000"/>
-<typeInfo handle="=BirthTech/src\/main\/java&lt;birthtech.interfaces{IChildService.java[IChildService" modifiers="513" timestamp="1463704706000"/>
-<typeInfo handle="=BirthTech/src\/main\/java&lt;birthtech.interfaces{ICheckupService.java[ICheckupService" modifiers="513" timestamp="1463704095000"/>
 </typeInfoHistroy>

@@ -1,5 +1,0 @@
-package infosource.remote.service.rest;
-
-public interface BCServiceResource {
-
-}

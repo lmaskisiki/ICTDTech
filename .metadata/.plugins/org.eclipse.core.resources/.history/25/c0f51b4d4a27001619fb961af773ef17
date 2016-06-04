@@ -1,0 +1,30 @@
+import java.util.List;
+
+import javax.transaction.Transactional;
+
+import org.junit.Test;
+import org.junit.runner.RunWith;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.test.context.ContextConfiguration;
+import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
+
+import webFrameApp.entites.FeedComment;
+import webFrameApp.entites.FeedPost;
+import webFrameApp.serviceLgoic.FeedPostImpl;
+@Transactional
+@RunWith(SpringJUnit4ClassRunner.class)
+@ContextConfiguration(locations={"classpath:META-INF/applicationContext.xml"})
+public class feedTest  {
+	 @Autowired
+	 private FeedPostImpl service;
+	@Test
+	@Transactional
+	public void testPost(){
+	 FeedPost p=service.findById(6);
+		 //System.out.println(service.listPosts().get(0).getComments());
+			
+		
+	}
+
+
+}

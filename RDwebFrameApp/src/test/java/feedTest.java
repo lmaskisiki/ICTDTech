@@ -20,12 +20,10 @@ public class feedTest  {
 	@Test
 	@Transactional
 	public void testPost(){
-	 FeedPost p=service.findById(1);
-		List<FeedComment> comments=p.getComments();
-		for(FeedComment fc:comments){
-			System.out.println("comment: "+fc.getCommentBody());
+	 FeedPost p=service.findById(6);
+		  System.out.println(service.listPosts().get(0).getBody());
 			
-		}
+		
 	}
 
 

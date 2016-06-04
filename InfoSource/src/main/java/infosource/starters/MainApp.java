@@ -8,7 +8,7 @@ import org.apache.camel.main.Main;
 import org.apache.camel.spring.SpringCamelContext;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
- 
+
 public class MainApp {
 
 	private ApplicationContext context;
@@ -33,7 +33,8 @@ public class MainApp {
 			ProducerTemplate template = this.camelContext
 					.createProducerTemplate();
 			template.start();
-			  template.sendBody("direct:go","message");;
+			template.sendBody("direct:go", "admin");
+			;
 			template.stop();
 		} catch (Exception e) {
 			e.printStackTrace();
@@ -43,10 +44,10 @@ public class MainApp {
 
 	public static void main(String[] args) {
 		System.out.println("Main App Started...");
-	      
+
 		new MainApp().sendMessage("admin");
-	 ;
-		 
+		;
+
 	}
 
 }

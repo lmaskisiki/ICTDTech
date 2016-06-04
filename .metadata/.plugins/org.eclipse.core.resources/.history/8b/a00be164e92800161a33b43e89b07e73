@@ -1,0 +1,16 @@
+package infosource.open.services.testing;
+
+import infosource.open.services.access.TransactionManager;
+
+import org.junit.Test;
+
+public class TransactionManagerTests {
+
+	
+	@Test
+	public void should_call_transaction_manager_invoker_service(){
+		TransactionManager ser=new TransactionManager();
+		System.out.println("Test running");
+		
+	}
+}

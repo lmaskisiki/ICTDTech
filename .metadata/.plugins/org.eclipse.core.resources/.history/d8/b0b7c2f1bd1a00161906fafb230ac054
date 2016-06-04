@@ -1,8 +1,0 @@
-package ws.rs;
-
-import javax.ws.rs.core.Application;
-
-
-public class HelloServiceActivator extends Application{
-
-}

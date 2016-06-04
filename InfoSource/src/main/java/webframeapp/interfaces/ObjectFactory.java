@@ -24,20 +24,14 @@ import javax.xml.namespace.QName;
 @XmlRegistry
 public class ObjectFactory {
 
-    private final static QName _NewRelationshipResponse_QNAME = new QName("http://interfaces.webFrameApp/", "newRelationshipResponse");
-    private final static QName _FindAllResponse_QNAME = new QName("http://interfaces.webFrameApp/", "findAllResponse");
-    private final static QName _CreateEntityResponse_QNAME = new QName("http://interfaces.webFrameApp/", "CreateEntityResponse");
-    private final static QName _Delete_QNAME = new QName("http://interfaces.webFrameApp/", "delete");
-    private final static QName _FindByDomain_QNAME = new QName("http://interfaces.webFrameApp/", "findByDomain");
-    private final static QName _FindByNameResponse_QNAME = new QName("http://interfaces.webFrameApp/", "findByNameResponse");
-    private final static QName _FindByDomainResponse_QNAME = new QName("http://interfaces.webFrameApp/", "findByDomainResponse");
-    private final static QName _FindByName_QNAME = new QName("http://interfaces.webFrameApp/", "findByName");
-    private final static QName _DeleteResponse_QNAME = new QName("http://interfaces.webFrameApp/", "deleteResponse");
-    private final static QName _RelateEntities_QNAME = new QName("http://interfaces.webFrameApp/", "relateEntities");
-    private final static QName _RelateEntitiesResponse_QNAME = new QName("http://interfaces.webFrameApp/", "relateEntitiesResponse");
-    private final static QName _CreateEntity_QNAME = new QName("http://interfaces.webFrameApp/", "CreateEntity");
-    private final static QName _FindAll_QNAME = new QName("http://interfaces.webFrameApp/", "findAll");
-    private final static QName _NewRelationship_QNAME = new QName("http://interfaces.webFrameApp/", "newRelationship");
+    private final static QName _CreatePost_QNAME = new QName("http://interfaces.webFrameApp/", "createPost");
+    private final static QName _SayHi_QNAME = new QName("http://interfaces.webFrameApp/", "sayHi");
+    private final static QName _CreatePostResponse_QNAME = new QName("http://interfaces.webFrameApp/", "createPostResponse");
+    private final static QName _ListPosts_QNAME = new QName("http://interfaces.webFrameApp/", "listPosts");
+    private final static QName _SayHiResponse_QNAME = new QName("http://interfaces.webFrameApp/", "sayHiResponse");
+    private final static QName _FindById_QNAME = new QName("http://interfaces.webFrameApp/", "findById");
+    private final static QName _ListPostsResponse_QNAME = new QName("http://interfaces.webFrameApp/", "listPostsResponse");
+    private final static QName _FindByIdResponse_QNAME = new QName("http://interfaces.webFrameApp/", "findByIdResponse");
 
     /**
      * Create a new ObjectFactory that can be used to create new instances of schema derived classes for package: webframeapp.interfaces
@@ -47,265 +41,147 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link DeleteResponse }
+     * Create an instance of {@link ListPostsResponse }
      * 
      */
-    public DeleteResponse createDeleteResponse() {
-        return new DeleteResponse();
+    public ListPostsResponse createListPostsResponse() {
+        return new ListPostsResponse();
     }
 
     /**
-     * Create an instance of {@link NewRelationshipResponse }
+     * Create an instance of {@link SayHiResponse }
      * 
      */
-    public NewRelationshipResponse createNewRelationshipResponse() {
-        return new NewRelationshipResponse();
+    public SayHiResponse createSayHiResponse() {
+        return new SayHiResponse();
     }
 
     /**
-     * Create an instance of {@link FindAll }
+     * Create an instance of {@link FeedPost }
      * 
      */
-    public FindAll createFindAll() {
-        return new FindAll();
+    public FeedPost createFeedPost() {
+        return new FeedPost();
     }
 
     /**
-     * Create an instance of {@link NewRelationship }
+     * Create an instance of {@link CreatePost }
      * 
      */
-    public NewRelationship createNewRelationship() {
-        return new NewRelationship();
+    public CreatePost createCreatePost() {
+        return new CreatePost();
     }
 
     /**
-     * Create an instance of {@link Domain }
+     * Create an instance of {@link FindById }
      * 
      */
-    public Domain createDomain() {
-        return new Domain();
+    public FindById createFindById() {
+        return new FindById();
     }
 
     /**
-     * Create an instance of {@link FindByNameResponse }
+     * Create an instance of {@link CreatePostResponse }
      * 
      */
-    public FindByNameResponse createFindByNameResponse() {
-        return new FindByNameResponse();
+    public CreatePostResponse createCreatePostResponse() {
+        return new CreatePostResponse();
     }
 
     /**
-     * Create an instance of {@link FindByName }
+     * Create an instance of {@link SayHi }
      * 
      */
-    public FindByName createFindByName() {
-        return new FindByName();
+    public SayHi createSayHi() {
+        return new SayHi();
     }
 
     /**
-     * Create an instance of {@link FindAllResponse }
+     * Create an instance of {@link ListPosts }
      * 
      */
-    public FindAllResponse createFindAllResponse() {
-        return new FindAllResponse();
+    public ListPosts createListPosts() {
+        return new ListPosts();
     }
 
     /**
-     * Create an instance of {@link FindByDomain }
+     * Create an instance of {@link FindByIdResponse }
      * 
      */
-    public FindByDomain createFindByDomain() {
-        return new FindByDomain();
+    public FindByIdResponse createFindByIdResponse() {
+        return new FindByIdResponse();
     }
 
     /**
-     * Create an instance of {@link CreateEntityResponse }
+     * Create an instance of {@link JAXBElement }{@code <}{@link CreatePost }{@code >}}
      * 
      */
-    public CreateEntityResponse createCreateEntityResponse() {
-        return new CreateEntityResponse();
+    @XmlElementDecl(namespace = "http://interfaces.webFrameApp/", name = "createPost")
+    public JAXBElement<CreatePost> createCreatePost(CreatePost value) {
+        return new JAXBElement<CreatePost>(_CreatePost_QNAME, CreatePost.class, null, value);
     }
 
     /**
-     * Create an instance of {@link SqldataTypes }
+     * Create an instance of {@link JAXBElement }{@code <}{@link SayHi }{@code >}}
      * 
      */
-    public SqldataTypes createSqldataTypes() {
-        return new SqldataTypes();
+    @XmlElementDecl(namespace = "http://interfaces.webFrameApp/", name = "sayHi")
+    public JAXBElement<SayHi> createSayHi(SayHi value) {
+        return new JAXBElement<SayHi>(_SayHi_QNAME, SayHi.class, null, value);
     }
 
     /**
-     * Create an instance of {@link OrgEntity }
+     * Create an instance of {@link JAXBElement }{@code <}{@link CreatePostResponse }{@code >}}
      * 
      */
-    public OrgEntity createOrgEntity() {
-        return new OrgEntity();
+    @XmlElementDecl(namespace = "http://interfaces.webFrameApp/", name = "createPostResponse")
+    public JAXBElement<CreatePostResponse> createCreatePostResponse(CreatePostResponse value) {
+        return new JAXBElement<CreatePostResponse>(_CreatePostResponse_QNAME, CreatePostResponse.class, null, value);
     }
 
     /**
-     * Create an instance of {@link FindByDomainResponse }
+     * Create an instance of {@link JAXBElement }{@code <}{@link ListPosts }{@code >}}
      * 
      */
-    public FindByDomainResponse createFindByDomainResponse() {
-        return new FindByDomainResponse();
+    @XmlElementDecl(namespace = "http://interfaces.webFrameApp/", name = "listPosts")
+    public JAXBElement<ListPosts> createListPosts(ListPosts value) {
+        return new JAXBElement<ListPosts>(_ListPosts_QNAME, ListPosts.class, null, value);
     }
 
     /**
-     * Create an instance of {@link RelateEntitiesResponse }
+     * Create an instance of {@link JAXBElement }{@code <}{@link SayHiResponse }{@code >}}
      * 
      */
-    public RelateEntitiesResponse createRelateEntitiesResponse() {
-        return new RelateEntitiesResponse();
+    @XmlElementDecl(namespace = "http://interfaces.webFrameApp/", name = "sayHiResponse")
+    public JAXBElement<SayHiResponse> createSayHiResponse(SayHiResponse value) {
+        return new JAXBElement<SayHiResponse>(_SayHiResponse_QNAME, SayHiResponse.class, null, value);
     }
 
     /**
-     * Create an instance of {@link RelateEntities }
+     * Create an instance of {@link JAXBElement }{@code <}{@link FindById }{@code >}}
      * 
      */
-    public RelateEntities createRelateEntities() {
-        return new RelateEntities();
+    @XmlElementDecl(namespace = "http://interfaces.webFrameApp/", name = "findById")
+    public JAXBElement<FindById> createFindById(FindById value) {
+        return new JAXBElement<FindById>(_FindById_QNAME, FindById.class, null, value);
     }
 
     /**
-     * Create an instance of {@link Delete }
+     * Create an instance of {@link JAXBElement }{@code <}{@link ListPostsResponse }{@code >}}
      * 
      */
-    public Delete createDelete() {
-        return new Delete();
+    @XmlElementDecl(namespace = "http://interfaces.webFrameApp/", name = "listPostsResponse")
+    public JAXBElement<ListPostsResponse> createListPostsResponse(ListPostsResponse value) {
+        return new JAXBElement<ListPostsResponse>(_ListPostsResponse_QNAME, ListPostsResponse.class, null, value);
     }
 
     /**
-     * Create an instance of {@link CreateEntity }
+     * Create an instance of {@link JAXBElement }{@code <}{@link FindByIdResponse }{@code >}}
      * 
      */
-    public CreateEntity createCreateEntity() {
-        return new CreateEntity();
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link NewRelationshipResponse }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://interfaces.webFrameApp/", name = "newRelationshipResponse")
-    public JAXBElement<NewRelationshipResponse> createNewRelationshipResponse(NewRelationshipResponse value) {
-        return new JAXBElement<NewRelationshipResponse>(_NewRelationshipResponse_QNAME, NewRelationshipResponse.class, null, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link FindAllResponse }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://interfaces.webFrameApp/", name = "findAllResponse")
-    public JAXBElement<FindAllResponse> createFindAllResponse(FindAllResponse value) {
-        return new JAXBElement<FindAllResponse>(_FindAllResponse_QNAME, FindAllResponse.class, null, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link CreateEntityResponse }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://interfaces.webFrameApp/", name = "CreateEntityResponse")
-    public JAXBElement<CreateEntityResponse> createCreateEntityResponse(CreateEntityResponse value) {
-        return new JAXBElement<CreateEntityResponse>(_CreateEntityResponse_QNAME, CreateEntityResponse.class, null, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link Delete }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://interfaces.webFrameApp/", name = "delete")
-    public JAXBElement<Delete> createDelete(Delete value) {
-        return new JAXBElement<Delete>(_Delete_QNAME, Delete.class, null, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link FindByDomain }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://interfaces.webFrameApp/", name = "findByDomain")
-    public JAXBElement<FindByDomain> createFindByDomain(FindByDomain value) {
-        return new JAXBElement<FindByDomain>(_FindByDomain_QNAME, FindByDomain.class, null, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link FindByNameResponse }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://interfaces.webFrameApp/", name = "findByNameResponse")
-    public JAXBElement<FindByNameResponse> createFindByNameResponse(FindByNameResponse value) {
-        return new JAXBElement<FindByNameResponse>(_FindByNameResponse_QNAME, FindByNameResponse.class, null, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link FindByDomainResponse }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://interfaces.webFrameApp/", name = "findByDomainResponse")
-    public JAXBElement<FindByDomainResponse> createFindByDomainResponse(FindByDomainResponse value) {
-        return new JAXBElement<FindByDomainResponse>(_FindByDomainResponse_QNAME, FindByDomainResponse.class, null, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link FindByName }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://interfaces.webFrameApp/", name = "findByName")
-    public JAXBElement<FindByName> createFindByName(FindByName value) {
-        return new JAXBElement<FindByName>(_FindByName_QNAME, FindByName.class, null, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link DeleteResponse }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://interfaces.webFrameApp/", name = "deleteResponse")
-    public JAXBElement<DeleteResponse> createDeleteResponse(DeleteResponse value) {
-        return new JAXBElement<DeleteResponse>(_DeleteResponse_QNAME, DeleteResponse.class, null, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link RelateEntities }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://interfaces.webFrameApp/", name = "relateEntities")
-    public JAXBElement<RelateEntities> createRelateEntities(RelateEntities value) {
-        return new JAXBElement<RelateEntities>(_RelateEntities_QNAME, RelateEntities.class, null, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link RelateEntitiesResponse }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://interfaces.webFrameApp/", name = "relateEntitiesResponse")
-    public JAXBElement<RelateEntitiesResponse> createRelateEntitiesResponse(RelateEntitiesResponse value) {
-        return new JAXBElement<RelateEntitiesResponse>(_RelateEntitiesResponse_QNAME, RelateEntitiesResponse.class, null, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link CreateEntity }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://interfaces.webFrameApp/", name = "CreateEntity")
-    public JAXBElement<CreateEntity> createCreateEntity(CreateEntity value) {
-        return new JAXBElement<CreateEntity>(_CreateEntity_QNAME, CreateEntity.class, null, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link FindAll }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://interfaces.webFrameApp/", name = "findAll")
-    public JAXBElement<FindAll> createFindAll(FindAll value) {
-        return new JAXBElement<FindAll>(_FindAll_QNAME, FindAll.class, null, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link NewRelationship }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://interfaces.webFrameApp/", name = "newRelationship")
-    public JAXBElement<NewRelationship> createNewRelationship(NewRelationship value) {
-        return new JAXBElement<NewRelationship>(_NewRelationship_QNAME, NewRelationship.class, null, value);
+    @XmlElementDecl(namespace = "http://interfaces.webFrameApp/", name = "findByIdResponse")
+    public JAXBElement<FindByIdResponse> createFindByIdResponse(FindByIdResponse value) {
+        return new JAXBElement<FindByIdResponse>(_FindByIdResponse_QNAME, FindByIdResponse.class, null, value);
     }
 
 }

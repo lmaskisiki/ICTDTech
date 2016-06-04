@@ -1,7 +1,0 @@
-package ws.rs;
-
-public interface Ihello {
-
-	String saySomething();
-
-}

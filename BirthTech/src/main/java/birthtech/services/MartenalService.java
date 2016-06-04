@@ -22,11 +22,8 @@ public class MartenalService implements IMartenalService {
 private 		AccountService remoteService;
 	@Override
 	public boolean addMaternity(Maternity mat) {
-		Person user=findRemoteAccount("pnomnga");
-		//repo.save(mat);
-		
-		System.out.println(user.getLastName()+" "+user.getFirstName()+" :"+user.getDn());
-		System.out.println("New Maternity was successfully added...");
+	 
+	 repo.save(mat);
 		return true;
 	}
 
@@ -58,9 +55,5 @@ private 		AccountService remoteService;
 		return found;
 	}
 	
-	public Person findRemoteAccount(String idNumber){
-		PersonInterface servicePort=remoteService.getAccountSOAPOverHTTP();
-		Person user=	servicePort.findByUsername(idNumber);
-		return user;
-	}
+	 
 }

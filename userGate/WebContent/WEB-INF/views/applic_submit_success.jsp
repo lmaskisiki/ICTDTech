@@ -24,6 +24,10 @@
 			<td>${first_name }</td>
 		</tr>
 		<tr>
+            <td>Id Number</td>
+            <td>${ idNumber}</td>
+        </tr>
+		<tr>
 			<td>Cell Number</td>
 			<td>${ cell}</td>
 		</tr>

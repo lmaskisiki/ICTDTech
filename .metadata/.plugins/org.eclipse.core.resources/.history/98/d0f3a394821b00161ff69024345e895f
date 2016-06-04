@@ -1,6 +1,0 @@
-package birthcertificate.ws.rest;
- 
- 
-public class BCServiceActivator {
-
-}
