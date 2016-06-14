@@ -40,14 +40,14 @@ public interface PersonInterface {
 
     /**
      * 
-     * @param arg0
+     * @param newPerson
      */
     @WebMethod
     @RequestWrapper(localName = "createPerson", targetNamespace = "http://services.soap.useraccount/", className = "useraccount.soap.services.CreatePerson")
     @ResponseWrapper(localName = "createPersonResponse", targetNamespace = "http://services.soap.useraccount/", className = "useraccount.soap.services.CreatePersonResponse")
     public void createPerson(
-        @WebParam(name = "arg0", targetNamespace = "")
-        Person arg0);
+        @WebParam(name = "newPerson", targetNamespace = "")
+        Person newPerson);
 
     /**
      * 
@@ -76,7 +76,7 @@ public interface PersonInterface {
 
     /**
      * 
-     * @param arg0
+     * @param username
      * @return
      *     returns useraccount.soap.services.Person
      */
@@ -85,8 +85,8 @@ public interface PersonInterface {
     @RequestWrapper(localName = "findByUsername", targetNamespace = "http://services.soap.useraccount/", className = "useraccount.soap.services.FindByUsername")
     @ResponseWrapper(localName = "findByUsernameResponse", targetNamespace = "http://services.soap.useraccount/", className = "useraccount.soap.services.FindByUsernameResponse")
     public Person findByUsername(
-        @WebParam(name = "arg0", targetNamespace = "")
-        String arg0);
+        @WebParam(name = "username", targetNamespace = "")
+        String username);
 
     /**
      * 
@@ -112,8 +112,8 @@ public interface PersonInterface {
 
     /**
      * 
-     * @param arg1
-     * @param arg0
+     * @param username
+     * @param password
      * @return
      *     returns boolean
      */
@@ -122,10 +122,10 @@ public interface PersonInterface {
     @RequestWrapper(localName = "login", targetNamespace = "http://services.soap.useraccount/", className = "useraccount.soap.services.Login")
     @ResponseWrapper(localName = "loginResponse", targetNamespace = "http://services.soap.useraccount/", className = "useraccount.soap.services.LoginResponse")
     public boolean login(
-        @WebParam(name = "arg0", targetNamespace = "")
-        String arg0,
-        @WebParam(name = "arg1", targetNamespace = "")
-        String arg1);
+        @WebParam(name = "username", targetNamespace = "")
+        String username,
+        @WebParam(name = "password", targetNamespace = "")
+        String password);
 
     /**
      * 
@@ -143,7 +143,7 @@ public interface PersonInterface {
 
     /**
      * 
-     * @param arg0
+     * @param username
      * @return
      *     returns useraccount.soap.services.Person
      */
@@ -152,14 +152,14 @@ public interface PersonInterface {
     @RequestWrapper(localName = "userProfile", targetNamespace = "http://services.soap.useraccount/", className = "useraccount.soap.services.UserProfile")
     @ResponseWrapper(localName = "userProfileResponse", targetNamespace = "http://services.soap.useraccount/", className = "useraccount.soap.services.UserProfileResponse")
     public Person userProfile(
-        @WebParam(name = "arg0", targetNamespace = "")
-        String arg0);
+        @WebParam(name = "username", targetNamespace = "")
+        String username);
 
     /**
      * 
-     * @param arg2
-     * @param arg1
-     * @param arg0
+     * @param attribute
+     * @param userDn
+     * @param attValue
      * @return
      *     returns boolean
      */
@@ -168,12 +168,12 @@ public interface PersonInterface {
     @RequestWrapper(localName = "addUserAttribute", targetNamespace = "http://services.soap.useraccount/", className = "useraccount.soap.services.AddUserAttribute")
     @ResponseWrapper(localName = "addUserAttributeResponse", targetNamespace = "http://services.soap.useraccount/", className = "useraccount.soap.services.AddUserAttributeResponse")
     public boolean addUserAttribute(
-        @WebParam(name = "arg0", targetNamespace = "")
-        String arg0,
-        @WebParam(name = "arg1", targetNamespace = "")
-        String arg1,
-        @WebParam(name = "arg2", targetNamespace = "")
-        String arg2);
+        @WebParam(name = "userDn", targetNamespace = "")
+        String userDn,
+        @WebParam(name = "attribute", targetNamespace = "")
+        String attribute,
+        @WebParam(name = "attValue", targetNamespace = "")
+        String attValue);
 
     /**
      * 
@@ -269,6 +269,20 @@ public interface PersonInterface {
 
     /**
      * 
+     * @param username
+     * @return
+     *     returns boolean
+     */
+    @WebMethod
+    @WebResult(targetNamespace = "")
+    @RequestWrapper(localName = "updateUserAttribute", targetNamespace = "http://services.soap.useraccount/", className = "useraccount.soap.services.UpdateUserAttribute")
+    @ResponseWrapper(localName = "updateUserAttributeResponse", targetNamespace = "http://services.soap.useraccount/", className = "useraccount.soap.services.UpdateUserAttributeResponse")
+    public boolean updateUserAttribute(
+        @WebParam(name = "username", targetNamespace = "")
+        String username);
+
+    /**
+     * 
      * @return
      *     returns java.lang.String
      */
@@ -280,7 +294,7 @@ public interface PersonInterface {
 
     /**
      * 
-     * @param arg0
+     * @param username
      * @return
      *     returns java.util.List<useraccount.soap.services.UserRoles>
      */
@@ -289,7 +303,7 @@ public interface PersonInterface {
     @RequestWrapper(localName = "personRoles", targetNamespace = "http://services.soap.useraccount/", className = "useraccount.soap.services.PersonRoles")
     @ResponseWrapper(localName = "personRolesResponse", targetNamespace = "http://services.soap.useraccount/", className = "useraccount.soap.services.PersonRolesResponse")
     public List<UserRoles> personRoles(
-        @WebParam(name = "arg0", targetNamespace = "")
-        String arg0);
+        @WebParam(name = "username", targetNamespace = "")
+        String username);
 
 }

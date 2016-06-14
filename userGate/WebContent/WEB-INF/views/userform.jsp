@@ -29,6 +29,10 @@
 				<td>Name</td>
 				<td><input type="text" name="first_name" /></td>
 			</tr>
+				<tr>
+				<td>Gender</td>
+				<td><input type="text" name="gender" /></td>
+			</tr>
 			<tr>
                 <td>Id Number</td>
                 <td><input type="text" name="idNumber" /></td>

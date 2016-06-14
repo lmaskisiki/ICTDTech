@@ -1,6 +1,7 @@
 package infosource.starters;
 
 import infosource.routebuilders.SearchRouteBuilder;
+import infosource.soap.client.useraccounts.UserAccountClient;
 
 import org.apache.camel.CamelContext;
 import org.apache.camel.ProducerTemplate;
@@ -9,6 +10,10 @@ import org.apache.camel.spring.SpringCamelContext;
 import org.apache.cxf.message.MessageContentsList;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
+
+import useraccount.soap.services.FindByUsername;
+import useraccount.soap.services.Greating;
+import useraccount.soap.services.UpdateUserAttribute;
 
 public class MainApp1 {
 
@@ -36,9 +41,19 @@ public class MainApp1 {
 			template.start();
 			MessageContentsList ms = new MessageContentsList();
 			ms.add("admin");
-			String res = template.requestBody("direct:getProfile", ms,
-				 String.class);
-			System.out.println("\nRESPONSE::" + res);
+			ms.add("mobile");
+			ms.add("0735222555");
+		UpdateUserAttribute request= new UserAccountClient().UpdateUserRequest("admin","mobile","0392521171");
+		 
+			  Greating greet= new Greating();
+			  greet.setGender("Male");
+			  greet.setFullname("Masikisiki Lizo");
+			  FindByUsername find=new FindByUsername();
+			  find.setUsername("admin");
+			  
+			 template.requestBody("direct:findUser", find );
+			 
+		//	System.out.println("\nRESPONSE::" + res);
 			template.stop();
 		} catch (Exception e) {
 			e.printStackTrace();

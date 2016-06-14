@@ -23,7 +23,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.servlet.ModelAndView;
 
 import useraccount.soap.services.groups;
-import useraccount.soap.services.person;
+import useraccount.soap.services.Person;
 import useraccount.soap.services.personInterface;
 import useraccount.soap.services.userRoles;
 
@@ -61,28 +61,29 @@ public class homeController {
 		personInterface userInterface = (personInterface) factory
 				.getBean("ldapUser");
 
-		person psn = userInterface.findByUsername(username);
+		Person psn = userInterface.findByUsername(username);
 		List<userRoles> roles=userInterface.personRoles(psn.getUsername());
  
 		ModelAndView model = new ModelAndView("edit");
 
-		model.addObject("person", psn);
+		model.addObject("Person", psn);
 		model.addObject("roles",roles);
 		return model;
 	}
 
 	@RequestMapping(value = "home/submit_appl", method = RequestMethod.GET)
-	public String applic_submit(@ModelAttribute("userWeb") person person,
+	public String applic_submit(@ModelAttribute("userWeb") Person person,
 			ModelMap model) {
 
 		model.addAttribute("last_name", person.getLast_name());
 		model.addAttribute("first_name", person.getFirst_name());
+		model.addAttribute("gender", person.getGender());
 		model.addAttribute("cell", person.getCell());
 		model.addAttribute("email", person.getEmail());
 		model.addAttribute("username", person.getUsername());
 		model.addAttribute("password", person.getPassword());
 		model.addAttribute("idNumber", person.getIdNumber());
-
+System.out.println("Gnder supplied"+ person.getGender());
 		ApplicationContext context = new ClassPathXmlApplicationContext(
 				"classpath:META-INF/applicationContext.xml");
 		BeanFactory factory = context;
@@ -93,7 +94,7 @@ public class homeController {
 	}
 
 	@RequestMapping(value = "private/profile/edit/update", method = RequestMethod.GET)
-	public String update(@ModelAttribute("userWeb") person person,
+	public String update(@ModelAttribute("userWeb") Person person,
 			ModelMap model) {
 
 		model.addAttribute("last_name", person.getLast_name());
@@ -122,13 +123,13 @@ public class homeController {
 		BeanFactory factory = context;
 		personInterface personList = (personInterface) factory
 				.getBean("ldapUser");
-		List<person> people = personList.getPersons();
+		List<Person> people = personList.getPersons();
 
 		System.out.println("security Context is :"
 				+ SecurityContextHolder.getContext().getAuthentication()
 						.getName());
 
-		for (person p : people) {
+		for (Person p : people) {
 
 			System.out.print(p.getFirst_name() + " ");
 			System.out.print(p.getLast_name() + " ");
@@ -142,7 +143,7 @@ public class homeController {
 	}
 
 	@RequestMapping(value = "searches/{name}", method = RequestMethod.GET)
-	public ModelAndView searches(@ModelAttribute("userWeb") person prsn,
+	public ModelAndView searches(@ModelAttribute("userWeb") Person prsn,
 			ModelMap modelmp, @PathVariable String name) {
 
 		modelmp.addAttribute("last_name", prsn.getLast_name());
@@ -153,14 +154,14 @@ public class homeController {
 		BeanFactory factory = context;
 		personInterface findPerson = (personInterface) factory
 				.getBean("ldapUser");
-		List<person> persons = findPerson.findSomeone(name);
+		List<Person> persons = findPerson.findSomeone(name);
 		model.addObject("found", persons);
 
 		return model;
 	}
 
 	@RequestMapping(value = "private/getUserByUsername" , method = RequestMethod.GET, produces="application/json")
-	public  @ResponseBody  List<person> search(HttpServletRequest request) {
+	public  @ResponseBody  List<Person> search(HttpServletRequest request) {
 		String username = request.getParameter("search_name");
 		ModelAndView model = new ModelAndView("search_results");
 		ApplicationContext context = new ClassPathXmlApplicationContext(
@@ -168,14 +169,14 @@ public class homeController {
 		BeanFactory factory = context;
 		personInterface findPerson = (personInterface) factory
 				.getBean("ldapUser");
-		List<person> persons = findPerson.findSomeone(username);
+		List<Person> persons = findPerson.findSomeone(username);
 		model.addObject("found", persons);
 		System.out.println("\n \n called+++ hahahah");
 		return persons;
 	}
 
 	@RequestMapping(value = "selfUpdate")
-	public ModelAndView selfUpdate(@ModelAttribute("userGate") person psn,
+	public ModelAndView selfUpdate(@ModelAttribute("userGate") Person psn,
 			ModelMap modelmp) {
 		ModelAndView model = new ModelAndView("userUpdate");
 		modelmp.addAttribute("last_name", psn.getLast_name());
@@ -202,7 +203,7 @@ public class homeController {
 
 	// //////////////////////////////////////////////////////////////////////////////////////////////////
 	@RequestMapping(value = "loginproces", method = RequestMethod.POST)
-	public ModelAndView login(@ModelAttribute("userGate") person user,
+	public ModelAndView login(@ModelAttribute("userGate") Person user,
 			ModelMap modelmp) {
 
 		modelmp.addAttribute("username", user.getUsername());
@@ -217,7 +218,7 @@ public class homeController {
 
 		ModelAndView model;
 
-		person psn;
+		Person psn;
 		String rs = "";
 		if (userFound == true) {
 			System.out.print("user Found");
@@ -240,7 +241,7 @@ public class homeController {
 	}
 
 	@RequestMapping(value = "private/migrateUser")
-	public ModelAndView migrateUser(@ModelAttribute("userGate") person p,
+	public ModelAndView migrateUser(@ModelAttribute("userGate") Person p,
 			ModelMap modelmp, HttpServletRequest request) {
 
 		final String name;
@@ -251,12 +252,12 @@ public class homeController {
 		BeanFactory factory = context;
 		personInterface prsn = (personInterface) factory.getBean("ldapUser");
 
-		List<person> requests = prsn.getPersons();
+		List<Person> requests = prsn.getPersons();
 		 List<groups>  roles=prsn.userGroup();
 		
 
 		if (full_name != null) {
-			person newp = (prsn.findSomeone(full_name)).get(0);
+			Person newp = (prsn.findSomeone(full_name)).get(0);
 			List list = prsn.getOrgUnit();
 			List<userRoles> rols= prsn.personRoles(newp.getUsername());
 			model = new ModelAndView("migrateUIprofile");
@@ -273,7 +274,7 @@ public class homeController {
 	}
 
 	@RequestMapping(value = "migrateprocess")
-	public ModelAndView migrateprocess(@ModelAttribute("userGate") person p,
+	public ModelAndView migrateprocess(@ModelAttribute("userGate") Person p,
 			ModelMap modelmp, HttpServletRequest request) {
 
 		modelmp.addAttribute("last_name", p.getLast_name());
@@ -306,7 +307,7 @@ public class homeController {
 		
 		String username =request.getParameter("username");
 		String groupdn=request.getParameter("roleDN");
-		person p=service.findByUsername(username);
+		Person p=service.findByUsername(username);
 		service.assignRole(p, groupdn);
 		
 		return null;
@@ -323,7 +324,7 @@ public class homeController {
 		String  rolename=request.getParameter("role");
 	 	String groupdn="";
 	 	groupdn=service.getRoleByName(rolename);
-		person p=service.findByUsername(username);
+		Person p=service.findByUsername(username);
 		 service.removeRole(p, groupdn);
 		
 		return null;

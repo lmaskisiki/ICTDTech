@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?><testrun name="TransactionManagerTests" project="InfoSource" tests="1" started="1" failures="0" errors="0" ignored="0">
+  <testsuite name="infosource.open.services.testing.TransactionManagerTests" time="4.286">
+    <testcase name="news" classname="infosource.open.services.testing.TransactionManagerTests" time="4.286"/>
+  </testsuite>
+</testrun>

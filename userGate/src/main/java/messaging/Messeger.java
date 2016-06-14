@@ -13,7 +13,7 @@ import org.springframework.beans.factory.BeanFactory;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
-import useraccount.soap.services.person;
+import useraccount.soap.services.Person;
 import useraccount.soap.services.personInterface;
 
 @MessageDriven(name = "Messeger", activationConfig = {
@@ -35,7 +35,7 @@ public class Messeger implements MessageListener {
 			if (message instanceof TextMessage) {
 				TextMessage msg = (TextMessage) message;
 				String tmsg= msg.getText();
-				person p =userService.findByUsername(tmsg);
+				Person p =userService.findByUsername(tmsg);
 				UniversalMarshaller um=new UniversalMarshaller();
 				String output=um.toXML(p);
 				System.out.println(output);

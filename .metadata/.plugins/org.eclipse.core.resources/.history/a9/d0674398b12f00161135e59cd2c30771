@@ -1,0 +1,12 @@
+
+
+<form>
+
+		<table>
+			<tr>
+			<td></td>
+						<td><input readonly="readonly"></<input></td>
+			</tr>
+		</table>
+
+</form>

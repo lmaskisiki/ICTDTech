@@ -1,0 +1,70 @@
+package useraccount.soap.services;
+
+import java.util.List;
+
+import javax.jws.WebMethod;
+import javax.jws.WebParam;
+import javax.jws.WebService;
+import javax.naming.Name;
+import org.springframework.ldap.core.LdapTemplate;
+
+@WebService
+public interface personInterface {
+	@WebMethod
+	public abstract void createPerson(
+			@WebParam(name = "newPerson")Person newPerson);
+	@WebMethod
+	public abstract List<Person> getPersons();
+	@WebMethod
+	public abstract boolean login(
+			@WebParam(name = "username")String username, 
+			@WebParam(name = "password")String password);
+	@WebMethod
+	public abstract Person userProfile(
+			@WebParam(name = "username")String username);
+	@WebMethod
+	public abstract Person findByUsername(
+			@WebParam(name = "username")String User);
+	@WebMethod
+	public abstract boolean addUserAttribute(
+			@WebParam(name = "userDn")String userDn, 
+			@WebParam(name = "attribute")String attribute,
+			@WebParam(name = "attValue")String attValue);
+	@WebMethod
+	public abstract boolean updateUserAttribute(
+			@WebParam(name = "username") String user,
+			@WebParam(name = "username") String attributename,
+			@WebParam(name = "username") String newValue);
+	@WebMethod
+	public abstract String findRole();
+	@WebMethod
+	public abstract List<userRoles> personRoles(
+			@WebParam(name = "username") String username);
+	// END OF WEB SERVICES
+	public abstract List<Person> findSomeone(String surname);
+
+	public abstract void updateUser(Person p);
+
+	public abstract Name makeDN(String full_name);
+
+	public abstract void migrateUser(Person p, String ou);
+
+	public abstract List getOrgUnit();
+
+	public abstract List getOrgs();
+
+	public abstract String getGroupDNfrom(String groupName);
+
+	public abstract String addUserToGroup(Person prsn, String group);
+
+	public abstract List<groups> userGroup();
+
+	public abstract List<userRoles> getRoles();
+
+	public abstract String getRoleByName(String roleName);
+
+	public abstract void assignRole(Person psn, String groupDN);
+
+	public abstract void removeRole(Person psn, String groupDN);
+
+}

@@ -1,7 +1,0 @@
-package infosource.open.services.access;
-
-import useraccount.soap.services.Person;
-
-public class TransactionManager implements ITransactionManager{
- 
-}

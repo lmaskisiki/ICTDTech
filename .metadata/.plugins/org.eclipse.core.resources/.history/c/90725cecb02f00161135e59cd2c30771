@@ -1,0 +1,15 @@
+package infosource.web.controllers;
+
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.RequestMapping;
+
+@Controller
+public class PartialController {
+
+	
+	@RequestMapping(value="partial/userprofile")
+	public String partial_userprofile(){
+		
+		return "userprofile";
+	}
+}

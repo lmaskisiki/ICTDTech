@@ -8,17 +8,17 @@ import javax.xml.bind.JAXBContext;
 import javax.xml.bind.JAXBException;
 import javax.xml.bind.Marshaller;
 
-import useraccount.soap.services.person;
+import useraccount.soap.services.Person;
 
 public class UniversalMarshaller {
 
-	public String toXML(person psn) {
-		person p = psn;
+	public String toXML(Person psn) {
+		Person p = psn;
 		File file;
 		String out = null;
 		try {
-			file = File.createTempFile("person", ".xml");
-			JAXBContext jaxbContext = JAXBContext.newInstance(person.class);
+			file = File.createTempFile("Person", ".xml");
+			JAXBContext jaxbContext = JAXBContext.newInstance(Person.class);
 			Marshaller jaxbMarshaller = jaxbContext.createMarshaller();
 			jaxbMarshaller.setProperty(Marshaller.JAXB_FORMATTED_OUTPUT, true);
 			jaxbMarshaller.marshal(p, file);

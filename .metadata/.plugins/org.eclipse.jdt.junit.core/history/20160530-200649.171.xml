@@ -1,5 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?><testrun name="feedTest" project="RDwebFrameApp" tests="1" started="1" failures="0" errors="0" ignored="0">
-  <testsuite name="feedTest" time="0.378">
-    <testcase name="testPost" classname="feedTest" time="0.378"/>
-  </testsuite>
-</testrun>

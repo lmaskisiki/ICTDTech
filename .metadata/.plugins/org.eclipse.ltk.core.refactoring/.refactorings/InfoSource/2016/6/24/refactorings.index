@@ -1,0 +1,11 @@
+1465128197698	Rename resource 'dispatcher-servlet.xml'
+1465128206099	Move 'web-dispatcher-servlet.xml' to 'WEB-INF'
+1465130177607	Delete element
+1465130434928	Delete element
+1465131376738	Copy file
+1465401886770	Rename local variable 'entity'
+1465401914200	Rename local variable 'json'
+1465402110664	Rename local variable 'rs'
+1465632986073	Copy file
+1465634677249	Rename resource 'userprofile.html'
+1465644370893	Copy file

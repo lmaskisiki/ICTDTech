@@ -62,15 +62,12 @@ public class TransactionManager implements ITransactionManager {
 					"methodName", "listPosts", String.class);
 			JSONObject on = new JSONObject(response);
 			Gson json = new Gson();
-			FeedPost feeds = json.fromJson(
-					(on.getJSONObject(
-							"org.apache.cxf.message.MessageContentsList")
-							.getJSONObject("list").getJSONObject("list")
-							.getString("webframeapp.interfaces.FeedPost"))
-							.toString(), FeedPost.class);
-			System.out.println("\n \n the size now is:" + feeds);
+			response = on
+					.getJSONObject("org.apache.cxf.message.MessageContentsList")
+					.getJSONObject("list").getJSONObject("list")
+					.getString("webframeapp.interfaces.FeedPost").toString();
 			template.stop();
-			response = json.toJson(feeds);
+			// response = json.toJson(feeds);
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
@@ -123,7 +120,6 @@ public class TransactionManager implements ITransactionManager {
 			ms.add(username);
 			response = template.requestBodyAndHeader("direct:DocManEndpoint",
 					ms, "methodName", "getFilesByOwner", String.class);
-
 			template.stop();
 
 		} catch (Exception e) {
@@ -140,13 +136,15 @@ public class TransactionManager implements ITransactionManager {
 			template.start();
 			MessageContentsList ms = new MessageContentsList();
 			ms.add(username);
-			response = template.requestBodyAndHeader("direct:UAService", ms,
-					"methodName", "findByUsername", String.class);
+			response = template.requestBody("direct:getProfile", ms,
+					String.class);
 			template.stop();
-
+			JSONObject personJson = new JSONObject(response);
+			response = personJson.getString("string");
 		} catch (Exception e) {
 			e.getMessage();
 		}
+
 		return response;
 	}
 

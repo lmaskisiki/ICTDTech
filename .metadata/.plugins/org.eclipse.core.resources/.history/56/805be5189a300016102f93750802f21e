@@ -1,0 +1,11 @@
+ $(document).ready(function(){
+		$('#main').load('partial/userprofile');
+ 	 loadUserProfile();
+ 	 loadFeeds();
+ 	 
+	 
+ 	 $("a").on('click',function(){
+ 		alert( );
+ 	 });
+  
+ });

@@ -1,0 +1,29 @@
+package infosource.open.services.routing;
+
+import infosource.processors.JsonBuilder;
+
+import java.util.Date;
+
+import org.apache.camel.Exchange;
+import org.apache.camel.processor.aggregate.AggregationStrategy;
+import org.codehaus.jettison.json.JSONArray;
+import org.codehaus.jettison.json.JSONException;
+import org.codehaus.jettison.json.JSONObject;
+
+public class AggregateUserProfile implements AggregationStrategy {
+	JSONObject object = new JSONObject();
+
+	@Override
+	public Exchange aggregate(Exchange oldExchange, Exchange newExchange) {
+		System.out.println("inside aggregator " + new Date() + ": :"
+				+ oldExchange + ";;" + newExchange);
+		if (oldExchange == null) {
+			return newExchange;
+		}
+		 //System.out.print("\n"+oldExchange.getIn().getBody(String.class).toString()+"\n \n");
+		JsonBuilder extractor=new JsonBuilder(oldExchange.getIn().getBody(String.class).toString(),newExchange.getIn().getBody(String.class).toString());
+		oldExchange.getIn().setBody(extractor.results[0]+"##"+extractor.results[1]);
+				return oldExchange;
+	}
+
+}

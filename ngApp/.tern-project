@@ -1,0 +1,38 @@
+{
+  "ecmaVersion": 5,
+  "plugins": {
+    "guess-types": {
+      
+    },
+    "outline": {
+      
+    },
+    "requirejs": {
+      "paths": {
+        
+      }
+    },
+    "lint": {
+      
+    },
+    "chrome-extension": {
+      
+    },
+    "angular": {
+      
+    },
+    "browser-extension": {
+      
+    },
+    "requirejs-extension": {
+      
+    },
+    "bootstrap": {
+      
+    }
+  },
+  "libs": [
+    "browser",
+    "jquery"
+  ]
+}

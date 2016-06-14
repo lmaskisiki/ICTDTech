@@ -1,0 +1,15 @@
+ $(document).ready(function(){
+		$('#main').load('partial/userprofile');
+ 	 loadUserProfile();
+ 	 loadFeeds();
+ 	 
+	 
+ 	 $('button').on('click',function(){
+ 		alert("alert"); 
+ 	 });
+ 	 
+	 
+ 	 $('.userattribute').on('click', function(){
+ 		alert("alert"); 
+ 	 });
+ });

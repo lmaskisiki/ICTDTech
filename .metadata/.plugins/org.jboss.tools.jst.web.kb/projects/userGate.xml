@@ -194,14 +194,14 @@
   <path value="/home/lizo/.m2/repository/org/jboss/spec/javax/jms/jboss-jms-api_2.0_spec/1.0.0.Final/jboss-jms-api_2.0_spec-1.0.0.Final.jar"/>
   <path value="/home/lizo/dev-tools/Servers/wildfly-8.2.1.final/modules/system/layers/base/org/jboss/ejb3/main/jboss-ejb3-ext-api-2.1.0.jar"/>
   <path value="/home/lizo/.m2/repository/org/springframework/spring-jdbc/3.1.2.RELEASE/spring-jdbc-3.1.2.RELEASE.jar"/>
-  <path value="/home/lizo/.m2/repository/mysql/mysql-connector-java/5.1.22/mysql-connector-java-5.1.22.jar"/>
   <path value="/home/lizo/.m2/repository/org/fusesource/hawtbuf/hawtbuf/1.9/hawtbuf-1.9.jar"/>
+  <path value="/home/lizo/.m2/repository/mysql/mysql-connector-java/5.1.22/mysql-connector-java-5.1.22.jar"/>
   <path value="/home/lizo/.m2/repository/org/springframework/security/spring-security-web/3.2.6.RELEASE/spring-security-web-3.2.6.RELEASE.jar"/>
   <path value="/home/lizo/dev-tools/Servers/wildfly-8.2.1.final/modules/system/layers/base/org/hibernate/validator/main/hibernate-validator-5.1.3.Final.jar"/>
   <path value="/home/lizo/.m2/repository/org/fusesource/hawtdispatch/hawtdispatch/1.11/hawtdispatch-1.11.jar"/>
   <path value="/home/lizo/dev-tools/Servers/wildfly-8.2.1.final/modules/system/layers/base/javax/validation/api/main/validation-api-1.1.0.Final.jar"/>
-  <path value="/home/lizo/.m2/repository/org/springframework/spring-context/4.1.5.RELEASE/spring-context-4.1.5.RELEASE.jar"/>
   <path value="/home/lizo/dev-tools/Servers/wildfly-8.2.1.final/modules/system/layers/base/javax/activation/api/main/activation-1.1.1.jar"/>
+  <path value="/home/lizo/.m2/repository/org/springframework/spring-context/4.1.5.RELEASE/spring-context-4.1.5.RELEASE.jar"/>
   <path value="/home/lizo/dev-tools/Servers/wildfly-8.2.1.final/modules/system/layers/base/javax/xml/soap/api/main/jboss-saaj-api_1.3_spec-1.0.3.Final.jar"/>
   <path value="/home/lizo/.m2/repository/org/springframework/ldap/spring-ldap-core/1.3.2.RELEASE/spring-ldap-core-1.3.2.RELEASE.jar"/>
   <path value="/home/lizo/dev-tools/Servers/wildfly-8.2.1.final/modules/system/layers/base/javax/servlet/jsp/api/main/jboss-jsp-api_2.3_spec-1.0.1.Final.jar"/>
@@ -237,15 +237,15 @@
    </libraries>
   </path>
   <path value="/home/lizo/dev-tools/Servers/wildfly-8.2.1.final/modules/system/layers/base/org/jboss/dmr/main/jboss-dmr-1.2.0.Final.jar"/>
-  <path value="/home/lizo/.m2/repository/org/springframework/spring-core/4.1.5.RELEASE/spring-core-4.1.5.RELEASE.jar"/>
   <path value="/home/lizo/.m2/repository/org/springframework/security/spring-security-acl/3.2.3.RELEASE/spring-security-acl-3.2.3.RELEASE.jar"/>
+  <path value="/home/lizo/.m2/repository/org/springframework/spring-core/4.1.5.RELEASE/spring-core-4.1.5.RELEASE.jar"/>
   <path value="/home/lizo/dev-tools/Servers/wildfly-8.2.1.final/modules/system/layers/base/javax/mail/api/main/javax.mail-1.5.1.jar"/>
   <path value="/home/lizo/.m2/repository/javax/servlet/servlet-api/2.5/servlet-api-2.5.jar"/>
   <path value="/home/lizo/.m2/repository/org/apache/geronimo/specs/geronimo-jms_1.1_spec/1.1.1/geronimo-jms_1.1_spec-1.1.1.jar"/>
   <path value="/home/lizo/.m2/repository/org/fusesource/hawtdispatch/hawtdispatch-transport/1.11/hawtdispatch-transport-1.11.jar"/>
   <path value="/home/lizo/dev-tools/Servers/wildfly-8.2.1.final/modules/system/layers/base/javax/inject/api/main/javax.inject-1.jar"/>
-  <path value="/home/lizo/.m2/repository/org/springframework/spring-orm/3.1.2.RELEASE/spring-orm-3.1.2.RELEASE.jar"/>
   <path value="/home/lizo/.m2/repository/org/springframework/security/spring-security-core/3.2.6.RELEASE/spring-security-core-3.2.6.RELEASE.jar"/>
+  <path value="/home/lizo/.m2/repository/org/springframework/spring-orm/3.1.2.RELEASE/spring-orm-3.1.2.RELEASE.jar"/>
  </paths>
  <validation>
   <core validator-id="jsf-verification"/>

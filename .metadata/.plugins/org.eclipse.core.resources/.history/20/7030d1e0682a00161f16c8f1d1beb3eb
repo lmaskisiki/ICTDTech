@@ -1,0 +1,4 @@
+app= angular.module("myApp", []);
+app.controller("myCtrl", function($scope) {
+	var  welcome="Welcome to Angular Development";
+});

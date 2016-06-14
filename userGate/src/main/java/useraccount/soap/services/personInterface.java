@@ -2,34 +2,69 @@ package useraccount.soap.services;
 
 import java.util.List;
 
+import javax.jws.WebMethod;
+import javax.jws.WebParam;
 import javax.jws.WebService;
-
+import javax.naming.Name;
+import org.springframework.ldap.core.LdapTemplate;
 
 @WebService
 public interface personInterface {
-	public void createPerson(person p);
-	public List<userRoles> personRoles(String username);
-	public List<userRoles> getRoles();
-	public person findByUsername(String User);
-	public boolean login(String username, String password);
-	public List<person> getPersons();
-	public void assignRole(person psn,  String groupDN);
-	public List<person> findSomeone(String surname);
-	public void updateUser(person p);
-	public person userProfile(String username);
-	public boolean addUserAttribute(String userDn,String attribute,String attValue);
-	public void migrateUser(person p, String ou);
-	public List getOrgUnit();
+	@WebMethod
+	public  void createPerson(
+			@WebParam(name = "newPerson")Person newPerson);
+	@WebMethod
+	public  List<Person> getPersons();
+	@WebMethod
+	public  boolean login(
+			@WebParam(name = "username")String username, 
+			@WebParam(name = "password")String password);
+	@WebMethod
+	public  Person userProfile(
+			@WebParam(name = "username")String username);
+	@WebMethod
+	public  Person findByUsername(
+			@WebParam(name = "username")String User);
+	@WebMethod
+	public  boolean addUserAttribute(
+			@WebParam(name = "userDn")String userDn, 
+			@WebParam(name = "attribute")String attribute,
+			@WebParam(name = "attValue")String attValue);
+	@WebMethod
+	public  boolean updateUserAttribute(
+			@WebParam(name = "username") String user,
+			@WebParam(name = "username") String attributename,
+			@WebParam(name = "username") String newValue);
+	@WebMethod
+	public  String findRole();
+	@WebMethod
+	public  List<userRoles> personRoles(
+			@WebParam(name = "username") String username);
+	// END OF WEB SERVICES
+	public  List<Person> findSomeone(String surname);
 
-	public List getOrgs();
+	public  void updateUser(Person p);
 
-	public String addUserToGroup(person prsn, String group);
+	//public  Name makeDN(String full_name);
 
-	public List<groups> userGroup();
+	public  void migrateUser(Person p, String ou);
 
-	public String findRole();
- 
-	String getGroupDNfrom(String groupName);
-	void removeRole(person psn, String groupDN);
-	String getRoleByName(String roleName);
+	public  List getOrgUnit();
+
+	public  List getOrgs();
+
+	public  String getGroupDNfrom(String groupName);
+
+	public  String addUserToGroup(Person prsn, String group);
+
+	public  List<groups> userGroup();
+
+	public  List<userRoles> getRoles();
+
+	public  String getRoleByName(String roleName);
+
+	public  void assignRole(Person psn, String groupDN);
+
+	public  void removeRole(Person psn, String groupDN);
+
 }

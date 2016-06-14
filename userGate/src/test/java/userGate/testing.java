@@ -12,21 +12,37 @@ import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 import org.springframework.ldap.core.DistinguishedName;
 
-import useraccount.soap.services.person;
+import useraccount.soap.services.Person;
+import useraccount.soap.services.UserAttributes;
 import useraccount.soap.services.personInterface;
  
 
 
 public class testing {
 
+ 
+	 public void testAttribueExists() {
+		System.out.print("results below :"+UserAttributes.exists("cell"));
+	}
 	@Test
+	 public void should_update_user_profile() {
+		ApplicationContext context = new ClassPathXmlApplicationContext(
+				"classpath:META-INF/applicationContext.xml");
+		BeanFactory factory = context;
+		personInterface userService = (personInterface) factory
+				.getBean("ldapUser");
+		Person p=userService.findByUsername("admin");
+		
+		System.out.println(userService.updateUserAttribute("bl", "uid", "bukhanye"));
+	}
+	
 	public void test() {
 		ApplicationContext context = new ClassPathXmlApplicationContext(
 				"classpath:META-INF/applicationContext.xml");
 		BeanFactory factory = context;
 		personInterface userService = (personInterface) factory
 				.getBean("ldapUser");
-		person p=userService.findByUsername("lmasikisiki");
+		Person p=userService.findByUsername("lmasikisiki");
 		UniversalMarshaller um=new UniversalMarshaller();
 		String output=um.toXML(p);
 		System.out.println("The out put  is: \n"+output);

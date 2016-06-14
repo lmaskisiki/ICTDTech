@@ -16,7 +16,7 @@ import javax.xml.bind.annotation.XmlType;
  *   &lt;complexContent>
  *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
  *       &lt;sequence>
- *         &lt;element name="arg0" type="{http://services.soap.useraccount/}person" minOccurs="0"/>
+ *         &lt;element name="newPerson" type="{http://services.soap.useraccount/}person" minOccurs="0"/>
  *       &lt;/sequence>
  *     &lt;/restriction>
  *   &lt;/complexContent>
@@ -27,34 +27,34 @@ import javax.xml.bind.annotation.XmlType;
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "createPerson", propOrder = {
-    "arg0"
+    "newPerson"
 })
 public class CreatePerson {
 
-    protected Person arg0;
+    protected Person newPerson;
 
     /**
-     * Gets the value of the arg0 property.
+     * Gets the value of the newPerson property.
      * 
      * @return
      *     possible object is
      *     {@link Person }
      *     
      */
-    public Person getArg0() {
-        return arg0;
+    public Person getNewPerson() {
+        return newPerson;
     }
 
     /**
-     * Sets the value of the arg0 property.
+     * Sets the value of the newPerson property.
      * 
      * @param value
      *     allowed object is
      *     {@link Person }
      *     
      */
-    public void setArg0(Person value) {
-        this.arg0 = value;
+    public void setNewPerson(Person value) {
+        this.newPerson = value;
     }
 
 }

@@ -1,0 +1,14 @@
+package useraccount.soap.services;
+
+import javax.jws.WebService;
+
+@WebService
+public class Hello implements HelloService {
+
+	@Override
+	public String greating(String gender, String fullname) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

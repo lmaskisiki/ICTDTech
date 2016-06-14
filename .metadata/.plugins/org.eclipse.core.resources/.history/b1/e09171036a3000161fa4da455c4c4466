@@ -1,0 +1,11 @@
+package useraccount.soap.services;
+
+import java.util.List;
+
+public class UserAttributes {
+
+	String [] attributes={}
+	
+	;
+	
+}

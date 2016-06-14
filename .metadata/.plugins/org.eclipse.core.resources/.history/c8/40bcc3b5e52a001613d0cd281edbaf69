@@ -1,0 +1,7 @@
+ angular.module("myapp", [])
+         
+         .controller("myCtrl", function($scope) {
+         	$scope.welcome="welcome to angular";
+            $scope.helloTo = {};
+            $scope.helloTo.title = "AngularJS";
+         });

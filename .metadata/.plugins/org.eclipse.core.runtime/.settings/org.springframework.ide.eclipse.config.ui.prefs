@@ -6,6 +6,7 @@
 //com.springsource.config.ui.prefs.activePageIndex\:/InfoSource/WebContent/WEB-INF/dispatcher-servlet.xml=<?xml version\="1.0" encoding\="UTF-8"?>\n<activePage index\="0"/>
 //com.springsource.config.ui.prefs.activePageIndex\:/InfoSource/src/main/resources/META-INF/camel-cfx.xml=<?xml version\="1.0" encoding\="UTF-8"?>\n<activePage index\="0"/>
 //com.springsource.config.ui.prefs.activePageIndex\:/InfoSource/src/main/resources/META-INF/camel-conf.xml=<?xml version\="1.0" encoding\="UTF-8"?>\n<activePage index\="0"/>
+//com.springsource.config.ui.prefs.activePageIndex\:/InfoSource/src/main/resources/META-INF/service-endpoints.xml=<?xml version\="1.0" encoding\="UTF-8"?>\n<activePage index\="0"/>
 //com.springsource.config.ui.prefs.activePageIndex\:/InfoSourceApp/src/main/resources/META-INF/camel-config.xml=<?xml version\="1.0" encoding\="UTF-8"?>\n<activePage index\="0"/>
 //com.springsource.config.ui.prefs.activePageIndex\:/IntTest/WebContent/META-INF/camel-conf.xml=<?xml version\="1.0" encoding\="UTF-8"?>\n<activePage index\="0"/>
 //com.springsource.config.ui.prefs.activePageIndex\:/PaymemtSyst/src/META-INF/applicationContext.xml=<?xml version\="1.0" encoding\="UTF-8"?>\n<activePage index\="0"/>

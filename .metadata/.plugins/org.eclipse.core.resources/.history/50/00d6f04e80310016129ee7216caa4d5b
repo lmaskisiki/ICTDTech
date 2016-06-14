@@ -1,0 +1,39 @@
+package useraccount.soap.services;
+
+import java.util.List;
+
+import javax.jws.WebMethod;
+import javax.jws.WebParam;
+import javax.jws.WebService;
+
+
+@WebService
+public interface personInterface {
+	public void createPerson(@WebParam Person p);
+	public List<userRoles> personRoles(@WebParam String username);
+	public List<userRoles> getRoles();
+	public Person findByUsername(@WebParam String User);
+	public boolean updateUserAttribute(String user,@WebParam String attribute,@WebParam String newValue);
+	public boolean login(@WebParam String username, @WebParam String password);
+	public List<Person> getPersons();
+	public void assignRole(@WebParam Person psn, @WebParam String groupDN);
+	public List<Person> findSomeone(@WebParam String surname);
+	public void updateUser(@WebParam Person p);
+	public Person userProfile(@WebParam String username);
+	@WebMethod
+	public boolean addUserAttribute(@WebParam String userDn,@WebParam String attribute,@WebParam String attValue);
+	public void migrateUser(@WebParam Person p, @WebParam String ou);
+	public List getOrgUnit();
+
+	public List getOrgs();
+
+	public String addUserToGroup(@WebParam Person prsn,@WebParam  String group);
+
+	public List<groups> userGroup();
+
+	public String findRole();
+ 
+	String getGroupDNfrom(@WebParam String groupName);
+	void removeRole(@WebParam Person psn, @WebParam String groupDN);
+	String getRoleByName(@WebParam String roleName);
+}

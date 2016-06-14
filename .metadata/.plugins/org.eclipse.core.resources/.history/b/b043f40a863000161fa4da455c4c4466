@@ -1,0 +1,15 @@
+$(document).ready(function() {
+	$('b').on('click', function() {
+		$('#main').load('partial/userprofile');
+	 
+		loadUserProfile();	
+	});
+
+ 
+	$('input').on('click', function(){
+		
+		alert("buton clicked!!")
+	});
+	
+	
+});

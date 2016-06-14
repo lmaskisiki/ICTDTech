@@ -1,15 +1,32 @@
 package infosource.open.services.routing;
 
+import java.util.Date;
+
 import org.apache.camel.Exchange;
 import org.apache.camel.Processor;
 import org.apache.camel.builder.RouteBuilder;
+import org.apache.camel.converter.jaxb.JaxbDataFormat;
+import org.apache.camel.dataformat.soap.name.ServiceInterfaceStrategy;
+import org.apache.camel.model.dataformat.SoapJaxbDataFormat;
 import org.apache.camel.processor.aggregate.AggregationStrategy;
 import org.springframework.stereotype.Component;
+
+import useraccount.soap.services.AccountService;
+import useraccount.soap.services.FindByUsername;
+import useraccount.soap.services.HelloService;
+import useraccount.soap.services.PersonInterface;
 
 @Component
 public class RouteManager extends RouteBuilder {
 	@Override
 	public void configure() throws Exception {
+
+		// JaxbDataFormat j= new
+		// JaxbDataFormat(AccountService.class.getPackage().getName());
+		SoapJaxbDataFormat j = new SoapJaxbDataFormat(FindByUsername.class
+				.getPackage().getName());
+		from("direct:findUser").marshal(j).to("cxf:bean:UAService")
+				.to("stream:out");
 		// News Feeds
 		from("direct:NewsFeeds").process(new Processor() {
 			@Override
@@ -46,48 +63,29 @@ public class RouteManager extends RouteBuilder {
 			}
 		}).to("cxf:bean:UAService").marshal().json().to("stream:out");
 		// user profile
-		from("direct:getProfile")
-				.multicast(new AggregationStrategy() {
-					@Override
-					public Exchange aggregate(Exchange Exchange1,
-							Exchange Exchange2) {
-						if (Exchange1 == null) {
-							return Exchange2;
-						} else {
-							String body1 = Exchange1.getIn().getBody(
-									String.class);
-							String body2 = Exchange2.getIn().getBody(
-									String.class);
-							String merged = (body1 == null) ? body2 : body1
-									+ " , " + body2;
-							Exchange2.getIn().setBody(merged);
-							return Exchange2;
-						}
-					}
-				}).parallelProcessing().timeout(200)
-				.to("direct:A", "direct:B").end().marshal().json()
-				.to("stream:out");
-		
+		from("direct:getProfile").multicast(new AggregateUserProfile())
+				.parallelProcessing().timeout(5000).to("direct:A", "direct:B")
+				.end().marshal().json().to("stream:out");
 
 		from("direct:A").process(new Processor() {
 			@Override
 			public void process(Exchange arg0) throws Exception {
 				arg0.getOut().setHeader("operationName", "findByUsername");
 				arg0.getOut().setBody(arg0.getIn().getBody());
-				System.out.println("Message going outt "
-						+ arg0.getOut().getBody());
+				System.out.println("Message going outA " + new Date()
+						+ arg0.getOut());
 			}
-		}).to("cxf:bean:UAService");
+		}).to("cxf:bean:UAService").marshal().json();
 
 		from("direct:B").process(new Processor() {
 			@Override
 			public void process(Exchange arg0) throws Exception {
 				arg0.getOut().setHeader("operationName", "getFilesByOwner");
 				arg0.getOut().setBody(arg0.getIn().getBody());
-				System.out.println("Message going outt "
-						+ arg0.getOut().getBody());
+				System.out.println("Message going outB " + new Date()
+						+ arg0.getOut());
 			}
-		}).to("cxf:bean:DocManEndpoint");
+		}).to("cxf:bean:DocManEndpoint").marshal().json();
 
 	}
 

@@ -1,0 +1,12 @@
+package infosource.processors;
+
+public class JsonBuilder {
+public String results;
+	public String getResults() {
+	return results;
+}
+public JsonBuilder() {
+		
+	}
+	
+}

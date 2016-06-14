@@ -1,0 +1,27 @@
+package infosource.open.services.routing;
+
+import org.apache.camel.Exchange;
+import org.apache.camel.processor.aggregate.AggregationStrategy;
+
+public class AggregateUserProfile implements AggregationStrategy {
+
+	@Override
+	public Exchange aggregate(Exchange Exchange1, Exchange Exchange2) {
+		if (Exchange1 == null) {
+			System.out.println("message 1 is empty1");
+			return Exchange2;
+		} else {
+			String body1 = Exchange1.getIn().getBody(
+					String.class);
+			String body2 = Exchange2.getIn().getBody(
+					String.class);
+			String merged = (body1 == null) ? body2 : body1
+					+ " , " + body2;
+			Exchange2.getIn().setBody(merged);
+			System.out.println("message are available");
+
+			return Exchange2;
+		}
+	}
+
+}

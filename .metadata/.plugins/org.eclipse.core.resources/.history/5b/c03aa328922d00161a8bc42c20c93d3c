@@ -1,0 +1,29 @@
+package infosource.processors;
+
+import org.codehaus.jettison.json.JSONException;
+import org.codehaus.jettison.json.JSONObject;
+
+public class JsonBuilder {
+public String results;
+	public String getResults() {
+	return results;
+}
+public JsonBuilder(String exchange1, String exchange2) {
+			
+	//JSONObject json = new JSONObject();
+	results=extractData(exchange1);
+	}
+	public String extractData(String message) {
+		String rs="";
+		try {
+			JSONObject json = new JSONObject(message);
+			JSONObject entity =json.getJSONObject("org.apache.cxf.message.MessageContentsList").getJSONObject("list");
+			rs =entity.toString();
+		} catch (JSONException e) {
+			 
+			 e.printStackTrace();
+		}
+		
+		return rs;
+	}
+}

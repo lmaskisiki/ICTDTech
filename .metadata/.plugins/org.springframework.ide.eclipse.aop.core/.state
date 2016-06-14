@@ -3,6 +3,7 @@
 <aop-project name="RDwebFrameApp"/>
 <aop-project name="userGate"/>
 <aop-project name="InfoSource"/>
+<aop-project name="BirthTech"/>
 <aop-project name="BCManager"/>
 <aop-project name="DocMan"/>
 <aop-project name="BCManager1"/>

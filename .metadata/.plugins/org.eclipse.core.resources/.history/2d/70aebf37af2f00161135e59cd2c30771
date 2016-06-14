@@ -1,0 +1,19 @@
+$(document).ready(function(){
+	
+	alert("masikisiki document loaded")
+	$('b').on('click', function(){
+		
+		var table= document.createElement("table");
+		var surnamerow= document.createElement("tr");
+		var cell= document.createElement("td");
+		var cell2= document.createAttribute('td');
+		
+		cell.appendChild(document.createTextNode("Surname :"))
+		surnamerow.appendChild(cell);
+		surnamerow.appendChild(cell2);
+		
+		 
+	});
+	
+	  
+});

@@ -1,0 +1,21 @@
+package useraccount.soap.services;
+
+import javax.jws.WebMethod;
+import javax.jws.WebService;
+
+@WebService
+public class Hello implements HelloService {
+
+	@Override
+	@WebMethod
+	public String greating(String gender, String fullname) {
+		// TODO Auto-generated method stub
+		if(gender =="male" || gender=="Male"){
+			return "Hello Mr. "+fullname;
+		}else{
+			return "Hello Ms. "+fullname;
+
+		}
+	}
+
+}

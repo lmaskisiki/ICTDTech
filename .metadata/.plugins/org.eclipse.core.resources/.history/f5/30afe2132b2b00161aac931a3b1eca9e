@@ -1,0 +1,30 @@
+package infosource.web.controllers;
+
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.ModelMap;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.servlet.ModelAndView;
+
+import useraccount.soap.services.Person;
+
+@Controller
+public class homeController {
+	
+	@RequestMapping(value = "/", method = RequestMethod.GET)
+	public ModelAndView home() {
+
+		return new ModelAndView("index");
+	}
+	@RequestMapping( value ="account/create", method=RequestMethod.GET)
+	public ModelAndView createAccountRequest(){
+		
+		return new ModelAndView("accountform");
+			}
+	
+	@RequestMapping(value="account/process", method=RequestMethod.GET)
+	public void processAccountRequest(ModelMap map, Person person){
+		
+		
+	}
+}

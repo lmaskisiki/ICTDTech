@@ -1,0 +1,43 @@
+
+<form>
+	<div class="userprofiletable"  style="display: none;">
+		<table >
+			<tr>
+			<td>Surname</td>
+			<td><input type="text" id="surname"name="surname" readonly="readonly"></<input></td>
+			</tr>
+			<tr>
+			<td>Name</td>
+			<td><input type="text" id="name"name="name" readonly="readonly"></<input></td>
+			</tr>
+			<tr>
+			<td>Id Number</td>
+			<td><input type="text" id="idNumber"name="idNumber" readonly="readonly"></<input></td>
+			</tr>
+			<tr>
+			<td>Gender</td>
+			<td><input type="text" id="gender" name="gender" readonly="readonly"></<input></td>
+			</tr>
+			<tr>
+			<td>Cell</td>
+			<td><input type="text" id="cellnumber" name="cell" readonly="readonly"></<input></td>
+			</tr>
+			<tr>
+			<td>Email Address</td>
+			<td><input type="text" id="email" name="email" readonly="readonly"></<input></td>
+			</tr>
+			<tr><td><input type="button" value="Submit"/></td><td><input type="button" value="Enable Update"/></td></tr>
+		</table>
+		<hr/>		
+		<ul class="showdocuments">
+		<a href="#">Show My Documents</a>
+			<ul class="documents" style="display: none;">
+				<li><a href="#">Document 1</a></li>
+			</ul>
+		</ul>
+</div>
+
+<div id="feedscontainer" ></div>
+</form>
+
+ 

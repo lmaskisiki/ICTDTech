@@ -1,0 +1,65 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+	pageEncoding="UTF-8"%><%@ taglib
+	uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Insert title here</title>
+ 
+<script type="text/javascript">
+
+</script>
+<style type="text/css">
+body{
+ 	background-color: buttonface;
+
+}
+.wrapper{
+
+	width: 100%;
+	margin: 1px;
+	border: 1px solid blue;;
+	border-style: outset;
+	display: block;
+
+}
+
+#main, #newsfeeds{
+float: left;
+}
+#main{
+width: 70%;
+
+}
+#newsfeeds{
+width: 30%;
+}
+</style>
+</head>
+<body onload="loadFeeds()">
+
+	<div class="wrapper">
+		<div id="Header">
+			<a href="account/create">Create</a>
+			<a href="#" onclick="loadUserProfile()">My Profile</a>
+					<b><a href="#" >My Profile1</a></b>
+		</div>
+		<div id="main"></div>
+		
+		<div id="newsfeeds"></div>
+	</div>
+
+
+
+
+
+
+
+	<script src="resources/js/jquery-1.12.4.min.js"></script>
+			<script src="resources/js/dombuilder.js"></script>
+	
+		<script src="resources/js/ajaxcallprocessor.js"></script>
+		
+</body>
+</html>

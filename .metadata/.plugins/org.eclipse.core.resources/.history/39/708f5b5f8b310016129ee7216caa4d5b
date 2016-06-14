@@ -1,0 +1,433 @@
+package useraccount.soap.services;
+
+import java.util.List;
+
+import javax.annotation.PostConstruct;
+import javax.jws.WebMethod;
+import javax.jws.WebParam;
+import javax.jws.WebService;
+import javax.naming.Name;
+import javax.naming.NamingException;
+import javax.naming.directory.Attribute;
+import javax.naming.directory.AttributeInUseException;
+import javax.naming.directory.Attributes;
+import javax.naming.directory.BasicAttribute;
+import javax.naming.directory.BasicAttributes;
+import javax.naming.directory.DirContext;
+import javax.naming.directory.ModificationItem;
+import javax.naming.directory.SearchControls;
+import javax.ws.rs.Produces;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.ldap.core.AttributesMapper;
+import org.springframework.ldap.core.DirContextOperations;
+import org.springframework.ldap.core.DistinguishedName;
+import org.springframework.ldap.core.LdapTemplate;
+import org.springframework.ldap.core.support.LdapContextSource;
+import org.springframework.ldap.filter.AndFilter;
+import org.springframework.ldap.filter.EqualsFilter;
+import org.springframework.stereotype.Service;
+import org.springframework.web.context.support.SpringBeanAutowiringSupport;
+
+@Service
+@WebService(endpointInterface = "useraccount.soap.services.personInterface", serviceName = "AccountService", portName = "AccountServicePort")
+public class personImpl extends SpringBeanAutowiringSupport implements
+		personInterface {
+
+	@Autowired
+	private LdapTemplate ldapTemplate;
+	private String baseDN = ",dc=myldap,dc=com";
+	private static final String fullDN = "distinguishedname";
+	private static final String member_attribute = "member";
+
+	LdapContextSource lcs = new LdapContextSource();
+
+	public LdapTemplate getLdapTemp() {
+		return ldapTemplate;
+	}
+
+	public void setLdapTemp(LdapTemplate ldapTemplate) {
+		this.ldapTemplate = ldapTemplate;
+	}
+
+	@PostConstruct
+	public void postConstruct() {
+
+		System.out.println("postconstruct has run.");
+		SpringBeanAutowiringSupport.processInjectionBasedOnCurrentContext(this);
+	}
+
+	private DistinguishedName getDnFrom( String fullname) {
+		DistinguishedName newContactDN = new DistinguishedName();
+		newContactDN.add("cn", fullname);
+		newContactDN.add("ou", "userAccounts");
+		return newContactDN;
+	}
+
+	@Override
+	@WebMethod
+	public void createPerson(@WebParam(name="newperson") Person newPerson) {
+		Attributes userAttributes = new BasicAttributes();
+		userAttributes.put("objectClass", "Person");
+		userAttributes.put("objectClass", "inetOrgPerson");
+		userAttributes.put("givenName", newPerson.getFirst_name());
+		userAttributes.put("sn", newPerson.getLast_name());
+		userAttributes.put("uid", newPerson.getUsername());
+		userAttributes.put("mobile", newPerson.getCell());
+		userAttributes.put("mail", newPerson.getEmail());
+		userAttributes.put("title", newPerson.getGender());
+		userAttributes.put("userPassword", newPerson.getPassword());
+		ldapTemplate.bind(
+				makeDN(newPerson.getFirst_name() + " "
+						+ newPerson.getLast_name()), null, userAttributes);
+	}
+
+	@Override
+	@WebMethod
+	public List<Person> getPersons() {
+		SearchControls controls = new SearchControls();
+		controls.setSearchScope(SearchControls.SUBTREE_SCOPE);
+
+		return ldapTemplate.search("", "(objectclass=Person)", controls,
+				new UserContextMapper());
+	}
+
+	@SuppressWarnings("unchecked")
+	@Override
+	@WebMethod
+	public List<Person> findSomeone(@WebParam(name="username") String surname) {
+
+		SearchControls controls = new SearchControls();
+		controls.setSearchScope(SearchControls.SUBTREE_SCOPE);
+		AndFilter filter = new AndFilter();
+		filter.and(new EqualsFilter("objectclass", "inetOrgPerson")).and(
+				new EqualsFilter("sn", surname));
+		List<Person> users = ldapTemplate.search("", filter.toString(),
+				controls, new UserContextMapper());
+
+		return users;
+
+	}
+
+	@Override
+	@WebMethod
+	public void updateUser(@WebParam (name="person")Person p) {
+		// Name dn = getDnFrom(p.getFirst_name() + " " + p.getLast_name());
+		DistinguishedName dn = new DistinguishedName();
+
+		DirContextOperations context = ldapTemplate.lookupContext(p.getDn());
+		context.setAttributeValue("mobile", p.getCell());
+		context.setAttributeValue("mail", p.getEmail());
+
+		ldapTemplate.modifyAttributes(context);
+
+	}
+	@WebMethod
+	public Name makeDN(@WebParam (name="fullname") String full_name) {
+		DistinguishedName dn = new DistinguishedName(
+				"ou=users,ou=people,o=egoveSystem");
+		dn.add("cn", full_name);
+
+		return dn;
+	}
+
+	@Override
+	@WebMethod
+	public boolean login(@WebParam(name="username") String username,@WebParam (name="password") String password) {
+		AndFilter filter = new AndFilter();
+		filter.and(new EqualsFilter("objectclass", "inetOrgPerson")).and(
+				new EqualsFilter("uid", username));
+		return ldapTemplate.authenticate(DistinguishedName.EMPTY_PATH,
+				filter.toString(), password);
+
+	}
+
+	@SuppressWarnings("unchecked")
+	@Override
+	@WebMethod
+	public Person userProfile(@WebParam (name="username") String username) {
+		SearchControls controls = new SearchControls();
+		controls.setSearchScope(SearchControls.SUBTREE_SCOPE);
+		AndFilter filter = new AndFilter();
+		filter.and(new EqualsFilter("objectclass", "inetOrgPerson")).and(
+				new EqualsFilter("uid", username));
+		List<Person> users = ldapTemplate.search("", filter.toString(),
+				controls, new UserContextMapper());
+		Person user = users.get(0);
+		return user;
+	}
+
+	@Override
+	@WebMethod
+	public void migrateUser(@WebParam (name="person")Person p, @WebParam (name="ou")String ou) {
+		// Name dn = getDnFrom(p.getFirst_name() + " " + p.getLast_name());
+		DistinguishedName dn = new DistinguishedName();
+		DistinguishedName dn1 = new DistinguishedName();
+
+		dn.add("ou", "userAccounts");
+		dn.add("cn", p.getFirst_name() + " " + p.getLast_name());
+		DirContextOperations context = ldapTemplate.lookupContext(dn);
+
+		DirContextOperations context1 = ldapTemplate.lookupContext(dn);
+		context1.setAttributeValue("ou", ou);
+		context1.setAttributeValue("mobile", p.getCell());
+		context1.setAttributeValue("mail", p.getEmail());
+
+		dn1.add("ou", ou);
+		dn1.add("cn", dn.getValue("cn"));
+
+	}
+
+	@Override
+	@WebMethod
+	public List getOrgUnit() {
+		AndFilter filter = new AndFilter();
+
+		filter.and(new EqualsFilter("objectclass", "organizationalUnit"));
+
+		List list = ldapTemplate.search("", filter.encode(),
+				new AttributesMapper() {
+					public Object mapFromAttributes(Attributes attrs)
+							throws NamingException {
+						return attrs.get("ou").get();
+					}
+				});
+
+		return list;
+	}
+
+	@Override
+	@WebMethod
+	public List getOrgs() {
+		AndFilter filter = new AndFilter();
+		filter.and(new EqualsFilter("objectclass", "organization"));
+		List list = ldapTemplate.search("", filter.encode(),
+				new AttributesMapper() {
+					public Object mapFromAttributes(Attributes attrs)
+							throws NamingException {
+						return attrs.get("o").get();
+					}
+				});
+
+		return list;
+	}
+	@WebMethod
+	private String getUserDNfrom(@WebParam (name="person")Person p) {
+		String Full_Name = p.getFirst_name() + " " + p.getLast_name();
+		SearchControls controls = new SearchControls();
+		controls.setSearchScope(SearchControls.SUBTREE_SCOPE);
+		AndFilter fil = new AndFilter();
+		fil.and((new EqualsFilter("objectclass", "inetOrgPerson")));
+		fil.and((new EqualsFilter("cn", Full_Name)));
+		List<Person> list = ldapTemplate.search(DistinguishedName.EMPTY_PATH,
+				fil.encode(), new UserContextMapper());
+
+		String dn = list.get(0).getDn();
+		System.out.println(" dn found: " + dn);
+		return dn;
+
+	}
+
+	@Override
+	@WebMethod
+	public String getGroupDNfrom(@WebParam(name="groupName") String groupName) {
+		SearchControls controls = new SearchControls();
+		controls.setSearchScope(SearchControls.SUBTREE_SCOPE);
+		AndFilter filter = new AndFilter();
+		filter.and(new EqualsFilter("objectclass", "groupOfNames")).and(
+				new EqualsFilter("cn", groupName));
+		List<groups> group = ldapTemplate.search("", filter.toString(),
+				controls, new GroupContextMapper());
+
+		System.out.println("try get group dn");
+		String groupDn = group.get(0).getGroupDN();
+		System.out.println("found group dn " + groupDn);
+		return groupDn;
+
+	}
+
+	@Override
+	@WebMethod
+	public String addUserToGroup(@WebParam Person prsn, @WebParam String group) {
+		String userDN = getUserDNfrom(prsn);
+		String groupDN = getGroupDNfrom(group);
+		if ((userDN != null || (!userDN.equals("")))
+				&& (groupDN != null || (!groupDN.equals("")))) {
+			DistinguishedName dn = new DistinguishedName(userDN);
+			DirContextOperations ctx = ldapTemplate.lookupContext(dn);
+
+			if (ctx != null) {
+				DistinguishedName dc = new DistinguishedName(userDN + baseDN);
+				ModificationItem[] mod = new ModificationItem[1];
+				Attribute att = new BasicAttribute("member", dc.encode());
+				mod[0] = new ModificationItem(DirContext.ADD_ATTRIBUTE, att);
+				ldapTemplate.modifyAttributes(groupDN, mod);
+				// ---
+				// ---
+				return "User was successfully added to the group: Role assigned";
+			} else {
+				return "User not found";
+			}
+
+		} else {
+			return "Ivalid Input";
+		}
+
+	}
+
+	@Override
+	@WebMethod
+	public List<groups> userGroup() {
+		SearchControls controls = new SearchControls();
+		controls.setSearchScope(SearchControls.SUBTREE_SCOPE);
+		String[] rt = { "cn" };
+		controls.setReturningAttributes(rt);
+		AndFilter filter = new AndFilter();
+		String baseDN = "ou=roles,ou=people,o=egoveSystem";
+		filter.and(new EqualsFilter("objectclass", "groupOfNames"));
+
+		List<groups> group = ldapTemplate.search(baseDN, filter.toString(),
+				controls, new GroupContextMapper());
+		return group;
+
+	}
+
+	@Override
+	@WebMethod
+	public String findRole() {
+
+		SearchControls controls = new SearchControls();
+		controls.setSearchScope(SearchControls.SUBTREE_SCOPE);
+		AndFilter filter = new AndFilter();
+		filter.and(new EqualsFilter("objectclass", "groupOfUniqueNames"));
+		List<groups> group = ldapTemplate.search("", filter.toString(),
+				controls, new GroupContextMapper());
+		return group.get(0).getGroupDN();
+	}
+
+	@Override
+	@WebMethod
+	public List<userRoles> personRoles(@WebParam String username) {
+		Person psn = findByUsername(username);
+		String userDN = getUserDNfrom(psn);
+		userDN = userDN + baseDN;
+		SearchControls controls = new SearchControls();
+		controls.setSearchScope(SearchControls.SUBTREE_SCOPE);
+		AndFilter filter = new AndFilter();
+		filter.and(new EqualsFilter("objectclass", "groupOfNames")).and(
+				new EqualsFilter("member", userDN));
+		List<userRoles> roles = ldapTemplate.search("", filter.toString(),
+				controls, new RoleAbstractMapper());
+
+		return roles;
+	}
+
+	@Override
+	@WebMethod
+	@Produces("application/json")
+	public Person findByUsername(@WebParam String User) {
+
+		SearchControls controls = new SearchControls();
+		controls.setSearchScope(SearchControls.SUBTREE_SCOPE);
+		AndFilter filter = new AndFilter();
+		filter.and(new EqualsFilter("objectclass", "inetOrgPerson")).and(
+				new EqualsFilter("uid", User));
+		List<Person> users = ldapTemplate.search("", filter.toString(),
+				controls, new UserContextMapper());
+
+		return users.get(0);
+
+	}
+
+	@Override
+	@WebMethod
+	public List<userRoles> getRoles() {
+
+		return null;
+	}
+
+	@Override
+	@WebMethod
+	public String getRoleByName(@WebParam String roleName) {
+
+		SearchControls controls = new SearchControls();
+		controls.setSearchScope(SearchControls.SUBTREE_SCOPE);
+		AndFilter filter = new AndFilter();
+		filter.and(new EqualsFilter("objectclass", "groupOfName")).and(
+				new EqualsFilter("cn", roleName));
+		List<groups> group = ldapTemplate.search("", filter.toString(),
+				controls, new GroupContextMapper());
+
+		return group.get(0).getGroupDN();
+	}
+
+	@Override
+	@WebMethod
+	public void assignRole(@WebParam Person psn,@WebParam  String groupDN) {
+		ModificationItem[] mods = new ModificationItem[1];
+		DistinguishedName groupdn = new DistinguishedName(groupDN);
+		DistinguishedName userdn = new DistinguishedName(psn.getDn() + baseDN);
+		Attribute att = new BasicAttribute("member", userdn.encode());
+		mods[0] = new ModificationItem(DirContext.ADD_ATTRIBUTE, att);
+		ldapTemplate.modifyAttributes(groupdn, mods);
+
+	}
+
+	@Override
+	@WebMethod
+	public void removeRole(@WebParam Person psn,@WebParam  String groupDN) {
+		ModificationItem[] mods = new ModificationItem[1];
+		DistinguishedName groupdn = new DistinguishedName(groupDN);
+		DistinguishedName userdn = new DistinguishedName(psn.getDn() + baseDN);
+		Attribute att = new BasicAttribute("member", userdn.encode());
+		mods[0] = new ModificationItem(DirContext.REMOVE_ATTRIBUTE, att);
+		ldapTemplate.modifyAttributes(groupdn, mods);
+
+	}
+
+	@Override
+	@WebMethod
+	public boolean addUserAttribute(@WebParam String userDn,@WebParam String attribute,
+			@WebParam	String attValue) {
+
+		ModificationItem[] mods = new ModificationItem[3];
+		DistinguishedName userDN = new DistinguishedName(userDn);
+
+		Attribute att = new BasicAttribute(attribute, attValue);
+		mods[0] = new ModificationItem(DirContext.ADD_ATTRIBUTE, att);
+		Attribute att2 = new BasicAttribute("objectClass", "posixAccount");
+		mods[1] = new ModificationItem(DirContext.ADD_ATTRIBUTE, att2);
+
+		Attribute att3 = new BasicAttribute("gidNumber", "503");
+		mods[2] = new ModificationItem(DirContext.ADD_ATTRIBUTE, att3);
+
+		// homeDirectory
+		ldapTemplate.modifyAttributes(userDN, mods);
+
+		Attribute att4 = new BasicAttribute("homeDirectory", "503");
+		System.out.println("mxm,,,,2");
+		mods[3] = new ModificationItem(DirContext.ADD_ATTRIBUTE, att4);
+		return false;
+	}
+
+	@Override
+	@WebMethod
+	public boolean updateUserAttribute(@WebParam String user,@WebParam String attributename,
+			@WebParam String newValue) {
+		Person person = findByUsername(user);
+		if (person != null) {
+			if (UserAttributes.exists(attributename)) {
+				ModificationItem[] mods = new ModificationItem[1];
+				Attribute attribute = new BasicAttribute(attributename,
+						newValue);
+				mods[0] = new ModificationItem(DirContext.REPLACE_ATTRIBUTE,
+						attribute);
+
+				ldapTemplate.modifyAttributes(person.getDn(), mods);
+				return true;
+			}
+		}
+		return false;
+	}
+
+}

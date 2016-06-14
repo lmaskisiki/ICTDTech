@@ -1,0 +1,6 @@
+$(document).ready(function() {
+	$('#sidebar').load("partial/newsfeeds");
+	loadFeeds()
+	
+	
+});

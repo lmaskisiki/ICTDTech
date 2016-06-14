@@ -1,0 +1,9 @@
+$(document).ready(function(){
+	
+	alert("masikisiki document loaded")
+	$('b').on('click', function(){
+		 $('#main').load('partial/userprofile');
+ 	});
+	
+	  
+});

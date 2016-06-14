@@ -7,20 +7,29 @@ import useraccount.soap.services.FindByUsernameResponse;
 import useraccount.soap.services.GetPersons;
 import useraccount.soap.services.GetPersonsResponse;
 import useraccount.soap.services.Person;
-
+import useraccount.soap.services.UpdateUser;
+import useraccount.soap.services.UpdateUserAttribute;
 
 @Component
 public class UserAccountClient {
-	
-	public Person getUserByUsername(FindByUsernameResponse response){
+
+	public Person getUserByUsername(FindByUsernameResponse response) {
 		response.getReturn();
 		return response.getReturn();
 	}
 
-	public GetPersonsResponse getPersons(){
-		GetPersons p=new GetPersons();
-		 
+	public GetPersonsResponse getPersons() {
+		GetPersons p = new GetPersons();
+
 		return null;
+
+	}
+
+	public UpdateUserAttribute UpdateUserRequest(String username,
+			String attributename, String newValue) {
+		UpdateUserAttribute update = new UpdateUserAttribute();
 		
+		 
+		return update;
 	}
 }

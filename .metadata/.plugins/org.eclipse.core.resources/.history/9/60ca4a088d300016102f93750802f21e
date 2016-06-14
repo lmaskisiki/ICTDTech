@@ -1,0 +1,9 @@
+$(document).ready(function() {
+	loadUserProfile();
+		$('#main').load('partial/userprofile');
+		
+ 
+
+ 	
+	
+});

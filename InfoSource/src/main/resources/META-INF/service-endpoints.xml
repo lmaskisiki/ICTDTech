@@ -56,6 +56,19 @@
         xmlns:ws="http://services.soap.useraccount/">
         <cxf:properties>
             <entry key="dataFormat" value="POJO"></entry>
+             <entry key="dataFormat" value="MESSAGE"></entry>
+        </cxf:properties>
+     </cxf:cxfEndpoint>
+     
+     <!-- User hello System -->	
+    <cxf:cxfEndpoint id="HelloService"
+        address="http://localhost:8080/userGate/Hello" 
+        wsdlURL="http://localhost:8080/userGate/Hello?wsdl"
+        serviceName="ws:HelloService" 
+         endpointName="ws:HelloPort"
+         xmlns:ws="http://services.soap.useraccount/">
+         <cxf:properties>
+            <entry key="dataFormat" value="MESSAGE"></entry>
         </cxf:properties>
      </cxf:cxfEndpoint>
  

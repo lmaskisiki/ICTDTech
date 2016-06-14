@@ -1,0 +1,18 @@
+package infosource.web.controllers;
+
+import infosource.open.services.access.TransactionManager;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+import org.springframework.web.servlet.ModelAndView;
+
+@Controller
+public class NewsController {
+
+	@Autowired
+	private TransactionManager tm;
+	
+	public ModelAndView showFeeds(){
+		
+	}
+}
