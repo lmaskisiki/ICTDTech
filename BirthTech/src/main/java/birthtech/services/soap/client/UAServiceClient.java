@@ -39,7 +39,7 @@ public class UAServiceClient {
 
 	public FindByUsername searchByUsernameRequest(String username) {
 		FindByUsername find = new FindByUsername();
-		find.setArg0(username);
+		find.setUsername(username);
 		return find;
 	}
 

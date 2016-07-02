@@ -1,5 +1,5 @@
 
-<form>
+
 	<div class="userprofiletable" style="display:none;">
 		<table>
 			<tr>
@@ -37,7 +37,7 @@
 				<td>Email Address</td>
 				<td><input type="text" id="email" name="email"
 					readonly="readonly" /></td>
-				<td><input class="userattribute" type="button" value="Update" /></td>
+				<td><input class="userattribute" type="button" value="Update" /><button onclick="l()">Button</button></td>
 			</tr>
 		</table>
 		<hr />
@@ -48,8 +48,7 @@
 			</ul>
 		</ul>
 	</div>
-<a href="#">click</a>
-	<div id="lizo"></div>
-</form>
+ 
+ 
 
-
+ 

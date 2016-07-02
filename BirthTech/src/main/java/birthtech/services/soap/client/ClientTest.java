@@ -17,7 +17,7 @@ public class ClientTest {
 		System.out.print(client.getPersons().size());
 		Person p = null;
 		try {
-			p = client.findByUsername("admins");
+			p = client.findUserByFullName("Lizo Masikisiki");
 		} catch (Exception e) {
 			// TODO: handle exception
 		}

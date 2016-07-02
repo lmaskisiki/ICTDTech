@@ -1,4 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<session version="1.0">
-<refactoring comment="Rename package &apos;infosource.ws&apos; to &apos;birthtech.ws&apos;&#x0A;- Original project: &apos;BirthTechHA&apos;&#x0A;- Original element: &apos;BirthTechHA/src/main/java/infosource.ws&apos;&#x0A;- Renamed element: &apos;BirthTechHA/src/main/java/birthtech.ws&apos;&#x0A;- Update references to refactored element&#x0A;- Update fully qualified names in &apos;*&apos; files&#x0A;- Update textual occurrences in comments and strings" description="Rename package &apos;infosource.ws&apos;" flags="589830" hierarchical="false" id="org.eclipse.jdt.ui.rename.package" input="/src\/main\/java&lt;infosource.ws" name="birthtech.ws" patterns="*" qualified="true" references="true" stamp="1460832512541" textual="true" version="1.0"/>
-</session>

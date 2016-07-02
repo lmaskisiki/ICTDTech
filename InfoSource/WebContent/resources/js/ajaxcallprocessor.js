@@ -23,7 +23,7 @@ function feedBehaviour() {
 	});
 }
 function showFeeds(jsonObject) {
- 	var div = document.createElement("div");
+	var div = document.createElement("div");
 	for (count = 0; count < jsonObject.length; count++) {
 		var feed = document.createElement("ul");
 		var feedTitle = document.createElement("li");
@@ -68,17 +68,19 @@ function loadUserProfile() {
 
 function showUserProfile(response) {
 	var jsonObject = JSON.parse(response);
+
 	// need to confirm if this is areal json object
 	var userInfo = jsonObject["useraccount.soap.services.Person"];
+	alert(response);
 	$("#surname").val(userInfo["lastName"]);
 	$("#name").val(userInfo["firstName"]);
 	$("#idNumber").val(userInfo["idNumber"]);
 	$("#gender").val(userInfo["gender"]);
 	$("#cellnumber").val(userInfo["cell"]);
 	$("#email").val(userInfo["email"]);
-	alert();
+
 	$(".userprofiletable").toggle();
-	
+
 	// process document information
 	var userDocumentsTest = jsonObject["document"];
 	if (userDocumentsTest == null || jsonObject["document"][0] == null) {
@@ -103,10 +105,70 @@ function showUserProfile(response) {
 											.appendChild(document
 													.createTextNode(userDocuments[0]["fileName"]))
 									li.appendChild(link);
-									//$(this).find(".documents").empty();
+									// $(this).find(".documents").empty();
 									$(this).find(".documents").append(li);
 								}
 							}
 						});
-		 }
+	}
+}
+
+function updateprofile() {
+	var attributes = personattributes();
+	var select = document.createElement("select");
+	select.setAttribute("name", "attribute");
+	select.setAttribute("class", "userattributes")
+	for (x = 0; x < attributes.length; x++) {
+		var option = document.createElement("option");
+		option.setAttribute("value", attributes[x].attribute);
+		option.appendChild(document.createTextNode(attributes[x].attribute));
+		select.appendChild(option);
+	}
+	select.addEventListener("change", attributeChanged, false);
+
+	$("#main").empty();
+	$("#main").append("<div></div>");
+	$("#main").find("div").append(select);
+
+	function attributeChanged() {
+		$(this).closest("#main").find("div").find("span").remove();
+		$(this).closest("#main").find("div").append("<span></span>")
+		var input = document.createElement("input");
+		input.setAttribute("type", "text");
+		input.setAttribute("name", this.value)
+		var pushbutton=document.createElement("button");
+		pushbutton.setAttribute("class", "submitupdate");
+		pushbutton.addEventListener("click", submitupdate, false);
+		pushbutton.appendChild(document.createTextNode("Update"))
+		$(this).closest("#main").find("div").find("span").append("Enter your new "+this.value+":");
+		$(this).closest("#main").find("div").find("span").append(input);
+		$(this).closest("#main").find("div").find("span").append(pushbutton);
+	}
+	
+
+	function submitupdate() {
+		var username="admin";
+		var attribute=$(this).closest("div").find("select").val();
+		var value=$(this).closest("span").find("input").val();
+		alert(username+" :"+attribute+" :"+value);
+		  
+		var data ={ username:username,attribute:attribute,value:value };
+		var json ='{"username":'+username+',"attribute":'+attribute+',"value":'+value+' }';
+		 var j= JSON.stringify(data);
+		 alert(json);
+		 alert(JSON.stringify(json));
+		console.log(j);
+		$.ajax({
+			type:"POST",
+			url:"account/update",
+			contentType:"application/json",
+			dataType:"json",
+			data:JSON.stringify(data)
+		 });
+ 	 
+		$(".submitupdate").hide();
+	}
+	
+	
+	
 }

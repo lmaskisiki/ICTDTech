@@ -2,6 +2,9 @@
     <wb-module deploy-name="DocManWeb">
         <wb-resource deploy-path="/" source-path="/WebContent" tag="defaultRootSource"/>
         <wb-resource deploy-path="/WEB-INF/classes" source-path="/src/main/java"/>
+        <dependent-module archiveName="DocMan.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/DocMan/DocMan">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
         <property name="context-root" value="DocManWeb"/>
         <property name="java-output-path" value="/DocManWeb/WebContent/WEB-INF/classes"/>
     </wb-module>

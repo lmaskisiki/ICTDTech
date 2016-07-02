@@ -1,6 +1,7 @@
 package birthtech.entities;
 
 import java.io.Serializable;
+import java.util.Date;
 
 import javax.persistence.*;
 import javax.xml.bind.annotation.XmlRootElement;
@@ -21,6 +22,15 @@ public class Checkup implements Serializable {
 	private String comments;
 	private String nurse;
 	private String place;
+	private Date date;
+	public Date getDate() {
+		return date;
+	}
+
+	public void setDate(Date date) {
+		this.date = date;
+	}
+
 	private boolean delivered;
 	
 	

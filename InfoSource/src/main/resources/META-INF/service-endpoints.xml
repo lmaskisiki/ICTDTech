@@ -56,10 +56,23 @@
         xmlns:ws="http://services.soap.useraccount/">
         <cxf:properties>
             <entry key="dataFormat" value="POJO"></entry>
-             <entry key="dataFormat" value="MESSAGE"></entry>
-        </cxf:properties>
+          </cxf:properties>
      </cxf:cxfEndpoint>
      
+     <!-- User Account Manager System -->	
+    <cxf:cxfEndpoint id="UAService2"
+        address="http://localhost:8080/userGate/AccountService" 
+        wsdlURL="http://localhost:8080/userGate/AccountService?wsdl"
+        serviceName="ws:AccountService" 
+        endpointName="ws:AccountServicePort"
+        serviceClass="useraccount.soap.services.PersonInterface"
+        xmlns:ws="http://services.soap.useraccount/">
+        <cxf:properties>
+            <entry key="dataFormat" value="MESSAGE"></entry>
+          </cxf:properties>
+     </cxf:cxfEndpoint>
+     
+     <!-- TESTING TESTING TESTING TESTING TESTING TESTING -->
      <!-- User hello System -->	
     <cxf:cxfEndpoint id="HelloService"
         address="http://localhost:8080/userGate/Hello" 

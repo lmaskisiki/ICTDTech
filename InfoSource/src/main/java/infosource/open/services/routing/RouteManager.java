@@ -13,19 +13,17 @@ import org.springframework.stereotype.Component;
 
 import useraccount.soap.services.AccountService;
 import useraccount.soap.services.FindByUsername;
-import useraccount.soap.services.HelloService;
 import useraccount.soap.services.PersonInterface;
+import useraccount.soap.services.UpdateUserAttribute;
 
 @Component
 public class RouteManager extends RouteBuilder {
 	@Override
 	public void configure() throws Exception {
-
-		// JaxbDataFormat j= new
-		// JaxbDataFormat(AccountService.class.getPackage().getName());
-		SoapJaxbDataFormat j = new SoapJaxbDataFormat(FindByUsername.class
+ 
+		SoapJaxbDataFormat tosoap = new SoapJaxbDataFormat(UpdateUserAttribute.class
 				.getPackage().getName());
-		from("direct:findUser").marshal(j).to("cxf:bean:UAService")
+		from("direct:UpdateUser").marshal(tosoap).to("cxf:bean:UAService2")
 				.to("stream:out");
 		// News Feeds
 		from("direct:NewsFeeds").process(new Processor() {

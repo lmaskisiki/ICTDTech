@@ -17,7 +17,7 @@ public class CheckupService implements ICheckupService {
 	private CheckupRepository repo;
 
 	@Autowired
-	private MartenalService MartenalService;
+	private MaternityService MartenalService;
 
 	@Override
 	public Checkup addCheckup(Checkup checkup) {

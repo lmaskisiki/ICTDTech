@@ -1,4 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<session version="1.0">
-<refactoring accessors="true" comment="Delete 3 elements from project &apos;BCManager&apos;&#x0A;- Original project: &apos;BCManager&apos;&#x0A;- Original elements:&#x0A;     jersey-core-1.18.3.jar&#x0A;     jersey-server-2.22.1.jar&#x0A;     jersey-spring-1.18.2.jar" description="Delete elements" element1="WebContent/WEB-INF/lib/jersey-spring-1.18.2.jar" element2="WebContent/WEB-INF/lib/jersey-core-1.18.3.jar" element3="WebContent/WEB-INF/lib/jersey-server-2.22.1.jar" elements="0" flags="589830" id="org.eclipse.jdt.ui.delete" resources="3" stamp="1463174429130" subPackages="false" version="1.0"/>
-</session>

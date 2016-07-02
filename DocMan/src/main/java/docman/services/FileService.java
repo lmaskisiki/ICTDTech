@@ -19,6 +19,7 @@ import javax.persistence.PersistenceContext;
 import org.apache.commons.net.ftp.FTP;
 import org.apache.commons.net.ftp.FTPClient;
 
+import useraccount.soap.client.UAServiceClient;
 import entities.FileInfo;
 import entities.FileRequest;
 import entities.FileShare;
@@ -29,7 +30,7 @@ import ftp.FTPConnection;
  */
 @Stateless
 @LocalBean
-@WebService(endpointInterface = "docman.services.FileServiceRemote",portName="SOAPFileService", serviceName="FileService")
+@WebService(endpointInterface = "docman.services.FileServiceRemote", portName = "SOAPFileService", serviceName = "FileService")
 public class FileService implements FileServiceRemote, FileServiceLocal {
 
 	@PersistenceContext(unitName = "DocMan")
@@ -90,9 +91,6 @@ public class FileService implements FileServiceRemote, FileServiceLocal {
 
 	@Override
 	public FileInfo findByName(String fileOnwer, String fileName) {
-		System.out
-				.println("\n \n \n\n\n \n Enter find method  FUCK THIS SHITTTTT \n\n\n");
-
 		String filePath = fileOnwer + "/" + fileName;
 		FTPClient ftpClient = new FTPConnection().connect();
 		String remoteFile = fileOnwer + "/" + fileName + "";
@@ -101,14 +99,9 @@ public class FileService implements FileServiceRemote, FileServiceLocal {
 			OutputStream os = new BufferedOutputStream(new FileOutputStream(
 					download));
 			Boolean success = ftpClient.retrieveFile(remoteFile, os);
-			System.out.println("\n \n \n\n\n \n WHATTTTT \n\n\n" + success
-					+ ": " + remoteFile);
-
 		} catch (FileNotFoundException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		} catch (IOException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 		return null;
@@ -149,14 +142,18 @@ public class FileService implements FileServiceRemote, FileServiceLocal {
 						"SELECT e From FileInfo e WHERE UploadedBy='"
 								+ fileOwner + "'").getResultList();
 
-		if (null == files) {
-			System.out.println("\n \n this is null");
+		return files;
+	}
 
-		} else {
-			System.out.println("\n \n check the size below");
-
+	public List<FileInfo> getUserDocuments(String requester, String owner) {
+		UAServiceClient client = new UAServiceClient();
+		List<FileInfo> files = null;
+		if (client.isUserMemberOf(requester, "SAGOV")) {
+			files = em
+					.createQuery(
+							"SELECT e From FileInfo e WHERE UploadedBy='"
+									+ owner + "'").getResultList();
 		}
-
 		return files;
 	}
 

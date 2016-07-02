@@ -22,6 +22,7 @@ public class AggregateUserProfile implements AggregationStrategy {
 				.getBody(String.class), newExchange.getIn()
 				.getBody(String.class));
 		oldExchange.getIn().setBody(json.results);	
+		System.out.println("\n \n inside aggregation strategy \n");
 		return oldExchange;
 	}
 

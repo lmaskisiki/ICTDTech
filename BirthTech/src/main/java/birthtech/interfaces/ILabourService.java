@@ -22,4 +22,6 @@ public interface ILabourService {
 
 	public List<Labour> getLabour(Date date);
 
+	Labour add(Labour lab);
+
 }

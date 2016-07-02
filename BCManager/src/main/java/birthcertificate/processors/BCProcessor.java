@@ -22,18 +22,24 @@ public class BCProcessor implements Processor {
 				"classpath:META-INF/applicationContext.xml");
 		service = context.getBean(BCService.class);
 		Gson json = new Gson();
-		Labour lab = json.fromJson(exchange.getIn().getBody().toString(),
-				Labour.class);
+		System.out.println("Inside the processor !!  abot to sleep");
 		
 		
-		service.createCerticate(000, new Date(), lab.getBirthNo() + "", "Bubu",
-				lab.getMartenal().getSurname(), "gender", lab.getMartenal()
-						.getIdnumber() + "");
+		String str=exchange.getIn().getBody().toString();
+		System.out.println("just got the exchange \n \n"+str);
+		Thread.sleep(3000);
+		Labour lab =json.fromJson(str, Labour.class);
+		System.out.println("staff recieved \n \n"+json.toJson(lab));
 
-		System.out.println("Successfully mapped json to 'labour class' \n");
-		System.out.println(lab.getLabourId() + ":" + lab.getBirthNo() + ":"
-				+ lab.getStatus() + "" + lab.getMartenal().getSurname() + " "
-				+ lab.getMartenal().getNames());
+	//	Labour lab = json.fromJson(exchange.getIn().getBody().toString(),
+	//			Labour.class);
+	//	
+		
+//	service.createCerticate(000, new Date(), lab.getBirthNo() + "", "Bubu",
+//			lab.getMartenal().getSurname(), "gender", lab.getMartenal()
+//					.getIdnumber() + "");
+//
+	
 	}
 
 }

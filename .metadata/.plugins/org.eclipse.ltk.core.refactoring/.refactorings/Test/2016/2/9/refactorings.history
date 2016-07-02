@@ -1,4 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<session version="1.0">
-<refactoring comment="Copy 3 elements to &apos;EJBRest/src&apos;&#x0A;- Original project: &apos;Test&apos;&#x0A;- Destination element: &apos;EJBRest/src&apos;&#x0A;- Original elements:&#x0A;     Itest.java&#x0A;     RevImpl.java&#x0A;     MathImpl.java" description="Copy compilation units" destination="=EJBRest/src" element1="/src&lt;{Itest.java" element2="/src&lt;{RevImpl.java" element3="/src&lt;{MathImpl.java" files="0" flags="589830" folders="0" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyResources" stamp="1456081757976" units="3" version="1.0"/>
-</session>

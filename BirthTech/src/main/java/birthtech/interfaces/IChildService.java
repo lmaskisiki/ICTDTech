@@ -15,4 +15,5 @@ public interface IChildService {
 	public List<Child> getChildren();
 	public List<Child> getChildren(Maternity mother);
 	public  Child getChil(int id);
+	Child save(Child child);
 }

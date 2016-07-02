@@ -164,6 +164,36 @@ public class personImpl extends SpringBeanAutowiringSupport implements
 		return false;
 	}
 
+	@Override
+	@WebMethod
+	public Person findUserByFullName(
+			@WebParam(name = "fullname") String fullName) {
+		SearchControls controls = new SearchControls();
+		controls.setSearchScope(SearchControls.SUBTREE_SCOPE);
+		AndFilter filter = new AndFilter();
+		filter.and(new EqualsFilter("objectclass", "inetOrgPerson")).and(
+				new EqualsFilter("cn", fullName));
+		List<Person> users = ldapTemplate.search("", filter.toString(),
+				controls, new UserContextMapper());
+		return users.get(0);
+	}
+
+	@Override
+	@WebMethod
+	public boolean isUserMemberOf(@WebParam(name = "username") String username,
+			@WebParam(name = "rolename") String rolename) {
+		List<userRoles> roles = personRoles(username);
+		if (roles != null) {
+			for (userRoles role : roles) {
+				if (role.getRole().equals(rolename)) {
+					return true;
+				}
+			}
+		}
+		return false;
+	}
+
+	// ////
 	private DistinguishedName getDnFrom(String fullname) {
 		DistinguishedName newContactDN = new DistinguishedName();
 		newContactDN.add("cn", fullname);
@@ -371,4 +401,5 @@ public class personImpl extends SpringBeanAutowiringSupport implements
 
 		return roles;
 	}
+
 }

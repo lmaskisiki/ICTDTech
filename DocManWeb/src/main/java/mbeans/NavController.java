@@ -17,9 +17,6 @@ import javax.jms.JMSException;
 import javax.jms.Message;
 import javax.jms.MessageListener;
 import javax.jms.Queue;
- 
-
-
 
 import javax.jms.TextMessage;
 
@@ -31,7 +28,7 @@ import entities.FileShare;
 
 @javax.faces.bean.ManagedBean
 @SessionScoped
-public class NavController implements Serializable  {
+public class NavController implements Serializable {
 	/**
 	 * 
 	 */
@@ -39,18 +36,18 @@ public class NavController implements Serializable  {
 	private static final long serialVersionUID = 1L;
 	@EJB
 	private FileService fileservice;
-	
-	///@Resource(name = "Messeger")
+
+	// /@Resource(name = "Messeger")
 	@Inject
 	private JMSContext context;
-	
-	@Resource(mappedName="java:/jms/queue/SearchRequest")
+
+	@Resource(mappedName = "java:/jms/queue/SearchRequest")
 	private Queue requestQ;
-	
-	@Resource(mappedName="java:/jms/queue/SearchResponse")
+
+	@Resource(mappedName = "java:/jms/queue/SearchResponse")
 	private Queue resQ;
-   	private UFinder uf;
-  
+	private UFinder uf;
+
 	private List<FileInfo> files;
 	private List<FileRequest> fileRequests;
 	private List<FileShare> shares;
@@ -80,21 +77,24 @@ public class NavController implements Serializable  {
 	}
 
 	public String browseFiles() throws JMSException {
-		
-		files = fileservice.getFilesByOwner(FacesContext.getCurrentInstance().getExternalContext()
-				.getRemoteUser());
+
+		files = fileservice.getFilesByOwner(FacesContext.getCurrentInstance()
+				.getExternalContext().getRemoteUser());
+		files = fileservice.getFilesByOwner("admin");
 		System.out.println("what :" + files.get(0).getFilePath());
 		System.out.println("\n \n the size is " + files.size());
-		System.out.println("Q name is:"+requestQ.getQueueName());
+		System.out.println("Q name is:" + requestQ.getQueueName());
 		context.createProducer().send(requestQ, "admin");
-		Queue q=context.createQueue("SearchResponse");
-		Message ms= (Message) context.createConsumer(q).receive(10000);
+		Queue q = context.createQueue("SearchResponse");
+		Message ms = (Message) context.createConsumer(q).receive(10000);
 		context.createProducer().send(requestQ, "admin");
-		if (ms !=null){
-			System.out.println("Response Recieved.. :"+((TextMessage) ms).getText());
-		}else{
-			System.out.println("I could not find anything from :"+q.getQueueName());
-			
+		if (ms != null) {
+			System.out.println("Response Recieved.. :"
+					+ ((TextMessage) ms).getText());
+		} else {
+			System.out.println("I could not find anything from :"
+					+ q.getQueueName());
+
 		}
 		return "listfiles";
 	}
@@ -104,7 +104,7 @@ public class NavController implements Serializable  {
 		FileInfo fi = fileservice
 				.getFileById("user3", Integer.parseInt(fileId));
 		File f = new File("/home/lizo/Desktop/" + fi.getFileName() + ".pdf");
-		//FileOutputStream fos = new FileOutputStream(f.getAbsolutePath());
+		// FileOutputStream fos = new FileOutputStream(f.getAbsolutePath());
 		System.out.println(f.getAbsolutePath());
 		boolean dwn = fileservice.downloadFile(fi.getFilePath(),
 				f.getAbsolutePath());
@@ -175,17 +175,19 @@ public class NavController implements Serializable  {
 		fileservice.removeRequest(fr);
 		return "requests";
 	}
-	public String myShares(){
+
+	public String myShares() {
 		String user = FacesContext.getCurrentInstance().getExternalContext()
 				.getRemoteUser();
 		shares = fileservice.getSahres(user);
-	return "shares";
+		return "shares";
 	}
-	
-	public void getSharedFile(String serverPath,String fileName){
-	 
-		File f = new File("/home/lizo/Desktop/" +fileName+".pdf");
+
+	public void getSharedFile(String serverPath, String fileName) {
+
+		File f = new File("/home/lizo/Desktop/" + fileName + ".pdf");
 		fileservice.downloadFile(serverPath, f.getAbsolutePath());
-		System.out.println("The File Was successfully Downloaded"+f.getAbsolutePath());
+		System.out.println("The File Was successfully Downloaded"
+				+ f.getAbsolutePath());
 	}
 }

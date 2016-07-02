@@ -1,3 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<session version="1.0">&#x0A;<refactoring comment="Delete resource &apos;DocManClient&apos;" deleteContents="true" description="Delete resource &apos;DocManClient&apos;" element1="/DocManClient" flags="7" id="org.eclipse.ltk.core.refactoring.delete.resources" resources="1" stamp="1452435041967"/>&#x0A;<refactoring comment="Delete resource &apos;DocManView&apos;" deleteContents="true" description="Delete resource &apos;DocManView&apos;" element1="/DocManView" flags="7" id="org.eclipse.ltk.core.refactoring.delete.resources" resources="1" stamp="1452537912233"/>
-</session>

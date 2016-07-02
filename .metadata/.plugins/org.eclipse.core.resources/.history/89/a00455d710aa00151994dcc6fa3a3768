@@ -1,5 +1,0 @@
-package webFrameApp.enumerations;
-
-public enum DomainCategory {
-SCHOOL,UNIVERSITY,HEALTH,COMMUNITY,HOME, SOCIAL,BUSINESS,EDUCATION, MEDIA,COMMUNICATION;
-}

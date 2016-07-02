@@ -18,7 +18,7 @@ import useraccount.soap.services.personInterface;
 
 @MessageDriven(name = "Messeger", activationConfig = {
 		@ActivationConfigProperty(propertyName = "destinationType", propertyValue = "javax.jms.Queue"),
-		@ActivationConfigProperty(propertyName = "destination", propertyValue = "/jms/queue/JMSBridgeTargetQ") })
+		@ActivationConfigProperty(propertyName = "destination", propertyValue = "findUser") })
 public class Messeger implements MessageListener {
 
 	public Messeger() {
@@ -35,10 +35,10 @@ public class Messeger implements MessageListener {
 			if (message instanceof TextMessage) {
 				TextMessage msg = (TextMessage) message;
 				String tmsg= msg.getText();
-				Person p =userService.findByUsername(tmsg);
+				Person p =userService.findUserByFullName(tmsg);
 				UniversalMarshaller um=new UniversalMarshaller();
 				String output=um.toXML(p);
-				System.out.println(output);
+				System.out.println("request recieved!!!");
 				
 
 			}

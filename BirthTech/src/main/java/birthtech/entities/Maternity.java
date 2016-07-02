@@ -9,24 +9,37 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.xml.bind.annotation.XmlRootElement;
 
+import birthtech.enums.EmploymentEnum;
+
  
 @Entity
 @XmlRootElement
 public class Maternity implements Serializable {  
-	 
-	@Id
+ 	@Id
 	@GeneratedValue(strategy=GenerationType.AUTO)
 	private int mid;
 	private String names;
 	private String surname;
 	private int idnumber;
+
+	private String employementStatus;
 	private String nurse;
 	private Date registration;
-	 
+ 
 	private static final long serialVersionUID = 1L;
+
+	public String getEmployementStatus() {
+		return employementStatus;
+	}
+
+	public void setEmployementStatus(String employementStatus) {
+		this.employementStatus = employementStatus;
+	}
+
 
 	public int getMid() {
 		return mid;
+		
 	}
 
 	public void setMid(int mid) {

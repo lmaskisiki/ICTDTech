@@ -1,0 +1,26 @@
+package useraccount.soap.client;
+
+import javax.xml.ws.WebServiceRef;
+
+import useraccount.soap.services.AccountService;
+import useraccount.soap.services.PersonInterface;
+
+public class UAServiceClient {
+
+	@WebServiceRef(wsdlLocation="http://localhost:8080/userGate/AccountService?wsdl")
+	static AccountService service;
+	public UAServiceClient() {
+		getUserRoles();
+	}
+	public void getUserRoles(){
+		 try{
+			 
+		 }
+		 catch(Exception e) {
+			 e.printStackTrace();
+		 }
+		System.out.println(service.getAccountServicePort().isUserMemberOf("admin","Admin"));
+	}
+	
+	 
+}

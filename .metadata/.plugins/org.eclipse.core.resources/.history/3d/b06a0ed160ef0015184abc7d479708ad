@@ -1,9 +1,0 @@
-package messaging;
-
-public class TestCon {
-
-	public static void main(String[] args) {
-	new MQjmsContext().getJMSContextAMQ();
-	}
-
-}

@@ -16,11 +16,10 @@
 	<div class=”container”>
         <div id="nav">
 			<ul class="nav nav-tabs">
-				<li><a href="martenal/getall">Find All</a></li>
-				<li><a href="maternal/search">Search</a></li>
-				<li><a href="martenal/new">Create New</a></li>
-				<li><a href="martenal/getall">Update</a></li>
-			</ul>
+				<li><a href="maternity/checkup/all">Find All</a></li>
+				<li><a href="maternity/search">Search</a></li>
+				<li><a href="maternity/new">Create New</a></li>
+ 			</ul>
 		</div>
 	</div>
 

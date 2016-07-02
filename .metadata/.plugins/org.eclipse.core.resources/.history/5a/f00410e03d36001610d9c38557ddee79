@@ -1,0 +1,19 @@
+package birthtech.messaging;
+
+import org.apache.camel.builder.RouteBuilder;
+import org.springframework.stereotype.Component;
+@Component
+public class BCRouteBuilder extends RouteBuilder{
+
+	@Override
+	public void configure() throws Exception {
+		 
+		from("direct:start")
+			.choice()
+				.when(xpath("")).to("activemq:grantapplication")
+				.otherwise().to("activemq:rejectGrant")
+				.end()
+		.to("activemq:queue:queue.birthIDs");
+	}
+
+}

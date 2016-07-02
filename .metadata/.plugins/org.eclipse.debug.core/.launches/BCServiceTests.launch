@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <launchConfiguration type="org.eclipse.jdt.junit.launchconfig">
 <listAttribute key="org.eclipse.debug.core.MAPPED_RESOURCE_PATHS">
-<listEntry value="/BCManager1/src/test/java/birthtechha/tests/bcservice/BCServiceTests.java"/>
+<listEntry value="/BCManager/src/test/java/birthtechha/tests/bcservice/BCServiceTests.java"/>
 </listAttribute>
 <listAttribute key="org.eclipse.debug.core.MAPPED_RESOURCE_TYPES">
 <listEntry value="1"/>
@@ -11,7 +11,7 @@
 <stringAttribute key="org.eclipse.jdt.junit.TEST_KIND" value="org.eclipse.jdt.junit.loader.junit4"/>
 <stringAttribute key="org.eclipse.jdt.launching.CLASSPATH_PROVIDER" value="org.eclipse.m2e.launchconfig.classpathProvider"/>
 <stringAttribute key="org.eclipse.jdt.launching.MAIN_TYPE" value="birthtechha.tests.bcservice.BCServiceTests"/>
-<stringAttribute key="org.eclipse.jdt.launching.PROJECT_ATTR" value="BCManager1"/>
+<stringAttribute key="org.eclipse.jdt.launching.PROJECT_ATTR" value="BCManager"/>
 <stringAttribute key="org.eclipse.jdt.launching.SOURCE_PATH_PROVIDER" value="org.eclipse.m2e.launchconfig.sourcepathProvider"/>
 <stringAttribute key="org.eclipse.jdt.launching.VM_ARGUMENTS" value=""/>
 </launchConfiguration>

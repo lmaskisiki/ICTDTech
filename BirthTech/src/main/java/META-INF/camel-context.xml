@@ -16,28 +16,34 @@ http://www.springframework.org/schema/context
 http://www.springframework.org/schema/context/spring-context.xsd">
 
 	<context:component-scan base-package="birthtech.messaging" />
-	<camelContext id="searchRoutes" xmlns="http://camel.apache.org/schema/spring">
-		<camel:routeBuilder ref="routes" />
+	<!-- <camelContext id="searchRoutes" xmlns="http://camel.apache.org/schema/spring"> 
+		<camel:routeBuilder ref="route" /> </camelContext> -->
+	<bean id="route" class="birthtech.messaging.BCRouteBuilder"></bean>
+	<camelContext xmlns="http://camel.apache.org/schema/spring">
+		<properties>
+			<property key="CamelLogDebugBodyMaxChars" value="1200" />
+		</properties>
+		<route id="birthManagement">
+			<from uri="direct:start" />
+			<choice>
+				<when>
+					<xpath>//labour/status='1'</xpath>
+					<choice>
+						<when>
+							<xpath>//labour/maternal/employementStatus='GOVERNMENT'</xpath>
+							<to uri="activemq:rejectetGrantApplication" />
+						</when>
+						<otherwise>
+							<to uri="activemq:acceptGrantApplication" />
+						</otherwise>
+					</choice>
+				</when>
+				<otherwise>
+					<to uri="activemq:stillbornRegister" />
+				</otherwise>
+			</choice>
+			<to uri="activemq:error" />
+		</route>
 	</camelContext>
-	
-	<bean id="BCRouteBuilder" class="birthtech.messaging.BCRouteBuilder" />
-	<cxf:cxfEndpoint id="UAService"
-		address="http://localhost:8080/userGate/AccountService" wsdlURL="http://localhost:8080/userGate/AccountService?wsdl"
-		serviceName="ws:AccountService" serviceClass="useraccount.soap.services.PersonInterface"
-		xmlns:ws="http://services.soap.useraccount/">
-		<cxf:properties>
-			<entry key="dataFormat" value="POJO" />
-		</cxf:properties>
-	</cxf:cxfEndpoint>
-	
-	<jaxws:client id="UAServiceClient"
-		address="http://localhost:8080/userGate/AccountService" serviceClass="useraccount.soap.services.AccountService">
-	</jaxws:client>
-	
-	<camelContext id="searchContext" xmlns="http://camel.apache.org/schema/spring">
-		<camel:routeBuilder ref="routes" />
-	</camelContext>
-	
-	<bean id="UAServiceClient" class="birthtech.services.soap.client.UAServiceClient" />
-	<bean id="routes" class="birthtech.services.routes.UserSearchRouter" />
+
 </beans>

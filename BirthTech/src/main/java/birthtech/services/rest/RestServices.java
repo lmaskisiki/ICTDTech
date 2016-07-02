@@ -14,12 +14,12 @@ import birthtech.entities.Maternity;
 import birthtech.services.CheckupService;
 import birthtech.services.ChildService;
 import birthtech.services.LabourService;
-import birthtech.services.MartenalService;
+import birthtech.services.MaternityService;
 
 @RestController
 public class RestServices {
 	@Autowired
-	private MartenalService martenalService;
+	private MaternityService martenalService;
 
 	@Autowired
 	private CheckupService checkupService;

@@ -8,12 +8,10 @@
    
 	   <persistence-unit name="BirthTech" >
 	               <provider>org.hibernate.ejb.HibernatePersistence</provider>
-	          
-
-		<class>birthtech.entities.Checkup</class>
 		<class>birthtech.entities.Child</class>
-		<class>birthtech.entities.Maternity</class>
 		<class>birthtech.entities.Labour</class>
+		<class>birthtech.entities.Maternity</class>
+		<class>birthtech.entities.Checkup</class>
          <shared-cache-mode>NONE</shared-cache-mode>
         <properties>
             <property name="hibernate.dialect" value="org.hibernate.dialect.MySQL5Dialect" />

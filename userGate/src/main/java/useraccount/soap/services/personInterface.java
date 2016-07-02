@@ -33,13 +33,19 @@ public interface personInterface {
 	@WebMethod
 	public  boolean updateUserAttribute(
 			@WebParam(name = "username") String user,
-			@WebParam(name = "username") String attributename,
-			@WebParam(name = "username") String newValue);
+			@WebParam(name = "attribute") String attributename,
+			@WebParam(name = "value") String newValue);
 	@WebMethod
 	public  String findRole();
+	
+	@WebMethod
+	public Person findUserByFullName(@WebParam(name="fullname")String fullName); 
+	
 	@WebMethod
 	public  List<userRoles> personRoles(
 			@WebParam(name = "username") String username);
+	@WebMethod
+	public boolean isUserMemberOf(@WebParam(name="username")String username,@WebParam(name="rolename")String rolename);
 	// END OF WEB SERVICES
 	public  List<Person> findSomeone(String surname);
 

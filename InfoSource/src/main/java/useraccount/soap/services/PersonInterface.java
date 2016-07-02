@@ -270,6 +270,8 @@ public interface PersonInterface {
     /**
      * 
      * @param username
+     * @param value
+     * @param attribute
      * @return
      *     returns boolean
      */
@@ -279,7 +281,11 @@ public interface PersonInterface {
     @ResponseWrapper(localName = "updateUserAttributeResponse", targetNamespace = "http://services.soap.useraccount/", className = "useraccount.soap.services.UpdateUserAttributeResponse")
     public boolean updateUserAttribute(
         @WebParam(name = "username", targetNamespace = "")
-        String username);
+        String username,
+        @WebParam(name = "attribute", targetNamespace = "")
+        String attribute,
+        @WebParam(name = "value", targetNamespace = "")
+        String value);
 
     /**
      * 

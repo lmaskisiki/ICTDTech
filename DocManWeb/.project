@@ -3,6 +3,7 @@
 	<name>DocManWeb</name>
 	<comment></comment>
 	<projects>
+		<project>DocMan</project>
 	</projects>
 	<buildSpec>
 		<buildCommand>

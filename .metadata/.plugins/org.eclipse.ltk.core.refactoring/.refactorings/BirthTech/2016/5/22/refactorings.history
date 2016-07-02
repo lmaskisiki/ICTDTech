@@ -1,4 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<session version="1.0">
-<refactoring comment="Rename compilation unit &apos;birthtech.services.soap.client.UAServiceInvoker.java&apos; to &apos;UAServiceClient.java&apos;&#x0A;- Original project: &apos;BirthTech&apos;&#x0A;- Original element: &apos;birthtech.services.soap.client.UAServiceInvoker.java&apos;&#x0A;- Renamed element: &apos;birthtech.services.soap.client.UAServiceClient.java&apos;" description="Rename compilation unit &apos;UAServiceInvoker.java&apos;" flags="2" id="org.eclipse.jdt.ui.rename.compilationunit" input="/src\/main\/java&lt;birthtech.services.soap.client{UAServiceInvoker.java" name="UAServiceClient.java" references="false" stamp="1464192435025" version="1.0"/>
-</session>

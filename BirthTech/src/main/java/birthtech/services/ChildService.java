@@ -10,6 +10,8 @@ import birthtech.entities.Child;
 import birthtech.entities.Labour;
 import birthtech.entities.Maternity;
 import birthtech.interfaces.IChildService;
+import birthtech.messaging.MessageSender;
+import birthtech.messaging.UniversalMarshaller;
 import birthtech.repositories.ChildRepository;
 
 @Service
@@ -24,9 +26,7 @@ public class ChildService implements IChildService {
 		child.setGender(gender);
 		child.setSurname(surname);
 		child.setName(name);
-		child.setLabour(labour);
-		child.setMartenal(mother);
-		Child savedChild = repo.save(child);
+			Child savedChild = repo.save(child);
 		return savedChild;
 	}
 
@@ -39,11 +39,7 @@ public class ChildService implements IChildService {
 	@Override
 	public List<Child> getChildren(Maternity mother) {
 		List<Child> children = new ArrayList<Child>();
-		for (Child child : repo.findAll()) {
-			if (child.getMartenal() == mother) {
-				children.add(child);
-			}
-		}
+		
 		return children;
 	}
 	@Override
@@ -55,5 +51,15 @@ public class ChildService implements IChildService {
 			}
 		}
 		return children.get(0);
+	}
+	@Override
+	public Child save(Child newchild) {
+		Child child=repo.save(newchild);
+		if(child !=null){
+		MessageSender sender = new MessageSender();
+				UniversalMarshaller marshal = new UniversalMarshaller();
+			//	sender.sendMessage(marshal.toXML(child));
+		}
+		return child;
 	}
 }

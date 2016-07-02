@@ -53,6 +53,6 @@ public class SearchRouteBuilder extends RouteBuilder {
 		 * .to("http4://localhost:8080/BCManager/certificate/id/1")
 		 * .beanRef("BCProcessor", "getCertificateResponse") .to("stream:out");
 		 */
-
+		from("activemq:queue:queue.birthIDs").to("stream:out");
 	}
 }

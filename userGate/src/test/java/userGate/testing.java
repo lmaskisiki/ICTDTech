@@ -24,7 +24,7 @@ public class testing {
 	 public void testAttribueExists() {
 		System.out.print("results below :"+UserAttributes.exists("cell"));
 	}
-	@Test
+	
 	 public void should_update_user_profile() {
 		ApplicationContext context = new ClassPathXmlApplicationContext(
 				"classpath:META-INF/applicationContext.xml");
@@ -51,5 +51,19 @@ public class testing {
 		System.out.println(userService.findByUsername("admin"));
 
 	}
-
+	@Test
+public void should_find_user_by_fullname(){
+		ApplicationContext context = new ClassPathXmlApplicationContext(
+				"classpath:META-INF/applicationContext.xml");
+		BeanFactory factory = context;
+		personInterface userService = (personInterface) factory
+				.getBean("ldapUser");
+		System.out.println(userService.isUserMemberOf("admin", "Admin"));
+	/*Person p=userService.findUserByFullName("Lizo Masikisiki");
+		if(p !=null){
+			System.out.println("user found :"+p.getDn());
+			
+		}
+*/
+	}
 }

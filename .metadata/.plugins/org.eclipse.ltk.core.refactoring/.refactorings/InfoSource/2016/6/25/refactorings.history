@@ -1,4 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<session version="1.0">
-<refactoring accessors="true" comment="Delete element from project &apos;InfoSource&apos;&#x0A;- Original project: &apos;InfoSource&apos;&#x0A;- Original element: &apos;InfoSource/src/main/java/useraccount.soap.services&apos;" description="Delete element" element1="/src\/main\/java&lt;useraccount.soap.services" element2="/src\/main\/java&lt;useraccount.soap" element3="/src\/main\/java&lt;useraccount" elements="3" flags="589830" id="org.eclipse.jdt.ui.delete" resources="0" stamp="1465835131144" subPackages="false" version="1.0"/>
-</session>

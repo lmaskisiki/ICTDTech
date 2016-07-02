@@ -11,4 +11,7 @@ Class-Path: lib/mysql-connector-java-5.1.23-bin.jar lib/spring-beans-4
  et-3.1.jar lib/jasypt-1.9.0.jar lib/jboss-ejb3-ext-api-2.1.0.jar lib/
  jboss-jms-api_2.0_spec-1.0.0.Final.jar lib/junit-4.9.jar lib/hamcrest
  -core-1.1.jar
+Build-Jdk: 1.7.0_76
+Built-By: lizo
+Created-By: Maven Integration for Eclipse
 

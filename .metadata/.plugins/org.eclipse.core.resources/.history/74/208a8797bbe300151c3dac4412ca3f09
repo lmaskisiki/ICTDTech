@@ -1,5 +1,0 @@
-package wsApp;
-
-public interface CustomerService {
-
-}

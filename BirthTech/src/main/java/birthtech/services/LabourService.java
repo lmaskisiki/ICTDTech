@@ -11,9 +11,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.google.gson.Gson;
- 
-
-
 
 import birthtech.entities.Child;
 import birthtech.entities.Labour;
@@ -21,6 +18,7 @@ import birthtech.entities.Maternity;
 import birthtech.enums.LabourStatusEnum;
 import birthtech.interfaces.ILabourService;
 import birthtech.messaging.MessageSender;
+import birthtech.messaging.UniversalMarshaller;
 import birthtech.repositories.LabourRepository;
 
 @Service
@@ -34,12 +32,13 @@ public class LabourService implements ILabourService {
 		Labour labour = new Labour();
 		labour.setBirthNo(birthnumber);
 		labour.setLabourDate(date);
-		labour.setMartenal(parent);
+		labour.setMaternal(parent);
 		labour.setStatus(status);
+
 		Labour lab = labourRepo.save(labour);
 		if (lab != null) {
 			MessageSender sender = new MessageSender();
-			Gson jsonMapper= new Gson();
+			Gson jsonMapper = new Gson();
 			sender.sendMessage(jsonMapper.toJson(lab));
 			return true;
 		} else {
@@ -68,7 +67,7 @@ public class LabourService implements ILabourService {
 	public List<Labour> getLabour(Maternity martenal) {
 		List<Labour> listLabour = new ArrayList<Labour>();
 		for (Labour labour : labourRepo.findAll()) {
-			if (labour.getMartenal() == martenal) {
+			if (labour.getMaternal() == martenal) {
 				listLabour.add(labour);
 			}
 		}
@@ -84,6 +83,27 @@ public class LabourService implements ILabourService {
 			}
 		}
 		return listLabour;
+	}
+
+	@Override
+	public Labour add(Labour lab) {
+		Labour labour = labourRepo.save(lab);
+	//	if(labour.getChild()!=null){
+			MessageSender sender = new MessageSender();
+					UniversalMarshaller marshal = new UniversalMarshaller();
+					sender.sendMessage(marshal.toXML(labour));
+					System.out.println("\n \n \n \n \n done !!! \n \n \n");
+		//	}
+	//f (labour != null) {
+	//	Gson jsonMapper = new Gson();
+	//	System.out.println("\n \n \n  sending jms message "
+	//			+ jsonMapper.toJson(labour) + " \n \n");
+	//	MessageSender sender = new MessageSender();
+	//	UniversalMarshaller marshal = new UniversalMarshaller();
+	//	sender.sendMessage(marshal.toXML(lab));
+    //
+	//
+		return labour;
 	}
 
 }

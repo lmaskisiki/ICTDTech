@@ -12,7 +12,6 @@ import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 import useraccount.soap.services.FindByUsername;
-import useraccount.soap.services.Greating;
 import useraccount.soap.services.UpdateUserAttribute;
 
 public class MainApp1 {
@@ -43,17 +42,15 @@ public class MainApp1 {
 			ms.add("admin");
 			ms.add("mobile");
 			ms.add("0735222555");
-		UpdateUserAttribute request= new UserAccountClient().UpdateUserRequest("admin","mobile","0392521171");
-		 
-			  Greating greet= new Greating();
-			  greet.setGender("Male");
-			  greet.setFullname("Masikisiki Lizo");
-			  FindByUsername find=new FindByUsername();
-			  find.setUsername("admin");
-			  
-			 template.requestBody("direct:findUser", find );
 			 
-		//	System.out.println("\nRESPONSE::" + res);
+  
+UpdateUserAttribute u= new UpdateUserAttribute();
+u.setUsername("admin");
+u.setAttribute("mobile");
+u.setValue("0362521171");
+		 template.requestBody("direct:UpdateUser", u);
+
+			// System.out.println("\nRESPONSE::" + res);
 			template.stop();
 		} catch (Exception e) {
 			e.printStackTrace();

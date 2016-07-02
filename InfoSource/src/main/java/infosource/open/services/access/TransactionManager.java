@@ -11,7 +11,10 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
 import com.google.gson.Gson;
 
 import useraccount.soap.services.CreatePerson;
+import useraccount.soap.services.FindByUsername;
 import useraccount.soap.services.Person;
+import useraccount.soap.services.UpdateUser;
+import useraccount.soap.services.UpdateUserAttribute;
 import webframeapp.interfaces.FeedPost;
 
 public class TransactionManager implements ITransactionManager {
@@ -131,21 +134,45 @@ public class TransactionManager implements ITransactionManager {
 
 	@Override
 	public String fullProfile(String username) {
-		String response = "";
+		String response = "admin";
 		try {
 			template.start();
 			MessageContentsList ms = new MessageContentsList();
 			ms.add(username);
-			response = template.requestBody("direct:getProfile", ms,
+			response = template.requestBodyAndHeader("direct:getProfile",ms,"methodName","findByUsername",
 					String.class);
 			template.stop();
 			JSONObject personJson = new JSONObject(response);
-			response = personJson.getString("string");
+			 response=personJson.getString("string");
 		} catch (Exception e) {
-			e.getMessage();
+			 e.getMessage();
 		}
 
 		return response;
+	}
+
+	@Override
+	public String updateUserProfile(String username, String attribute,
+			String value) {
+		String response;
+		try {
+			template.start();
+			MessageContentsList ms = new MessageContentsList();
+			ms.add(username);
+			 UpdateUserAttribute upd= new UpdateUserAttribute();
+			 upd.setUsername(username);
+			 upd.setAttribute(attribute);
+			 upd.setValue(value);
+			 response = template.requestBody("direct:UpdateUser",upd,
+					String.class); 
+			 
+			template.stop();
+			JSONObject personJson = new JSONObject(response);
+			 response=personJson.getString("string");
+		} catch (Exception e) {
+			 e.getMessage();
+		}
+		return null;
 	}
 
 }

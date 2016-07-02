@@ -13,4 +13,5 @@ public String getHealthInfo();
 public String getHomeAffairInfo();
  String getMyProfile(String username);
 String getMyDocuments(String username);
+String updateUserProfile(String username,String attribute,String value);
 }

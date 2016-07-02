@@ -11,6 +11,7 @@ import org.springframework.test.context.transaction.TransactionConfiguration;
 import org.springframework.transaction.annotation.Transactional;
 
 import birthcertificate.entities.BCertificate;
+import birthcertificate.processors.Person;
 import birthcertificate.services.BCService;
 
 
@@ -22,30 +23,36 @@ public class BCServiceTests {
 
 	@Autowired
 	private BCService service=null;
-	@Test
+ 
 	public void should_create_certificate(){
 		
 		//service.createCerticate(6566,new Date(),"birthNumber","childNames","surname","gender","marternalId");
  
 	}
-	@Test
+ 
 	public void find(){
 		
 		System.out.println(service.getAll().get(0).getCreationDate());
 	}
 	
-
-	@Test
+ 
 	public void findBCbyChildId(){
 	BCertificate cert=	service.getCertificateById("5");
 	System.out.println("watttt:"+cert.getSurname());
 		
 	}
-	@Test
+ 
 	public void findBCbyParentId(){
 	BCertificate cert=	service.getCertificateByParentId("600");
 	System.out.println("watttt:"+cert.getSurname());
 		
 	}
-	
+	@Test
+	 public void update(){
+	 service.updateCollectionStatus(false,"Lizo Masikisiki");
+		// service.updateCollectionStatus(true,12);
+		String str="lizo";
+		
+		System.out.println(str);
+	 }
 }

@@ -33,6 +33,8 @@ public interface FileServiceRemote {
 	@WebMethod
 	public List<FileInfo> getFiles();
 	@WebMethod
+	public List<FileInfo> getUserDocuments(@WebParam(name="requester") String requester,@WebParam(name="docOwner") String owner) ;
+	@WebMethod
 	public List<FileInfo> getFilesByOwner(@WebParam(name="fileOwner") String fileOwner);
 	// requests
 	@WebMethod

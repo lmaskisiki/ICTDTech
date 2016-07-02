@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<Layout resource="/DocManWeb/WebContent/WEB-INF/jboss-web.xml">
- <TreeFormPage>
-  <Memento type="FileCDIBeans">
-   <Memento type="CDI Beans 1.0 File"/>
-  </Memento>
- </TreeFormPage>
-</Layout>

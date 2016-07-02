@@ -1,0 +1,535 @@
+!SESSION 
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842760 2016-06-30 18:40:35.744
+!MESSAGE Server Starting
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842769 2016-06-30 18:40:53.365
+!MESSAGE Server Startup Succeeded
+
+!ENTRY org.jboss.ide.eclipse.as.core 4 16973827 2016-06-30 19:01:35.559
+!MESSAGE Killing the server process has failed. The process may still be running.
+!STACK 1
+org.eclipse.debug.core.DebugException: Terminate failed
+	at org.eclipse.debug.core.model.RuntimeProcess.terminate(RuntimeProcess.java:227)
+	at org.jboss.tools.as.core.server.controllable.subsystems.internal.LocalLegacyShutdownController.forceStop(LocalLegacyShutdownController.java:178)
+	at org.jboss.tools.as.core.server.controllable.subsystems.internal.LocalLegacyShutdownController.stopImpl(LocalLegacyShutdownController.java:120)
+	at org.jboss.tools.as.core.server.controllable.subsystems.internal.LocalLegacyShutdownController.stop(LocalLegacyShutdownController.java:66)
+	at org.jboss.tools.as.core.server.controllable.subsystems.internal.LocalLegacyShutdownController.stop(LocalLegacyShutdownController.java:53)
+	at org.jboss.tools.as.core.server.controllable.subsystems.internal.ManagementShutdownController.forceStop(ManagementShutdownController.java:63)
+	at org.jboss.tools.as.core.server.controllable.subsystems.internal.LocalLegacyShutdownController.stopImpl(LocalLegacyShutdownController.java:120)
+	at org.jboss.tools.as.core.server.controllable.subsystems.internal.LocalLegacyShutdownController.stop(LocalLegacyShutdownController.java:66)
+	at org.jboss.tools.as.core.server.controllable.subsystems.internal.LocalLegacyShutdownController.stop(LocalLegacyShutdownController.java:53)
+	at org.jboss.ide.eclipse.as.wtp.core.server.behavior.ControllableServerBehavior.stop(ControllableServerBehavior.java:252)
+	at org.eclipse.wst.server.core.internal.Server.stopImpl2(Server.java:3673)
+	at org.eclipse.wst.server.core.internal.Server.stopImpl(Server.java:3630)
+	at org.eclipse.wst.server.core.internal.Server$StopJob.run(Server.java:403)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+!SUBENTRY 1 org.eclipse.debug.core 4 5010 2016-06-30 19:01:35.560
+!MESSAGE Terminate failed
+
+!ENTRY org.jboss.ide.eclipse.as.wtp.core 1 16973825 2016-06-30 19:01:35.574
+!MESSAGE Server processes have been terminated.
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842760 2016-06-30 19:01:37.203
+!MESSAGE Server Starting
+
+!ENTRY org.jboss.ide.eclipse.as.core 2 16842784 2016-06-30 19:01:42.324
+!MESSAGE Poll Thread Aborted: null
+
+!ENTRY org.jboss.ide.eclipse.as.wtp.core 1 16973825 2016-06-30 19:01:47.814
+!MESSAGE Server processes have been terminated.
+
+!ENTRY org.jboss.ide.eclipse.as.core 4 16973826 2016-06-30 19:01:47.828
+!MESSAGE The server was shutdown forcefully. All processes were terminated.
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842760 2016-06-30 19:01:48.984
+!MESSAGE Server Starting
+
+!ENTRY org.jboss.ide.eclipse.as.wtp.core 1 16973825 2016-06-30 19:02:24.916
+!MESSAGE Server processes have been terminated.
+
+!ENTRY org.jboss.ide.eclipse.as.core 2 16842784 2016-06-30 19:02:24.929
+!MESSAGE Poll Thread Aborted: null
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842760 2016-06-30 19:05:59.543
+!MESSAGE Server Starting
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842769 2016-06-30 19:06:20.177
+!MESSAGE Server Startup Succeeded
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842776 2016-06-30 19:13:04.156
+!MESSAGE Server shutting down
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842785 2016-06-30 19:13:05.394
+!MESSAGE Server Shutdown Succeeded
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842760 2016-06-30 19:13:05.509
+!MESSAGE Server Starting
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842769 2016-06-30 19:13:08.614
+!MESSAGE Server Startup Succeeded
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842776 2016-06-30 19:15:26.829
+!MESSAGE Server shutting down
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842785 2016-06-30 19:15:28.072
+!MESSAGE Server Shutdown Succeeded
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842760 2016-06-30 19:15:28.082
+!MESSAGE Server Starting
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842769 2016-06-30 19:15:31.395
+!MESSAGE Server Startup Succeeded
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842776 2016-06-30 19:23:30.575
+!MESSAGE Server shutting down
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842785 2016-06-30 19:23:31.826
+!MESSAGE Server Shutdown Succeeded
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842760 2016-06-30 19:23:31.839
+!MESSAGE Server Starting
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842769 2016-06-30 19:23:35.263
+!MESSAGE Server Startup Succeeded
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842776 2016-06-30 19:30:58.595
+!MESSAGE Server shutting down
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842785 2016-06-30 19:31:00.006
+!MESSAGE Server Shutdown Succeeded
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842760 2016-06-30 19:31:00.022
+!MESSAGE Server Starting
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842769 2016-06-30 19:31:03.130
+!MESSAGE Server Startup Succeeded
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842776 2016-06-30 19:35:09.518
+!MESSAGE Server shutting down
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842785 2016-06-30 19:35:10.837
+!MESSAGE Server Shutdown Succeeded
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842760 2016-06-30 19:35:10.859
+!MESSAGE Server Starting
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842769 2016-06-30 19:35:14.476
+!MESSAGE Server Startup Succeeded
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842776 2016-06-30 19:36:40.628
+!MESSAGE Server shutting down
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842785 2016-06-30 19:36:41.845
+!MESSAGE Server Shutdown Succeeded
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842760 2016-06-30 19:36:41.861
+!MESSAGE Server Starting
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842769 2016-06-30 19:36:45.269
+!MESSAGE Server Startup Succeeded
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842776 2016-06-30 19:49:18.125
+!MESSAGE Server shutting down
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842785 2016-06-30 19:49:19.453
+!MESSAGE Server Shutdown Succeeded
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842760 2016-06-30 19:49:19.561
+!MESSAGE Server Starting
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842769 2016-06-30 19:49:23.276
+!MESSAGE Server Startup Succeeded
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842776 2016-06-30 19:53:42.556
+!MESSAGE Server shutting down
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842785 2016-06-30 19:53:43.772
+!MESSAGE Server Shutdown Succeeded
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842760 2016-06-30 19:53:43.789
+!MESSAGE Server Starting
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842769 2016-06-30 19:53:47.404
+!MESSAGE Server Startup Succeeded
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842776 2016-06-30 19:55:40.763
+!MESSAGE Server shutting down
+
+!ENTRY org.jboss.ide.eclipse.as.wtp.core 1 16973825 2016-06-30 19:55:42.141
+!MESSAGE Server processes have been terminated.
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842760 2016-06-30 19:55:42.388
+!MESSAGE Server Starting
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842769 2016-06-30 19:55:45.993
+!MESSAGE Server Startup Succeeded
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842776 2016-06-30 19:59:11.600
+!MESSAGE Server shutting down
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842785 2016-06-30 19:59:12.793
+!MESSAGE Server Shutdown Succeeded
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842760 2016-06-30 19:59:12.810
+!MESSAGE Server Starting
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842769 2016-06-30 19:59:16.316
+!MESSAGE Server Startup Succeeded
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842776 2016-06-30 20:03:07.245
+!MESSAGE Server shutting down
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842785 2016-06-30 20:03:08.566
+!MESSAGE Server Shutdown Succeeded
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842760 2016-06-30 20:03:08.630
+!MESSAGE Server Starting
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842769 2016-06-30 20:03:12.344
+!MESSAGE Server Startup Succeeded
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842776 2016-06-30 20:04:43.826
+!MESSAGE Server shutting down
+
+!ENTRY org.jboss.ide.eclipse.as.wtp.core 1 16973825 2016-06-30 20:04:45.156
+!MESSAGE Server processes have been terminated.
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842760 2016-06-30 20:04:45.192
+!MESSAGE Server Starting
+
+!ENTRY org.jboss.ide.eclipse.as.core 2 16842768 2016-06-30 20:04:45.240
+!MESSAGE Poll Thread Aborted: null
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842769 2016-06-30 20:04:48.908
+!MESSAGE Server Startup Succeeded
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842776 2016-06-30 20:34:29.616
+!MESSAGE Server shutting down
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842785 2016-06-30 20:34:30.937
+!MESSAGE Server Shutdown Succeeded
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842760 2016-06-30 20:34:30.954
+!MESSAGE Server Starting
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842769 2016-06-30 20:34:34.368
+!MESSAGE Server Startup Succeeded
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842776 2016-06-30 20:37:55.602
+!MESSAGE Server shutting down
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842785 2016-06-30 20:37:57.025
+!MESSAGE Server Shutdown Succeeded
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842760 2016-06-30 20:37:57.101
+!MESSAGE Server Starting
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842769 2016-06-30 20:38:00.818
+!MESSAGE Server Startup Succeeded
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842776 2016-06-30 20:38:51.576
+!MESSAGE Server shutting down
+
+!ENTRY org.jboss.ide.eclipse.as.wtp.core 1 16973825 2016-06-30 20:38:52.551
+!MESSAGE Server processes have been terminated.
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842760 2016-06-30 20:38:52.581
+!MESSAGE Server Starting
+
+!ENTRY org.jboss.ide.eclipse.as.core 2 16842768 2016-06-30 20:38:52.587
+!MESSAGE Poll Thread Aborted: null
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842769 2016-06-30 20:38:55.900
+!MESSAGE Server Startup Succeeded
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842776 2016-06-30 21:01:00.232
+!MESSAGE Server shutting down
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842785 2016-06-30 21:01:05.030
+!MESSAGE Server Shutdown Succeeded
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842760 2016-06-30 21:01:05.488
+!MESSAGE Server Starting
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842769 2016-06-30 21:01:42.440
+!MESSAGE Server Startup Succeeded
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842776 2016-07-01 17:23:48.397
+!MESSAGE Server shutting down
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842785 2016-07-01 17:23:49.421
+!MESSAGE Server Shutdown Succeeded
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842760 2016-07-01 17:23:55.057
+!MESSAGE Server Starting
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842769 2016-07-01 17:23:58.269
+!MESSAGE Server Startup Succeeded
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842776 2016-07-01 17:42:42.010
+!MESSAGE Server shutting down
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842785 2016-07-01 17:42:42.631
+!MESSAGE Server Shutdown Succeeded
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842760 2016-07-01 17:42:42.640
+!MESSAGE Server Starting
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842769 2016-07-01 17:42:46.261
+!MESSAGE Server Startup Succeeded
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842776 2016-07-01 17:48:24.630
+!MESSAGE Server shutting down
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842785 2016-07-01 17:48:25.963
+!MESSAGE Server Shutdown Succeeded
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842760 2016-07-01 17:48:31.974
+!MESSAGE Server Starting
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842769 2016-07-01 17:48:35.985
+!MESSAGE Server Startup Succeeded
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842776 2016-07-01 17:53:57.980
+!MESSAGE Server shutting down
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842785 2016-07-01 17:54:00.047
+!MESSAGE Server Shutdown Succeeded
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842760 2016-07-01 17:54:00.516
+!MESSAGE Server Starting
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842769 2016-07-01 17:54:46.082
+!MESSAGE Server Startup Succeeded
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842776 2016-07-01 17:58:16.449
+!MESSAGE Server shutting down
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842785 2016-07-01 17:58:17.059
+!MESSAGE Server Shutdown Succeeded
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842760 2016-07-01 17:58:17.131
+!MESSAGE Server Starting
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842769 2016-07-01 17:58:31.352
+!MESSAGE Server Startup Succeeded
+
+!ENTRY org.jboss.ide.eclipse.as.wtp.core 1 16973825 2016-07-01 18:01:40.239
+!MESSAGE Server processes have been terminated.
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842760 2016-07-01 18:02:32.159
+!MESSAGE Server Starting
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842769 2016-07-01 18:02:35.272
+!MESSAGE Server Startup Succeeded
+
+!ENTRY org.jboss.ide.eclipse.as.core 4 1644298244 2016-07-01 18:06:35.021
+!MESSAGE Incremental publish failed for module InfoSource
+!SUBENTRY 1 org.jboss.ide.eclipse.as.wtp.core 4 1644298251 2016-07-01 18:06:35.021
+!MESSAGE Could not delete /home/lizo/dev-tools/Servers/wildfly-8.2.1.final/standalone/deployments/InfoSource.war/WEB-INF/classes/infosource/aggregators/SearchAggregation.class. May be locked by another process.
+!SUBENTRY 1 org.jboss.ide.eclipse.as.wtp.core 4 1644298251 2016-07-01 18:06:35.021
+!MESSAGE Could not delete /home/lizo/dev-tools/Servers/wildfly-8.2.1.final/standalone/deployments/InfoSource.war/WEB-INF/classes/infosource/homeaffairs/services/BCProcessor.class. May be locked by another process.
+!SUBENTRY 1 org.jboss.ide.eclipse.as.wtp.core 4 1644298251 2016-07-01 18:06:35.021
+!MESSAGE Could not delete /home/lizo/dev-tools/Servers/wildfly-8.2.1.final/standalone/deployments/InfoSource.war/WEB-INF/classes/infosource/homeaffairs/services/BCertificate.class. May be locked by another process.
+!SUBENTRY 1 org.jboss.ide.eclipse.as.wtp.core 4 1644298251 2016-07-01 18:06:35.021
+!MESSAGE Could not delete /home/lizo/dev-tools/Servers/wildfly-8.2.1.final/standalone/deployments/InfoSource.war/WEB-INF/classes/infosource/models/UserUpdateModel.class. May be locked by another process.
+!SUBENTRY 1 org.jboss.ide.eclipse.as.wtp.core 4 1644298251 2016-07-01 18:06:35.021
+!MESSAGE Could not delete /home/lizo/dev-tools/Servers/wildfly-8.2.1.final/standalone/deployments/InfoSource.war/WEB-INF/classes/infosource/open/services/access/ITransactionManager.class. May be locked by another process.
+!SUBENTRY 1 org.jboss.ide.eclipse.as.wtp.core 4 1644298251 2016-07-01 18:06:35.021
+!MESSAGE Could not delete /home/lizo/dev-tools/Servers/wildfly-8.2.1.final/standalone/deployments/InfoSource.war/WEB-INF/classes/infosource/open/services/access/TransactionManager.class. May be locked by another process.
+!SUBENTRY 1 org.jboss.ide.eclipse.as.wtp.core 4 1644298251 2016-07-01 18:06:35.021
+!MESSAGE Could not delete /home/lizo/dev-tools/Servers/wildfly-8.2.1.final/standalone/deployments/InfoSource.war/WEB-INF/classes/infosource/open/services/processors/RemoteMethodHandler.class. May be locked by another process.
+!SUBENTRY 1 org.jboss.ide.eclipse.as.wtp.core 4 1644298251 2016-07-01 18:06:35.021
+!MESSAGE Could not delete /home/lizo/dev-tools/Servers/wildfly-8.2.1.final/standalone/deployments/InfoSource.war/WEB-INF/classes/infosource/open/services/routing/AggregateUserProfile.class. May be locked by another process.
+!SUBENTRY 1 org.jboss.ide.eclipse.as.wtp.core 4 1644298251 2016-07-01 18:06:35.021
+!MESSAGE Could not delete /home/lizo/dev-tools/Servers/wildfly-8.2.1.final/standalone/deployments/InfoSource.war/WEB-INF/classes/infosource/open/services/routing/RouteManager$1.class. May be locked by another process.
+!SUBENTRY 1 org.jboss.ide.eclipse.as.wtp.core 4 1644298251 2016-07-01 18:06:35.021
+!MESSAGE Could not delete /home/lizo/dev-tools/Servers/wildfly-8.2.1.final/standalone/deployments/InfoSource.war/WEB-INF/classes/infosource/open/services/routing/RouteManager$2.class. May be locked by another process.
+!SUBENTRY 1 org.jboss.ide.eclipse.as.wtp.core 4 1644298251 2016-07-01 18:06:35.021
+!MESSAGE Could not delete /home/lizo/dev-tools/Servers/wildfly-8.2.1.final/standalone/deployments/InfoSource.war/WEB-INF/classes/infosource/open/services/routing/RouteManager$3.class. May be locked by another process.
+!SUBENTRY 1 org.jboss.ide.eclipse.as.wtp.core 4 1644298251 2016-07-01 18:06:35.021
+!MESSAGE Could not delete /home/lizo/dev-tools/Servers/wildfly-8.2.1.final/standalone/deployments/InfoSource.war/WEB-INF/classes/infosource/open/services/routing/RouteManager$4.class. May be locked by another process.
+!SUBENTRY 1 org.jboss.ide.eclipse.as.wtp.core 4 1644298251 2016-07-01 18:06:35.021
+!MESSAGE Could not delete /home/lizo/dev-tools/Servers/wildfly-8.2.1.final/standalone/deployments/InfoSource.war/WEB-INF/classes/infosource/open/services/routing/RouteManager$5.class. May be locked by another process.
+!SUBENTRY 1 org.jboss.ide.eclipse.as.wtp.core 4 1644298251 2016-07-01 18:06:35.021
+!MESSAGE Could not delete /home/lizo/dev-tools/Servers/wildfly-8.2.1.final/standalone/deployments/InfoSource.war/WEB-INF/classes/infosource/open/services/routing/RouteManager.class. May be locked by another process.
+!SUBENTRY 1 org.jboss.ide.eclipse.as.wtp.core 4 1644298251 2016-07-01 18:06:35.021
+!MESSAGE Could not delete /home/lizo/dev-tools/Servers/wildfly-8.2.1.final/standalone/deployments/InfoSource.war/WEB-INF/classes/infosource/open/services/testing/TransactionManagerTests.class. May be locked by another process.
+!SUBENTRY 1 org.jboss.ide.eclipse.as.wtp.core 4 1644298251 2016-07-01 18:06:35.021
+!MESSAGE Could not delete /home/lizo/dev-tools/Servers/wildfly-8.2.1.final/standalone/deployments/InfoSource.war/WEB-INF/classes/infosource/processors/JsonBuilder.class. May be locked by another process.
+!SUBENTRY 1 org.jboss.ide.eclipse.as.wtp.core 4 1644298251 2016-07-01 18:06:35.021
+!MESSAGE Could not delete /home/lizo/dev-tools/Servers/wildfly-8.2.1.final/standalone/deployments/InfoSource.war/WEB-INF/classes/infosource/processors/ProcessSOAPOUT.class. May be locked by another process.
+!SUBENTRY 1 org.jboss.ide.eclipse.as.wtp.core 4 1644298251 2016-07-01 18:06:35.021
+!MESSAGE Could not delete /home/lizo/dev-tools/Servers/wildfly-8.2.1.final/standalone/deployments/InfoSource.war/WEB-INF/classes/infosource/processors/ProcessSearchResponse.class. May be locked by another process.
+!SUBENTRY 1 org.jboss.ide.eclipse.as.wtp.core 4 1644298251 2016-07-01 18:06:35.021
+!MESSAGE Could not delete /home/lizo/dev-tools/Servers/wildfly-8.2.1.final/standalone/deployments/InfoSource.war/WEB-INF/classes/infosource/processors/UserAccountSearchProcessor.class. May be locked by another process.
+!SUBENTRY 1 org.jboss.ide.eclipse.as.wtp.core 4 1644298251 2016-07-01 18:06:35.021
+!MESSAGE Could not delete /home/lizo/dev-tools/Servers/wildfly-8.2.1.final/standalone/deployments/InfoSource.war/WEB-INF/classes/infosource/remote/service/resources/BCServiceResource.class. May be locked by another process.
+!SUBENTRY 1 org.jboss.ide.eclipse.as.wtp.core 4 1644298251 2016-07-01 18:06:35.021
+!MESSAGE Could not delete /home/lizo/dev-tools/Servers/wildfly-8.2.1.final/standalone/deployments/InfoSource.war/WEB-INF/classes/infosource/routebuilders/SearchRouteBuilder.class. May be locked by another process.
+!SUBENTRY 1 org.jboss.ide.eclipse.as.wtp.core 4 1644298251 2016-07-01 18:06:35.021
+!MESSAGE Could not delete /home/lizo/dev-tools/Servers/wildfly-8.2.1.final/standalone/deployments/InfoSource.war/WEB-INF/classes/infosource/routebuilders/UniversalMarshaller.class. May be locked by another process.
+!SUBENTRY 1 org.jboss.ide.eclipse.as.wtp.core 4 1644298251 2016-07-01 18:06:35.021
+!MESSAGE Could not delete /home/lizo/dev-tools/Servers/wildfly-8.2.1.final/standalone/deployments/InfoSource.war/WEB-INF/classes/infosource/soap/client/customapp/DomainService.class. May be locked by another process.
+!SUBENTRY 1 org.jboss.ide.eclipse.as.wtp.core 4 1644298251 2016-07-01 18:06:35.021
+!MESSAGE Could not delete /home/lizo/dev-tools/Servers/wildfly-8.2.1.final/standalone/deployments/InfoSource.war/WEB-INF/classes/infosource/soap/client/customapp/EntityService.class. May be locked by another process.
+!SUBENTRY 1 org.jboss.ide.eclipse.as.wtp.core 4 1644298251 2016-07-01 18:06:35.021
+!MESSAGE Could not delete /home/lizo/dev-tools/Servers/wildfly-8.2.1.final/standalone/deployments/InfoSource.war/WEB-INF/classes/infosource/soap/client/useraccounts/UserAccountClient.class. May be locked by another process.
+!SUBENTRY 1 org.jboss.ide.eclipse.as.wtp.core 4 1644298251 2016-07-01 18:06:35.021
+!MESSAGE Could not delete /home/lizo/dev-tools/Servers/wildfly-8.2.1.final/standalone/deployments/InfoSource.war/WEB-INF/classes/infosource/starters/MainApp.class. May be locked by another process.
+!SUBENTRY 1 org.jboss.ide.eclipse.as.wtp.core 4 1644298251 2016-07-01 18:06:35.021
+!MESSAGE Could not delete /home/lizo/dev-tools/Servers/wildfly-8.2.1.final/standalone/deployments/InfoSource.war/WEB-INF/classes/infosource/starters/MainApp1.class. May be locked by another process.
+!SUBENTRY 1 org.jboss.ide.eclipse.as.wtp.core 4 1644298251 2016-07-01 18:06:35.021
+!MESSAGE Could not delete /home/lizo/dev-tools/Servers/wildfly-8.2.1.final/standalone/deployments/InfoSource.war/WEB-INF/classes/infosource/starters/MainApp2.class. May be locked by another process.
+!SUBENTRY 1 org.jboss.ide.eclipse.as.wtp.core 4 1644298251 2016-07-01 18:06:35.021
+!MESSAGE Could not delete /home/lizo/dev-tools/Servers/wildfly-8.2.1.final/standalone/deployments/InfoSource.war/WEB-INF/classes/infosource/starters/RouteBuilserTest$1.class. May be locked by another process.
+!SUBENTRY 1 org.jboss.ide.eclipse.as.wtp.core 4 1644298251 2016-07-01 18:06:35.021
+!MESSAGE Could not delete /home/lizo/dev-tools/Servers/wildfly-8.2.1.final/standalone/deployments/InfoSource.war/WEB-INF/classes/infosource/starters/RouteBuilserTest.class. May be locked by another process.
+!SUBENTRY 1 org.jboss.ide.eclipse.as.wtp.core 4 1644298251 2016-07-01 18:06:35.021
+!MESSAGE Could not delete /home/lizo/dev-tools/Servers/wildfly-8.2.1.final/standalone/deployments/InfoSource.war/WEB-INF/classes/infosource/web/controllers/NewsController.class. May be locked by another process.
+!SUBENTRY 1 org.jboss.ide.eclipse.as.wtp.core 4 1644298251 2016-07-01 18:06:35.021
+!MESSAGE Could not delete /home/lizo/dev-tools/Servers/wildfly-8.2.1.final/standalone/deployments/InfoSource.war/WEB-INF/classes/infosource/web/controllers/PartialController.class. May be locked by another process.
+!SUBENTRY 1 org.jboss.ide.eclipse.as.wtp.core 4 1644298251 2016-07-01 18:06:35.021
+!MESSAGE Could not delete /home/lizo/dev-tools/Servers/wildfly-8.2.1.final/standalone/deployments/InfoSource.war/WEB-INF/classes/infosource/web/controllers/homeController.class. May be locked by another process.
+!SUBENTRY 1 org.jboss.ide.eclipse.as.wtp.core 4 1644298251 2016-07-01 18:06:35.021
+!MESSAGE Could not delete /home/lizo/dev-tools/Servers/wildfly-8.2.1.final/standalone/deployments/InfoSource.war/WEB-INF/classes/webframeapp/interfaces/CreateEntity.class. May be locked by another process.
+!SUBENTRY 1 org.jboss.ide.eclipse.as.wtp.core 4 1644298251 2016-07-01 18:06:35.021
+!MESSAGE Could not delete /home/lizo/dev-tools/Servers/wildfly-8.2.1.final/standalone/deployments/InfoSource.war/WEB-INF/classes/webframeapp/interfaces/CreateEntityResponse.class. May be locked by another process.
+!SUBENTRY 1 org.jboss.ide.eclipse.as.wtp.core 4 1644298251 2016-07-01 18:06:35.021
+!MESSAGE Could not delete /home/lizo/dev-tools/Servers/wildfly-8.2.1.final/standalone/deployments/InfoSource.war/WEB-INF/classes/webframeapp/interfaces/Delete.class. May be locked by another process.
+!SUBENTRY 1 org.jboss.ide.eclipse.as.wtp.core 4 1644298251 2016-07-01 18:06:35.021
+!MESSAGE Could not delete /home/lizo/dev-tools/Servers/wildfly-8.2.1.final/standalone/deployments/InfoSource.war/WEB-INF/classes/webframeapp/interfaces/DeleteResponse.class. May be locked by another process.
+!SUBENTRY 1 org.jboss.ide.eclipse.as.wtp.core 4 1644298251 2016-07-01 18:06:35.021
+!MESSAGE Could not delete /home/lizo/dev-tools/Servers/wildfly-8.2.1.final/standalone/deployments/InfoSource.war/WEB-INF/classes/webframeapp/interfaces/EntityAccessType.class. May be locked by another process.
+!SUBENTRY 1 org.jboss.ide.eclipse.as.wtp.core 4 1644298251 2016-07-01 18:06:35.021
+!MESSAGE Could not delete /home/lizo/dev-tools/Servers/wildfly-8.2.1.final/standalone/deployments/InfoSource.war/WEB-INF/classes/webframeapp/interfaces/FindAll.class. May be locked by another process.
+!SUBENTRY 1 org.jboss.ide.eclipse.as.wtp.core 4 1644298251 2016-07-01 18:06:35.022
+!MESSAGE Could not delete /home/lizo/dev-tools/Servers/wildfly-8.2.1.final/standalone/deployments/InfoSource.war/WEB-INF/classes/webframeapp/interfaces/FindAllResponse.class. May be locked by another process.
+!SUBENTRY 1 org.jboss.ide.eclipse.as.wtp.core 4 1644298251 2016-07-01 18:06:35.022
+!MESSAGE Could not delete /home/lizo/dev-tools/Servers/wildfly-8.2.1.final/standalone/deployments/InfoSource.war/WEB-INF/classes/webframeapp/interfaces/FindByDomain.class. May be locked by another process.
+!SUBENTRY 1 org.jboss.ide.eclipse.as.wtp.core 4 1644298251 2016-07-01 18:06:35.022
+!MESSAGE Could not delete /home/lizo/dev-tools/Servers/wildfly-8.2.1.final/standalone/deployments/InfoSource.war/WEB-INF/classes/webframeapp/interfaces/FindByDomainResponse.class. May be locked by another process.
+!SUBENTRY 1 org.jboss.ide.eclipse.as.wtp.core 4 1644298251 2016-07-01 18:06:35.022
+!MESSAGE Could not delete /home/lizo/dev-tools/Servers/wildfly-8.2.1.final/standalone/deployments/InfoSource.war/WEB-INF/classes/webframeapp/interfaces/FindByName.class. May be locked by another process.
+!SUBENTRY 1 org.jboss.ide.eclipse.as.wtp.core 4 1644298251 2016-07-01 18:06:35.022
+!MESSAGE Could not delete /home/lizo/dev-tools/Servers/wildfly-8.2.1.final/standalone/deployments/InfoSource.war/WEB-INF/classes/webframeapp/interfaces/FindByNameResponse.class. May be locked by another process.
+!SUBENTRY 1 org.jboss.ide.eclipse.as.wtp.core 4 1644298251 2016-07-01 18:06:35.022
+!MESSAGE Could not delete /home/lizo/dev-tools/Servers/wildfly-8.2.1.final/standalone/deployments/InfoSource.war/WEB-INF/classes/webframeapp/interfaces/NewRelationship.class. May be locked by another process.
+!SUBENTRY 1 org.jboss.ide.eclipse.as.wtp.core 4 1644298251 2016-07-01 18:06:35.022
+!MESSAGE Could not delete /home/lizo/dev-tools/Servers/wildfly-8.2.1.final/standalone/deployments/InfoSource.war/WEB-INF/classes/webframeapp/interfaces/NewRelationshipResponse.class. May be locked by another process.
+!SUBENTRY 1 org.jboss.ide.eclipse.as.wtp.core 4 1644298251 2016-07-01 18:06:35.022
+!MESSAGE Could not delete /home/lizo/dev-tools/Servers/wildfly-8.2.1.final/standalone/deployments/InfoSource.war/WEB-INF/classes/webframeapp/interfaces/OrgEntity.class. May be locked by another process.
+!SUBENTRY 1 org.jboss.ide.eclipse.as.wtp.core 4 1644298251 2016-07-01 18:06:35.022
+!MESSAGE Could not delete /home/lizo/dev-tools/Servers/wildfly-8.2.1.final/standalone/deployments/InfoSource.war/WEB-INF/classes/webframeapp/interfaces/RelateEntities.class. May be locked by another process.
+!SUBENTRY 1 org.jboss.ide.eclipse.as.wtp.core 4 1644298251 2016-07-01 18:06:35.022
+!MESSAGE Could not delete /home/lizo/dev-tools/Servers/wildfly-8.2.1.final/standalone/deployments/InfoSource.war/WEB-INF/classes/webframeapp/interfaces/RelateEntitiesResponse.class. May be locked by another process.
+!SUBENTRY 1 org.jboss.ide.eclipse.as.wtp.core 4 1644298251 2016-07-01 18:06:35.022
+!MESSAGE Could not delete /home/lizo/dev-tools/Servers/wildfly-8.2.1.final/standalone/deployments/InfoSource.war/WEB-INF/classes/webframeapp/interfaces/SqldataTypes.class. May be locked by another process.
+!SUBENTRY 1 org.jboss.ide.eclipse.as.wtp.core 4 1644298251 2016-07-01 18:06:35.022
+!MESSAGE Could not delete /home/lizo/dev-tools/Servers/wildfly-8.2.1.final/standalone/deployments/InfoSource.war/WEB-INF/classes/webframeapp/servicelgoic/EntityService.class. May be locked by another process.
+!SUBENTRY 1 org.jboss.ide.eclipse.as.wtp.core 4 1644298251 2016-07-01 18:06:35.022
+!MESSAGE Could not delete /home/lizo/dev-tools/Servers/wildfly-8.2.1.final/standalone/deployments/InfoSource.war/WEB-INF/classes/webframeapp/servicelgoic/IEntityService.class. May be locked by another process.
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842776 2016-07-01 18:21:04.779
+!MESSAGE Server shutting down
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842785 2016-07-01 18:21:06.567
+!MESSAGE Server Shutdown Succeeded
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842760 2016-07-01 18:21:06.634
+!MESSAGE Server Starting
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842769 2016-07-01 18:21:29.269
+!MESSAGE Server Startup Succeeded
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842776 2016-07-01 18:49:02.974
+!MESSAGE Server shutting down
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842785 2016-07-01 18:49:03.982
+!MESSAGE Server Shutdown Succeeded
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842760 2016-07-01 18:49:04.356
+!MESSAGE Server Starting
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842769 2016-07-01 18:49:16.481
+!MESSAGE Server Startup Succeeded
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842776 2016-07-01 19:10:22.321
+!MESSAGE Server shutting down
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842785 2016-07-01 19:10:23.637
+!MESSAGE Server Shutdown Succeeded
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842760 2016-07-01 19:10:23.660
+!MESSAGE Server Starting
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842769 2016-07-01 19:10:34.590
+!MESSAGE Server Startup Succeeded
+!SESSION 
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842760 2016-07-02 08:29:33.307
+!MESSAGE Server Starting
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842769 2016-07-02 08:29:52.838
+!MESSAGE Server Startup Succeeded
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842776 2016-07-02 08:30:40.469
+!MESSAGE Server shutting down
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842785 2016-07-02 08:30:41.495
+!MESSAGE Server Shutdown Succeeded
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842760 2016-07-02 08:30:41.622
+!MESSAGE Server Starting
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842769 2016-07-02 08:30:44.728
+!MESSAGE Server Startup Succeeded
+
+!ENTRY org.jboss.ide.eclipse.as.wtp.core 1 16973825 2016-07-02 09:50:30.131
+!MESSAGE Server processes have been terminated.
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842760 2016-07-02 09:51:05.679
+!MESSAGE Server Starting
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842769 2016-07-02 09:51:26.811
+!MESSAGE Server Startup Succeeded
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842776 2016-07-02 10:05:17.290
+!MESSAGE Server shutting down
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842785 2016-07-02 10:05:18.207
+!MESSAGE Server Shutdown Succeeded
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842760 2016-07-02 10:05:18.226
+!MESSAGE Server Starting
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842769 2016-07-02 10:05:21.357
+!MESSAGE Server Startup Succeeded
+
+!ENTRY org.jboss.ide.eclipse.as.wtp.core 1 16973825 2016-07-02 11:16:03.921
+!MESSAGE Server processes have been terminated.
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842760 2016-07-02 11:16:12.166
+!MESSAGE Server Starting
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842769 2016-07-02 11:16:30.090
+!MESSAGE Server Startup Succeeded
+
+!ENTRY org.jboss.ide.eclipse.as.wtp.core 1 16973825 2016-07-02 12:01:34.332
+!MESSAGE Server processes have been terminated.
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842760 2016-07-02 12:01:43.550
+!MESSAGE Server Starting
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842769 2016-07-02 12:01:58.092
+!MESSAGE Server Startup Succeeded
+
+!ENTRY org.jboss.ide.eclipse.as.wtp.core 1 16973825 2016-07-02 13:18:58.262
+!MESSAGE Server processes have been terminated.
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842760 2016-07-02 13:19:17.689
+!MESSAGE Server Starting
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842769 2016-07-02 13:19:40.386
+!MESSAGE Server Startup Succeeded

@@ -1,5 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?><testrun name="testing" project="userGate" tests="1" started="1" failures="0" errors="0" ignored="0">
-  <testsuite name="userGate.testing" time="1.599">
-    <testcase name="should_update_user_profile" classname="userGate.testing" time="1.599"/>
-  </testsuite>
-</testrun>

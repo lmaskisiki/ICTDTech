@@ -41,19 +41,9 @@
 			<artifactId>spring-beans</artifactId>
 			<version>4.1.5.RELEASE</version>
 		</dependency>
-		<!-- Apache CFX 
-		<dependency>
-			<groupId>org.apache.cxf</groupId>
-			<artifactId>cxf-core</artifactId>
-			<version>3.1.0</version>
-		</dependency>
-		<dependency>
-			<groupId>org.apache.cxf</groupId>
-			<artifactId>cxf-rt-frontend-jaxws</artifactId>
-			<version>3.1.0</version>
-		</dependency>
+		
+	 
 
--->
 <dependency>
   <groupId>org.apache.activemq</groupId>
   <artifactId>activemq-core</artifactId>

@@ -20,22 +20,22 @@ public class UserSearchRouter extends RouteBuilder {
 
 	@Override
 	public void configure() throws Exception {
-		from("direct:start")
+		from("direct:start1")
 			  .beanRef("UAServiceClient", "searchByUsernameRequest")
 			 .setHeader("OperationName", simple("findByUsername"))
 			 .process(new Processor() {
 				
 				@Override
 				public void process(Exchange ex) throws Exception {
-					System.out.println(ex.getIn().getBody(FindByUsername.class).getArg0());
+					System.out.println(ex.getIn().getBody(FindByUsername.class).getUsername());
 					 
 					
 				}
 			})
-			 .to("cxf:bean:UAService")
+			 //.to("cxf:bean:UAService")
 			 //.beanRef("UAServiceClient", "searchByUsernameResponse")
 			 ;
-
+		from("activemq:queue:queue.birthIDs").to("stream:out");
 	}
 
 }

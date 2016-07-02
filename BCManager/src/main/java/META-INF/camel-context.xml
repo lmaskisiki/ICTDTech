@@ -20,4 +20,10 @@
 	<camelContext id="camelContext2" xmlns="http://camel.apache.org/schema/spring">
 		<camel:routeBuilder ref="birthbuilder" />
 	</camelContext> 
+	    <bean id="jms" class="org.apache.activemq.camel.component.ActiveMQComponent">
+
+        <property name="brokerURL" value="tcp://localhost:61616" />
+
+    </bean>
+	
 </beans>

@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<Layout resource="/DocMan/ejbModule/META-INF/web.xml">
- <TreeFormPage>
-  <Memento type="FileCDIBeans">
-   <Memento collapsed="false" type="CDI Beans 1.0 File"/>
-  </Memento>
- </TreeFormPage>
-</Layout>

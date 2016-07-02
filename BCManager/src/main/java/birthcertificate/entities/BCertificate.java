@@ -23,7 +23,14 @@ public class BCertificate {
 	String gender;
 	String maternalId;
 	boolean collectReady;
+	private String parentFullNames;
 	
+	public String getParentFullNames() {
+		return parentFullNames;
+	}
+	public void setParentFullNames(String parentFullNames) {
+		this.parentFullNames = parentFullNames;
+	}
 	public boolean isCollectReady() {
 		return collectReady;
 	}
@@ -73,5 +80,4 @@ public class BCertificate {
 		this.maternalId = maternalId;
 	}
  
-
 }

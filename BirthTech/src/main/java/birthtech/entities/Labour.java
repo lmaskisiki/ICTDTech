@@ -11,52 +11,70 @@ import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
 import javax.xml.bind.annotation.XmlRootElement;
+import javax.xml.bind.annotation.XmlSeeAlso;
 
 /**
  * Entity implementation class for Entity: Labour
  *
  */
-@Entity
 @XmlRootElement
+@XmlSeeAlso(birthtech.entities.Maternity.class)
+@Entity
 public class Labour implements Serializable {
- 
+
 	/**
 	 * 
 	 */
 	private static final long serialVersionUID = 1L;
 	@Id
-	@GeneratedValue(strategy=GenerationType.AUTO)
+	@GeneratedValue(strategy = GenerationType.AUTO)
 	private int labourId;
-	
-	 
 	@ManyToOne
-	private Maternity martenal;
+	private Maternity maternal;
+	@ManyToOne
+	private Child child;
+
+
 	private Date labourDate;
 	private int birthNo;
 	private String nurse;
 	private int labourStatus;
 	private String birthPlace;
-	
+
 	public Labour() {
 		super();
 	}
 
- 	public int getLabourId() {
+	public int getLabourId() {
 		return labourId;
 	}
- 
+
 	public void setLabourId(int labourId) {
 		this.labourId = labourId;
 	}
+ 
 
-
-
-	public Maternity getMartenal() {
-		return martenal;
+	public Maternity getMaternal() {
+		return maternal;
 	}
 
-	public void setMartenal(Maternity martenal) {
-		this.martenal = martenal;
+	public void setMaternal(Maternity maternal) {
+		this.maternal = maternal;
+	}
+
+	public Child getChild() {
+		return child;
+	}
+
+	public void setChild(Child child) {
+		this.child = child;
+	}
+	public int getLabourStatus() {
+		return labourStatus;
+	}
+
+	public void setLabourStatus(int labourStatus) {
+		this.labourStatus = labourStatus;
 	}
 
 	public Date getLabourDate() {
@@ -98,6 +116,5 @@ public class Labour implements Serializable {
 	public void setStatus(int status) {
 		this.labourStatus = status;
 	}
-	
-   
+
 }

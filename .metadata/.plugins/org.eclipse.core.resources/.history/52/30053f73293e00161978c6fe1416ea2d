@@ -1,0 +1,5 @@
+package birthcertificate.cxf.clients;
+
+public class DocManClient {
+
+}

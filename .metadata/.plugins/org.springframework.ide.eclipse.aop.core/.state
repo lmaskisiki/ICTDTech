@@ -6,5 +6,4 @@
 <aop-project name="BirthTech"/>
 <aop-project name="BCManager"/>
 <aop-project name="DocMan"/>
-<aop-project name="BCManager1"/>
 </aop-reference-model>

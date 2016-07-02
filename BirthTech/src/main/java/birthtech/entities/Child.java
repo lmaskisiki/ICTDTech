@@ -1,12 +1,17 @@
 package birthtech.entities;
 
 import java.io.Serializable;
+
 import javax.persistence.*;
+import javax.xml.bind.annotation.XmlRootElement;
+import javax.xml.bind.annotation.XmlSeeAlso;
 
 /**
  * Entity implementation class for Entity: Child
  *
  */
+@XmlRootElement
+@XmlSeeAlso(Maternity.class)
 @Entity
 public class Child implements Serializable {
 
@@ -15,10 +20,7 @@ public class Child implements Serializable {
 	private int childId;
 	private String name;
 	private String surname;
-	@JoinColumn(name = "martenalId")
-	private Maternity martenal;
-	@JoinColumn(name = "labourId")
-	private Labour labour;
+	 
 	private String gender;
 
 	private static final long serialVersionUID = 1L;
@@ -51,21 +53,7 @@ public class Child implements Serializable {
 		this.surname = surname;
 	}
 
-	public Maternity getMartenal() {
-		return martenal;
-	}
-
-	public void setMartenal(Maternity martenal) {
-		this.martenal = martenal;
-	}
-
-	public Labour getLabour() {
-		return labour;
-	}
-
-	public void setLabour(Labour labour) {
-		this.labour = labour;
-	}
+ 
 
 	public String getGender() {
 		return gender;
