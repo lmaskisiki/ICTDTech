@@ -12,8 +12,8 @@ public class UAServiceClient {
 				"META-INF/cxf-context.xml");
 	  client = (PersonInterface) context
 				.getBean("UAServiceClient");
+	  context.close();
 	}
-	
 	public useraccount.soap.services.Person findPersonByFullName(String fullName){
 		useraccount.soap.services.Person person=client.findUserByFullName(fullName);
 		return person;

@@ -7,7 +7,7 @@ import birthcertificate.cxf.clients.UAServiceClient;
 
 public class UAServiceClientTests {
 	
-	@Test
+	//@Test
 public void should_find_the_person(){
 	UAServiceClient client = new UAServiceClient();
 	Person p=client.findPersonByFullName("Lizo Masikisiki");

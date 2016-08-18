@@ -1,0 +1,33 @@
+package birthcertificate.ws.rest;
+
+import java.io.Serializable;
+
+import javax.xml.bind.annotation.XmlRootElement;
+
+@XmlRootElement
+public class CollectionStatus  implements Serializable{
+
+	private int parentId;
+	private boolean status;
+	private int bcNumber;
+	public int getParentId() {
+		return parentId;
+	}
+	public void setParentId(int parentId) {
+		this.parentId = parentId;
+	}
+	public boolean isStatus() {
+		return status;
+	}
+	public void setStatus(boolean status) {
+		this.status = status;
+	}
+	public int getBcNumber() {
+		return bcNumber;
+	}
+	public void setBcNumber(int bcNumber) {
+		this.bcNumber = bcNumber;
+	}
+	
+	
+}

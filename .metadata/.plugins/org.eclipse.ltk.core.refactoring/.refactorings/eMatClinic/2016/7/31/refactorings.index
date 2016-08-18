@@ -1,0 +1,23 @@
+1469336076166	Delete element
+1469336110280	Delete element
+1469336214789	Rename resource 'birthtech'
+1469336342493	Delete element
+1469336465736	Rename package 'birthtech.entities'
+1469336518459	Rename package 'birthtech.enums'
+1469336570139	Rename package 'birthtech.services.soap.client'
+1469336590973	Rename package 'birthtech.services.routes'
+1469336629132	Rename package 'birthtech.services.rest'
+1469336668626	Rename package 'birthtech.services.processors'
+1469336704063	Rename package 'birthtech.services'
+1469336728989	Rename package 'birthtech.repositories'
+1469336803262	Rename package 'birthtech.messaging'
+1469336833010	Rename package 'birthtech.interfaces'
+1469348491117	Delete element
+1469350774242	Delete element
+1469554522828	Delete element
+1469554715036	Delete element
+1469557388542	Rename resource 'spring-cxf-rest-example.xml'
+1469724674171	Extract interface 'IClinicService'
+1469731705830	Copy packages
+1469809279704	Copy packages
+1469812817805	Copy file

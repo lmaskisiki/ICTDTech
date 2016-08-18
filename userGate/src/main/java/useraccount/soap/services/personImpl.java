@@ -56,20 +56,25 @@ public class personImpl extends SpringBeanAutowiringSupport implements
 
 	@Override
 	@WebMethod
-	public void createPerson(@WebParam(name = "newperson") Person newPerson) {
-		Attributes userAttributes = new BasicAttributes();
-		userAttributes.put("objectClass", "Person");
-		userAttributes.put("objectClass", "inetOrgPerson");
-		userAttributes.put("givenName", newPerson.getFirst_name());
-		userAttributes.put("sn", newPerson.getLast_name());
-		userAttributes.put("uid", newPerson.getUsername());
-		userAttributes.put("mobile", newPerson.getCell());
-		userAttributes.put("mail", newPerson.getEmail());
-		userAttributes.put("title", newPerson.getGender());
-		userAttributes.put("userPassword", newPerson.getPassword());
-		ldapTemplate.bind(
-				makeDN(newPerson.getFirst_name() + " "
-						+ newPerson.getLast_name()), null, userAttributes);
+	public void createAccount(@WebParam(name = "newperson") Person newPerson) {
+		try {
+			Attributes userAttributes = new BasicAttributes();
+			userAttributes.put("objectClass", "Person");
+			userAttributes.put("objectClass", "inetOrgPerson");
+			userAttributes.put("givenName", newPerson.getFirst_name());
+			userAttributes.put("sn", newPerson.getLast_name());
+			userAttributes.put("uid", newPerson.getUsername());
+			userAttributes.put("mobile", newPerson.getCell());
+			userAttributes.put("mail", newPerson.getEmail());
+			userAttributes.put("title", newPerson.getGender());
+			userAttributes.put("userPassword", newPerson.getPassword());
+			Name userDn = makeDN(newPerson.getFirst_name() + " "
+					+ newPerson.getLast_name());
+			ldapTemplate.bind(userDn, null, userAttributes);
+		} catch (Exception e) {
+			// TODO: handle exception
+		}
+
 	}
 
 	@Override
@@ -108,17 +113,23 @@ public class personImpl extends SpringBeanAutowiringSupport implements
 		return user;
 	}
 
+	@SuppressWarnings("unchecked")
+	@Produces("application/json")
 	@Override
 	@WebMethod
-	@Produces("application/json")
 	public Person findByUsername(@WebParam(name = "user") String User) {
 		SearchControls controls = new SearchControls();
-		controls.setSearchScope(SearchControls.SUBTREE_SCOPE);
-		AndFilter filter = new AndFilter();
-		filter.and(new EqualsFilter("objectclass", "inetOrgPerson")).and(
-				new EqualsFilter("uid", User));
-		List<Person> users = ldapTemplate.search("", filter.toString(),
-				controls, new UserContextMapper());
+		List<Person> users = null;
+		try {
+			controls.setSearchScope(SearchControls.SUBTREE_SCOPE);
+			AndFilter filter = new AndFilter();
+			filter.and(new EqualsFilter("objectclass", "inetOrgPerson"))
+				.and(new EqualsFilter("uid", User));
+			users = ldapTemplate.search("", filter.toString(), controls,
+					new UserContextMapper());
+		} catch (Exception e) {
+		System.out.println("Exception thrown :"+e.getMessage());
+		}
 		return users.get(0);
 	}
 

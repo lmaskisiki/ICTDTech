@@ -533,3 +533,2547 @@ org.eclipse.debug.core.DebugException: Terminate failed
 
 !ENTRY org.jboss.ide.eclipse.as.core 1 16842769 2016-07-02 13:19:40.386
 !MESSAGE Server Startup Succeeded
+!SESSION 
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842760 2016-07-02 20:26:10.784
+!MESSAGE Server Starting
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842769 2016-07-02 20:27:06.253
+!MESSAGE Server Startup Succeeded
+!SESSION 
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842760 2016-07-02 21:05:24.057
+!MESSAGE Server Starting
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842769 2016-07-02 21:06:15.161
+!MESSAGE Server Startup Succeeded
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 0 2016-07-02 21:06:15.224
+!MESSAGE Module BirthTech on WildFly 8.x not yet fully deployed. Waiting...
+
+!ENTRY org.jboss.ide.eclipse.as.core 2 0 2016-07-02 21:06:35.232
+!MESSAGE Module BirthTech on WildFly 8.x still not ready to be shown in browser. Aborting delay.
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842776 2016-07-02 21:29:04.109
+!MESSAGE Server shutting down
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842785 2016-07-02 21:29:05.522
+!MESSAGE Server Shutdown Succeeded
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842760 2016-07-02 21:29:05.870
+!MESSAGE Server Starting
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842769 2016-07-02 21:29:17.430
+!MESSAGE Server Startup Succeeded
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842776 2016-07-02 21:32:33.613
+!MESSAGE Server shutting down
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842785 2016-07-02 21:32:34.623
+!MESSAGE Server Shutdown Succeeded
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842760 2016-07-02 21:32:34.637
+!MESSAGE Server Starting
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842769 2016-07-02 21:32:37.746
+!MESSAGE Server Startup Succeeded
+!SESSION 
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842760 2016-07-03 07:52:30.140
+!MESSAGE Server Starting
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842769 2016-07-03 07:52:57.252
+!MESSAGE Server Startup Succeeded
+!SESSION 
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842760 2016-07-03 08:04:52.633
+!MESSAGE Server Starting
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842769 2016-07-03 08:05:20.455
+!MESSAGE Server Startup Succeeded
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842776 2016-07-03 14:27:55.975
+!MESSAGE Server shutting down
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842785 2016-07-03 14:27:57.480
+!MESSAGE Server Shutdown Succeeded
+
+!ENTRY org.jboss.ide.eclipse.as.wtp.core 1 16973825 2016-07-03 14:28:01.011
+!MESSAGE Server processes have been terminated.
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842760 2016-07-03 14:40:08.643
+!MESSAGE Server Starting
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842769 2016-07-03 14:40:43.484
+!MESSAGE Server Startup Succeeded
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842776 2016-07-03 15:09:32.681
+!MESSAGE Server shutting down
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842785 2016-07-03 15:09:33.849
+!MESSAGE Server Shutdown Succeeded
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842760 2016-07-03 15:09:53.098
+!MESSAGE Server Starting
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842769 2016-07-03 15:10:21.935
+!MESSAGE Server Startup Succeeded
+!SESSION 
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842760 2016-07-03 19:25:39.493
+!MESSAGE Server Starting
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842769 2016-07-03 19:26:12.926
+!MESSAGE Server Startup Succeeded
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842776 2016-07-03 19:28:08.347
+!MESSAGE Server shutting down
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842785 2016-07-03 19:28:09.465
+!MESSAGE Server Shutdown Succeeded
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842760 2016-07-03 19:28:09.493
+!MESSAGE Server Starting
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842769 2016-07-03 19:28:12.906
+!MESSAGE Server Startup Succeeded
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842776 2016-07-03 19:34:36.495
+!MESSAGE Server shutting down
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842785 2016-07-03 19:34:39.058
+!MESSAGE Server Shutdown Succeeded
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842760 2016-07-03 19:34:39.173
+!MESSAGE Server Starting
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842769 2016-07-03 19:35:10.116
+!MESSAGE Server Startup Succeeded
+!SESSION 
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842760 2016-07-18 18:49:25.683
+!MESSAGE Server Starting
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842769 2016-07-18 18:50:03.388
+!MESSAGE Server Startup Succeeded
+
+!ENTRY org.jboss.ide.eclipse.as.wtp.core 1 16973825 2016-07-18 18:52:53.345
+!MESSAGE Server processes have been terminated.
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842760 2016-07-18 18:53:00.503
+!MESSAGE Server Starting
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842769 2016-07-18 18:53:31.751
+!MESSAGE Server Startup Succeeded
+
+!ENTRY org.jboss.ide.eclipse.as.wtp.core 1 16973825 2016-07-18 19:00:16.082
+!MESSAGE Server processes have been terminated.
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842760 2016-07-18 19:00:57.800
+!MESSAGE Server Starting
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842769 2016-07-18 19:02:08.194
+!MESSAGE Server Startup Succeeded
+
+!ENTRY org.jboss.ide.eclipse.as.wtp.core 1 16973825 2016-07-18 19:06:50.353
+!MESSAGE Server processes have been terminated.
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842760 2016-07-18 19:07:28.567
+!MESSAGE Server Starting
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842769 2016-07-18 19:07:44.349
+!MESSAGE Server Startup Succeeded
+
+!ENTRY org.jboss.ide.eclipse.as.wtp.core 1 16973825 2016-07-18 19:40:47.510
+!MESSAGE Server processes have been terminated.
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842760 2016-07-18 20:04:44.884
+!MESSAGE Server Starting
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842769 2016-07-18 20:05:13.914
+!MESSAGE Server Startup Succeeded
+!SESSION 
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842760 2016-07-18 20:52:18.172
+!MESSAGE Server Starting
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842769 2016-07-18 20:52:53.630
+!MESSAGE Server Startup Succeeded
+
+!ENTRY org.jboss.ide.eclipse.as.wtp.core 1 16973825 2016-07-18 20:55:12.305
+!MESSAGE Server processes have been terminated.
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842760 2016-07-18 20:58:25.202
+!MESSAGE Server Starting
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842769 2016-07-18 20:58:37.022
+!MESSAGE Server Startup Succeeded
+
+!ENTRY org.jboss.ide.eclipse.as.wtp.core 1 16973825 2016-07-18 20:59:13.871
+!MESSAGE Server processes have been terminated.
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842760 2016-07-18 21:02:11.927
+!MESSAGE Server Starting
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842769 2016-07-18 21:02:35.856
+!MESSAGE Server Startup Succeeded
+!SESSION 
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842760 2016-07-18 21:30:26.092
+!MESSAGE Server Starting
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842769 2016-07-18 21:30:53.849
+!MESSAGE Server Startup Succeeded
+!SESSION 
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842760 2016-07-19 18:39:17.196
+!MESSAGE Server Starting
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842769 2016-07-19 18:39:55.458
+!MESSAGE Server Startup Succeeded
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842776 2016-07-19 18:40:33.426
+!MESSAGE Server shutting down
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842785 2016-07-19 18:40:38.341
+!MESSAGE Server Shutdown Succeeded
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842760 2016-07-19 18:40:39.147
+!MESSAGE Server Starting
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842769 2016-07-19 18:40:59.347
+!MESSAGE Server Startup Succeeded
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842776 2016-07-19 18:46:39.569
+!MESSAGE Server shutting down
+
+!ENTRY org.jboss.ide.eclipse.as.wtp.core 1 16973825 2016-07-19 18:46:43.751
+!MESSAGE Server processes have been terminated.
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842760 2016-07-19 18:46:43.802
+!MESSAGE Server Starting
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842769 2016-07-19 18:46:46.909
+!MESSAGE Server Startup Succeeded
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842776 2016-07-19 18:52:49.009
+!MESSAGE Server shutting down
+
+!ENTRY org.jboss.ide.eclipse.as.wtp.core 1 16973825 2016-07-19 18:52:54.009
+!MESSAGE Server processes have been terminated.
+!SESSION 
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842760 2016-07-19 19:10:53.594
+!MESSAGE Server Starting
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842769 2016-07-19 19:11:24.398
+!MESSAGE Server Startup Succeeded
+
+!ENTRY org.jboss.ide.eclipse.as.wtp.core 1 16973825 2016-07-19 19:11:59.941
+!MESSAGE Server processes have been terminated.
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842760 2016-07-19 19:13:10.787
+!MESSAGE Server Starting
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842769 2016-07-19 19:13:13.899
+!MESSAGE Server Startup Succeeded
+!SESSION 
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842760 2016-07-19 20:02:49.332
+!MESSAGE Server Starting
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842769 2016-07-19 20:03:14.025
+!MESSAGE Server Startup Succeeded
+!SESSION 
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842760 2016-07-19 20:12:50.496
+!MESSAGE Server Starting
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842769 2016-07-19 20:13:15.586
+!MESSAGE Server Startup Succeeded
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842776 2016-07-19 20:14:32.443
+!MESSAGE Server shutting down
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842785 2016-07-19 20:14:36.414
+!MESSAGE Server Shutdown Succeeded
+!SESSION 
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842760 2016-07-20 16:59:29.025
+!MESSAGE Server Starting
+
+!ENTRY org.jboss.ide.eclipse.as.wtp.core 1 16973825 2016-07-20 16:59:40.780
+!MESSAGE Server processes have been terminated.
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842760 2016-07-20 17:01:20.972
+!MESSAGE Server Starting
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842769 2016-07-20 17:01:30.495
+!MESSAGE Server Startup Succeeded
+
+!ENTRY org.jboss.ide.eclipse.as.wtp.core 1 16973825 2016-07-20 17:03:48.528
+!MESSAGE Server processes have been terminated.
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842760 2016-07-20 17:05:02.784
+!MESSAGE Server Starting
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842769 2016-07-20 17:05:05.992
+!MESSAGE Server Startup Succeeded
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842776 2016-07-20 17:06:01.924
+!MESSAGE Server shutting down
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842785 2016-07-20 17:06:03.845
+!MESSAGE Server Shutdown Succeeded
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842760 2016-07-20 17:11:13.474
+!MESSAGE Server Starting
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842769 2016-07-20 17:11:16.586
+!MESSAGE Server Startup Succeeded
+!SESSION 
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842760 2016-07-20 18:15:01.583
+!MESSAGE Server Starting
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842769 2016-07-20 18:15:18.577
+!MESSAGE Server Startup Succeeded
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 0 2016-07-20 18:16:26.346
+!MESSAGE Module userGate on WildFly 8.x not yet fully deployed. Waiting...
+
+!ENTRY org.jboss.ide.eclipse.as.core 2 0 2016-07-20 18:16:46.368
+!MESSAGE Module userGate on WildFly 8.x still not ready to be shown in browser. Aborting delay.
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842776 2016-07-20 18:18:15.685
+!MESSAGE Server shutting down
+
+!ENTRY org.jboss.ide.eclipse.as.wtp.core 1 16973825 2016-07-20 18:18:16.344
+!MESSAGE Server processes have been terminated.
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842760 2016-07-20 18:18:16.371
+!MESSAGE Server Starting
+
+!ENTRY org.jboss.ide.eclipse.as.core 2 16842768 2016-07-20 18:18:16.405
+!MESSAGE Poll Thread Aborted: null
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842769 2016-07-20 18:18:24.183
+!MESSAGE Server Startup Succeeded
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842776 2016-07-20 18:19:36.243
+!MESSAGE Server shutting down
+
+!ENTRY org.jboss.ide.eclipse.as.wtp.core 1 16973825 2016-07-20 18:19:37.206
+!MESSAGE Server processes have been terminated.
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842760 2016-07-20 18:20:57.948
+!MESSAGE Server Starting
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842769 2016-07-20 18:21:00.958
+!MESSAGE Server Startup Succeeded
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 0 2016-07-20 18:41:49.265
+!MESSAGE Module userGate on WildFly 8.x not yet fully deployed. Waiting...
+
+!ENTRY org.jboss.ide.eclipse.as.core 2 0 2016-07-20 18:42:10.123
+!MESSAGE Module userGate on WildFly 8.x still not ready to be shown in browser. Aborting delay.
+!SESSION 
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842760 2016-07-21 19:36:39.508
+!MESSAGE Server Starting
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842769 2016-07-21 19:36:59.914
+!MESSAGE Server Startup Succeeded
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842776 2016-07-21 21:03:41.851
+!MESSAGE Server shutting down
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842785 2016-07-21 21:03:45.802
+!MESSAGE Server Shutdown Succeeded
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842760 2016-07-21 21:03:46.469
+!MESSAGE Server Starting
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842769 2016-07-21 21:04:17.115
+!MESSAGE Server Startup Succeeded
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 0 2016-07-21 21:30:52.424
+!MESSAGE Module testWarDep on WildFly 8.x not yet fully deployed. Waiting...
+!SESSION 
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842760 2016-07-22 19:31:29.463
+!MESSAGE Server Starting
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842769 2016-07-22 19:31:53.398
+!MESSAGE Server Startup Succeeded
+
+!ENTRY org.jboss.ide.eclipse.as.wtp.core 1 16973825 2016-07-22 19:38:34.553
+!MESSAGE Server processes have been terminated.
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842760 2016-07-22 19:59:24.235
+!MESSAGE Server Starting
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842769 2016-07-22 19:59:34.155
+!MESSAGE Server Startup Succeeded
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842776 2016-07-22 20:03:22.105
+!MESSAGE Server shutting down
+
+!ENTRY org.jboss.ide.eclipse.as.wtp.core 1 16973825 2016-07-22 20:03:26.617
+!MESSAGE Server processes have been terminated.
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842760 2016-07-22 20:39:20.809
+!MESSAGE Server Starting
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842769 2016-07-22 20:39:23.918
+!MESSAGE Server Startup Succeeded
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842776 2016-07-22 21:04:37.067
+!MESSAGE Server shutting down
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842785 2016-07-22 21:04:39.401
+!MESSAGE Server Shutdown Succeeded
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842760 2016-07-22 21:04:39.897
+!MESSAGE Server Starting
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842769 2016-07-22 21:04:59.922
+!MESSAGE Server Startup Succeeded
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842776 2016-07-22 21:51:37.137
+!MESSAGE Server shutting down
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842785 2016-07-22 21:51:40.772
+!MESSAGE Server Shutdown Succeeded
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842760 2016-07-22 21:51:41.020
+!MESSAGE Server Starting
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842769 2016-07-22 21:52:06.250
+!MESSAGE Server Startup Succeeded
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842776 2016-07-22 21:54:55.868
+!MESSAGE Server shutting down
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842785 2016-07-22 21:54:57.489
+!MESSAGE Server Shutdown Succeeded
+!SESSION 
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842760 2016-07-23 06:02:26.161
+!MESSAGE Server Starting
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842769 2016-07-23 06:02:43.254
+!MESSAGE Server Startup Succeeded
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842776 2016-07-23 06:09:09.197
+!MESSAGE Server shutting down
+
+!ENTRY org.jboss.ide.eclipse.as.wtp.core 1 16973825 2016-07-23 06:09:09.414
+!MESSAGE Server processes have been terminated.
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842760 2016-07-23 06:09:09.447
+!MESSAGE Server Starting
+
+!ENTRY org.jboss.ide.eclipse.as.core 2 16842768 2016-07-23 06:09:09.498
+!MESSAGE Poll Thread Aborted: null
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842769 2016-07-23 06:09:12.465
+!MESSAGE Server Startup Succeeded
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842776 2016-07-23 06:20:48.487
+!MESSAGE Server shutting down
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842785 2016-07-23 06:20:49.713
+!MESSAGE Server Shutdown Succeeded
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842760 2016-07-23 06:20:49.841
+!MESSAGE Server Starting
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842769 2016-07-23 06:21:04.463
+!MESSAGE Server Startup Succeeded
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842776 2016-07-23 06:24:05.155
+!MESSAGE Server shutting down
+
+!ENTRY org.jboss.ide.eclipse.as.wtp.core 1 16973825 2016-07-23 06:24:05.396
+!MESSAGE Server processes have been terminated.
+
+!ENTRY org.jboss.ide.eclipse.as.core 2 16842768 2016-07-23 06:24:05.456
+!MESSAGE Poll Thread Aborted: null
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842760 2016-07-23 06:24:05.464
+!MESSAGE Server Starting
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842769 2016-07-23 06:24:08.574
+!MESSAGE Server Startup Succeeded
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 0 2016-07-23 06:29:03.759
+!MESSAGE Module MaternityApp on WildFly 8.x not yet fully deployed. Waiting...
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842776 2016-07-23 06:29:22.414
+!MESSAGE Server shutting down
+
+!ENTRY org.jboss.ide.eclipse.as.wtp.core 1 16973825 2016-07-23 06:29:23.511
+!MESSAGE Server processes have been terminated.
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842760 2016-07-23 06:29:23.533
+!MESSAGE Server Starting
+
+!ENTRY org.jboss.ide.eclipse.as.core 2 0 2016-07-23 06:29:23.773
+!MESSAGE Module MaternityApp on WildFly 8.x still not ready to be shown in browser. Aborting delay.
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842769 2016-07-23 06:29:26.644
+!MESSAGE Server Startup Succeeded
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842776 2016-07-23 06:50:11.971
+!MESSAGE Server shutting down
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842785 2016-07-23 06:50:14.371
+!MESSAGE Server Shutdown Succeeded
+!SESSION 
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842760 2016-07-23 13:15:56.084
+!MESSAGE Server Starting
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842769 2016-07-23 13:16:14.467
+!MESSAGE Server Startup Succeeded
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 0 2016-07-23 13:36:19.035
+!MESSAGE Module eMatclinic on WildFly 8.x not yet fully deployed. Waiting...
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842776 2016-07-23 14:07:14.388
+!MESSAGE Server shutting down
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842785 2016-07-23 14:07:15.846
+!MESSAGE Server Shutdown Succeeded
+
+!ENTRY org.jboss.ide.eclipse.as.wtp.core 1 16973825 2016-07-23 14:07:16.137
+!MESSAGE Server processes have been terminated.
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842760 2016-07-23 14:07:16.696
+!MESSAGE Server Starting
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842760 2016-07-23 14:09:26.899
+!MESSAGE Server Starting
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842769 2016-07-23 14:09:39.514
+!MESSAGE Server Startup Succeeded
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842776 2016-07-23 14:24:04.861
+!MESSAGE Server shutting down
+
+!ENTRY org.jboss.ide.eclipse.as.wtp.core 1 16973825 2016-07-23 14:24:05.254
+!MESSAGE Server processes have been terminated.
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842760 2016-07-23 14:24:05.408
+!MESSAGE Server Starting
+
+!ENTRY org.jboss.ide.eclipse.as.wtp.core 1 16973825 2016-07-23 14:25:52.345
+!MESSAGE Server processes have been terminated.
+
+!ENTRY org.jboss.ide.eclipse.as.core 4 16973826 2016-07-23 14:25:52.833
+!MESSAGE The server was shutdown forcefully. All processes were terminated.
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842760 2016-07-23 14:26:24.057
+!MESSAGE Server Starting
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842769 2016-07-23 14:26:27.385
+!MESSAGE Server Startup Succeeded
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842776 2016-07-23 14:56:07.540
+!MESSAGE Server shutting down
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842785 2016-07-23 14:56:08.531
+!MESSAGE Server Shutdown Succeeded
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842760 2016-07-23 14:56:08.603
+!MESSAGE Server Starting
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842769 2016-07-23 14:56:25.021
+!MESSAGE Server Startup Succeeded
+!SESSION 
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 0 2016-07-23 15:09:44.560
+!MESSAGE Module eMatclinic on WildFly 8.x not yet fully deployed. Waiting...
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842776 2016-07-23 15:24:12.949
+!MESSAGE Server shutting down
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842785 2016-07-23 15:24:13.856
+!MESSAGE Server Shutdown Succeeded
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842760 2016-07-23 15:24:14.900
+!MESSAGE Server Starting
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842769 2016-07-23 15:24:30.527
+!MESSAGE Server Startup Succeeded
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842776 2016-07-23 15:31:57.161
+!MESSAGE Server shutting down
+
+!ENTRY org.jboss.ide.eclipse.as.wtp.core 1 16973825 2016-07-23 15:31:57.550
+!MESSAGE Server processes have been terminated.
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842760 2016-07-23 15:31:57.579
+!MESSAGE Server Starting
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842769 2016-07-23 15:32:01.020
+!MESSAGE Server Startup Succeeded
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842776 2016-07-23 15:32:28.574
+!MESSAGE Server shutting down
+
+!ENTRY org.jboss.ide.eclipse.as.wtp.core 1 16973825 2016-07-23 15:32:29.619
+!MESSAGE Server processes have been terminated.
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842760 2016-07-23 15:32:29.649
+!MESSAGE Server Starting
+
+!ENTRY org.jboss.ide.eclipse.as.core 2 16842768 2016-07-23 15:32:29.685
+!MESSAGE Poll Thread Aborted: null
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842769 2016-07-23 15:32:32.867
+!MESSAGE Server Startup Succeeded
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842776 2016-07-23 15:47:04.675
+!MESSAGE Server shutting down
+
+!ENTRY org.jboss.ide.eclipse.as.wtp.core 1 16973825 2016-07-23 15:47:04.934
+!MESSAGE Server processes have been terminated.
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842760 2016-07-23 15:47:04.949
+!MESSAGE Server Starting
+
+!ENTRY org.jboss.ide.eclipse.as.core 2 16842768 2016-07-23 15:47:04.976
+!MESSAGE Poll Thread Aborted: null
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842769 2016-07-23 15:47:08.459
+!MESSAGE Server Startup Succeeded
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842776 2016-07-23 15:48:16.209
+!MESSAGE Server shutting down
+
+!ENTRY org.jboss.ide.eclipse.as.wtp.core 1 16973825 2016-07-23 15:48:16.438
+!MESSAGE Server processes have been terminated.
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842760 2016-07-23 15:48:16.497
+!MESSAGE Server Starting
+
+!ENTRY org.jboss.ide.eclipse.as.core 2 16842768 2016-07-23 15:48:16.517
+!MESSAGE Poll Thread Aborted: null
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842769 2016-07-23 15:48:19.806
+!MESSAGE Server Startup Succeeded
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842776 2016-07-23 15:53:15.395
+!MESSAGE Server shutting down
+
+!ENTRY org.jboss.ide.eclipse.as.wtp.core 1 16973825 2016-07-23 15:53:15.797
+!MESSAGE Server processes have been terminated.
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842760 2016-07-23 15:53:15.929
+!MESSAGE Server Starting
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842769 2016-07-23 15:53:26.048
+!MESSAGE Server Startup Succeeded
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842776 2016-07-23 15:56:58.705
+!MESSAGE Server shutting down
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842785 2016-07-23 15:56:59.217
+!MESSAGE Server Shutdown Succeeded
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842760 2016-07-23 15:57:27.477
+!MESSAGE Server Starting
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842769 2016-07-23 15:57:36.594
+!MESSAGE Server Startup Succeeded
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842776 2016-07-23 15:58:41.803
+!MESSAGE Server shutting down
+
+!ENTRY org.jboss.ide.eclipse.as.wtp.core 1 16973825 2016-07-23 15:58:42.906
+!MESSAGE Server processes have been terminated.
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842760 2016-07-23 15:58:42.937
+!MESSAGE Server Starting
+
+!ENTRY org.jboss.ide.eclipse.as.core 2 16842768 2016-07-23 15:58:43.005
+!MESSAGE Poll Thread Aborted: null
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842769 2016-07-23 15:58:46.441
+!MESSAGE Server Startup Succeeded
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842776 2016-07-23 16:00:05.749
+!MESSAGE Server shutting down
+
+!ENTRY org.jboss.ide.eclipse.as.wtp.core 1 16973825 2016-07-23 16:00:06.336
+!MESSAGE Server processes have been terminated.
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842760 2016-07-23 16:00:06.366
+!MESSAGE Server Starting
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842769 2016-07-23 16:00:10.073
+!MESSAGE Server Startup Succeeded
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 0 2016-07-23 16:00:26.827
+!MESSAGE Module eMatclinic on WildFly 8.x not yet fully deployed. Waiting...
+
+!ENTRY org.jboss.ide.eclipse.as.core 2 0 2016-07-23 16:00:46.846
+!MESSAGE Module eMatclinic on WildFly 8.x still not ready to be shown in browser. Aborting delay.
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842776 2016-07-23 16:03:13.505
+!MESSAGE Server shutting down
+
+!ENTRY org.jboss.ide.eclipse.as.wtp.core 1 16973825 2016-07-23 16:03:14.634
+!MESSAGE Server processes have been terminated.
+
+!ENTRY org.jboss.ide.eclipse.as.core 2 16842768 2016-07-23 16:03:14.634
+!MESSAGE Poll Thread Aborted: null
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842760 2016-07-23 16:03:14.656
+!MESSAGE Server Starting
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842769 2016-07-23 16:03:18.064
+!MESSAGE Server Startup Succeeded
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842776 2016-07-23 16:03:56.603
+!MESSAGE Server shutting down
+
+!ENTRY org.jboss.ide.eclipse.as.wtp.core 1 16973825 2016-07-23 16:03:57.441
+!MESSAGE Server processes have been terminated.
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842760 2016-07-23 16:03:57.469
+!MESSAGE Server Starting
+
+!ENTRY org.jboss.ide.eclipse.as.core 2 16842768 2016-07-23 16:03:57.504
+!MESSAGE Poll Thread Aborted: null
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842769 2016-07-23 16:04:01.173
+!MESSAGE Server Startup Succeeded
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842776 2016-07-23 18:16:49.859
+!MESSAGE Server shutting down
+
+!ENTRY org.jboss.ide.eclipse.as.wtp.core 1 16973825 2016-07-23 18:16:50.672
+!MESSAGE Server processes have been terminated.
+!SESSION 
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842760 2016-07-23 19:44:18.418
+!MESSAGE Server Starting
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842769 2016-07-23 19:44:37.067
+!MESSAGE Server Startup Succeeded
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842776 2016-07-23 19:46:13.433
+!MESSAGE Server shutting down
+
+!ENTRY org.jboss.ide.eclipse.as.wtp.core 1 16973825 2016-07-23 19:46:14.217
+!MESSAGE Server processes have been terminated.
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842760 2016-07-23 19:46:14.240
+!MESSAGE Server Starting
+
+!ENTRY org.jboss.ide.eclipse.as.core 2 16842768 2016-07-23 19:46:14.241
+!MESSAGE Poll Thread Aborted: null
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842769 2016-07-23 19:46:17.550
+!MESSAGE Server Startup Succeeded
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 0 2016-07-23 20:05:06.658
+!MESSAGE Module eMatclinic on WildFly 8.x not yet fully deployed. Waiting...
+
+!ENTRY org.jboss.ide.eclipse.as.core 2 0 2016-07-23 20:05:26.672
+!MESSAGE Module eMatclinic on WildFly 8.x still not ready to be shown in browser. Aborting delay.
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842776 2016-07-23 20:06:51.786
+!MESSAGE Server shutting down
+
+!ENTRY org.jboss.ide.eclipse.as.wtp.core 1 16973825 2016-07-23 20:06:52.057
+!MESSAGE Server processes have been terminated.
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842760 2016-07-23 20:06:52.145
+!MESSAGE Server Starting
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842769 2016-07-23 20:06:55.963
+!MESSAGE Server Startup Succeeded
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842776 2016-07-23 20:19:41.640
+!MESSAGE Server shutting down
+
+!ENTRY org.jboss.ide.eclipse.as.wtp.core 1 16973825 2016-07-23 20:19:42.552
+!MESSAGE Server processes have been terminated.
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842760 2016-07-23 20:19:42.571
+!MESSAGE Server Starting
+
+!ENTRY org.jboss.ide.eclipse.as.core 2 16842768 2016-07-23 20:19:42.642
+!MESSAGE Poll Thread Aborted: null
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842769 2016-07-23 20:19:45.778
+!MESSAGE Server Startup Succeeded
+!SESSION 
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842760 2016-07-24 06:17:25.281
+!MESSAGE Server Starting
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842769 2016-07-24 06:17:43.830
+!MESSAGE Server Startup Succeeded
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842776 2016-07-24 06:21:45.169
+!MESSAGE Server shutting down
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842785 2016-07-24 06:21:45.573
+!MESSAGE Server Shutdown Succeeded
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842760 2016-07-24 06:45:17.762
+!MESSAGE Server Starting
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842769 2016-07-24 06:45:21.071
+!MESSAGE Server Startup Succeeded
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842776 2016-07-24 06:46:42.121
+!MESSAGE Server shutting down
+
+!ENTRY org.jboss.ide.eclipse.as.wtp.core 1 16973825 2016-07-24 06:46:42.952
+!MESSAGE Server processes have been terminated.
+!SESSION 
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842760 2016-07-24 12:27:17.671
+!MESSAGE Server Starting
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 0 2016-07-24 12:27:42.691
+!MESSAGE Module eMatClinic on WildFly 8.x not yet fully deployed. Waiting...
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842769 2016-07-24 12:27:42.778
+!MESSAGE Server Startup Succeeded
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842776 2016-07-24 16:13:41.847
+!MESSAGE Server shutting down
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842785 2016-07-24 16:13:43.440
+!MESSAGE Server Shutdown Succeeded
+!SESSION 
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842760 2016-07-26 18:52:54.778
+!MESSAGE Server Starting
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842769 2016-07-26 18:53:14.051
+!MESSAGE Server Startup Succeeded
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842776 2016-07-26 19:10:26.642
+!MESSAGE Server shutting down
+
+!ENTRY org.jboss.ide.eclipse.as.wtp.core 1 16973825 2016-07-26 19:10:27.661
+!MESSAGE Server processes have been terminated.
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842760 2016-07-26 19:10:35.001
+!MESSAGE Server Starting
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842769 2016-07-26 19:10:38.518
+!MESSAGE Server Startup Succeeded
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 0 2016-07-26 19:12:14.491
+!MESSAGE Module eMatClinic on WildFly 8.x not yet fully deployed. Waiting...
+
+!ENTRY org.jboss.ide.eclipse.as.core 2 0 2016-07-26 19:12:34.511
+!MESSAGE Module eMatClinic on WildFly 8.x still not ready to be shown in browser. Aborting delay.
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842776 2016-07-26 19:13:04.159
+!MESSAGE Server shutting down
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842785 2016-07-26 19:13:04.563
+!MESSAGE Server Shutdown Succeeded
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842760 2016-07-26 19:13:04.602
+!MESSAGE Server Starting
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842769 2016-07-26 19:13:07.621
+!MESSAGE Server Startup Succeeded
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842776 2016-07-26 19:14:04.470
+!MESSAGE Server shutting down
+
+!ENTRY org.jboss.ide.eclipse.as.wtp.core 1 16973825 2016-07-26 19:14:04.629
+!MESSAGE Server processes have been terminated.
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842760 2016-07-26 19:19:19.444
+!MESSAGE Server Starting
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842769 2016-07-26 19:19:22.553
+!MESSAGE Server Startup Succeeded
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842776 2016-07-26 19:25:25.829
+!MESSAGE Server shutting down
+
+!ENTRY org.jboss.ide.eclipse.as.wtp.core 1 16973825 2016-07-26 19:25:26.476
+!MESSAGE Server processes have been terminated.
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842760 2016-07-26 19:48:51.900
+!MESSAGE Server Starting
+
+!ENTRY org.jboss.ide.eclipse.as.wtp.core 1 16973825 2016-07-26 19:48:53.448
+!MESSAGE Server processes have been terminated.
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842760 2016-07-26 19:58:55.250
+!MESSAGE Server Starting
+
+!ENTRY org.jboss.ide.eclipse.as.wtp.core 1 16973825 2016-07-26 19:58:56.786
+!MESSAGE Server processes have been terminated.
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842760 2016-07-26 19:59:27.706
+!MESSAGE Server Starting
+
+!ENTRY org.jboss.ide.eclipse.as.wtp.core 1 16973825 2016-07-26 19:59:30.853
+!MESSAGE Server processes have been terminated.
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842760 2016-07-26 20:01:35.170
+!MESSAGE Server Starting
+
+!ENTRY org.jboss.ide.eclipse.as.wtp.core 1 16973825 2016-07-26 20:01:36.798
+!MESSAGE Server processes have been terminated.
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842760 2016-07-26 20:02:25.681
+!MESSAGE Server Starting
+
+!ENTRY org.jboss.ide.eclipse.as.wtp.core 1 16973825 2016-07-26 20:02:27.154
+!MESSAGE Server processes have been terminated.
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842760 2016-07-26 20:03:33.149
+!MESSAGE Server Starting
+
+!ENTRY org.jboss.ide.eclipse.as.wtp.core 1 16973825 2016-07-26 20:03:35.254
+!MESSAGE Server processes have been terminated.
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842760 2016-07-26 20:05:20.195
+!MESSAGE Server Starting
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842769 2016-07-26 20:05:23.327
+!MESSAGE Server Startup Succeeded
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842776 2016-07-26 20:06:27.709
+!MESSAGE Server shutting down
+
+!ENTRY org.jboss.ide.eclipse.as.wtp.core 1 16973825 2016-07-26 20:06:28.339
+!MESSAGE Server processes have been terminated.
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842760 2016-07-26 20:12:03.751
+!MESSAGE Server Starting
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842769 2016-07-26 20:12:06.858
+!MESSAGE Server Startup Succeeded
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842776 2016-07-26 20:12:47.329
+!MESSAGE Server shutting down
+
+!ENTRY org.jboss.ide.eclipse.as.wtp.core 1 16973825 2016-07-26 20:12:48.542
+!MESSAGE Server processes have been terminated.
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842760 2016-07-26 20:12:48.562
+!MESSAGE Server Starting
+
+!ENTRY org.jboss.ide.eclipse.as.core 2 16842768 2016-07-26 20:12:48.633
+!MESSAGE Poll Thread Aborted: null
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842769 2016-07-26 20:12:51.776
+!MESSAGE Server Startup Succeeded
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842776 2016-07-26 20:23:14.676
+!MESSAGE Server shutting down
+
+!ENTRY org.jboss.ide.eclipse.as.wtp.core 1 16973825 2016-07-26 20:23:15.675
+!MESSAGE Server processes have been terminated.
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842760 2016-07-26 20:23:15.698
+!MESSAGE Server Starting
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842769 2016-07-26 20:23:18.907
+!MESSAGE Server Startup Succeeded
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842776 2016-07-26 20:24:18.373
+!MESSAGE Server shutting down
+
+!ENTRY org.jboss.ide.eclipse.as.wtp.core 1 16973825 2016-07-26 20:24:18.837
+!MESSAGE Server processes have been terminated.
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842760 2016-07-26 20:24:18.866
+!MESSAGE Server Starting
+
+!ENTRY org.jboss.ide.eclipse.as.core 2 16842768 2016-07-26 20:24:18.881
+!MESSAGE Poll Thread Aborted: null
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842769 2016-07-26 20:24:22.172
+!MESSAGE Server Startup Succeeded
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842776 2016-07-26 20:25:39.458
+!MESSAGE Server shutting down
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842785 2016-07-26 20:25:39.764
+!MESSAGE Server Shutdown Succeeded
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842760 2016-07-26 20:25:39.791
+!MESSAGE Server Starting
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842769 2016-07-26 20:25:42.910
+!MESSAGE Server Startup Succeeded
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842776 2016-07-26 20:26:08.706
+!MESSAGE Server shutting down
+
+!ENTRY org.jboss.ide.eclipse.as.wtp.core 1 16973825 2016-07-26 20:26:09.538
+!MESSAGE Server processes have been terminated.
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842760 2016-07-26 20:26:09.564
+!MESSAGE Server Starting
+
+!ENTRY org.jboss.ide.eclipse.as.core 2 16842768 2016-07-26 20:26:09.609
+!MESSAGE Poll Thread Aborted: null
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842769 2016-07-26 20:26:12.871
+!MESSAGE Server Startup Succeeded
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842776 2016-07-26 20:45:50.188
+!MESSAGE Server shutting down
+
+!ENTRY org.jboss.ide.eclipse.as.wtp.core 1 16973825 2016-07-26 20:45:50.667
+!MESSAGE Server processes have been terminated.
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842760 2016-07-26 20:45:50.684
+!MESSAGE Server Starting
+
+!ENTRY org.jboss.ide.eclipse.as.core 2 16842768 2016-07-26 20:45:50.691
+!MESSAGE Poll Thread Aborted: null
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842769 2016-07-26 20:45:53.698
+!MESSAGE Server Startup Succeeded
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842776 2016-07-26 20:46:38.247
+!MESSAGE Server shutting down
+
+!ENTRY org.jboss.ide.eclipse.as.wtp.core 1 16973825 2016-07-26 20:46:38.662
+!MESSAGE Server processes have been terminated.
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842760 2016-07-26 20:46:38.687
+!MESSAGE Server Starting
+
+!ENTRY org.jboss.ide.eclipse.as.core 2 16842768 2016-07-26 20:46:38.748
+!MESSAGE Poll Thread Aborted: null
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842769 2016-07-26 20:46:41.901
+!MESSAGE Server Startup Succeeded
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842776 2016-07-26 20:47:25.698
+!MESSAGE Server shutting down
+
+!ENTRY org.jboss.ide.eclipse.as.wtp.core 1 16973825 2016-07-26 20:47:26.086
+!MESSAGE Server processes have been terminated.
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842760 2016-07-26 20:47:26.106
+!MESSAGE Server Starting
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842769 2016-07-26 20:47:29.711
+!MESSAGE Server Startup Succeeded
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842776 2016-07-26 20:48:46.455
+!MESSAGE Server shutting down
+
+!ENTRY org.jboss.ide.eclipse.as.wtp.core 1 16973825 2016-07-26 20:48:47.348
+!MESSAGE Server processes have been terminated.
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842760 2016-07-26 20:48:47.372
+!MESSAGE Server Starting
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842769 2016-07-26 20:48:50.681
+!MESSAGE Server Startup Succeeded
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842776 2016-07-26 20:54:59.286
+!MESSAGE Server shutting down
+
+!ENTRY org.jboss.ide.eclipse.as.wtp.core 1 16973825 2016-07-26 20:54:59.732
+!MESSAGE Server processes have been terminated.
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842760 2016-07-26 20:54:59.758
+!MESSAGE Server Starting
+
+!ENTRY org.jboss.ide.eclipse.as.core 2 16842768 2016-07-26 20:54:59.788
+!MESSAGE Poll Thread Aborted: null
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842769 2016-07-26 20:55:03.066
+!MESSAGE Server Startup Succeeded
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 0 2016-07-26 21:05:05.322
+!MESSAGE Module testWarDep on WildFly 8.x not yet fully deployed. Waiting...
+
+!ENTRY org.jboss.ide.eclipse.as.core 4 1644298244 2016-07-26 21:30:57.960
+!MESSAGE Incremental publish failed for module eMatClinic
+!SUBENTRY 1 org.jboss.ide.eclipse.as.wtp.core 4 1644298251 2016-07-26 21:30:57.960
+!MESSAGE Error reading file /home/lizo/.m2/repository/org/jboss/ws/jbossws-api/1.0.2.Final/jbossws-api-1.0.2.Final.jar
+
+!ENTRY org.jboss.ide.eclipse.as.core 4 1644298244 2016-07-26 21:31:59.876
+!MESSAGE Incremental publish failed for module eMatClinic
+!SUBENTRY 1 org.jboss.ide.eclipse.as.wtp.core 4 1644298251 2016-07-26 21:31:59.876
+!MESSAGE Error reading file /home/lizo/.m2/repository/org/jboss/ws/jbossws-api/1.0.2.Final/jbossws-api-1.0.2.Final.jar
+!SUBENTRY 1 org.jboss.ide.eclipse.as.wtp.core 4 1644298251 2016-07-26 21:31:59.876
+!MESSAGE Could not delete /home/lizo/dev-tools/Servers/wildfly-8.2.1.final/standalone/deployments/eMatClinic.war/WEB-INF/lib/jbossws-api-1.0.3.Final.jar. May be locked by another process.
+
+!ENTRY org.jboss.ide.eclipse.as.core 4 1644298244 2016-07-26 21:32:01.736
+!MESSAGE Incremental publish failed for module eMatClinic
+!SUBENTRY 1 org.jboss.ide.eclipse.as.wtp.core 4 1644298251 2016-07-26 21:32:01.736
+!MESSAGE Error reading file /home/lizo/.m2/repository/org/jboss/ws/jbossws-api/1.0.2.Final/jbossws-api-1.0.2.Final.jar
+!SUBENTRY 1 org.jboss.ide.eclipse.as.wtp.core 4 1644298251 2016-07-26 21:32:01.736
+!MESSAGE Could not delete /home/lizo/dev-tools/Servers/wildfly-8.2.1.final/standalone/deployments/eMatClinic.war/WEB-INF/lib/jbossws-api-1.0.3.Final.jar. May be locked by another process.
+!SESSION 
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 0 2016-07-26 21:40:43.912
+!MESSAGE Module eMatClinic on WildFly 8.x not yet fully deployed. Waiting...
+!SESSION 2016-07-29 18:01:10.927 -----------------------------------------------
+eclipse.buildId=4.3.2.M20140221-1700
+java.version=1.7.0_76
+java.vendor=Oracle Corporation
+BootLoader constants: OS=linux, ARCH=x86, WS=gtk, NL=en_ZA
+Framework arguments:  -product org.eclipse.epp.package.jee.product
+Command-line arguments:  -os linux -ws gtk -arch x86 -product org.eclipse.epp.package.jee.product
+
+!ENTRY org.jboss.ide.eclipse.as.core 0 33685505 2016-07-29 19:16:00.187
+!MESSAGE 140 files modified in module eMatClinic
+
+!ENTRY org.jboss.ide.eclipse.as.core 0 33685505 2016-07-29 19:16:00.272
+!MESSAGE Module spring-web-4.1.5.RELEASE.jar published without error.
+
+!ENTRY org.jboss.ide.eclipse.as.core 0 33685505 2016-07-29 19:16:00.280
+!MESSAGE 3 files modified in module testWarDep
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842760 2016-07-29 19:16:01.110
+!MESSAGE Server Starting
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842769 2016-07-29 19:16:22.054
+!MESSAGE Server Startup Succeeded
+
+!ENTRY unknown 0 0 2016-07-29 19:17:09.883
+!MESSAGE OK
+
+!ENTRY unknown 0 0 2016-07-29 19:17:09.886
+!MESSAGE OK
+
+!ENTRY unknown 0 0 2016-07-29 19:17:09.901
+!MESSAGE OK
+
+!ENTRY org.jboss.ide.eclipse.as.core 0 33685505 2016-07-29 19:18:07.717
+!MESSAGE Module MMS published without error.
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842776 2016-07-29 19:18:11.560
+!MESSAGE Server shutting down
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16973825 2016-07-29 19:18:12.349
+!MESSAGE Server processes have been terminated.
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842760 2016-07-29 19:18:12.365
+!MESSAGE Server Starting
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842769 2016-07-29 19:18:15.574
+!MESSAGE Server Startup Succeeded
+
+!ENTRY org.jboss.ide.eclipse.as.core 0 33685505 2016-07-29 19:20:19.512
+!MESSAGE 1 files modified in module MMS
+
+!ENTRY org.jboss.ide.eclipse.as.core 0 33685505 2016-07-29 19:22:04.839
+!MESSAGE 1 files modified in module MMS
+
+!ENTRY org.jboss.ide.eclipse.as.core 0 33685505 2016-07-29 19:23:36.287
+!MESSAGE 1 files modified in module MMS
+
+!ENTRY org.jboss.ide.eclipse.as.core 0 33685505 2016-07-29 19:23:49.261
+!MESSAGE 1 files modified in module MMS
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842776 2016-07-29 19:23:57.936
+!MESSAGE Server shutting down
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16973825 2016-07-29 19:23:58.738
+!MESSAGE Server processes have been terminated.
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842760 2016-07-29 19:23:58.755
+!MESSAGE Server Starting
+
+!ENTRY org.jboss.ide.eclipse.as.core 2 16842768 2016-07-29 19:23:58.838
+!MESSAGE Poll Thread Aborted: null
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842769 2016-07-29 19:24:01.768
+!MESSAGE Server Startup Succeeded
+
+!ENTRY org.jboss.ide.eclipse.as.core 0 33685505 2016-07-29 19:34:20.344
+!MESSAGE 1 files modified in module MMS
+
+!ENTRY org.jboss.ide.eclipse.as.core 0 33685505 2016-07-29 19:35:40.323
+!MESSAGE 1 files modified in module MMS
+
+!ENTRY org.jboss.ide.eclipse.as.core 0 33685505 2016-07-29 19:37:03.225
+!MESSAGE 1 files modified in module MMS
+
+!ENTRY org.jboss.ide.eclipse.as.core 0 33685505 2016-07-29 19:37:13.943
+!MESSAGE 2 files modified in module MMS
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842776 2016-07-29 19:37:17.480
+!MESSAGE Server shutting down
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16973825 2016-07-29 19:37:17.918
+!MESSAGE Server processes have been terminated.
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842760 2016-07-29 19:37:17.939
+!MESSAGE Server Starting
+
+!ENTRY org.jboss.ide.eclipse.as.core 2 16842768 2016-07-29 19:37:17.982
+!MESSAGE Poll Thread Aborted: null
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842769 2016-07-29 19:37:20.949
+!MESSAGE Server Startup Succeeded
+
+!ENTRY org.jboss.ide.eclipse.as.core 0 33685505 2016-07-29 19:40:35.911
+!MESSAGE 82 files modified in module MMS
+
+!ENTRY org.jboss.ide.eclipse.as.core 0 33685505 2016-07-29 19:41:43.088
+!MESSAGE 1 files modified in module MMS
+
+!ENTRY org.jboss.ide.eclipse.as.core 0 33685505 2016-07-29 19:41:50.846
+!MESSAGE 1 files modified in module MMS
+
+!ENTRY org.jboss.ide.eclipse.as.core 0 33685505 2016-07-29 19:43:08.785
+!MESSAGE 1 files modified in module MMS
+
+!ENTRY org.jboss.ide.eclipse.as.core 0 33685505 2016-07-29 19:43:17.612
+!MESSAGE 1 files modified in module MMS
+
+!ENTRY org.jboss.ide.eclipse.as.core 0 33685505 2016-07-29 19:47:29.248
+!MESSAGE 1 files modified in module MMS
+
+!ENTRY org.jboss.ide.eclipse.as.core 0 33685505 2016-07-29 19:49:24.784
+!MESSAGE 85 files modified in module MMS
+
+!ENTRY org.jboss.ide.eclipse.as.core 0 33685505 2016-07-29 19:49:58.693
+!MESSAGE 21 files modified in module MMS
+
+!ENTRY org.jboss.ide.eclipse.as.core 0 33685505 2016-07-29 19:50:00.104
+!MESSAGE 69 files modified in module MMS
+
+!ENTRY org.jboss.ide.eclipse.as.core 0 33685505 2016-07-29 19:50:12.581
+!MESSAGE 2 files modified in module MMS
+
+!ENTRY org.jboss.ide.eclipse.as.core 0 33685505 2016-07-29 19:53:33.670
+!MESSAGE 82 files modified in module MMS
+
+!ENTRY org.jboss.ide.eclipse.as.core 0 33685505 2016-07-29 19:56:32.321
+!MESSAGE 70 files modified in module MMS
+
+!ENTRY org.jboss.ide.eclipse.as.core 0 33685505 2016-07-29 19:56:41.602
+!MESSAGE 1 files modified in module MMS
+
+!ENTRY org.jboss.ide.eclipse.as.core 0 33685505 2016-07-29 19:56:54.309
+!MESSAGE 2 files modified in module MMS
+
+!ENTRY org.jboss.ide.eclipse.as.core 0 33685505 2016-07-29 19:57:18.762
+!MESSAGE 1 files modified in module MMS
+
+!ENTRY org.jboss.ide.eclipse.as.core 0 33685505 2016-07-29 20:05:26.348
+!MESSAGE 1 files modified in module MMS
+
+!ENTRY org.jboss.ide.eclipse.as.core 0 33685505 2016-07-29 20:06:00.751
+!MESSAGE 1 files modified in module MMS
+
+!ENTRY org.jboss.ide.eclipse.as.core 0 33685505 2016-07-29 20:06:43.068
+!MESSAGE 1 files modified in module MMS
+
+!ENTRY org.jboss.ide.eclipse.as.core 0 33685505 2016-07-29 20:07:12.536
+!MESSAGE 1 files modified in module MMS
+
+!ENTRY org.jboss.ide.eclipse.as.core 0 33685505 2016-07-29 20:08:04.509
+!MESSAGE 1 files modified in module MMS
+
+!ENTRY org.jboss.ide.eclipse.as.core 0 33685505 2016-07-29 20:08:23.603
+!MESSAGE 4 files modified in module MMS
+
+!ENTRY org.jboss.ide.eclipse.as.core 0 33685505 2016-07-29 20:10:17.383
+!MESSAGE 4 files modified in module MMS
+
+!ENTRY org.jboss.ide.eclipse.as.core 0 33685505 2016-07-29 20:11:01.329
+!MESSAGE 1 files modified in module MMS
+
+!ENTRY org.jboss.ide.eclipse.as.core 0 33685505 2016-07-29 20:26:57.160
+!MESSAGE 13 files modified in module MMS
+
+!ENTRY org.jboss.ide.eclipse.as.core 0 33685505 2016-07-29 20:28:55.956
+!MESSAGE 1 files modified in module MMS
+
+!ENTRY org.jboss.ide.eclipse.as.core 0 33685505 2016-07-29 20:30:00.445
+!MESSAGE 1 files modified in module MMS
+
+!ENTRY org.jboss.ide.eclipse.as.core 0 33685505 2016-07-29 20:31:13.599
+!MESSAGE 2 files modified in module MMS
+
+!ENTRY org.jboss.ide.eclipse.as.core 0 33685505 2016-07-29 20:33:53.491
+!MESSAGE 1 files modified in module MMS
+
+!ENTRY org.jboss.ide.eclipse.as.core 0 33685505 2016-07-29 20:35:44.721
+!MESSAGE 17 files modified in module MMS
+
+!ENTRY org.jboss.ide.eclipse.as.core 0 33685505 2016-07-29 20:36:11.459
+!MESSAGE 70 files modified in module MMS
+
+!ENTRY org.jboss.ide.eclipse.as.core 0 33685505 2016-07-29 20:36:41.616
+!MESSAGE 70 files modified in module MMS
+
+!ENTRY org.jboss.ide.eclipse.as.core 0 33685505 2016-07-29 20:37:56.752
+!MESSAGE 1 files modified in module MMS
+
+!ENTRY org.jboss.ide.eclipse.as.core 0 33685505 2016-07-29 20:41:20.383
+!MESSAGE 1 files modified in module MMS
+
+!ENTRY org.jboss.ide.eclipse.as.core 0 33685505 2016-07-29 20:50:06.688
+!MESSAGE 1 files modified in module MMS
+
+!ENTRY org.jboss.ide.eclipse.as.core 0 33685505 2016-07-29 20:50:56.448
+!MESSAGE 70 files modified in module MMS
+
+!ENTRY org.jboss.ide.eclipse.as.core 0 33685505 2016-07-29 20:51:18.111
+!MESSAGE 70 files modified in module MMS
+
+!ENTRY org.jboss.ide.eclipse.as.core 0 33685505 2016-07-29 20:54:33.155
+!MESSAGE 70 files modified in module MMS
+
+!ENTRY org.jboss.ide.eclipse.as.core 0 33685505 2016-07-29 20:55:33.933
+!MESSAGE 71 files modified in module MMS
+
+!ENTRY org.jboss.ide.eclipse.as.core 0 33685505 2016-07-29 20:55:58.426
+!MESSAGE 1 files modified in module MMS
+
+!ENTRY org.jboss.ide.eclipse.as.core 0 33685505 2016-07-29 20:57:34.234
+!MESSAGE 1 files modified in module MMS
+
+!ENTRY org.jboss.ide.eclipse.as.core 0 33685505 2016-07-29 20:58:07.835
+!MESSAGE 1 files modified in module MMS
+
+!ENTRY org.jboss.ide.eclipse.as.core 0 33685505 2016-07-29 20:58:40.681
+!MESSAGE 1 files modified in module MMS
+
+!ENTRY org.jboss.ide.eclipse.as.core 0 33685505 2016-07-29 20:58:46.623
+!MESSAGE 1 files modified in module MMS
+
+!ENTRY org.jboss.ide.eclipse.as.core 0 33685505 2016-07-29 21:00:06.450
+!MESSAGE 1 files modified in module MMS
+
+!ENTRY org.jboss.ide.eclipse.as.core 0 33685505 2016-07-29 21:01:17.571
+!MESSAGE 71 files modified in module MMS
+
+!ENTRY org.jboss.ide.eclipse.as.core 0 33685505 2016-07-29 21:02:06.986
+!MESSAGE 71 files modified in module MMS
+
+!ENTRY org.jboss.ide.eclipse.as.core 0 33685505 2016-07-29 21:02:33.193
+!MESSAGE 1 files modified in module MMS
+
+!ENTRY org.jboss.ide.eclipse.as.core 0 33685505 2016-07-29 21:03:21.781
+!MESSAGE 1 files modified in module MMS
+
+!ENTRY org.jboss.ide.eclipse.as.core 0 33685505 2016-07-29 21:05:34.953
+!MESSAGE 1 files modified in module MMS
+
+!ENTRY org.jboss.ide.eclipse.as.core 0 33685505 2016-07-29 21:06:24.061
+!MESSAGE 1 files modified in module MMS
+
+!ENTRY org.jboss.ide.eclipse.as.core 0 33685505 2016-07-29 21:09:03.357
+!MESSAGE 1 files modified in module MMS
+
+!ENTRY org.jboss.ide.eclipse.as.core 0 33685505 2016-07-29 21:10:40.036
+!MESSAGE 1 files modified in module MMS
+
+!ENTRY org.jboss.ide.eclipse.as.core 0 33685505 2016-07-29 21:11:21.096
+!MESSAGE 1 files modified in module MMS
+
+!ENTRY org.jboss.ide.eclipse.as.core 0 33685505 2016-07-29 21:11:45.270
+!MESSAGE 1 files modified in module MMS
+
+!ENTRY org.jboss.ide.eclipse.as.core 0 33685505 2016-07-29 21:13:03.075
+!MESSAGE 1 files modified in module MMS
+
+!ENTRY org.jboss.ide.eclipse.as.core 0 33685505 2016-07-29 21:14:23.441
+!MESSAGE 2 files modified in module MMS
+
+!ENTRY org.jboss.ide.eclipse.as.core 0 33685505 2016-07-29 21:15:17.286
+!MESSAGE 1 files modified in module MMS
+
+!ENTRY org.jboss.ide.eclipse.as.core 0 33685505 2016-07-29 21:15:32.800
+!MESSAGE 1 files modified in module MMS
+
+!ENTRY org.jboss.ide.eclipse.as.core 0 33685505 2016-07-29 21:16:08.004
+!MESSAGE 1 files modified in module MMS
+
+!ENTRY org.jboss.ide.eclipse.as.core 0 33685505 2016-07-29 21:16:30.188
+!MESSAGE 1 files modified in module MMS
+
+!ENTRY org.jboss.ide.eclipse.as.core 0 33685505 2016-07-29 21:16:46.310
+!MESSAGE 1 files modified in module MMS
+
+!ENTRY org.jboss.ide.eclipse.as.core 0 33685505 2016-07-29 21:17:22.104
+!MESSAGE 1 files modified in module MMS
+
+!ENTRY org.jboss.ide.eclipse.as.core 0 33685505 2016-07-29 21:17:52.300
+!MESSAGE 1 files modified in module MMS
+
+!ENTRY org.jboss.ide.eclipse.as.core 0 33685505 2016-07-29 21:18:05.406
+!MESSAGE 1 files modified in module MMS
+
+!ENTRY org.jboss.ide.eclipse.as.core 0 33685505 2016-07-29 21:20:04.453
+!MESSAGE 1 files modified in module MMS
+
+!ENTRY org.jboss.ide.eclipse.as.core 0 33685505 2016-07-29 21:25:19.523
+!MESSAGE 28 files modified in module MMS
+
+!ENTRY org.jboss.ide.eclipse.as.core 0 33685505 2016-07-29 21:25:21.286
+!MESSAGE 73 files modified in module MMS
+
+!ENTRY org.jboss.ide.eclipse.as.core 0 33685505 2016-07-29 21:25:49.460
+!MESSAGE 61 files modified in module MMS
+
+!ENTRY org.jboss.ide.eclipse.as.core 0 33685505 2016-07-29 21:25:51.761
+!MESSAGE 72 files modified in module MMS
+
+!ENTRY org.jboss.ide.eclipse.as.core 0 33685505 2016-07-29 21:28:54.710
+!MESSAGE 85 files modified in module MMS
+
+!ENTRY org.jboss.ide.eclipse.as.core 0 33685505 2016-07-29 21:30:07.442
+!MESSAGE 77 files modified in module MMS
+
+!ENTRY org.jboss.ide.eclipse.as.core 0 33685505 2016-07-29 21:30:13.497
+!MESSAGE 2 files modified in module MMS
+
+!ENTRY org.jboss.ide.eclipse.as.core 0 33685505 2016-07-29 21:30:21.236
+!MESSAGE 74 files modified in module MMS
+
+!ENTRY org.jboss.ide.eclipse.as.core 0 33685505 2016-07-29 21:32:54.584
+!MESSAGE 78 files modified in module MMS
+
+!ENTRY org.jboss.ide.eclipse.as.core 0 33685505 2016-07-29 21:34:21.028
+!MESSAGE 2 files modified in module MMS
+
+!ENTRY org.jboss.ide.eclipse.as.core 0 33685505 2016-07-29 21:35:01.341
+!MESSAGE 78 files modified in module MMS
+
+!ENTRY org.jboss.ide.eclipse.as.core 0 33685505 2016-07-29 21:36:02.864
+!MESSAGE 75 files modified in module MMS
+
+!ENTRY org.jboss.ide.eclipse.as.core 0 33685505 2016-07-29 21:37:28.977
+!MESSAGE 2 files modified in module MMS
+
+!ENTRY org.jboss.ide.eclipse.as.core 0 33685505 2016-07-29 21:38:22.294
+!MESSAGE 91 files modified in module MMS
+
+!ENTRY org.jboss.ide.eclipse.as.core 0 33685505 2016-07-29 21:38:58.170
+!MESSAGE 75 files modified in module MMS
+
+!ENTRY org.jboss.ide.eclipse.as.core 0 33685505 2016-07-29 21:39:19.615
+!MESSAGE 2 files modified in module MMS
+
+!ENTRY org.jboss.ide.eclipse.as.core 0 33685505 2016-07-29 21:41:22.152
+!MESSAGE 1 files modified in module MMS
+
+!ENTRY org.jboss.ide.eclipse.as.core 0 33685505 2016-07-29 21:44:20.936
+!MESSAGE 2 files modified in module MMS
+
+!ENTRY org.jboss.ide.eclipse.as.core 0 33685505 2016-07-29 21:47:59.823
+!MESSAGE 1 files modified in module MMS
+
+!ENTRY org.jboss.ide.eclipse.as.core 0 33685505 2016-07-29 21:50:31.729
+!MESSAGE 1 files modified in module MMS
+
+!ENTRY org.jboss.ide.eclipse.as.core 0 33685505 2016-07-29 21:51:17.864
+!MESSAGE 1 files modified in module MMS
+
+!ENTRY org.jboss.ide.eclipse.as.core 0 33685505 2016-07-29 21:52:10.736
+!MESSAGE 1 files modified in module MMS
+
+!ENTRY org.jboss.ide.eclipse.as.core 0 33685505 2016-07-29 21:52:24.738
+!MESSAGE 1 files modified in module MMS
+
+!ENTRY org.jboss.ide.eclipse.as.core 0 33685505 2016-07-29 21:52:34.968
+!MESSAGE 1 files modified in module MMS
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842776 2016-07-29 21:53:07.565
+!MESSAGE Server shutting down
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16973825 2016-07-29 21:53:07.960
+!MESSAGE Server processes have been terminated.
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842760 2016-07-29 21:53:08.016
+!MESSAGE Server Starting
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842769 2016-07-29 21:53:11.322
+!MESSAGE Server Startup Succeeded
+
+!ENTRY org.jboss.ide.eclipse.as.core 0 33685505 2016-07-29 21:55:34.882
+!MESSAGE 83 files modified in module MMS
+
+!ENTRY org.jboss.ide.eclipse.as.core 0 33685505 2016-07-29 21:55:34.912
+!MESSAGE Module spring-web-4.1.5.RELEASE.jar published without error.
+
+!ENTRY org.jboss.ide.eclipse.as.core 0 33685505 2016-07-29 21:55:36.206
+!MESSAGE 1 files modified in module MMS
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842776 2016-07-29 21:56:03.356
+!MESSAGE Server shutting down
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16973825 2016-07-29 21:56:03.640
+!MESSAGE Server processes have been terminated.
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842760 2016-07-29 21:56:03.660
+!MESSAGE Server Starting
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842769 2016-07-29 21:56:06.768
+!MESSAGE Server Startup Succeeded
+
+!ENTRY org.jboss.ide.eclipse.as.core 0 33685505 2016-07-29 21:57:23.589
+!MESSAGE 1 files modified in module MMS
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842776 2016-07-29 21:57:27.025
+!MESSAGE Server shutting down
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16973825 2016-07-29 21:57:27.354
+!MESSAGE Server processes have been terminated.
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842760 2016-07-29 21:57:27.375
+!MESSAGE Server Starting
+
+!ENTRY org.jboss.ide.eclipse.as.core 2 16842768 2016-07-29 21:57:27.426
+!MESSAGE Poll Thread Aborted: null
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842769 2016-07-29 21:57:30.581
+!MESSAGE Server Startup Succeeded
+
+!ENTRY org.jboss.ide.eclipse.as.core 0 33685505 2016-07-29 21:57:42.246
+!MESSAGE Module MMS published without error.
+
+!ENTRY org.jboss.ide.eclipse.as.core 0 33685505 2016-07-29 21:57:42.251
+!MESSAGE Module spring-web-4.1.5.RELEASE.jar published without error.
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842776 2016-07-29 21:57:46.222
+!MESSAGE Server shutting down
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16973825 2016-07-29 21:57:50.097
+!MESSAGE Server processes have been terminated.
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842760 2016-07-29 21:57:50.177
+!MESSAGE Server Starting
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842769 2016-07-29 21:57:53.280
+!MESSAGE Server Startup Succeeded
+
+!ENTRY org.jboss.ide.eclipse.as.core 0 33685505 2016-07-29 21:58:48.417
+!MESSAGE 1 files modified in module MMS
+
+!ENTRY org.jboss.ide.eclipse.as.core 0 33685505 2016-07-29 21:58:52.740
+!MESSAGE Module MMS published without error.
+
+!ENTRY org.jboss.ide.eclipse.as.core 0 33685505 2016-07-29 21:58:52.746
+!MESSAGE Module spring-web-4.1.5.RELEASE.jar published without error.
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842776 2016-07-29 21:59:04.431
+!MESSAGE Server shutting down
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16973825 2016-07-29 21:59:04.716
+!MESSAGE Server processes have been terminated.
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842760 2016-07-29 21:59:04.728
+!MESSAGE Server Starting
+
+!ENTRY org.jboss.ide.eclipse.as.core 2 16842768 2016-07-29 21:59:04.731
+!MESSAGE Poll Thread Aborted: null
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842769 2016-07-29 21:59:07.637
+!MESSAGE Server Startup Succeeded
+
+!ENTRY org.jboss.ide.eclipse.as.core 0 33685505 2016-07-29 21:59:43.685
+!MESSAGE 1 files modified in module MMS
+
+!ENTRY org.jboss.ide.eclipse.as.core 0 33685505 2016-07-29 21:59:51.447
+!MESSAGE 1 files modified in module MMS
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842776 2016-07-29 21:59:57.487
+!MESSAGE Server shutting down
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16973825 2016-07-29 21:59:58.516
+!MESSAGE Server processes have been terminated.
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842760 2016-07-29 21:59:58.540
+!MESSAGE Server Starting
+
+!ENTRY org.jboss.ide.eclipse.as.core 2 16842768 2016-07-29 21:59:58.590
+!MESSAGE Poll Thread Aborted: null
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842769 2016-07-29 22:00:01.445
+!MESSAGE Server Startup Succeeded
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842776 2016-07-29 22:00:32.414
+!MESSAGE Server shutting down
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16973825 2016-07-29 22:00:32.643
+!MESSAGE Server processes have been terminated.
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842760 2016-07-29 22:00:34.657
+!MESSAGE Server Starting
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842769 2016-07-29 22:00:38.053
+!MESSAGE Server Startup Succeeded
+
+!ENTRY org.jboss.ide.eclipse.as.core 0 33685505 2016-07-29 22:01:03.415
+!MESSAGE Module MMS published without error.
+
+!ENTRY org.jboss.ide.eclipse.as.core 0 33685505 2016-07-29 22:01:03.420
+!MESSAGE Module spring-web-4.1.5.RELEASE.jar published without error.
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842776 2016-07-29 22:02:21.001
+!MESSAGE Server shutting down
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16973825 2016-07-29 22:02:21.986
+!MESSAGE Server processes have been terminated.
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842760 2016-07-29 22:02:22.004
+!MESSAGE Server Starting
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842769 2016-07-29 22:02:25.411
+!MESSAGE Server Startup Succeeded
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842776 2016-07-29 22:03:40.594
+!MESSAGE Server shutting down
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16973825 2016-07-29 22:03:41.097
+!MESSAGE Server processes have been terminated.
+
+!ENTRY org.jboss.ide.eclipse.as.core 0 33685505 2016-07-30 07:31:39.825
+!MESSAGE 2 files modified in module MMS
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842760 2016-07-30 07:31:39.849
+!MESSAGE Server Starting
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842769 2016-07-30 07:31:42.863
+!MESSAGE Server Startup Succeeded
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 0 2016-07-30 07:32:47.348
+!MESSAGE Module MMS on WildFly 8.x not yet fully deployed. Waiting...
+
+!ENTRY org.jboss.ide.eclipse.as.core 2 0 2016-07-30 07:33:07.747
+!MESSAGE Module MMS on WildFly 8.x still not ready to be shown in browser. Aborting delay.
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842776 2016-07-30 07:34:01.503
+!MESSAGE Server shutting down
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16973825 2016-07-30 07:34:01.755
+!MESSAGE Server processes have been terminated.
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842760 2016-07-30 07:34:01.779
+!MESSAGE Server Starting
+
+!ENTRY org.jboss.ide.eclipse.as.core 2 16842768 2016-07-30 07:34:01.803
+!MESSAGE Poll Thread Aborted: null
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842769 2016-07-30 07:34:04.882
+!MESSAGE Server Startup Succeeded
+
+!ENTRY org.jboss.ide.eclipse.as.core 0 33685505 2016-07-30 07:34:36.196
+!MESSAGE Module MMS published without error.
+
+!ENTRY org.jboss.ide.eclipse.as.core 0 33685505 2016-07-30 07:34:36.202
+!MESSAGE Module spring-web-4.1.5.RELEASE.jar published without error.
+
+!ENTRY org.jboss.ide.eclipse.as.core 0 33685505 2016-07-30 07:37:01.611
+!MESSAGE Module MMS published without error.
+
+!ENTRY org.jboss.ide.eclipse.as.core 0 33685505 2016-07-30 07:37:01.620
+!MESSAGE Module spring-web-4.1.5.RELEASE.jar published without error.
+
+!ENTRY org.jboss.ide.eclipse.as.core 0 33685505 2016-07-30 07:38:22.662
+!MESSAGE 1 files modified in module MMS
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842776 2016-07-30 07:38:28.853
+!MESSAGE Server shutting down
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16973825 2016-07-30 07:38:29.890
+!MESSAGE Server processes have been terminated.
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842760 2016-07-30 07:38:29.906
+!MESSAGE Server Starting
+
+!ENTRY org.jboss.ide.eclipse.as.core 2 16842768 2016-07-30 07:38:29.955
+!MESSAGE Poll Thread Aborted: null
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842769 2016-07-30 07:38:33.712
+!MESSAGE Server Startup Succeeded
+
+!ENTRY org.jboss.ide.eclipse.as.core 0 33685505 2016-07-30 07:39:01.425
+!MESSAGE Module MMS published without error.
+
+!ENTRY org.jboss.ide.eclipse.as.core 0 33685505 2016-07-30 07:39:01.433
+!MESSAGE Module spring-web-4.1.5.RELEASE.jar published without error.
+
+!ENTRY org.jboss.ide.eclipse.as.core 0 33685505 2016-07-30 07:40:41.402
+!MESSAGE 1 files modified in module MMS
+
+!ENTRY org.jboss.ide.eclipse.as.core 0 33685505 2016-07-30 07:41:13.986
+!MESSAGE Module MMS published without error.
+
+!ENTRY org.jboss.ide.eclipse.as.core 0 33685505 2016-07-30 07:41:13.996
+!MESSAGE Module spring-web-4.1.5.RELEASE.jar published without error.
+
+!ENTRY org.jboss.ide.eclipse.as.core 0 33685505 2016-07-30 07:42:01.340
+!MESSAGE Module MMS published without error.
+
+!ENTRY org.jboss.ide.eclipse.as.core 0 33685505 2016-07-30 07:42:02.108
+!MESSAGE Module spring-web-4.1.5.RELEASE.jar published without error.
+
+!ENTRY org.jboss.ide.eclipse.as.core 0 33685505 2016-07-30 07:51:15.604
+!MESSAGE 1 files modified in module MMS
+
+!ENTRY org.jboss.ide.eclipse.as.core 0 33685505 2016-07-30 07:53:21.242
+!MESSAGE 2 files modified in module MMS
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842776 2016-07-30 07:55:16.845
+!MESSAGE Server shutting down
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16973825 2016-07-30 07:55:18.047
+!MESSAGE Server processes have been terminated.
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842785 2016-07-30 07:55:18.052
+!MESSAGE Server Shutdown Succeeded
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842760 2016-07-30 07:55:18.206
+!MESSAGE Server Starting
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842769 2016-07-30 07:55:25.218
+!MESSAGE Server Startup Succeeded
+
+!ENTRY org.jboss.ide.eclipse.as.core 0 33685505 2016-07-30 07:55:56.496
+!MESSAGE Module MMS published without error.
+
+!ENTRY org.jboss.ide.eclipse.as.core 0 33685505 2016-07-30 07:55:56.502
+!MESSAGE Module spring-web-4.1.5.RELEASE.jar published without error.
+
+!ENTRY org.jboss.ide.eclipse.as.core 0 33685505 2016-07-30 07:56:54.512
+!MESSAGE 1 files modified in module MMS
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842776 2016-07-30 07:56:57.317
+!MESSAGE Server shutting down
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16973825 2016-07-30 07:56:58.189
+!MESSAGE Server processes have been terminated.
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842760 2016-07-30 07:56:58.216
+!MESSAGE Server Starting
+
+!ENTRY org.jboss.ide.eclipse.as.core 2 16842768 2016-07-30 07:56:58.219
+!MESSAGE Poll Thread Aborted: null
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842769 2016-07-30 07:57:01.325
+!MESSAGE Server Startup Succeeded
+
+!ENTRY org.jboss.ide.eclipse.as.core 0 33685505 2016-07-30 07:57:10.164
+!MESSAGE Module MMS published without error.
+
+!ENTRY org.jboss.ide.eclipse.as.core 0 33685505 2016-07-30 07:57:10.878
+!MESSAGE Module spring-web-4.1.5.RELEASE.jar published without error.
+
+!ENTRY org.jboss.ide.eclipse.as.core 0 33685505 2016-07-30 07:57:46.173
+!MESSAGE Module MMS published without error.
+
+!ENTRY org.jboss.ide.eclipse.as.core 0 33685505 2016-07-30 07:57:46.181
+!MESSAGE Module spring-web-4.1.5.RELEASE.jar published without error.
+
+!ENTRY org.jboss.ide.eclipse.as.core 0 33685505 2016-07-30 08:04:07.422
+!MESSAGE 78 files modified in module MMS
+
+!ENTRY org.jboss.ide.eclipse.as.core 0 33685505 2016-07-30 08:04:11.219
+!MESSAGE 1 files modified in module MMS
+
+!ENTRY org.jboss.ide.eclipse.as.core 0 33685505 2016-07-30 08:06:22.267
+!MESSAGE 1 files modified in module MMS
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842776 2016-07-30 08:07:21.426
+!MESSAGE Server shutting down
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16973825 2016-07-30 08:07:22.577
+!MESSAGE Server processes have been terminated.
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842760 2016-07-30 08:07:22.598
+!MESSAGE Server Starting
+
+!ENTRY org.jboss.ide.eclipse.as.core 2 16842768 2016-07-30 08:07:22.669
+!MESSAGE Poll Thread Aborted: null
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842769 2016-07-30 08:07:27.336
+!MESSAGE Server Startup Succeeded
+
+!ENTRY org.jboss.ide.eclipse.as.core 0 33685505 2016-07-30 08:07:53.927
+!MESSAGE Module MMS published without error.
+
+!ENTRY org.jboss.ide.eclipse.as.core 0 33685505 2016-07-30 08:07:54.656
+!MESSAGE Module spring-web-4.1.5.RELEASE.jar published without error.
+
+!ENTRY org.jboss.ide.eclipse.as.core 0 33685505 2016-07-30 08:11:01.151
+!MESSAGE 1 files modified in module MMS
+
+!ENTRY org.jboss.ide.eclipse.as.core 0 33685505 2016-07-30 08:13:45.531
+!MESSAGE Module MMS published without error.
+
+!ENTRY org.jboss.ide.eclipse.as.core 0 33685505 2016-07-30 08:13:45.537
+!MESSAGE Module spring-web-4.1.5.RELEASE.jar published without error.
+
+!ENTRY org.jboss.ide.eclipse.as.core 0 33685505 2016-07-30 09:51:28.365
+!MESSAGE 5 files modified in module MMS
+
+!ENTRY org.jboss.ide.eclipse.as.core 0 33685505 2016-07-30 09:51:37.079
+!MESSAGE 72 files modified in module MMS
+
+!ENTRY org.jboss.ide.eclipse.as.core 0 33685505 2016-07-30 09:52:00.667
+!MESSAGE Module MMS published without error.
+
+!ENTRY org.jboss.ide.eclipse.as.core 0 33685505 2016-07-30 09:52:00.675
+!MESSAGE Module spring-web-4.1.5.RELEASE.jar published without error.
+
+!ENTRY org.jboss.ide.eclipse.as.core 0 33685505 2016-07-30 09:56:49.091
+!MESSAGE 1 files modified in module MMS
+
+!ENTRY org.jboss.ide.eclipse.as.core 0 33685505 2016-07-30 09:56:55.024
+!MESSAGE Module MMS published without error.
+
+!ENTRY org.jboss.ide.eclipse.as.core 0 33685505 2016-07-30 09:56:55.033
+!MESSAGE Module spring-web-4.1.5.RELEASE.jar published without error.
+
+!ENTRY org.jboss.ide.eclipse.as.core 0 33685505 2016-07-30 10:04:42.569
+!MESSAGE 2 files modified in module MMS
+
+!ENTRY org.jboss.ide.eclipse.as.core 0 33685505 2016-07-30 10:07:16.233
+!MESSAGE 72 files modified in module MMS
+
+!ENTRY org.jboss.ide.eclipse.as.core 0 33685505 2016-07-30 10:07:37.864
+!MESSAGE 72 files modified in module MMS
+
+!ENTRY org.jboss.ide.eclipse.as.core 0 33685505 2016-07-30 10:12:05.972
+!MESSAGE 3 files modified in module MMS
+
+!ENTRY org.jboss.ide.eclipse.as.core 0 33685505 2016-07-30 10:14:45.872
+!MESSAGE 2 files modified in module MMS
+
+!ENTRY org.jboss.ide.eclipse.as.core 0 33685505 2016-07-30 10:19:39.772
+!MESSAGE 2 files modified in module MMS
+
+!ENTRY org.jboss.ide.eclipse.as.core 0 33685505 2016-07-30 10:23:01.495
+!MESSAGE 2 files modified in module MMS
+
+!ENTRY org.jboss.ide.eclipse.as.core 0 33685505 2016-07-30 10:23:32.851
+!MESSAGE 2 files modified in module MMS
+
+!ENTRY org.jboss.ide.eclipse.as.core 0 33685505 2016-07-30 10:30:40.856
+!MESSAGE 1 files modified in module MMS
+
+!ENTRY org.jboss.ide.eclipse.as.core 0 33685505 2016-07-30 10:32:57.776
+!MESSAGE 1 files modified in module MMS
+
+!ENTRY org.jboss.ide.eclipse.as.core 0 33685505 2016-07-30 10:35:12.970
+!MESSAGE 1 files modified in module MMS
+
+!ENTRY org.jboss.ide.eclipse.as.core 0 33685505 2016-07-30 10:35:47.093
+!MESSAGE 1 files modified in module MMS
+
+!ENTRY org.jboss.ide.eclipse.as.core 0 33685505 2016-07-30 10:36:29.191
+!MESSAGE 1 files modified in module MMS
+
+!ENTRY org.jboss.ide.eclipse.as.core 0 33685505 2016-07-30 10:36:39.425
+!MESSAGE 1 files modified in module MMS
+
+!ENTRY org.jboss.ide.eclipse.as.core 0 33685505 2016-07-30 10:37:50.732
+!MESSAGE 1 files modified in module MMS
+
+!ENTRY org.jboss.ide.eclipse.as.core 0 33685505 2016-07-30 10:39:56.697
+!MESSAGE 1 files modified in module MMS
+
+!ENTRY org.jboss.ide.eclipse.as.core 0 33685505 2016-07-30 10:41:39.087
+!MESSAGE 1 files modified in module MMS
+
+!ENTRY org.jboss.ide.eclipse.as.core 0 33685505 2016-07-30 10:43:08.663
+!MESSAGE 1 files modified in module MMS
+
+!ENTRY org.jboss.ide.eclipse.as.core 0 33685505 2016-07-30 10:43:40.820
+!MESSAGE 2 files modified in module MMS
+
+!ENTRY org.jboss.ide.eclipse.as.core 0 33685505 2016-07-30 10:47:07.875
+!MESSAGE 3 files modified in module MMS
+
+!ENTRY org.jboss.ide.eclipse.as.core 0 33685505 2016-07-30 10:47:38.803
+!MESSAGE 1 files modified in module MMS
+
+!ENTRY org.jboss.ide.eclipse.as.core 0 33685505 2016-07-30 10:47:49.495
+!MESSAGE 1 files modified in module MMS
+
+!ENTRY org.jboss.ide.eclipse.as.core 0 33685505 2016-07-30 10:49:10.264
+!MESSAGE 6 files modified in module MMS
+
+!ENTRY org.jboss.ide.eclipse.as.core 0 33685505 2016-07-30 10:50:16.330
+!MESSAGE 4 files modified in module MMS
+
+!ENTRY org.jboss.ide.eclipse.as.core 0 33685505 2016-07-30 10:50:35.717
+!MESSAGE 3 files modified in module MMS
+
+!ENTRY org.jboss.ide.eclipse.as.core 0 33685505 2016-07-30 10:51:00.082
+!MESSAGE 2 files modified in module MMS
+
+!ENTRY org.jboss.ide.eclipse.as.core 0 33685505 2016-07-30 10:51:16.470
+!MESSAGE 2 files modified in module MMS
+
+!ENTRY org.jboss.ide.eclipse.as.core 0 33685505 2016-07-30 10:51:30.357
+!MESSAGE 2 files modified in module MMS
+
+!ENTRY org.jboss.ide.eclipse.as.core 0 33685505 2016-07-30 10:51:53.107
+!MESSAGE 4 files modified in module MMS
+
+!ENTRY org.jboss.ide.eclipse.as.core 0 33685505 2016-07-30 10:53:28.721
+!MESSAGE 75 files modified in module MMS
+
+!ENTRY org.jboss.ide.eclipse.as.core 0 33685505 2016-07-30 10:53:33.402
+!MESSAGE 4 files modified in module MMS
+
+!ENTRY org.jboss.ide.eclipse.as.core 0 33685505 2016-07-30 10:53:56.764
+!MESSAGE 1 files modified in module MMS
+
+!ENTRY org.jboss.ide.eclipse.as.core 0 33685505 2016-07-30 10:54:39.836
+!MESSAGE 1 files modified in module MMS
+
+!ENTRY org.jboss.ide.eclipse.as.core 0 33685505 2016-07-30 10:55:57.222
+!MESSAGE 1 files modified in module MMS
+
+!ENTRY org.jboss.ide.eclipse.as.core 0 33685505 2016-07-30 10:58:21.502
+!MESSAGE 1 files modified in module MMS
+
+!ENTRY org.jboss.ide.eclipse.as.core 0 33685505 2016-07-30 10:58:59.228
+!MESSAGE 2 files modified in module MMS
+
+!ENTRY org.jboss.ide.eclipse.as.core 0 33685505 2016-07-30 10:59:48.064
+!MESSAGE 2 files modified in module MMS
+
+!ENTRY org.jboss.ide.eclipse.as.core 0 33685505 2016-07-30 11:00:48.992
+!MESSAGE 2 files modified in module MMS
+
+!ENTRY org.jboss.ide.eclipse.as.core 0 33685505 2016-07-30 11:00:58.230
+!MESSAGE 2 files modified in module MMS
+
+!ENTRY org.jboss.ide.eclipse.as.core 0 33685505 2016-07-30 11:01:38.373
+!MESSAGE 1 files modified in module MMS
+
+!ENTRY org.jboss.ide.eclipse.as.core 0 33685505 2016-07-30 11:02:22.345
+!MESSAGE 2 files modified in module MMS
+
+!ENTRY org.jboss.ide.eclipse.as.core 0 33685505 2016-07-30 11:03:07.014
+!MESSAGE 1 files modified in module MMS
+
+!ENTRY org.jboss.ide.eclipse.as.core 0 33685505 2016-07-30 11:03:33.532
+!MESSAGE 1 files modified in module MMS
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842776 2016-07-30 11:04:11.000
+!MESSAGE Server shutting down
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16973825 2016-07-30 11:04:11.554
+!MESSAGE Server processes have been terminated.
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842760 2016-07-30 11:04:11.576
+!MESSAGE Server Starting
+
+!ENTRY org.jboss.ide.eclipse.as.core 2 16842768 2016-07-30 11:04:11.601
+!MESSAGE Poll Thread Aborted: null
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842769 2016-07-30 11:04:18.585
+!MESSAGE Server Startup Succeeded
+
+!ENTRY org.jboss.ide.eclipse.as.core 0 33685505 2016-07-30 11:12:57.904
+!MESSAGE 1 files modified in module MMS
+
+!ENTRY org.jboss.ide.eclipse.as.core 0 33685505 2016-07-30 11:24:00.030
+!MESSAGE 2 files modified in module MMS
+
+!ENTRY org.jboss.ide.eclipse.as.core 0 33685505 2016-07-30 11:25:51.114
+!MESSAGE 4 files modified in module MMS
+
+!ENTRY org.jboss.ide.eclipse.as.core 0 33685505 2016-07-30 11:26:15.042
+!MESSAGE Module BCManager published without error.
+
+!ENTRY org.jboss.ide.eclipse.as.core 0 33685505 2016-07-30 11:26:15.051
+!MESSAGE Module spring-web-4.1.5.RELEASE.jar published without error.
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 0 2016-07-30 11:26:16.514
+!MESSAGE Module BCManager on WildFly 8.x not yet fully deployed. Waiting...
+
+!ENTRY org.jboss.ide.eclipse.as.core 0 33685505 2016-07-30 11:37:53.920
+!MESSAGE Module RDwebFrameApp published without error.
+
+!ENTRY org.jboss.ide.eclipse.as.core 0 33685505 2016-07-30 11:37:53.928
+!MESSAGE Module spring-web-4.1.5.RELEASE.jar published without error.
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 0 2016-07-30 11:37:54.388
+!MESSAGE Module RDwebFrameApp on WildFly 8.x not yet fully deployed. Waiting...
+
+!ENTRY org.jboss.ide.eclipse.as.core 0 33685505 2016-07-30 11:38:56.591
+!MESSAGE 1 files modified in module MMS
+
+!ENTRY org.jboss.ide.eclipse.as.core 0 33685505 2016-07-30 11:43:30.439
+!MESSAGE 44 files modified in module MMS
+
+!ENTRY org.jboss.ide.eclipse.as.core 0 33685505 2016-07-30 11:43:35.553
+!MESSAGE 1 files modified in module MMS
+
+!ENTRY org.jboss.ide.eclipse.as.core 0 33685505 2016-07-30 11:44:49.202
+!MESSAGE 2 files modified in module MMS
+
+!ENTRY org.jboss.ide.eclipse.as.core 0 33685505 2016-07-30 11:45:29.339
+!MESSAGE 174 files modified in module MMS
+
+!ENTRY unknown 0 0 2016-07-30 11:45:29.403
+!MESSAGE OK
+
+!ENTRY org.jboss.ide.eclipse.as.core 0 33685505 2016-07-30 11:46:30.053
+!MESSAGE 107 files modified in module MMS
+
+!ENTRY org.jboss.ide.eclipse.as.core 0 33685505 2016-07-30 11:46:30.059
+!MESSAGE Module spring-web-4.1.5.RELEASE.jar published without error.
+
+!ENTRY org.jboss.ide.eclipse.as.core 0 33685505 2016-07-30 11:47:52.721
+!MESSAGE 83 files modified in module MMS
+
+!ENTRY org.jboss.ide.eclipse.as.core 0 33685505 2016-07-30 11:48:56.828
+!MESSAGE 4 files modified in module MMS
+
+!ENTRY org.jboss.ide.eclipse.as.core 0 33685505 2016-07-30 11:49:11.927
+!MESSAGE 72 files modified in module MMS
+
+!ENTRY org.jboss.ide.eclipse.as.core 0 33685505 2016-07-30 11:50:18.917
+!MESSAGE 1 files modified in module MMS
+
+!ENTRY org.jboss.ide.eclipse.as.core 0 33685505 2016-07-30 11:50:41.646
+!MESSAGE 114 files modified in module MMS
+
+!ENTRY org.jboss.ide.eclipse.as.core 0 33685505 2016-07-30 11:50:56.112
+!MESSAGE 41 files modified in module MMS
+
+!ENTRY org.jboss.ide.eclipse.as.core 0 33685505 2016-07-30 11:50:59.176
+!MESSAGE 73 files modified in module MMS
+
+!ENTRY org.jboss.ide.eclipse.as.core 0 33685505 2016-07-30 11:51:49.844
+!MESSAGE 1 files modified in module MMS
+
+!ENTRY org.jboss.ide.eclipse.as.core 0 33685505 2016-07-30 11:53:53.762
+!MESSAGE 3 files modified in module MMS
+
+!ENTRY org.jboss.ide.eclipse.as.core 0 33685505 2016-07-30 12:03:36.251
+!MESSAGE 1 files modified in module MMS
+
+!ENTRY org.jboss.ide.eclipse.as.core 0 33685505 2016-07-30 12:08:49.143
+!MESSAGE 1 files modified in module MMS
+
+!ENTRY org.jboss.ide.eclipse.as.core 0 33685505 2016-07-30 12:12:04.182
+!MESSAGE 51 files modified in module MMS
+
+!ENTRY org.jboss.ide.eclipse.as.core 0 33685505 2016-07-30 12:12:45.769
+!MESSAGE 2 files modified in module MMS
+
+!ENTRY org.jboss.ide.eclipse.as.core 0 33685505 2016-07-30 12:12:58.061
+!MESSAGE 2 files modified in module MMS
+
+!ENTRY org.jboss.ide.eclipse.as.core 0 33685505 2016-07-30 12:13:28.754
+!MESSAGE 1 files modified in module MMS
+
+!ENTRY unknown 0 0 2016-07-30 12:13:44.284
+!MESSAGE OK
+
+!ENTRY unknown 0 0 2016-07-30 12:13:44.406
+!MESSAGE OK
+
+!ENTRY org.jboss.ide.eclipse.as.core 0 33685505 2016-07-30 12:14:08.160
+!MESSAGE 1 files modified in module MMS
+
+!ENTRY org.jboss.ide.eclipse.as.core 0 33685505 2016-07-30 12:14:27.852
+!MESSAGE 22 files modified in module MMS
+
+!ENTRY org.jboss.ide.eclipse.as.core 0 33685505 2016-07-30 12:16:41.478
+!MESSAGE 24 files modified in module MMS
+
+!ENTRY org.jboss.ide.eclipse.as.core 0 33685505 2016-07-30 12:17:09.791
+!MESSAGE 2 files modified in module MMS
+
+!ENTRY org.jboss.ide.eclipse.as.core 0 33685505 2016-07-30 12:17:27.850
+!MESSAGE 21 files modified in module MMS
+
+!ENTRY org.jboss.ide.eclipse.as.core 0 33685505 2016-07-30 12:18:46.210
+!MESSAGE 21 files modified in module MMS
+
+!ENTRY org.jboss.ide.eclipse.as.core 0 33685505 2016-07-30 12:20:09.503
+!MESSAGE 9 files modified in module MMS
+
+!ENTRY org.jboss.ide.eclipse.as.core 0 33685505 2016-07-30 12:20:55.700
+!MESSAGE 1 files modified in module MMS
+
+!ENTRY org.jboss.ide.eclipse.as.core 0 33685505 2016-07-30 12:21:03.333
+!MESSAGE 21 files modified in module MMS
+
+!ENTRY org.jboss.ide.eclipse.as.core 0 33685505 2016-07-30 12:21:29.239
+!MESSAGE 1 files modified in module MMS
+
+!ENTRY org.jboss.ide.eclipse.as.core 0 33685505 2016-07-30 12:22:13.468
+!MESSAGE 1 files modified in module MMS
+
+!ENTRY org.jboss.ide.eclipse.as.core 0 33685505 2016-07-30 12:22:42.269
+!MESSAGE 2 files modified in module MMS
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842776 2016-07-30 12:22:58.692
+!MESSAGE Server shutting down
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16973825 2016-07-30 12:23:00.956
+!MESSAGE Server processes have been terminated.
+!SESSION 2016-07-30 12:47:04.865 -----------------------------------------------
+eclipse.buildId=4.3.2.M20140221-1700
+java.version=1.7.0_76
+java.vendor=Oracle Corporation
+BootLoader constants: OS=linux, ARCH=x86, WS=gtk, NL=en_ZA
+Framework arguments:  -product org.eclipse.epp.package.jee.product
+Command-line arguments:  -os linux -ws gtk -arch x86 -product org.eclipse.epp.package.jee.product
+
+!ENTRY org.jboss.ide.eclipse.as.core 0 33685505 2016-07-30 16:00:59.553
+!MESSAGE 130 files modified in module MMS
+
+!ENTRY org.jboss.ide.eclipse.as.core 0 33685505 2016-07-30 16:01:00.277
+!MESSAGE 145 files modified in module RDwebFrameApp
+
+!ENTRY org.jboss.ide.eclipse.as.core 0 33685505 2016-07-30 16:01:00.301
+!MESSAGE Module spring-web-4.1.5.RELEASE.jar published without error.
+
+!ENTRY unknown 0 0 2016-07-30 16:01:00.303
+!MESSAGE OK
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842760 2016-07-30 16:01:01.597
+!MESSAGE Server Starting
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842769 2016-07-30 16:01:32.035
+!MESSAGE Server Startup Succeeded
+
+!ENTRY unknown 0 0 2016-07-30 16:02:04.154
+!MESSAGE OK
+
+!ENTRY unknown 0 0 2016-07-30 16:02:04.156
+!MESSAGE OK
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 0 2016-07-30 16:02:04.321
+!MESSAGE Module MMS on WildFly 8.x not yet fully deployed. Waiting...
+
+!ENTRY org.jboss.ide.eclipse.as.core 2 0 2016-07-30 16:02:24.781
+!MESSAGE Module MMS on WildFly 8.x still not ready to be shown in browser. Aborting delay.
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842776 2016-07-30 16:03:10.202
+!MESSAGE Server shutting down
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16973825 2016-07-30 16:03:11.441
+!MESSAGE Server processes have been terminated.
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842760 2016-07-30 16:03:11.459
+!MESSAGE Server Starting
+
+!ENTRY org.jboss.ide.eclipse.as.core 2 16842768 2016-07-30 16:03:11.505
+!MESSAGE Poll Thread Aborted: null
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842769 2016-07-30 16:03:14.667
+!MESSAGE Server Startup Succeeded
+
+!ENTRY org.jboss.ide.eclipse.as.core 0 33685505 2016-07-30 16:03:45.571
+!MESSAGE Module MMS published without error.
+
+!ENTRY org.jboss.ide.eclipse.as.core 0 33685505 2016-07-30 16:55:01.156
+!MESSAGE 2 files modified in module MMS
+
+!ENTRY org.jboss.ide.eclipse.as.core 0 33685505 2016-07-30 16:55:15.355
+!MESSAGE 22 files modified in module MMS
+
+!ENTRY org.jboss.ide.eclipse.as.core 0 33685505 2016-07-30 17:00:41.534
+!MESSAGE 1 files modified in module MMS
+
+!ENTRY org.jboss.ide.eclipse.as.core 0 33685505 2016-07-30 17:00:57.435
+!MESSAGE 1 files modified in module MMS
+
+!ENTRY org.jboss.ide.eclipse.as.core 0 33685505 2016-07-30 17:02:28.451
+!MESSAGE 1 files modified in module MMS
+
+!ENTRY org.jboss.ide.eclipse.as.core 0 33685505 2016-07-30 17:02:36.647
+!MESSAGE 1 files modified in module MMS
+
+!ENTRY org.jboss.ide.eclipse.as.core 0 33685505 2016-07-30 17:03:09.780
+!MESSAGE 1 files modified in module MMS
+
+!ENTRY org.jboss.ide.eclipse.as.core 0 33685505 2016-07-30 17:03:18.287
+!MESSAGE 1 files modified in module MMS
+
+!ENTRY org.jboss.ide.eclipse.as.core 0 33685505 2016-07-30 17:04:50.204
+!MESSAGE 1 files modified in module MMS
+!SESSION 
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842760 2016-08-06 11:53:31.641
+!MESSAGE Server Starting
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842769 2016-08-06 11:53:49.531
+!MESSAGE Server Startup Succeeded
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842776 2016-08-06 12:31:15.440
+!MESSAGE Server shutting down
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842785 2016-08-06 12:31:18.336
+!MESSAGE Server Shutdown Succeeded
+
+!ENTRY org.jboss.ide.eclipse.as.wtp.core 1 16973825 2016-08-06 12:31:18.923
+!MESSAGE Server processes have been terminated.
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842760 2016-08-06 12:31:18.959
+!MESSAGE Server Starting
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842776 2016-08-06 12:43:35.694
+!MESSAGE Server shutting down
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842785 2016-08-06 12:43:37.215
+!MESSAGE Server Shutdown Succeeded
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842760 2016-08-06 12:43:37.222
+!MESSAGE Server Starting
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842769 2016-08-06 12:43:48.738
+!MESSAGE Server Startup Succeeded
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842776 2016-08-06 12:47:11.462
+!MESSAGE Server shutting down
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842785 2016-08-06 12:47:12.880
+!MESSAGE Server Shutdown Succeeded
+
+!ENTRY org.jboss.ide.eclipse.as.wtp.core 1 16973825 2016-08-06 12:47:13.150
+!MESSAGE Server processes have been terminated.
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842760 2016-08-06 12:47:13.209
+!MESSAGE Server Starting
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842776 2016-08-06 12:59:56.604
+!MESSAGE Server shutting down
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842785 2016-08-06 12:59:59.012
+!MESSAGE Server Shutdown Succeeded
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842760 2016-08-06 12:59:59.722
+!MESSAGE Server Starting
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842769 2016-08-06 13:00:26.976
+!MESSAGE Server Startup Succeeded
+
+!ENTRY org.jboss.ide.eclipse.as.core 4 1644298244 2016-08-06 13:05:08.979
+!MESSAGE Incremental publish failed for module BirthTech
+!SUBENTRY 1 org.jboss.ide.eclipse.as.wtp.core 4 1644298251 2016-08-06 13:05:08.979
+!MESSAGE Error reading file /home/lizo/.m2/repository/org/apache/cxf/cxf-rt-transports-http/${cxf.version}/cxf-rt-transports-http-${cxf.version}.jar
+!SUBENTRY 1 org.jboss.ide.eclipse.as.wtp.core 4 1644298251 2016-08-06 13:05:08.979
+!MESSAGE Error reading file /home/lizo/.m2/repository/org/apache/cxf/cxf-rt-transports-http-jetty/${cxf.version}/cxf-rt-transports-http-jetty-${cxf.version}.jar
+
+!ENTRY org.jboss.ide.eclipse.as.core 4 1644298244 2016-08-06 13:06:53.309
+!MESSAGE Incremental publish failed for module BirthTech
+!SUBENTRY 1 org.jboss.ide.eclipse.as.wtp.core 4 1644298251 2016-08-06 13:06:53.309
+!MESSAGE Error reading file /home/lizo/.m2/repository/org/apache/cxf/cxf-rt-transports-http/${cxf.version}/cxf-rt-transports-http-${cxf.version}.jar
+!SUBENTRY 1 org.jboss.ide.eclipse.as.wtp.core 4 1644298251 2016-08-06 13:06:53.309
+!MESSAGE Error reading file /home/lizo/.m2/repository/org/apache/cxf/cxf-rt-transports-http-jetty/${cxf.version}/cxf-rt-transports-http-jetty-${cxf.version}.jar
+!SUBENTRY 1 org.jboss.ide.eclipse.as.wtp.core 4 1644298251 2016-08-06 13:06:53.309
+!MESSAGE Could not delete /home/lizo/dev-tools/Servers/wildfly-8.2.1.final/standalone/deployments/BirthTech.war/WEB-INF/lib/cxf-rt-frontend-jaxrs-3.0.4.jar. May be locked by another process.
+!SUBENTRY 1 org.jboss.ide.eclipse.as.wtp.core 4 1644298251 2016-08-06 13:06:53.309
+!MESSAGE Could not delete /home/lizo/dev-tools/Servers/wildfly-8.2.1.final/standalone/deployments/BirthTech.war/WEB-INF/lib/cxf-core-3.0.4.jar. May be locked by another process.
+!SUBENTRY 1 org.jboss.ide.eclipse.as.wtp.core 4 1644298251 2016-08-06 13:06:53.309
+!MESSAGE Could not delete /home/lizo/dev-tools/Servers/wildfly-8.2.1.final/standalone/deployments/BirthTech.war/WEB-INF/lib/xmlschema-core-2.2.1.jar. May be locked by another process.
+!SUBENTRY 1 org.jboss.ide.eclipse.as.wtp.core 4 1644298251 2016-08-06 13:06:53.309
+!MESSAGE Could not delete /home/lizo/dev-tools/Servers/wildfly-8.2.1.final/standalone/deployments/BirthTech.war/WEB-INF/lib/javax.ws.rs-api-2.0.1.jar. May be locked by another process.
+!SUBENTRY 1 org.jboss.ide.eclipse.as.wtp.core 4 1644298251 2016-08-06 13:06:53.309
+!MESSAGE Could not delete /home/lizo/dev-tools/Servers/wildfly-8.2.1.final/standalone/deployments/BirthTech.war/WEB-INF/lib/cxf-rt-transports-http-3.0.4.jar. May be locked by another process.
+!SUBENTRY 1 org.jboss.ide.eclipse.as.wtp.core 4 1644298251 2016-08-06 13:06:53.309
+!MESSAGE Could not delete /home/lizo/dev-tools/Servers/wildfly-8.2.1.final/standalone/deployments/BirthTech.war/WEB-INF/lib/jaxb-impl-2.2.11.jar. May be locked by another process.
+!SESSION 
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842760 2016-08-06 13:39:31.838
+!MESSAGE Server Starting
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842769 2016-08-06 13:39:51.019
+!MESSAGE Server Startup Succeeded
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842776 2016-08-06 14:05:58.080
+!MESSAGE Server shutting down
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842785 2016-08-06 14:06:00.405
+!MESSAGE Server Shutdown Succeeded
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842760 2016-08-06 14:06:01.101
+!MESSAGE Server Starting
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842769 2016-08-06 14:06:30.678
+!MESSAGE Server Startup Succeeded
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842776 2016-08-06 14:34:07.366
+!MESSAGE Server shutting down
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842785 2016-08-06 14:34:10.613
+!MESSAGE Server Shutdown Succeeded
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842760 2016-08-06 14:34:11.653
+!MESSAGE Server Starting
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842769 2016-08-06 14:34:34.478
+!MESSAGE Server Startup Succeeded
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842776 2016-08-06 14:41:29.345
+!MESSAGE Server shutting down
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842785 2016-08-06 14:41:32.182
+!MESSAGE Server Shutdown Succeeded
+
+!ENTRY org.jboss.ide.eclipse.as.wtp.core 1 16973825 2016-08-06 14:41:32.642
+!MESSAGE Server processes have been terminated.
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842760 2016-08-06 14:41:32.773
+!MESSAGE Server Starting
+!SESSION 
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842760 2016-08-06 15:32:32.072
+!MESSAGE Server Starting
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842769 2016-08-06 15:32:50.261
+!MESSAGE Server Startup Succeeded
+!SESSION 
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842760 2016-08-06 15:52:06.341
+!MESSAGE Server Starting
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842769 2016-08-06 15:52:09.188
+!MESSAGE Server Startup Succeeded
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 0 2016-08-06 15:52:09.222
+!MESSAGE Module BCManager on WildFly 8.x not yet fully deployed. Waiting...
+
+!ENTRY org.jboss.ide.eclipse.as.core 2 0 2016-08-06 15:52:29.721
+!MESSAGE Module BCManager on WildFly 8.x still not ready to be shown in browser. Aborting delay.
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842776 2016-08-06 16:57:47.512
+!MESSAGE Server shutting down
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842785 2016-08-06 16:57:48.942
+!MESSAGE Server Shutdown Succeeded
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842760 2016-08-06 16:57:49.000
+!MESSAGE Server Starting
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842769 2016-08-06 16:58:06.723
+!MESSAGE Server Startup Succeeded
+!SESSION 
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842760 2016-08-06 18:45:10.065
+!MESSAGE Server Starting
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842769 2016-08-06 18:45:44.877
+!MESSAGE Server Startup Succeeded
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842776 2016-08-06 18:47:23.928
+!MESSAGE Server shutting down
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842785 2016-08-06 18:47:24.860
+!MESSAGE Server Shutdown Succeeded
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842760 2016-08-06 18:47:24.875
+!MESSAGE Server Starting
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842769 2016-08-06 18:47:27.881
+!MESSAGE Server Startup Succeeded
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842776 2016-08-06 19:35:07.972
+!MESSAGE Server shutting down
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842785 2016-08-06 19:35:10.339
+!MESSAGE Server Shutdown Succeeded
+
+!ENTRY org.jboss.ide.eclipse.as.wtp.core 1 16973825 2016-08-06 19:35:10.589
+!MESSAGE Server processes have been terminated.
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842760 2016-08-06 19:35:10.839
+!MESSAGE Server Starting
+!SESSION 
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842760 2016-08-07 07:00:31.869
+!MESSAGE Server Starting
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842769 2016-08-07 07:01:05.548
+!MESSAGE Server Startup Succeeded
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842776 2016-08-07 07:13:04.964
+!MESSAGE Server shutting down
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842785 2016-08-07 07:13:06.505
+!MESSAGE Server Shutdown Succeeded
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842760 2016-08-07 07:13:06.559
+!MESSAGE Server Starting
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842769 2016-08-07 07:13:18.472
+!MESSAGE Server Startup Succeeded
+!SESSION 
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842760 2016-08-07 09:34:01.554
+!MESSAGE Server Starting
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842769 2016-08-07 09:34:27.337
+!MESSAGE Server Startup Succeeded
+!SESSION 
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842760 2016-08-07 18:55:24.228
+!MESSAGE Server Starting
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842769 2016-08-07 18:55:36.797
+!MESSAGE Server Startup Succeeded
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842776 2016-08-07 19:04:16.511
+!MESSAGE Server shutting down
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842785 2016-08-07 19:04:17.632
+!MESSAGE Server Shutdown Succeeded
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842760 2016-08-07 19:04:17.661
+!MESSAGE Server Starting
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842769 2016-08-07 19:04:24.376
+!MESSAGE Server Startup Succeeded
+
+!ENTRY org.jboss.ide.eclipse.as.wtp.core 1 16973825 2016-08-07 19:06:17.305
+!MESSAGE Server processes have been terminated.
+!SESSION 
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842760 2016-08-09 10:17:57.442
+!MESSAGE Server Starting
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842769 2016-08-09 10:18:15.636
+!MESSAGE Server Startup Succeeded
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842776 2016-08-09 10:23:09.793
+!MESSAGE Server shutting down
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842785 2016-08-09 10:23:11.210
+!MESSAGE Server Shutdown Succeeded
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842760 2016-08-09 10:23:11.262
+!MESSAGE Server Starting
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842769 2016-08-09 10:23:28.591
+!MESSAGE Server Startup Succeeded
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842776 2016-08-09 10:35:58.363
+!MESSAGE Server shutting down
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842785 2016-08-09 10:35:59.509
+!MESSAGE Server Shutdown Succeeded
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842760 2016-08-09 10:35:59.542
+!MESSAGE Server Starting
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842769 2016-08-09 10:36:03.193
+!MESSAGE Server Startup Succeeded
+!SESSION 
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842760 2016-08-10 18:32:47.949
+!MESSAGE Server Starting
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842769 2016-08-10 18:33:13.035
+!MESSAGE Server Startup Succeeded
+!SESSION 
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842760 2016-08-11 17:15:20.369
+!MESSAGE Server Starting
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842769 2016-08-11 17:15:58.155
+!MESSAGE Server Startup Succeeded
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842776 2016-08-11 17:23:39.400
+!MESSAGE Server shutting down
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842785 2016-08-11 17:23:42.663
+!MESSAGE Server Shutdown Succeeded
+!SESSION 
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842760 2016-08-11 18:03:29.742
+!MESSAGE Server Starting
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842769 2016-08-11 18:03:40.029
+!MESSAGE Server Startup Succeeded
+
+!ENTRY org.jboss.ide.eclipse.as.core 4 16973827 2016-08-11 18:27:40.908
+!MESSAGE Killing the server process has failed. The process may still be running.
+!STACK 1
+org.eclipse.debug.core.DebugException: Terminate failed
+	at org.eclipse.debug.core.model.RuntimeProcess.terminate(RuntimeProcess.java:227)
+	at org.jboss.tools.as.core.server.controllable.subsystems.internal.LocalLegacyShutdownController.forceStop(LocalLegacyShutdownController.java:178)
+	at org.jboss.tools.as.core.server.controllable.subsystems.internal.LocalLegacyShutdownController.stopImpl(LocalLegacyShutdownController.java:120)
+	at org.jboss.tools.as.core.server.controllable.subsystems.internal.LocalLegacyShutdownController.stop(LocalLegacyShutdownController.java:66)
+	at org.jboss.tools.as.core.server.controllable.subsystems.internal.LocalLegacyShutdownController.stop(LocalLegacyShutdownController.java:53)
+	at org.jboss.tools.as.core.server.controllable.subsystems.internal.ManagementShutdownController.forceStop(ManagementShutdownController.java:63)
+	at org.jboss.tools.as.core.server.controllable.subsystems.internal.LocalLegacyShutdownController.stopImpl(LocalLegacyShutdownController.java:120)
+	at org.jboss.tools.as.core.server.controllable.subsystems.internal.LocalLegacyShutdownController.stop(LocalLegacyShutdownController.java:66)
+	at org.jboss.tools.as.core.server.controllable.subsystems.internal.LocalLegacyShutdownController.stop(LocalLegacyShutdownController.java:53)
+	at org.jboss.ide.eclipse.as.wtp.core.server.behavior.ControllableServerBehavior.stop(ControllableServerBehavior.java:252)
+	at org.eclipse.wst.server.core.internal.Server.stopImpl2(Server.java:3673)
+	at org.eclipse.wst.server.core.internal.Server.stopImpl(Server.java:3630)
+	at org.eclipse.wst.server.core.internal.Server$StopJob.run(Server.java:403)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+!SUBENTRY 1 org.eclipse.debug.core 4 5010 2016-08-11 18:27:40.908
+!MESSAGE Terminate failed
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842760 2016-08-11 18:28:17.701
+!MESSAGE Server Starting
+!SESSION 
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842760 2016-08-11 18:38:25.593
+!MESSAGE Server Starting
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842769 2016-08-11 18:39:14.922
+!MESSAGE Server Startup Succeeded
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842776 2016-08-11 18:40:38.215
+!MESSAGE Server shutting down
+
+!ENTRY org.jboss.ide.eclipse.as.wtp.core 1 16973825 2016-08-11 18:40:38.865
+!MESSAGE Server processes have been terminated.
+!SESSION 
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842760 2016-08-11 19:26:51.057
+!MESSAGE Server Starting
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842769 2016-08-11 19:27:05.914
+!MESSAGE Server Startup Succeeded
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842776 2016-08-11 19:36:41.418
+!MESSAGE Server shutting down
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842785 2016-08-11 19:36:42.134
+!MESSAGE Server Shutdown Succeeded
+!SESSION 
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842760 2016-08-11 20:11:36.830
+!MESSAGE Server Starting
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842769 2016-08-11 20:12:05.773
+!MESSAGE Server Startup Succeeded
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842776 2016-08-11 20:22:44.412
+!MESSAGE Server shutting down
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842785 2016-08-11 20:22:46.724
+!MESSAGE Server Shutdown Succeeded
+!SESSION 
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842760 2016-08-11 21:26:15.039
+!MESSAGE Server Starting
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842769 2016-08-11 21:26:18.871
+!MESSAGE Server Startup Succeeded
+
+!ENTRY org.jboss.ide.eclipse.as.wtp.core 1 16973825 2016-08-11 21:38:44.109
+!MESSAGE Server processes have been terminated.

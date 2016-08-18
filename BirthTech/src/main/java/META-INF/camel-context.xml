@@ -24,6 +24,7 @@ http://www.springframework.org/schema/context/spring-context.xsd">
 			<property key="CamelLogDebugBodyMaxChars" value="1200" />
 		</properties>
 		<route id="birthManagement">
+
 			<from uri="direct:start" />
 			<choice>
 				<when>
@@ -37,6 +38,7 @@ http://www.springframework.org/schema/context/spring-context.xsd">
 							<to uri="activemq:acceptGrantApplication" />
 						</otherwise>
 					</choice>
+					<to uri="activemq:birthCertificateApplication"/>
 				</when>
 				<otherwise>
 					<to uri="activemq:stillbornRegister" />
@@ -44,6 +46,7 @@ http://www.springframework.org/schema/context/spring-context.xsd">
 			</choice>
 			<to uri="activemq:error" />
 		</route>
+		
 	</camelContext>
 
 </beans>

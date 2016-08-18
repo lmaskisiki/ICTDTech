@@ -17,8 +17,9 @@
 
 
     <camelContext id="camelContext" xmlns="http://camel.apache.org/schema/spring">
-        <routeBuilder ref="routeManager" />
+        <routeBuilder ref="timer" />
     </camelContext>
+     <bean id="timer" class="infosource.open.services.routing.MessageAgentRouter" />
     <bean id="routeManager" class="infosource.open.services.routing.RouteManager" />
 	<!-- News Feeds Endpoint -->
 	<cxf:cxfEndpoint id="NewsFeeds"
@@ -72,17 +73,15 @@
           </cxf:properties>
      </cxf:cxfEndpoint>
      
-     <!-- TESTING TESTING TESTING TESTING TESTING TESTING -->
-     <!-- User hello System -->	
-    <cxf:cxfEndpoint id="HelloService"
-        address="http://localhost:8080/userGate/Hello" 
-        wsdlURL="http://localhost:8080/userGate/Hello?wsdl"
-        serviceName="ws:HelloService" 
-         endpointName="ws:HelloPort"
-         xmlns:ws="http://services.soap.useraccount/">
-         <cxf:properties>
-            <entry key="dataFormat" value="MESSAGE"></entry>
-        </cxf:properties>
+    <cxf:cxfEndpoint id="UAService2"
+        address="http://localhost:8080/userGate/AccountService" 
+        wsdlURL="http://localhost:8080/userGate/AccountService?wsdl"
+        serviceName="ws:AccountService" 
+        endpointName="ws:AccountServicePort"
+        serviceClass="useraccount.soap.services.PersonInterface"
+        xmlns:ws="http://services.soap.useraccount/">
      </cxf:cxfEndpoint>
+       
+    
  
 </beans>

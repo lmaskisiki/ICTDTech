@@ -1,0 +1,57 @@
+package birthtech.services.rest;
+
+import java.util.List;
+
+import javax.jws.WebParam;
+import javax.ws.rs.Consumes;
+import javax.ws.rs.GET;
+import javax.ws.rs.Path;
+import javax.ws.rs.PathParam;
+import javax.ws.rs.Produces;
+
+import org.springframework.stereotype.Service;
+import org.springframework.web.bind.annotation.ResponseBody;
+
+import birthtech.entities.Checkup;
+import birthtech.entities.Child;
+import birthtech.entities.Labour;
+import birthtech.entities.Patient;
+
+
+@Path("/")
+@Service
+public interface IWclinic {
+
+	@GET
+	@Path("/checkup/list/{patientid}")
+	@Consumes("application/json")
+	@Produces("application/json")
+	public @ResponseBody List<Checkup> checkuplist(@PathParam("patientid") String patientId);
+	
+	@GET
+	@Path("/patient/children/{patientid}")
+	@Consumes("application/json")
+	@Produces("application/json")
+	public @ResponseBody List<Child> children(@PathParam("patientid") String patientId);
+	
+	@GET
+	@Path("/patients")
+	@Consumes("application/json")
+	@Produces("application/json")
+	public @ResponseBody List<Patient> patients();
+	
+	@GET
+	@Path("/labour/list")
+	@Consumes("application/json")
+	@Produces("application/json")
+	public @ResponseBody List<Labour> labourevent();
+	
+	
+	@GET
+	@Path("/labour/list/{day}")
+	@Consumes("application/json")
+	@Produces("application/json")
+	public @ResponseBody List<Labour> labourevent(@PathParam("day")String day);
+	
+	
+}

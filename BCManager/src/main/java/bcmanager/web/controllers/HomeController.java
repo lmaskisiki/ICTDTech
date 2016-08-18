@@ -33,7 +33,7 @@ public class HomeController {
 		ModelAndView model = new ModelAndView("home");
 		List<BCertificate> list = null;
 		list = service.getAll();
-		// model.addObject("results", list);
+		// model.addObject("results", labourList);
 		return model;
 
 	}

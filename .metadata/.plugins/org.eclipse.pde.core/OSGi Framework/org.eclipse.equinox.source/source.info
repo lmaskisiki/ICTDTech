@@ -1,0 +1,7 @@
+#encoding=UTF-8
+#version=1
+org.aspectj.runtime.source,1.8.1.20140516080300,file:/home/lizo/dev-tools/JBDS8-1/studio/plugins/org.aspectj.runtime.source_1.8.1.20140516080300.jar,-1,false
+org.eclipse.equinox.weaving.aspectj.source,1.0.400.I20140501-0200,file:/home/lizo/dev-tools/JBDS8-1/studio/plugins/org.eclipse.equinox.weaving.aspectj.source_1.0.400.I20140501-0200.jar,-1,false
+org.eclipse.equinox.weaving.caching.j9.source,1.0.200.I20140501-0200,file:/home/lizo/dev-tools/JBDS8-1/studio/plugins/org.eclipse.equinox.weaving.caching.j9.source_1.0.200.I20140501-0200.jar,-1,false
+org.eclipse.equinox.weaving.caching.source,1.0.400.I20140501-0200,file:/home/lizo/dev-tools/JBDS8-1/studio/plugins/org.eclipse.equinox.weaving.caching.source_1.0.400.I20140501-0200.jar,-1,false
+org.eclipse.equinox.weaving.hook.source,1.1.0.I20140501-0200,file:/home/lizo/dev-tools/JBDS8-1/studio/plugins/org.eclipse.equinox.weaving.hook.source_1.1.0.I20140501-0200.jar,-1,false

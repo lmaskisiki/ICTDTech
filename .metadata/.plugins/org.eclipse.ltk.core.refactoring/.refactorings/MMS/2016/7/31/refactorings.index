@@ -1,0 +1,35 @@
+1469811347884	Delete elements
+1469811362228	Delete elements
+1469811370026	Delete element
+1469811379893	Delete element
+1469812272783	Delete elements
+1469812311529	Delete elements
+1469813832522	Move folder
+1469814826686	Delete element
+1469816815135	Move compilation units
+1469816826883	Delete element
+1469817040971	Rename type 'MMResource'
+1469817342641	Rename package 'infosource.health.ematclinic.models'
+1469818471704	Extract interface 'MMSResource'
+1469821458515	Rename resource 'spring-context.xml'
+1469868423967	Delete element
+1469868546756	Rename type 'IMartenalService'
+1469868576084	Rename type 'MaternityService'
+1469868614671	Rename method 'addMaternity'
+1469868633365	Rename method 'getMaternityById'
+1469868656903	Rename method 'getMaternityByFullname'
+1469868674099	Rename method 'getPatienttyByFullname'
+1469868688034	Rename method 'getPatientyByFullname'
+1469868709708	Rename method 'getMaternity'
+1469869020743	Rename local variable 'maternityId'
+1469870029112	Rename type 'MaternityTests'
+1469870745200	Delete element
+1469873520178	Delete element
+1469873562891	Rename resource 'OSGI-INF'
+1469873574365	Move 1 resources to 'META-INF'
+1469873580868	Delete element
+1469873644713	Move 1 resources to 'META-INF'
+1469873651339	Delete element
+1469890498477	Move folder
+1469890955048	Delete element
+1469895240829	Delete elements

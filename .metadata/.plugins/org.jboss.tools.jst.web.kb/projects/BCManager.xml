@@ -7,8 +7,8 @@
   <path value="/home/lizo/wildfly-8.2.1.Final/modules/system/layers/base/org/jboss/dmr/main/jboss-dmr-1.2.0.Final.jar"/>
   <path value="/home/lizo/.m2/repository/commons-pool/commons-pool/1.6/commons-pool-1.6.jar"/>
   <path value="/home/lizo/wildfly-8.2.1.Final/modules/system/layers/base/org/jboss/as/controller-client/main/wildfly-controller-client-8.2.1.Final.jar"/>
-  <path value="/home/lizo/.m2/repository/org/apache/camel/camel-cxf/2.15.1/camel-cxf-2.15.1.jar"/>
   <path value="/home/lizo/.m2/repository/org/apache/activemq/activemq-broker/5.11.1/activemq-broker-5.11.1.jar"/>
+  <path value="/home/lizo/.m2/repository/org/apache/camel/camel-cxf/2.15.1/camel-cxf-2.15.1.jar"/>
   <path value="/home/lizo/wildfly-8.2.1.Final/modules/system/layers/base/javax/security/auth/message/api/main/jboss-jaspi-api_1.1_spec-1.0.0.Final.jar"/>
   <path value="/home/lizo/wildfly-8.2.1.Final/modules/system/layers/base/javax/ejb/api/main/jboss-ejb-api_3.2_spec-1.0.0.Final.jar"/>
   <path value="/home/lizo/wildfly-8.2.1.Final/modules/system/layers/base/org/jboss/resteasy/resteasy-multipart-provider/main/resteasy-multipart-provider-3.0.10.Final-jandex.jar"/>
@@ -18,8 +18,8 @@
   <path value="/home/lizo/.m2/repository/asm/asm/3.3.1/asm-3.3.1.jar"/>
   <path value="/home/lizo/wildfly-8.2.1.Final/modules/system/layers/base/javax/persistence/api/main/hibernate-jpa-2.1-api-1.0.0.Final.jar"/>
   <path value="/home/lizo/.m2/repository/org/apache/cxf/cxf-rt-bindings-soap/3.0.4/cxf-rt-bindings-soap-3.0.4.jar"/>
-  <path value="/home/lizo/.m2/repository/org/codehaus/woodstox/stax2-api/3.1.4/stax2-api-3.1.4.jar"/>
   <path value="/home/lizo/.m2/repository/org/aspectj/aspectjrt/1.6.12/aspectjrt-1.6.12.jar"/>
+  <path value="/home/lizo/.m2/repository/org/codehaus/woodstox/stax2-api/3.1.4/stax2-api-3.1.4.jar"/>
   <path value="/home/lizo/wildfly-8.2.1.Final/modules/system/layers/base/javax/servlet/api/main/jboss-servlet-api_3.1_spec-1.0.0.Final.jar"/>
   <path value="/home/lizo/.m2/repository/org/apache/activemq/activemq-camel/5.11.1/activemq-camel-5.11.1.jar"/>
   <path value="/home/lizo/.m2/repository/dom4j/dom4j/1.6.1/dom4j-1.6.1.jar"/>
@@ -65,8 +65,8 @@
   <path value="/home/lizo/.m2/repository/org/springframework/spring-expression/4.1.5.RELEASE/spring-expression-4.1.5.RELEASE.jar"/>
   <path value="/home/lizo/.m2/repository/org/apache/cxf/cxf-rt-rs-client/3.0.4/cxf-rt-rs-client-3.0.4.jar"/>
   <path value="/home/lizo/.m2/repository/org/apache/maven/maven-artifact-manager/2.2.1/maven-artifact-manager-2.2.1.jar"/>
-  <path value="/home/lizo/.m2/repository/org/apache/cxf/cxf-rt-ws-policy/3.0.4/cxf-rt-ws-policy-3.0.4.jar"/>
   <path value="/home/lizo/.m2/repository/antlr/antlr/2.7.7/antlr-2.7.7.jar"/>
+  <path value="/home/lizo/.m2/repository/org/apache/cxf/cxf-rt-ws-policy/3.0.4/cxf-rt-ws-policy-3.0.4.jar"/>
   <path value="/home/lizo/.m2/repository/org/apache/activemq/activemq-openwire-legacy/5.11.1/activemq-openwire-legacy-5.11.1.jar"/>
   <path value="/home/lizo/.m2/repository/org/apache/camel/camel-jms/2.15.1/camel-jms-2.15.1.jar"/>
   <path value="/home/lizo/.m2/repository/org/codehaus/plexus/plexus-interpolation/1.11/plexus-interpolation-1.11.jar"/>
@@ -152,8 +152,8 @@
   <path value="/home/lizo/.m2/repository/xml-resolver/xml-resolver/1.2/xml-resolver-1.2.jar"/>
   <path value="/home/lizo/.m2/repository/org/apache/maven/maven-project/2.2.1/maven-project-2.2.1.jar"/>
   <path value="/home/lizo/wildfly-8.2.1.Final/modules/system/layers/base/org/picketbox/main/picketbox-4.0.21.Final.jar"/>
-  <path value="/home/lizo/.m2/repository/org/javassist/javassist/3.15.0-GA/javassist-3.15.0-GA.jar"/>
   <path value="/home/lizo/.m2/repository/org/codehaus/plexus/plexus-container-default/1.0-alpha-9-stable-1/plexus-container-default-1.0-alpha-9-stable-1.jar"/>
+  <path value="/home/lizo/.m2/repository/org/javassist/javassist/3.15.0-GA/javassist-3.15.0-GA.jar"/>
   <path value="/home/lizo/.m2/repository/org/apache/activemq/activemq-client/5.11.1/activemq-client-5.11.1.jar"/>
   <path value="/home/lizo/wildfly-8.2.1.Final/modules/system/layers/base/org/jboss/logging/main/jboss-logging-3.1.4.GA.jar"/>
   <path value="/home/lizo/wildfly-8.2.1.Final/modules/system/layers/base/javax/resource/api/main/jboss-connector-api_1.7_spec-1.0.0.Final.jar"/>
@@ -244,32 +244,32 @@
     </library>
    </libraries>
   </path>
-  <path value="/home/lizo/.m2/repository/org/apache/cxf/cxf-rt-transports-http/3.0.4/cxf-rt-transports-http-3.0.4.jar"/>
   <path value="/home/lizo/.m2/repository/net/oauth/core/oauth/20100527/oauth-20100527.jar"/>
-  <path value="/home/lizo/.m2/repository/javax/servlet/jsp/jsp-api/2.2/jsp-api-2.2.jar"/>
+  <path value="/home/lizo/.m2/repository/org/apache/cxf/cxf-rt-transports-http/3.0.4/cxf-rt-transports-http-3.0.4.jar"/>
   <path value="/home/lizo/.m2/repository/org/apache/activemq/activemq-spring/5.11.1/activemq-spring-5.11.1.jar"/>
+  <path value="/home/lizo/.m2/repository/javax/servlet/jsp/jsp-api/2.2/jsp-api-2.2.jar"/>
   <path value="/home/lizo/wildfly-8.2.1.Final/modules/system/layers/base/javax/security/jacc/api/main/jboss-jacc-api_1.5_spec-1.0.0.Final.jar"/>
   <path value="/home/lizo/wildfly-8.2.1.Final/modules/system/layers/base/org/picketbox/main/picketbox-commons-1.0.0.final.jar"/>
   <path value="/home/lizo/.m2/repository/org/apache/maven/maven-artifact/2.2.1/maven-artifact-2.2.1.jar"/>
   <path value="/home/lizo/wildfly-8.2.1.Final/modules/system/layers/base/javax/xml/rpc/api/main/jboss-jaxrpc-api_1.1_spec-1.0.1.Final.jar"/>
   <path value="/home/lizo/.m2/repository/net/oauth/core/oauth-provider/20100527/oauth-provider-20100527.jar"/>
-  <path value="/home/lizo/.m2/repository/org/apache/cxf/cxf-rt-ws-addr/3.0.4/cxf-rt-ws-addr-3.0.4.jar"/>
   <path value="/home/lizo/.m2/repository/org/apache/neethi/neethi/3.0.3/neethi-3.0.3.jar"/>
+  <path value="/home/lizo/.m2/repository/org/apache/cxf/cxf-rt-ws-addr/3.0.4/cxf-rt-ws-addr-3.0.4.jar"/>
   <path value="/home/lizo/wildfly-8.2.1.Final/modules/system/layers/base/javax/xml/bind/api/main/jboss-jaxb-api_2.2_spec-1.0.4.Final.jar"/>
-  <path value="/home/lizo/.m2/repository/org/codehaus/plexus/plexus-utils/1.5.15/plexus-utils-1.5.15.jar"/>
   <path value="/home/lizo/.m2/repository/org/apache/camel/camel-core/2.15.1/camel-core-2.15.1.jar"/>
+  <path value="/home/lizo/.m2/repository/org/codehaus/plexus/plexus-utils/1.5.15/plexus-utils-1.5.15.jar"/>
   <path value="/home/lizo/.m2/repository/org/jboss/ws/jbossws-spi/2.2.0.Final/jbossws-spi-2.2.0.Final.jar"/>
-  <path value="/home/lizo/.m2/repository/org/springframework/spring-tx/3.2.3.RELEASE/spring-tx-3.2.3.RELEASE.jar"/>
   <path value="/home/lizo/.m2/repository/org/apache/geronimo/specs/geronimo-jta_1.0.1B_spec/1.0.1/geronimo-jta_1.0.1B_spec-1.0.1.jar"/>
+  <path value="/home/lizo/.m2/repository/org/springframework/spring-tx/3.2.3.RELEASE/spring-tx-3.2.3.RELEASE.jar"/>
   <path value="/home/lizo/wildfly-8.2.1.Final/modules/system/layers/base/org/jboss/resteasy/resteasy-jaxrs/main/async-http-servlet-3.0-3.0.10.Final.jar"/>
   <path value="/home/lizo/.m2/repository/classworlds/classworlds/1.1-alpha-2/classworlds-1.1-alpha-2.jar"/>
   <path value="/home/lizo/wildfly-8.2.1.Final/modules/system/layers/base/org/hibernate/validator/main/hibernate-validator-5.1.3.Final.jar"/>
   <path value="/home/lizo/.m2/repository/org/apache/camel/camel-stream/2.15.1/camel-stream-2.15.1.jar"/>
   <path value="/home/lizo/wildfly-8.2.1.Final/modules/system/layers/base/org/jboss/ejb3/main/jboss-ejb3-ext-api-2.1.0.jar"/>
   <path value="/home/lizo/.m2/repository/com/fasterxml/classmate/1.0.0/classmate-1.0.0.jar"/>
-  <path value="/home/lizo/.m2/repository/gnu/getopt/java-getopt/1.0.13/java-getopt-1.0.13.jar"/>
-  <path value="/home/lizo/.m2/repository/org/springframework/spring-test/4.1.6.RELEASE/spring-test-4.1.6.RELEASE.jar"/>
   <path value="/home/lizo/.m2/repository/org/apache/cxf/cxf-rt-bindings-xml/3.0.4/cxf-rt-bindings-xml-3.0.4.jar"/>
+  <path value="/home/lizo/.m2/repository/org/springframework/spring-test/4.1.6.RELEASE/spring-test-4.1.6.RELEASE.jar"/>
+  <path value="/home/lizo/.m2/repository/gnu/getopt/java-getopt/1.0.13/java-getopt-1.0.13.jar"/>
   <path value="/home/lizo/wildfly-8.2.1.Final/modules/system/layers/base/javax/rmi/api/main/jboss-rmi-api_1.0_spec-1.0.4.Final.jar"/>
   <path value="/home/lizo/.m2/repository/org/springframework/spring-web/4.1.5.RELEASE/spring-web-4.1.5.RELEASE.jar"/>
   <path value="/home/lizo/.m2/repository/org/apache/activemq/activemq-pool/5.11.1/activemq-pool-5.11.1.jar"/>
@@ -292,10 +292,10 @@
   <path value="/home/lizo/.m2/repository/org/jboss/spec/javax/transaction/jboss-transaction-api_1.1_spec/1.0.1.Final/jboss-transaction-api_1.1_spec-1.0.1.Final.jar"/>
   <path value="/home/lizo/.m2/repository/org/jboss/logging/jboss-logging/3.1.0.GA/jboss-logging-3.1.0.GA.jar"/>
   <path value="/home/lizo/.m2/repository/org/apache/geronimo/specs/geronimo-jms_1.1_spec/1.1.1/geronimo-jms_1.1_spec-1.1.1.jar"/>
-  <path value="/home/lizo/.m2/repository/org/apache/cxf/cxf-rt-rs-security-oauth/3.0.4/cxf-rt-rs-security-oauth-3.0.4.jar"/>
   <path value="/home/lizo/.m2/repository/org/apache/cxf/cxf-rt-wsdl/3.0.4/cxf-rt-wsdl-3.0.4.jar"/>
-  <path value="/home/lizo/.m2/repository/org/hibernate/hibernate-entitymanager/4.2.1.Final/hibernate-entitymanager-4.2.1.Final.jar"/>
+  <path value="/home/lizo/.m2/repository/org/apache/cxf/cxf-rt-rs-security-oauth/3.0.4/cxf-rt-rs-security-oauth-3.0.4.jar"/>
   <path value="/home/lizo/.m2/repository/org/apache/cxf/cxf-rt-frontend-simple/3.0.4/cxf-rt-frontend-simple-3.0.4.jar"/>
+  <path value="/home/lizo/.m2/repository/org/hibernate/hibernate-entitymanager/4.2.1.Final/hibernate-entitymanager-4.2.1.Final.jar"/>
   <path value="/home/lizo/.m2/repository/org/apache/ws/xmlschema/xmlschema-core/2.2.1/xmlschema-core-2.2.1.jar"/>
   <path value="/home/lizo/.m2/repository/org/jboss/ws/jbossws-common-tools/1.2.0.Final/jbossws-common-tools-1.2.0.Final.jar"/>
   <path value="/home/lizo/wildfly-8.2.1.Final/modules/system/layers/base/org/jboss/resteasy/resteasy-jaxb-provider/main/resteasy-jaxb-provider-3.0.10.Final-jandex.jar"/>
@@ -306,83 +306,83 @@
   <core validator-id="jboss.cdi.core"/>
   <core validator-id="jboss.jsf.core"/>
   <el>
-   <linked-el length="17" name="%0" offset="1009" path="%1"/>
-   <linked-el length="33" name="%0" offset="1058" path="%1"/>
-   <linked-el length="41" name="%2" offset="1243" path="%1"/>
-   <linked-el length="18" name="%2" offset="502" path="%1"/>
-   <linked-el length="25" name="%3" offset="2079" path="%4"/>
-   <linked-el length="18" name="%5" offset="1972" path="%4"/>
-   <linked-el length="18" name="%6" offset="2044" path="%4"/>
-   <linked-el length="25" name="%6" offset="2079" path="%4"/>
-   <linked-el length="21" name="%6" offset="1934" path="%4"/>
-   <linked-el length="20" name="%6" offset="2007" path="%4"/>
-   <linked-el length="23" name="%6" offset="2626" path="%4"/>
-   <linked-el length="18" name="%6" offset="1972" path="%4"/>
-   <linked-el length="18" name="%7" offset="644" path="%1"/>
-   <linked-el length="12" name="%7" offset="839" path="%1"/>
-   <linked-el length="19" name="%7" offset="572" path="%1"/>
-   <linked-el length="41" name="%7" offset="1243" path="%1"/>
-   <linked-el length="14" name="%7" offset="778" path="%1"/>
-   <linked-el length="18" name="%7" offset="502" path="%1"/>
-   <linked-el length="16" name="%7" offset="713" path="%1"/>
-   <linked-el length="16" name="%8" offset="623" path="%9"/>
-   <linked-el length="23" name="%8" offset="834" path="%9"/>
-   <linked-el length="20" name="%10" offset="766" path="%9"/>
+   <linked-el length="41" name="%0" offset="1243" path="%1"/>
+   <linked-el length="18" name="%0" offset="502" path="%1"/>
+   <linked-el length="25" name="%2" offset="2079" path="%3"/>
+   <linked-el length="17" name="%4" offset="1009" path="%1"/>
+   <linked-el length="33" name="%4" offset="1058" path="%1"/>
+   <linked-el length="18" name="%5" offset="1972" path="%3"/>
+   <linked-el length="18" name="%6" offset="2044" path="%3"/>
+   <linked-el length="25" name="%6" offset="2079" path="%3"/>
+   <linked-el length="21" name="%6" offset="1934" path="%3"/>
+   <linked-el length="20" name="%6" offset="2007" path="%3"/>
+   <linked-el length="23" name="%6" offset="2626" path="%3"/>
+   <linked-el length="18" name="%6" offset="1972" path="%3"/>
+   <linked-el length="16" name="%7" offset="623" path="%8"/>
+   <linked-el length="23" name="%7" offset="834" path="%8"/>
+   <linked-el length="18" name="%9" offset="644" path="%1"/>
+   <linked-el length="12" name="%9" offset="839" path="%1"/>
+   <linked-el length="19" name="%9" offset="572" path="%1"/>
+   <linked-el length="14" name="%9" offset="778" path="%1"/>
+   <linked-el length="41" name="%9" offset="1243" path="%1"/>
+   <linked-el length="18" name="%9" offset="502" path="%1"/>
+   <linked-el length="16" name="%9" offset="713" path="%1"/>
+   <linked-el length="20" name="%10" offset="766" path="%8"/>
    <linked-el length="15" name="%11" offset="926" path="%1"/>
-   <linked-el length="15" name="%12" offset="690" path="%9"/>
+   <linked-el length="15" name="%12" offset="690" path="%8"/>
    <linked-el length="16" name="%13" offset="713" path="%1"/>
-   <linked-el length="14" name="%14" offset="727" path="%9"/>
-   <linked-el length="18" name="%15" offset="654" path="%9"/>
-   <linked-el length="14" name="%16" offset="778" path="%1"/>
-   <linked-el length="21" name="%17" offset="1934" path="%4"/>
-   <linked-el length="23" name="%17" offset="2626" path="%4"/>
-   <linked-el length="13" name="%18" offset="580" path="%9"/>
-   <linked-el length="15" name="%19" offset="690" path="%9"/>
-   <linked-el length="16" name="%19" offset="623" path="%9"/>
-   <linked-el length="23" name="%19" offset="834" path="%9"/>
-   <linked-el length="14" name="%19" offset="727" path="%9"/>
-   <linked-el length="18" name="%19" offset="654" path="%9"/>
-   <linked-el length="20" name="%19" offset="766" path="%9"/>
+   <linked-el length="14" name="%14" offset="727" path="%8"/>
+   <linked-el length="18" name="%15" offset="654" path="%8"/>
+   <linked-el length="21" name="%16" offset="1934" path="%3"/>
+   <linked-el length="23" name="%16" offset="2626" path="%3"/>
+   <linked-el length="14" name="%17" offset="778" path="%1"/>
+   <linked-el length="13" name="%18" offset="580" path="%8"/>
+   <linked-el length="15" name="%19" offset="690" path="%8"/>
+   <linked-el length="16" name="%19" offset="623" path="%8"/>
+   <linked-el length="23" name="%19" offset="834" path="%8"/>
+   <linked-el length="14" name="%19" offset="727" path="%8"/>
+   <linked-el length="18" name="%19" offset="654" path="%8"/>
+   <linked-el length="20" name="%19" offset="766" path="%8"/>
    <linked-el length="15" name="%20" offset="1033" path="%1"/>
    <linked-el length="17" name="%20" offset="1009" path="%1"/>
    <linked-el length="33" name="%20" offset="1058" path="%1"/>
    <linked-el length="18" name="%21" offset="644" path="%1"/>
-   <linked-el length="12" name="%22" offset="839" path="%1"/>
-   <linked-el length="19" name="%23" offset="572" path="%1"/>
-   <linked-el length="41" name="%23" offset="1243" path="%1"/>
+   <linked-el length="19" name="%22" offset="572" path="%1"/>
+   <linked-el length="41" name="%22" offset="1243" path="%1"/>
+   <linked-el length="12" name="%23" offset="839" path="%1"/>
    <linked-el length="15" name="%24" offset="1033" path="%1"/>
-   <linked-el length="18" name="%25" offset="2044" path="%4"/>
-   <linked-el length="20" name="%26" offset="2007" path="%4"/>
+   <linked-el length="18" name="%25" offset="2044" path="%3"/>
+   <linked-el length="20" name="%26" offset="2007" path="%3"/>
   </el>
  </validation>
  <aliases>
-  <alias path="doc.filePath" value="%0"/>
+  <alias path="doc.filePath" value="%4"/>
   <alias path="maternity" value="%6"/>
-  <alias path="person" value="%7"/>
+  <alias path="person" value="%9"/>
   <alias path="item.creationDate" value="%10"/>
-  <alias path="/BCManager/WebContent/WEB-INF/view/viewcurrent.jsp" value="%4"/>
+  <alias path="/BCManager/WebContent/WEB-INF/view/viewcurrent.jsp" value="%3"/>
   <alias path="person.gender" value="%13"/>
   <alias path="item.childNames" value="%15"/>
-  <alias path="person.cell" value="%16"/>
-  <alias path="maternity.idnumber" value="%17"/>
+  <alias path="maternity.idnumber" value="%16"/>
+  <alias path="person.cell" value="%17"/>
   <alias path="/BCManager/WebContent/WEB-INF/view/profile.jsp" value="%1"/>
   <alias path="results" value="%18"/>
   <alias path="person.username" value="%21"/>
-  <alias path="person.dn" value="%22"/>
+  <alias path="person.dn" value="%23"/>
   <alias path="maternity.surname" value="%26"/>
-  <alias path="maternity.registration" value="%3"/>
-  <alias path="person.lastName" value="%2"/>
+  <alias path="maternity.registration" value="%2"/>
+  <alias path="person.lastName" value="%0"/>
   <alias path="maternity.names" value="%5"/>
-  <alias path="item.bcNumber" value="%8"/>
+  <alias path="item.bcNumber" value="%7"/>
   <alias path="documents" value="%11"/>
   <alias path="item.surname" value="%12"/>
   <alias path="item.gender" value="%14"/>
   <alias path="item" value="%19"/>
   <alias path="doc" value="%20"/>
-  <alias path="person.firstName" value="%23"/>
+  <alias path="person.firstName" value="%22"/>
   <alias path="maternity.nurse" value="%25"/>
   <alias path="doc.fileName" value="%24"/>
-  <alias path="/BCManager/WebContent/WEB-INF/view/getall.jsp" value="%9"/>
+  <alias path="/BCManager/WebContent/WEB-INF/view/getall.jsp" value="%8"/>
  </aliases>
  <includes/>
  <uris>

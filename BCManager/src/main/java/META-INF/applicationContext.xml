@@ -32,7 +32,7 @@
 	<context:component-scan base-package="birthcertificate.services" />
 	<context:component-scan base-package="birthcertificate.routebuilders" />
 	<context:component-scan base-package="birthcertificate.entities" />
-	<context:component-scan base-package="birthcertificate.ws.rest" />
+	<context:component-scan base-package="birthcertificate.ews.soap" />
  <context:component-scan base-package="bcmanager.web.controllers" />
  
 	<!-- Database -->

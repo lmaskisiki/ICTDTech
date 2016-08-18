@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<blueprint xmlns="http://www.osgi.org/xmlns/blueprint/v1.0.0"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="
+       http://www.osgi.org/xmlns/blueprint/v1.0.0 http://www.osgi.org/xmlns/blueprint/v1.0.0/blueprint.xsd
+       http://camel.apache.org/schema/blueprint http://camel.apache.org/schema/blueprint/camel-blueprint.xsd">
+
+  <bean id="helloBean" class="com.mycompany.camel.blueprint.HelloBean">
+      <property name="say" value="Hi from Camel"/>
+  </bean>
+ <broker xmlns="http://activemq.apache.org/schema/core" useJmx="true" persistent="false">
+    <transportConnectors>
+      <transportConnector uri="tcp://localhost:61616" />
+    </transportConnectors>
+  </broker>
+  <camelContext xmlns="http://camel.apache.org/schema/blueprint">
+  <route id="timerToLog">
+    <from uri="file://data/person.xml" id="stat">
+      <description>lele</description>
+    </from>
+    <from uri="activemq:queue:lizo"/>
+    <choice id="choice">
+      <when id="lizo">
+        <description>lizo</description>
+        <xpath>/person/name="lizo"</xpath>
+        <to uri="activemq:queue:lizoquue"/>
+      </when>
+      <when id="lele">
+        <description>lele</description>
+        <simple>/person/name="lele"</simple>
+        <to uri="activemq:queue:lelequeue" id="lelequeue">
+          <description>lele</description>
+        </to>
+      </when>
+    </choice>
+  </route>
+</camelContext>
+
+</blueprint>

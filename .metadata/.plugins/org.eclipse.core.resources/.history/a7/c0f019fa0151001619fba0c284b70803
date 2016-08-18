@@ -1,0 +1,10 @@
+package ematclinic.cxf.rest.service;
+
+public class Clinicservice  implements IClinic{
+
+	public String Hello() {
+	 
+		return "Welcome to rest service";
+	}
+
+}

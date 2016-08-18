@@ -41,9 +41,9 @@ public class GetUserDocumentsResponse {
      * Gets the value of the return property.
      * 
      * <p>
-     * This accessor method returns a reference to the live list,
+     * This accessor method returns a reference to the live labourList,
      * not a snapshot. Therefore any modification you make to the
-     * returned list will be present inside the JAXB object.
+     * returned labourList will be present inside the JAXB object.
      * This is why there is not a <CODE>set</CODE> method for the return property.
      * 
      * <p>
@@ -54,7 +54,7 @@ public class GetUserDocumentsResponse {
      * 
      * 
      * <p>
-     * Objects of the following type(s) are allowed in the list
+     * Objects of the following type(s) are allowed in the labourList
      * {@link FileInfo }
      * 
      * 

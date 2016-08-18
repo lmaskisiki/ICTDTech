@@ -1,0 +1,16 @@
+package birthcertificate.ws.rest;
+
+import java.util.List;
+
+import javax.jws.WebMethod;
+import javax.jws.WebService;
+
+import org.springframework.stereotype.Service;
+
+@Service
+@WebService
+public interface IBEService {
+
+		public @WebMethod List<CollectionStatus> applications();
+		
+}

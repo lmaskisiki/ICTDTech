@@ -1,0 +1,289 @@
+<?xml version='1.0' encoding='UTF-8'?><wsdl:definitions xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:tns="http://soap.ews.birthcertificate/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:ns1="http://schemas.xmlsoap.org/soap/http" name="BEServiceService" targetNamespace="http://soap.ews.birthcertificate/">
+  <wsdl:types>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://soap.ews.birthcertificate/" elementFormDefault="unqualified" targetNamespace="http://soap.ews.birthcertificate/" version="1.0">
+
+  <xs:element name="BatchApplication" type="tns:BatchApplication"/>
+
+  <xs:element name="BatchApplicationResponse" type="tns:BatchApplicationResponse"/>
+
+  <xs:element name="applications" type="tns:applications"/>
+
+  <xs:element name="applicationsResponse" type="tns:applicationsResponse"/>
+
+  <xs:element name="approved" type="tns:approved"/>
+
+  <xs:element name="approvedResponse" type="tns:approvedResponse"/>
+
+  <xs:element name="bCertificate" type="tns:bCertificate"/>
+
+  <xs:element name="checkStatus" type="tns:checkStatus"/>
+
+  <xs:element name="checkStatusResponse" type="tns:checkStatusResponse"/>
+
+  <xs:element name="child" type="tns:child"/>
+
+  <xs:element name="collectionStatus" type="tns:collectionStatus"/>
+
+  <xs:element name="createApplication" type="tns:createApplication"/>
+
+  <xs:element name="createApplicationResponse" type="tns:createApplicationResponse"/>
+
+  <xs:element name="labour" type="tns:labour"/>
+
+  <xs:element name="maternity" type="tns:maternity"/>
+
+  <xs:element name="systemMessage" type="tns:systemMessage"/>
+
+  <xs:complexType name="applications">
+    <xs:sequence/>
+  </xs:complexType>
+
+  <xs:complexType name="applicationsResponse">
+    <xs:sequence>
+      <xs:element maxOccurs="unbounded" minOccurs="0" name="return" type="tns:collectionStatus"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="collectionStatus">
+    <xs:sequence>
+      <xs:element name="bcNumber" type="xs:int"/>
+      <xs:element minOccurs="0" name="message" type="xs:string"/>
+      <xs:element name="parentId" type="xs:int"/>
+      <xs:element name="status" type="xs:boolean"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="approved">
+    <xs:sequence/>
+  </xs:complexType>
+
+  <xs:complexType name="approvedResponse">
+    <xs:sequence>
+      <xs:element maxOccurs="unbounded" minOccurs="0" name="return" type="tns:bCertificate"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="bCertificate">
+    <xs:sequence>
+      <xs:element name="bcNumber" type="xs:int"/>
+      <xs:element minOccurs="0" name="birthNumber" type="xs:string"/>
+      <xs:element minOccurs="0" name="childNames" type="xs:string"/>
+      <xs:element name="collectReady" type="xs:boolean"/>
+      <xs:element minOccurs="0" name="creationDate" type="xs:dateTime"/>
+      <xs:element minOccurs="0" name="gender" type="xs:string"/>
+      <xs:element minOccurs="0" name="maternalId" type="xs:string"/>
+      <xs:element minOccurs="0" name="parentFullNames" type="xs:string"/>
+      <xs:element minOccurs="0" name="surname" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="checkStatus">
+    <xs:sequence>
+      <xs:element name="parentId" type="xs:int"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="checkStatusResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:collectionStatus"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="createApplication">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="labour" type="tns:labour"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="labour">
+    <xs:sequence>
+      <xs:element name="birthNo" type="xs:int"/>
+      <xs:element minOccurs="0" name="birthPlace" type="xs:string"/>
+      <xs:element minOccurs="0" name="child" type="tns:child"/>
+      <xs:element minOccurs="0" name="labourDate" type="xs:dateTime"/>
+      <xs:element name="labourId" type="xs:int"/>
+      <xs:element name="labourStatus" type="xs:int"/>
+      <xs:element minOccurs="0" name="maternal" type="tns:maternity"/>
+      <xs:element minOccurs="0" name="nurse" type="xs:string"/>
+      <xs:element name="status" type="xs:int"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="child">
+    <xs:sequence>
+      <xs:element name="childId" type="xs:int"/>
+      <xs:element minOccurs="0" name="gender" type="xs:string"/>
+      <xs:element minOccurs="0" name="name" type="xs:string"/>
+      <xs:element minOccurs="0" name="surname" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="maternity">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="employementStatus" type="xs:string"/>
+      <xs:element name="idnumber" type="xs:int"/>
+      <xs:element name="mid" type="xs:int"/>
+      <xs:element minOccurs="0" name="names" type="xs:string"/>
+      <xs:element minOccurs="0" name="nurse" type="xs:string"/>
+      <xs:element minOccurs="0" name="registration" type="xs:dateTime"/>
+      <xs:element minOccurs="0" name="surname" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="createApplicationResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:systemMessage"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="systemMessage">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="message" type="xs:string"/>
+      <xs:element minOccurs="0" name="messageType" type="tns:messageType"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="messageType">
+    <xs:sequence/>
+  </xs:complexType>
+
+  <xs:complexType name="BatchApplication">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="arg0" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="BatchApplicationResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:systemMessage"/>
+    </xs:sequence>
+  </xs:complexType>
+
+</xs:schema>
+  </wsdl:types>
+  <wsdl:message name="createApplication">
+    <wsdl:part element="tns:createApplication" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="createApplicationResponse">
+    <wsdl:part element="tns:createApplicationResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="approved">
+    <wsdl:part element="tns:approved" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="BatchApplication">
+    <wsdl:part element="tns:BatchApplication" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="checkStatus">
+    <wsdl:part element="tns:checkStatus" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="BatchApplicationResponse">
+    <wsdl:part element="tns:BatchApplicationResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="applicationsResponse">
+    <wsdl:part element="tns:applicationsResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="approvedResponse">
+    <wsdl:part element="tns:approvedResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="applications">
+    <wsdl:part element="tns:applications" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="checkStatusResponse">
+    <wsdl:part element="tns:checkStatusResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:portType name="IBEService">
+    <wsdl:operation name="applications">
+      <wsdl:input message="tns:applications" name="applications">
+    </wsdl:input>
+      <wsdl:output message="tns:applicationsResponse" name="applicationsResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="approved">
+      <wsdl:input message="tns:approved" name="approved">
+    </wsdl:input>
+      <wsdl:output message="tns:approvedResponse" name="approvedResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="checkStatus">
+      <wsdl:input message="tns:checkStatus" name="checkStatus">
+    </wsdl:input>
+      <wsdl:output message="tns:checkStatusResponse" name="checkStatusResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="createApplication">
+      <wsdl:input message="tns:createApplication" name="createApplication">
+    </wsdl:input>
+      <wsdl:output message="tns:createApplicationResponse" name="createApplicationResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="BatchApplication">
+      <wsdl:input message="tns:BatchApplication" name="BatchApplication">
+    </wsdl:input>
+      <wsdl:output message="tns:BatchApplicationResponse" name="BatchApplicationResponse">
+    </wsdl:output>
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BEServiceServiceSoapBinding" type="tns:IBEService">
+    <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsdl:operation name="applications">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="applications">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="applicationsResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="approved">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="approved">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="approvedResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="checkStatus">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="checkStatus">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="checkStatusResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="BatchApplication">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="BatchApplication">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="BatchApplicationResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="createApplication">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="createApplication">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="createApplicationResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="BEServiceService">
+    <wsdl:port binding="tns:BEServiceServiceSoapBinding" name="ibcservice">
+      <soap:address location="http://localhost:8080/BCManager/services/bcs"/>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

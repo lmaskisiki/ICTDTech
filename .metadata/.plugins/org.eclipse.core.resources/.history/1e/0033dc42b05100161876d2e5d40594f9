@@ -1,0 +1,40 @@
+package infosource.health.ematclinic.services;
+
+import java.util.List;
+
+import javax.ws.rs.GET;
+import javax.ws.rs.Path;
+import javax.ws.rs.Produces;
+import javax.ws.rs.core.MediaType;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+import org.springframework.web.bind.annotation.ResponseBody;
+
+import com.google.inject.Injector;
+
+import infosource.health.ematclinic.models.Checkup;
+
+@Path("/checkup")
+@Service
+public class ClinicService {
+
+	@Autowired
+	private MaternityService matService;
+	@Autowired
+	private CheckupService checkService;
+	@Autowired
+	private LabourService labService;
+	@Autowired
+	private ChildService childService;
+	
+	
+	
+@GET
+@Path("/getall")
+@Produces("application/json")
+public @ResponseBody List<Checkup> getCheckups(){
+	return checkService.getCheckups();
+ }
+
+}

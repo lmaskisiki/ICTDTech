@@ -1,0 +1,50 @@
+package infosource.starters;
+
+import infosource.routebuilders.SearchRouteBuilder;
+
+import org.apache.camel.CamelContext;
+import org.apache.camel.ProducerTemplate;
+import org.apache.camel.main.Main;
+import org.apache.camel.spring.SpringCamelContext;
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
+
+public class timerRouting {
+
+	private ApplicationContext context;
+	private CamelContext camelContext;
+
+	public timerRouting() {
+
+		try {
+			this.context = new ClassPathXmlApplicationContext(
+					"META-INF/camel-conf.xml");
+			this.camelContext = SpringCamelContext.springCamelContext(context);
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+
+	}
+
+	public void sendMessage(String msg) {
+		try {
+			ProducerTemplate template = this.camelContext
+					.createProducerTemplate();
+			template.start();
+			template.sendBody("direct:timer", "testing timer roouting");
+			;
+			template.stop();
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+	}
+
+	public static void main(String[] args) {
+		System.out.println("Main App Started...");
+		new timerRouting().sendMessage("admin");
+	 
+
+	}
+
+}

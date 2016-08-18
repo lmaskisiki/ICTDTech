@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:camel="http://camel.apache.org/schema/spring"
+	xmlns:cxf="http://camel.apache.org/schema/cxf" xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:jaxws="http://cxf.apache.org/jaxws"
+	xsi:schemaLocation="
+http://www.springframework.org/schema/beans
+http://www.springframework.org/schema/beans/spring-beans.xsd
+http://camel.apache.org/schema/cxf
+http://camel.apache.org/schema/cxf/camel-cxf.xsd
+http://cxf.apache.org/jaxrs
+http://cxf.apache.org/schemas/jaxrs.xsd
+http://camel.apache.org/schema/spring
+http://camel.apache.org/schema/spring/camel-spring.xsd
+http://www.springframework.org/schema/context
+http://www.springframework.org/schema/context/spring-context.xsd">
+
+	<context:component-scan base-package="infosource.health.ematclinic.messaging" />
+	<!-- <camelContext id="searchRoutes" xmlns="http://camel.apache.org/schema/spring"> 
+		<camel:routeBuilder ref="route" /> </camelContext> -->
+	<bean id="route" class="infosource.health.ematclinic.messaging.BCRouteBuilder"></bean>
+	<camelContext xmlns="http://camel.apache.org/schema/spring">
+		<properties>
+			<property key="CamelLogDebugBodyMaxChars" value="1200" />
+		</properties>
+		<route id="birthManagement">
+
+			<from uri="direct:start" />
+			<choice>
+				<when>
+					<xpath>//labour/status='1'</xpath>
+					<choice>
+						<when>
+							<xpath>//labour/maternal/employementStatus='GOVERNMENT'</xpath>
+							<to uri="activemq:rejectetGrantApplication" />
+						</when>
+						<otherwise>
+							<to uri="activemq:acceptGrantApplication" />
+						</otherwise>
+					</choice>
+					<to uri="activemq:birthCertificateApplication"/>
+				</when>
+				<otherwise>
+					<to uri="activemq:stillbornRegister" />
+				</otherwise>
+			</choice>
+			<to uri="activemq:error" />
+		</route>
+		
+	</camelContext>
+
+</beans>

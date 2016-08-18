@@ -10,7 +10,10 @@ import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 import org.springframework.test.context.transaction.TransactionConfiguration;
 import org.springframework.transaction.annotation.Transactional;
 
+import bcmanager.system.SystemMessage;
 import birthcertificate.entities.BCertificate;
+import birthcertificate.entities.Labour;
+import birthcertificate.ews.soap.BEService;
 import birthcertificate.processors.Person;
 import birthcertificate.services.BCService;
 
@@ -23,6 +26,8 @@ public class BCServiceTests {
 
 	@Autowired
 	private BCService service=null;
+	@Autowired
+	private BEService bservice=null;
  
 	public void should_create_certificate(){
 		
@@ -47,12 +52,12 @@ public class BCServiceTests {
 	System.out.println("watttt:"+cert.getSurname());
 		
 	}
-	@Test
+	 @Test
 	 public void update(){
-	 service.updateCollectionStatus(false,"Lizo Masikisiki");
-		// service.updateCollectionStatus(true,12);
-		String str="lizo";
-		
-		System.out.println(str);
+		 Labour l = new Labour();
+		 l.setBirthPlace("Alice");
+		 
+		SystemMessage ms= bservice.createApplication(l);
+	 
 	 }
 }

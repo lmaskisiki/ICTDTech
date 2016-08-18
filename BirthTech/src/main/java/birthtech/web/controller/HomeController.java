@@ -1,5 +1,6 @@
 package birthtech.web.controller;
 
+import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
@@ -20,16 +21,16 @@ import org.springframework.web.servlet.ModelAndView;
 import birthtech.entities.Checkup;
 import birthtech.entities.Child;
 import birthtech.entities.Labour;
-import birthtech.entities.Maternity;
+import birthtech.entities.Patient;
 import birthtech.services.CheckupService;
 import birthtech.services.ChildService;
 import birthtech.services.LabourService;
-import birthtech.services.MaternityService;
+import birthtech.services.PatientService;
 
 @Controller
 public class HomeController {
 	@Autowired
-	private MaternityService matService;
+	private PatientService matService;
 	@Autowired
 	private CheckupService checkService;
 	@Autowired
@@ -46,28 +47,28 @@ public class HomeController {
 	@RequestMapping(value = "maternity/getall", method = RequestMethod.GET)
 	public ModelAndView findAll() {
 		ModelAndView model = new ModelAndView("getallmartenals");
-		List<Maternity> getAll = matService.getMartenal();
+		List<Patient> getAll = matService.getMartenal();
 		model.addObject("results", getAll);
 		return model;
 	}
 
 	@RequestMapping(value = "maternity/new", method = RequestMethod.GET)
 	public ModelAndView newmartenal() {
-		return new ModelAndView("newmartenalform");
+		return new ModelAndView("new");
 	}
 
-	@RequestMapping(value = "maternity/create", method = RequestMethod.GET)
+	@RequestMapping(value = "maternity/add", method = RequestMethod.GET)
 	public ModelAndView newrecord(ModelMap modelmap,
-			HttpServletRequest request, Maternity mat) {
+			HttpServletRequest request, Patient mat) {
 		ModelAndView model = new ModelAndView("viewmaternal");
 		modelmap.addAttribute(mat.getNames(), "names");
-		modelmap.addAttribute(mat.getNurse(), "nurse");
 		modelmap.addAttribute(mat.getSurname(), "surname");
-		modelmap.addAttribute(mat.getIdnumber());
-		int idNumber = Integer.parseInt(request.getParameter("idNumber"));
+		modelmap.addAttribute(mat.getEmployementStatus(), "employment");
+ 		int idNumber = Integer.parseInt(request.getParameter("idNumber"));
 		Date date = new Date();
 		mat.setIdnumber(idNumber);
 		mat.setRegistration(date);
+		mat.setNurse("Lizo Masikisiki");
 		boolean saved = matService.addMaternity(mat);
 		model.addObject("maternal", mat);
 		return model;
@@ -78,7 +79,7 @@ public class HomeController {
 		ModelAndView model = new ModelAndView("viewcurrent");
 		String id = request.getParameter("idnumber");
 		int intId = Integer.parseInt(id);
-		Maternity patient = matService.getMaternityById(intId);
+		Patient patient = matService.getMaternityById(intId);
 		model.addObject("maternity", patient);
 		return model;
 	}
@@ -87,7 +88,7 @@ public class HomeController {
 	public ModelAndView viewmaternal(
 			@RequestParam(value = "idnumber", required = false) String idnumber) {
 		ModelAndView model = new ModelAndView("viewmaternal");
-		Maternity mat = null;
+		Patient mat = null;
 		mat = matService.getMaternityById(Integer.parseInt(idnumber));
 		model.addObject("maternal", mat);
 		return model;
@@ -97,7 +98,7 @@ public class HomeController {
 	public ModelAndView editmaternal(
 			@PathVariable(value = "idnumber") String idnumber) {
 		ModelAndView model = new ModelAndView("editmaternalform");
-		Maternity mat = null;
+		Patient mat = null;
 		mat = matService.getMaternityById(40);
 		System.out.println("\n" + mat.getNames() + " " + mat.getSurname()
 				+ " with ID " + mat.getIdnumber() + " is being edited");
@@ -125,7 +126,19 @@ public class HomeController {
 
 		return false;
 	}
-
+	@RequestMapping(value = "maternity/all", method = RequestMethod.GET)
+	public ModelAndView  getmatrenity() {
+			List<Patient> list= new ArrayList<Patient>();
+			ModelAndView model = new ModelAndView("getallmaternity");
+			try{
+				list= matService.getMartenal();
+			}
+			catch(Exception ex){
+				System.out.println("Something went wrong");
+			}
+			model.addObject("results", list);
+		return model;
+	}
 	// CRUD ends
 	@RequestMapping(value = "maternity/checkup/add", method = RequestMethod.GET)
 	public ModelAndView addCheckup(ModelMap map, Checkup checkup,
@@ -140,13 +153,13 @@ public class HomeController {
 		checkup.setDelivered(false);
 		String delivery = request.getParameter("delivered");
 	
-		Maternity maternity = matService.getMaternityById(Integer.parseInt(id));
+		Patient patient = matService.getMaternityById(Integer.parseInt(id));
 		if (delivery.trim().equals("yes")) {
 			String labourstatus= request.getParameter("labourstatus");
 			
 			checkup.setDelivered(true);
 			Labour lab = new Labour();
-			lab.setMaternal(maternity);
+			lab.setMaternal(patient);
 			lab.setBirthNo(1862);
 			lab.setBirthPlace(checkup.getPlace());
 		 if(labourstatus.trim().equals("success")){lab.setStatus(1);}else{lab.setStatus(0);}

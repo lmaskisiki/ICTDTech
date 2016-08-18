@@ -11,7 +11,7 @@ import org.springframework.ldap.core.LdapTemplate;
 @WebService
 public interface personInterface {
 	@WebMethod
-	public  void createPerson(
+	public  void createAccount(
 			@WebParam(name = "newPerson")Person newPerson);
 	@WebMethod
 	public  List<Person> getPersons();

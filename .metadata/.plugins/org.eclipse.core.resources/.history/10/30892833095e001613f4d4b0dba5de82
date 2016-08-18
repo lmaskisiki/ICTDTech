@@ -1,0 +1,40 @@
+package birthtech.services.rest;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
+
+import birthtech.entities.Checkup;
+import birthtech.entities.Child;
+import birthtech.entities.Patient;
+import birthtech.interfaces.ICheckupService;
+import birthtech.interfaces.IChildService;
+import birthtech.interfaces.IMartenalService;
+
+@Component
+public class WClinic  implements IWclinic{
+@Autowired
+private ICheckupService checkupService;
+@Autowired
+private IMartenalService matService;
+@Autowired
+private IChildService childService;
+
+		
+	@Override
+	public List<Checkup> checkuplist(String patientId) {
+		return  checkupService.getCheckups(Integer.parseInt(patientId));
+	}
+
+	@Override
+	public List<Child> children(String patientId) {
+	return childService.getChildren(matService.getMaternityById(Integer.parseInt(patientId)));
+	}
+
+	@Override
+	public List<Patient> patients() {
+		return matService.getMartenal();
+	}
+
+}

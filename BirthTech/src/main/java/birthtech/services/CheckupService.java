@@ -7,7 +7,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import birthtech.entities.Checkup;
-import birthtech.entities.Maternity;
+import birthtech.entities.Patient;
 import birthtech.interfaces.ICheckupService;
 import birthtech.repositories.CheckupRepository;
 
@@ -17,7 +17,7 @@ public class CheckupService implements ICheckupService {
 	private CheckupRepository repo;
 
 	@Autowired
-	private MaternityService MartenalService;
+	private PatientService MartenalService;
 
 	@Override
 	public Checkup addCheckup(Checkup checkup) {
@@ -74,12 +74,12 @@ public class CheckupService implements ICheckupService {
 	public Checkup getCheckup(String fullname) {
 		int martenalId = 0;
 		Checkup checkup = null;
-		List<Maternity> martenal = MartenalService.getMartenal();
-		for (Maternity mat : martenal) {
+		List<Patient> martenal = MartenalService.getMartenal();
+		for (Patient mat : martenal) {
 			if ((mat.getNames() + " " + mat.getSurname()).equals(fullname)
 					|| (mat.getSurname() + " " + mat.getSurname())
 							.equals(fullname)) {
-				martenalId = mat.getMid();
+				martenalId = mat.getPid();
 				System.out.println("ID found :" + martenalId);
 				checkup = repo.findOne(martenalId);
 				break;

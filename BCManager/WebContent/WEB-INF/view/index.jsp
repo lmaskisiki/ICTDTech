@@ -6,10 +6,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>Insert title here</title>
-
-<script type="text/javascript">
-	
-</script>
+<link rel="stylesheet" type="text/css" href="resources/bootstrap/css/bootstrap.min.css">
 <link rel="stylesheet" href="resources/bootstrap/css/bootstrap-theme.min.css">
 <style type="text/css">
 body {
@@ -59,12 +56,12 @@ body {
 
 
 
-		<script src="resources/js/namingconversion/personproperties.js">
-			
-		</script>
+	
 		<script src="resources/js/jquery-1.12.4.min.js"></script>
-		<script src="resources/js/dombuilder.js"></script>
+		<script src="resources/bootstrap/js/bootstrap.min.js"></script>
 		<script src="resources/js/eventhander.js"></script>
+		<script src="resources/js/namingconversion/personproperties.js"></script>
 		<script src="resources/js/ajaxcallprocessor.js"></script>
+		
 </body>
 </html>

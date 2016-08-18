@@ -9,8 +9,11 @@
 	<configs>
 		<config>WebContent/WEB-INF/dispatcher-servlet.xml</config>
 		<config>src/main/java/META-INF/cxf-context.xml</config>
+		<config>src/main/java/META-INF/cxf-rest.xml</config>
 	</configs>
 	<autoconfigs>
+		<config>src/main/java/META-INF/camel-context.xml</config>
+		<config>src/main/java/META-INF/applicationContext.xml</config>
 	</autoconfigs>
 	<configSets>
 	</configSets>

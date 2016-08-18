@@ -8,7 +8,7 @@ import org.springframework.stereotype.Service;
 
 import birthtech.entities.Child;
 import birthtech.entities.Labour;
-import birthtech.entities.Maternity;
+import birthtech.entities.Patient;
 import birthtech.interfaces.IChildService;
 import birthtech.messaging.MessageSender;
 import birthtech.messaging.UniversalMarshaller;
@@ -21,7 +21,7 @@ public class ChildService implements IChildService {
 
 	@Override
 	public Child addChild(String gender, String name, String surname,
-			Maternity mother, Labour labour) {
+			Patient mother, Labour labour) {
 		Child child = new Child();
 		child.setGender(gender);
 		child.setSurname(surname);
@@ -37,7 +37,7 @@ public class ChildService implements IChildService {
 	}
 
 	@Override
-	public List<Child> getChildren(Maternity mother) {
+	public List<Child> getChildren(Patient mother) {
 		List<Child> children = new ArrayList<Child>();
 		
 		return children;

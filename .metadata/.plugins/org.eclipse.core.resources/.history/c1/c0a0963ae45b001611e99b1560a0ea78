@@ -1,0 +1,22 @@
+package birthcertificate.ws.rest;
+
+import java.util.List;
+
+import org.springframework.stereotype.Component;
+
+@Component
+public class BEService implements IBEService {
+
+	@Override
+	public List<CollectionStatus> applications() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public CollectionStatus checkStatus(int parentId) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

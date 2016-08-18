@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename field &apos;checkService&apos; in &apos;birthtech.web.controller.HomeController&apos; to &apos;checkupService&apos;&#x0A;- Original project: &apos;BirthTech&apos;&#x0A;- Original element: &apos;birthtech.web.controller.HomeController.checkService&apos;&#x0A;- Renamed element: &apos;birthtech.web.controller.HomeController.checkupService&apos;&#x0A;- Update references to refactored element&#x0A;- Update textual occurrences in comments and strings" delegate="false" deprecate="false" description="Rename field &apos;checkService&apos;" flags="589826" getter="false" id="org.eclipse.jdt.ui.rename.field" input="/src\/main\/java&lt;birthtech.web.controller{HomeController.java[HomeController^checkService" name="checkupService" references="true" setter="false" stamp="1468345742074" textual="false" version="1.0"/>
+</session>

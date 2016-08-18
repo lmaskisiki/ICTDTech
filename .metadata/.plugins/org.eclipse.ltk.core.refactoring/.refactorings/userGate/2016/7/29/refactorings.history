@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename method &apos;useraccount.soap.services.personInterface.createPerson(...)&apos; to &apos;createAccount&apos;&#x0A;- Original project: &apos;userGate&apos;&#x0A;- Original element: &apos;useraccount.soap.services.personInterface.createPerson(...)&apos;&#x0A;- Renamed element: &apos;useraccount.soap.services.personInterface.createAccount(...)&apos;&#x0A;- Update references to refactored element" delegate="false" deprecate="false" description="Rename method &apos;createPerson&apos;" flags="589830" id="org.eclipse.jdt.ui.rename.method" input="/src\/main\/java&lt;useraccount.soap.services{personInterface.java[personInterface~createPerson~QPerson;" name="createAccount" references="true" stamp="1468171164746" version="1.0"/>
+</session>

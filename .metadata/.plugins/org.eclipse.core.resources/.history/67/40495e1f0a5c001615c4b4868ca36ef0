@@ -1,0 +1,5 @@
+package bcmanager.system;
+
+public class SystemMessage {
+
+}

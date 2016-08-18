@@ -88,7 +88,7 @@ System.out.println("Gnder supplied"+ person.getGender());
 				"classpath:META-INF/applicationContext.xml");
 		BeanFactory factory = context;
 		personInterface create = (personInterface) factory.getBean("ldapUser");
-		create.createPerson(person);
+		create.createAccount(person);
 
 		return "applic_submit_success";
 	}

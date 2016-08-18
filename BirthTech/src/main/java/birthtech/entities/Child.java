@@ -11,7 +11,7 @@ import javax.xml.bind.annotation.XmlSeeAlso;
  *
  */
 @XmlRootElement
-@XmlSeeAlso(Maternity.class)
+@XmlSeeAlso(Patient.class)
 @Entity
 public class Child implements Serializable {
 

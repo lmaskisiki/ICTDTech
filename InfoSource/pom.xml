@@ -53,7 +53,7 @@
 			<type>pom</type>
 		</dependency>
 		<!-- Apache Camel -->
-		
+
 		<dependency>
 			<groupId>org.apache.camel</groupId>
 			<artifactId>camel-cxf</artifactId>
@@ -85,80 +85,80 @@
 			<version>2.15.1</version>
 		</dependency>
 		<dependency>
-  <groupId>org.apache.camel</groupId>
-  <artifactId>camel-jaxb</artifactId>
-  <version>2.15.1</version>
-</dependency>
+			<groupId>org.apache.camel</groupId>
+			<artifactId>camel-jaxb</artifactId>
+			<version>2.15.1</version>
+		</dependency>
 		<dependency>
-  <groupId>org.apache.camel</groupId>
-  <artifactId>components</artifactId>
-  <version>2.15.1</version>
-  <type>pom</type>
-</dependency>
-<dependency>
-  <groupId>org.apache.cxf</groupId>
-  <artifactId>cxf-rt-transports-http-jetty</artifactId>
-  <version>3.1.0</version>
-</dependency>
-<dependency>
-  <groupId>org.apache.cxf</groupId>
-  <artifactId>cxf-rt-transports-http</artifactId>
-  <version>3.1.0</version>
-</dependency>
-<dependency>
-    <groupId>org.apache.camel</groupId>
-    <artifactId>camel-cxf-transport</artifactId>
-    <version>2.15.1</version>
-</dependency>
-<dependency>
-    <groupId>org.apache.camel</groupId>
-    <artifactId>camel-jaxb</artifactId>
-    <version>2.15.1</version>
-</dependency>
-<dependency>
-    <groupId>org.apache.camel</groupId>
-    <artifactId>camel-soap</artifactId>
-    <version>2.15.1</version>
-</dependency>
-<dependency>
-  <groupId>org.apache.camel</groupId>
-  <artifactId>camel-jackson</artifactId>
-  <version>2.15.1</version>
-</dependency>
-<dependency>
-  <groupId>org.apache.camel</groupId>
-  <artifactId>camel-xstream</artifactId>
-  <version>2.15.1</version>
-</dependency>
-<dependency>
-    <groupId>org.apache.camel</groupId>
-    <artifactId>camel-jetty</artifactId>
-    <version>2.15.1</version>
-</dependency>
-<dependency>
-    <groupId>org.apache.camel</groupId>
-    <artifactId>camel-restlet</artifactId>
-    <version>2.15.1</version>
-</dependency>
+			<groupId>org.apache.camel</groupId>
+			<artifactId>components</artifactId>
+			<version>2.15.1</version>
+			<type>pom</type>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.cxf</groupId>
+			<artifactId>cxf-rt-transports-http-jetty</artifactId>
+			<version>3.1.0</version>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.cxf</groupId>
+			<artifactId>cxf-rt-transports-http</artifactId>
+			<version>3.1.0</version>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.camel</groupId>
+			<artifactId>camel-cxf-transport</artifactId>
+			<version>2.15.1</version>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.camel</groupId>
+			<artifactId>camel-jaxb</artifactId>
+			<version>2.15.1</version>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.camel</groupId>
+			<artifactId>camel-soap</artifactId>
+			<version>2.15.1</version>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.camel</groupId>
+			<artifactId>camel-jackson</artifactId>
+			<version>2.15.1</version>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.camel</groupId>
+			<artifactId>camel-xstream</artifactId>
+			<version>2.15.1</version>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.camel</groupId>
+			<artifactId>camel-jetty</artifactId>
+			<version>2.15.1</version>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.camel</groupId>
+			<artifactId>camel-restlet</artifactId>
+			<version>2.15.1</version>
+		</dependency>
 
-<!-- Camel REST -->
-<dependency>
-  <groupId>org.apache.cxf</groupId>
-  <artifactId>cxf-rt-frontend-jaxrs</artifactId>
-  <version>3.0.4</version>
-</dependency>
+		<!-- Camel REST -->
+		<dependency>
+			<groupId>org.apache.cxf</groupId>
+			<artifactId>cxf-rt-frontend-jaxrs</artifactId>
+			<version>3.0.4</version>
+		</dependency>
 		<!-- spring -->
 		<dependency>
 			<groupId>org.springframework</groupId>
 			<artifactId>spring-context</artifactId>
 			<version>4.1.5.RELEASE</version>
 		</dependency>
-		 <dependency>
-            <groupId>org.springframework</groupId>
-            <artifactId>spring-webmvc</artifactId>
-            <version>4.1.5.RELEASE</version>
-        </dependency>
-      		<dependency>
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-webmvc</artifactId>
+			<version>4.1.5.RELEASE</version>
+		</dependency>
+		<dependency>
 			<groupId>org.springframework</groupId>
 			<artifactId>spring-web</artifactId>
 			<version>4.1.5.RELEASE</version>
@@ -184,18 +184,18 @@
 			<artifactId>log4j</artifactId>
 			<version>1.2.17</version>
 		</dependency>
-		
- 
+
+
 		<dependency>
-<groupId>org.apache.camel</groupId>
-<artifactId>camel-http4</artifactId>
-<version>2.15.1</version>
- </dependency>
+			<groupId>org.apache.camel</groupId>
+			<artifactId>camel-http4</artifactId>
+			<version>2.15.1</version>
+		</dependency>
 		<dependency>
-  <groupId>com.google.code.gson</groupId>
-  <artifactId>gson</artifactId>
-  <version>1.7.1</version>
-</dependency>
+			<groupId>com.google.code.gson</groupId>
+			<artifactId>gson</artifactId>
+			<version>1.7.1</version>
+		</dependency>
 
 	</dependencies>
 

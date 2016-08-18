@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<blueprint xmlns="http://www.osgi.org/xmlns/blueprint/v1.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:cxf="http://camel.apache.org/schema/blueprint/cxf"
+	xmlns:jaxrs="http://cxf.apache.org/jaxrs"
+	xmlns:core="http://cxf.apache.org/core"
+	xmlns:jaxws="http://cxf.apache.org/jaxws"
+	xmlns:jaxrs-client="http://cxf.apache.org/jaxrs-client"
+	xmlns:beans="http://cxf.apache.org/configuration/beans"
+	xmlns:camel="http://cxf.apache.org/transports/camel"
+	xsi:schemaLocation="http://cxf.apache.org/jaxrs-client http://cxf.apache.org/schemas/jaxrs-client.xsd
+		http://cxf.apache.org/configuration/beans http://cxf.apache.org/schemas/configuration/cxf-beans.xsd
+		http://cxf.apache.org/core http://cxf.apache.org/schemas/core.xsd
+		http://cxf.apache.org/transports/camel http://cxf.apache.org/transports/camel.xsd
+		http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-4.1.xsd
+		http://www.osgi.org/xmlns/blueprint/v1.0.0 http://www.osgi.org/xmlns/blueprint/v1.0.0/blueprint.xsd
+		http://camel.apache.org/schema/cxf http://camel.apache.org/schema/cxf/camel-cxf-2.15.1.redhat-620133.xsd
+		http://camel.apache.org/schema/blueprint/cxf http://camel.apache.org/schema/blueprint/cxf/camel-cxf.xsd
+		http://cxf.apache.org/jaxws http://cxf.apache.org/schemas/jaxws.xsd
+		http://cxf.apache.org/jaxrs http://cxf.apache.org/schemas/jaxrs.xsd">
+
+
+	<cxf:cxfEndpoint id="reportEndpoint" address="/report/"	serviceClass="infosource.health.clinicservice.incident.IncidentService" />
+		
+	<bean id="reportIncidentProcessor" class="infosource.health.clinicservice.incident.ReportIncidentProcessor" />
+	<bean id="statusIncidentProcessor" class="infosource.health.clinicservice.incident.StatusIncidentProcessor" />
+
+	<camelContext xmlns="http://camel.apache.org/schema/blueprint">
+
+		<route id="cxf">
+			<!-- route starts from the cxf webservice in POJO mode -->
+			<from uri="cxf:bean:reportEndpoint" />
+
+			<recipientList>
+				<simple>direct:${header.operationName}</simple>
+			</recipientList>
+		</route>
+
+		<route id="report">
+			<from uri="direct:reportIncident"/>
+			<log message="reportIncident Call"/>
+			<process ref="reportIncidentProcessor"/>
+			<to uri="log:output" />
+		</route>
+
+		<route id="status">
+			<from uri="direct:statusIncident"/>
+			<log message="statusIncident Call"/>
+			<process ref="statusIncidentProcessor"/>
+			<to uri="log:output" />
+		</route>
+
+	</camelContext>
+
+</blueprint>

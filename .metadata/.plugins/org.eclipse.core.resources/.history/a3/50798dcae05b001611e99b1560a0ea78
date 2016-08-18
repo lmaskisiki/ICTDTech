@@ -1,0 +1,39 @@
+package birthtechha.tests.bcservice;
+
+import java.text.SimpleDateFormat;
+import java.util.Date;
+import java.util.List;
+
+import org.junit.Test;
+
+import birthcertificate.entities.BCertificate;
+import birthcertificate.ws.rest.BCRestService;
+
+public class RestServiceTest {
+
+
+	public RestServiceTest() {
+		// TODO Auto-generated constructor stub
+	}
+	//@Test
+	public void getCollectReadyTest(){
+		
+		BCRestService service = new BCRestService();
+		List<BCertificate> collectReady=service.getCollectReady();
+	
+	}
+	
+	@Test
+	public void findBCbyChildId(){
+		
+		SimpleDateFormat fmt = new SimpleDateFormat("yy-MM-dd");
+		String date = fmt.format(new Date());
+		String [] dateParts= date.split("-");
+		String gender="FeMale";
+		int gen= gender.contains("f") ? 0:1;
+		String bcnumStr=dateParts[0]+dateParts[1]+dateParts[2]+9999;
+		int bcNumber= Integer.parseInt(bcnumStr);
+		System.out.print("your bc number is "+bcNumber);
+		
+	}
+}

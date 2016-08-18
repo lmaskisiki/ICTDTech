@@ -5,13 +5,13 @@ import java.util.List;
 
 import org.springframework.stereotype.Service;
 
-import birthtech.entities.Maternity;
+import birthtech.entities.Patient;
 @Service
 public interface IMartenalService {
-	public boolean addMaternity(Maternity mat);
-	public Maternity getMaternityById(int registeredId);
-	public Maternity getMaternityByFullname(String fullname);
-	public List<Maternity> getMartenal();
+	public boolean addMaternity(Patient mat);
+	public Patient getMaternityById(int registeredId);
+	public Patient getMaternityByFullname(String fullname);
+	public List<Patient> getMartenal();
 }
 //savedCheckup
 //maternity

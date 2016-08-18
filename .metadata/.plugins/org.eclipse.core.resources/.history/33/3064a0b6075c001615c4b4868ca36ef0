@@ -1,0 +1,27 @@
+package birthcertificate.ws.rest;
+
+import java.util.List;
+
+import javax.jws.WebMethod;
+import javax.jws.WebParam;
+import javax.jws.WebService;
+
+import org.springframework.stereotype.Service;
+
+import birthcertificate.entities.BCertificate;
+import sun.security.x509.CertAndKeyGen;
+
+@Service
+@WebService(portName="IBEServicePort",serviceName="IBEService")
+public interface IBEService {
+
+		@WebMethod
+		public  List<CollectionStatus> applications();
+		
+		@WebMethod
+		public CollectionStatus checkStatus(@WebParam(name="parentId") int parentId);
+		
+		@WebMethod
+		public BCertificate createApplication(@WebParam(name="bcertificate") BCertificate certficate);
+		
+}

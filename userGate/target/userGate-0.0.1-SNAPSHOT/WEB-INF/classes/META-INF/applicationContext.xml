@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:jee="http://www.springframework.org/schema/jee" xmlns:mvc="http://www.springframework.org/schema/mvc"
+	xmlns:tx="http://www.springframework.org/schema/tx" xmlns:security="http://www.springframework.org/schema/security"
+	xsi:schemaLocation="http://www.springframework.org/schema/jee http://www.springframework.org/schema/jee/spring-jee-3.2.xsd
+		http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc-3.2.xsd
+		http://www.springframework.org/schema/security http://www.springframework.org/schema/security/spring-security-3.2.xsd
+		http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-3.2.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-3.2.xsd">
+
+
+	<context:annotation-config />
+	<mvc:resources mapping="/resources/**" location="resources/" />
+	<security:http auto-config="true">
+		<security:session-management
+			invalid-session-url="/spring_security_login">
+		</security:session-management>
+		<security:form-login default-target-url="/private/default" />
+		<security:intercept-url pattern="/**" access="" />
+	</security:http>
+
+
+
+
+	<bean id="contextSource" class="org.springframework.ldap.core.support.LdapContextSource">
+		<property name="url" value="ldap://localhost:389" />
+		<property name="base" value="dc=myldap,dc=com" />
+		<property name="userDn" value="cn=admin,dc=myldap,dc=com" />
+		<property name="password" value="lizo@200903375" />
+	</bean>
+	<security:authentication-manager alias="authenticationManager">
+		<security:authentication-provider
+			ref="ldapAuthProvider" />
+	</security:authentication-manager>
+	<bean id="userSearch"
+		class="org.springframework.security.ldap.search.FilterBasedLdapUserSearch">
+		<constructor-arg index="0" value="" />
+		<constructor-arg index="1" value="(uid={0})" />
+		<constructor-arg index="2" ref="contextSource" />
+	</bean>
+	<bean id="ldapAuthProvider"
+		class="org.springframework.security.ldap.authentication.LdapAuthenticationProvider">
+		<constructor-arg>
+			<bean
+				class="org.springframework.security.ldap.authentication.BindAuthenticator">
+				<constructor-arg ref="contextSource" />
+				<property name="userSearch" ref="userSearch" />
+			</bean>
+		</constructor-arg>
+		<constructor-arg>
+			<bean class="useraccount.soap.services.authoritiesPopulator" />
+		</constructor-arg>
+	</bean>
+
+	<bean id="ldapTemplate" class="org.springframework.ldap.core.LdapTemplate">
+		<constructor-arg ref="contextSource" />
+	</bean>
+	<bean id="ldapUser" class="useraccount.soap.services.personImpl">
+		<property name="ldapTemp" ref="ldapTemplate" />
+	</bean>
+
+	<bean id="personImpl" class="useraccount.soap.services.personImpl" />
+
+
+
+
+
+
+</beans>

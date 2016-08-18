@@ -1,0 +1,23 @@
+package birthcertificate.entities;
+
+import java.io.Serializable;
+import java.util.ArrayList;
+import java.util.List;
+
+import javax.xml.bind.annotation.XmlRootElement;
+
+@XmlRootElement
+public class LabourList  implements Serializable{
+	
+	
+	public ArrayList<Labour> labourBatch;
+
+	public ArrayList<Labour> getLabourBatch() {
+		return labourBatch;
+	}
+
+	public void setLabourBatch(ArrayList<Labour> labourBatch) {
+		this.labourBatch = labourBatch;
+	}
+ 
+}

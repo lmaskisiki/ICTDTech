@@ -1,0 +1,70 @@
+package infosource.health.ematclinic.services;
+
+import java.util.List;
+
+import javax.ws.rs.GET;
+import javax.ws.rs.POST;
+import javax.ws.rs.Path;
+import javax.ws.rs.PathParam;
+import javax.ws.rs.Produces;
+import javax.ws.rs.core.MediaType;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.ResponseBody;
+
+import com.google.inject.Injector;
+
+import infosource.health.ematclinic.models.Checkup;
+
+@Path("/checkup")
+@Service
+public class ClinicService {
+
+	@Autowired
+	private MaternityService matService;
+	@Autowired
+	private CheckupService checkService;
+	@Autowired
+	private LabourService labService;
+	@Autowired
+	private ChildService childService;
+	
+	
+	/*CHECKUP OPERTION*/
+@GET
+@Path("/getall")
+@Produces("application/json")
+public @ResponseBody List<Checkup> getCheckups(){
+	List<Checkup> list=null;
+	try {
+		 list =checkService.getCheckups();
+	} catch (Exception e) {
+		
+	}
+	return list;
+ }
+@GET
+@Path("/find/{id}")
+@Produces("application/json")
+public @ResponseBody  Checkup findById(@PathParam("id") String id){
+	Checkup checkup=null;
+	try {
+		int key=Integer.parseInt(id);
+		 checkup=checkService.getCheckupById(key);
+	} catch (Exception e) {}
+	return checkup;
+ }
+@POST
+@Path("/save")
+@Produces("application/json")
+public void save(@RequestBody String jsonString){
+ System.out.println("good: "+jsonString);
+ }
+
+
+
+
+
+}

@@ -16,12 +16,12 @@ import useraccount.soap.services.Person;
 import useraccount.soap.services.PersonInterface;
 import birthtech.entities.Checkup;
 import birthtech.entities.Labour;
-import birthtech.entities.Maternity;
+import birthtech.entities.Patient;
 import birthtech.enums.EmploymentEnum;
 import birthtech.enums.LabourStatusEnum;
 import birthtech.services.CheckupService;
 import birthtech.services.LabourService;
-import birthtech.services.MaternityService;
+import birthtech.services.PatientService;
 
 @RunWith(SpringJUnit4ClassRunner.class)
 @ContextConfiguration("/META-INF/applicationContext.xml")
@@ -30,7 +30,7 @@ import birthtech.services.MaternityService;
 public class ServiceTest {
 
 	@Autowired
-	private MaternityService martenalService = null;
+	private PatientService martenalService = null;
 	@Autowired
 	private CheckupService checkService = null;
 	@Autowired
@@ -43,32 +43,32 @@ public class ServiceTest {
 		PersonInterface service = (PersonInterface) context
 				.getBean("UAServiceClient");
 		Person psn = null;
-		Maternity maternity = new Maternity();
+		Patient patient = new Patient();
 		try {
 			psn = service.findByUsername("pnomngasss");
 		} catch (Exception e) {
 		System.out.print(""+e.getClass()+" :was thrown\n");
 		}
 		if(psn !=null){
-			maternity.setMid(1);
-			maternity.setIdnumber(901);
-			maternity.setSurname(psn.getLastName());
-			maternity.setNames(psn.getFirstName());
-			maternity.setEmployementStatus(EmploymentEnum.GOVERNMENT.name());
-			maternity.setRegistration(new Date());
+			patient.setPid(1);
+			patient.setIdnumber(901);
+			patient.setSurname(psn.getLastName());
+			patient.setNames(psn.getFirstName());
+			patient.setEmployementStatus(EmploymentEnum.GOVERNMENT.name());
+			patient.setRegistration(new Date());
 	
 		  System.out.println("Ok.");
 		}
 		else{
- 		maternity.setIdnumber(6009081);
-		maternity.setNames("Nonkonzo");
-		maternity.setSurname("Shiqa");
-		maternity.setNurse("Dr. Sinqa");
-		maternity.setRegistration(new Date());
-		maternity.setEmployementStatus(EmploymentEnum.SELF.name());
+ 		patient.setIdnumber(6009081);
+		patient.setNames("Nonkonzo");
+		patient.setSurname("Shiqa");
+		patient.setNurse("Dr. Sinqa");
+		patient.setRegistration(new Date());
+		patient.setEmployementStatus(EmploymentEnum.SELF.name());
 
 		}
-		martenalService.addMaternity(maternity);
+		martenalService.addMaternity(patient);
 
 	}
 
@@ -82,7 +82,7 @@ public class ServiceTest {
 		 c.setNurse("Ms Zenzele");
 		 c.setMartenalId(6009081);
 		 c.setDate(new Date());
-		 Maternity mat = martenalService.getMartenal().get(0);
+		 Patient mat = martenalService.getMartenal().get(0);
 		 checkService.addCheckup(c);
 		 checkService.getCheckups().size();
 		 
@@ -92,7 +92,7 @@ public class ServiceTest {
 	public void shoud_add_labour() {
 
 		Labour labour = new Labour();
-		Maternity parent = martenalService.getMartenal().get(1);
+		Patient parent = martenalService.getMartenal().get(1);
 		labour.setBirthNo(9010);
 		labour.setBirthPlace("Bizana");
 		labour.setNurse("Mabhulu");

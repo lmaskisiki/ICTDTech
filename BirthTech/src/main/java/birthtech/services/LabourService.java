@@ -14,7 +14,7 @@ import com.google.gson.Gson;
 
 import birthtech.entities.Child;
 import birthtech.entities.Labour;
-import birthtech.entities.Maternity;
+import birthtech.entities.Patient;
 import birthtech.enums.LabourStatusEnum;
 import birthtech.interfaces.ILabourService;
 import birthtech.messaging.MessageSender;
@@ -28,7 +28,7 @@ public class LabourService implements ILabourService {
 
 	@Override
 	public boolean addLabour(Date date, String place, int status,
-			Maternity parent, String nurse, int birthnumber) {
+			Patient parent, String nurse, int birthnumber) {
 		Labour labour = new Labour();
 		labour.setBirthNo(birthnumber);
 		labour.setLabourDate(date);
@@ -64,7 +64,7 @@ public class LabourService implements ILabourService {
 	}
 
 	@Override
-	public List<Labour> getLabour(Maternity martenal) {
+	public List<Labour> getLabour(Patient martenal) {
 		List<Labour> listLabour = new ArrayList<Labour>();
 		for (Labour labour : labourRepo.findAll()) {
 			if (labour.getMaternal() == martenal) {

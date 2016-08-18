@@ -1,17 +1,18 @@
 package birthcertificate.services;
 
 import java.io.StringReader;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
- 
-
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import docman.services.FileInfo;
+import bcmanager.system.MessageType;
+import bcmanager.system.SystemMessage;
 import birthcertificate.cxf.clients.DocManClient;
 import birthcertificate.cxf.clients.UAServiceClient;
 import birthcertificate.entities.BCertificate;
@@ -73,25 +74,69 @@ public class BCService {
 		return null;
 	}
 
-	public void createCerticate(Labour labour) {
+	public int generateBCNumber(Labour lab) {
+		System.out.println("Trying to generate a Birth Certicate Id for:"
+				+ lab.getChild().getSurname());
+		SimpleDateFormat fmt = new SimpleDateFormat("yy-MM-dd");
+		String date = fmt.format(new Date());
+		String[] dateParts = date.split("-");
+		String gen = lab.getChild().getGender().toLowerCase().equals("male") ? "0"
+				: "1";
+		String bcnumStr = dateParts[0] + dateParts[1] + dateParts[2] + gen
+				+ 999;
+		int bcNumber = Integer.parseInt(bcnumStr);
+		return bcNumber;
+	}
 
+	public SystemMessage batchApplications(Labour[] applications) {
+		SystemMessage message = new SystemMessage();
+		int countValid=-1;
+		try {
+			for (Labour lab : applications) {
+				if (lab.getChild() != null) {
+					countValid++;
+					message = createCerticate(lab);
+				}
+			}
+		System.out.println(countValid+"  entities were processed!!!");
+		} catch (Exception e) {
+			System.out.println("Something went wrong! >> 'batchApplication'");
+			message.setMessage(MessageType.Exception);
+			message.setMessage(e.getMessage());
+		}
+		return message;
+	}
+
+	public SystemMessage createCerticate(Labour labour) {
+		System.out.println("Start below");
+
+		SystemMessage message = new SystemMessage();
 		BCertificate certificate = new BCertificate();
-		certificate.setBcNumber(1222);
-		System.out.println("\n \n all most done in service 1");
+		try {
 
-		certificate.setBirthNumber("" + labour.getBirthNo());
-		certificate.setChildNames(labour.getChild().getName());
-		certificate.setSurname(labour.getChild().getSurname());
-		certificate.setGender(labour.getChild().getGender());
-		certificate.setParentFullNames(labour.getMaternal().getSurname() + " "
-				+ labour.getMaternal().getNames());
-		System.out.println("\n \n almost done in service");
+			// certificate.setBcNumber(generateBCNumber(labour));
+			certificate.setBcNumber(labour.getBirthNo());
+			System.out.println("Id generated...");
 
-		certificate.setMaternalId("" + labour.getMaternal().getMid());
-		certificate.setCollectReady(false);
-		certificate.setCreationDate(new Date());
-		repo.save(certificate);
+			certificate.setBirthNumber("" + labour.getBirthNo());
+			certificate.setChildNames("lizo");
+			certificate.setSurname("sikza");
+			certificate.setGender("Male");
+			certificate.setParentFullNames("Masikiki Baphumele	");
+			System.out.println("\n \n almost done in service");
 
+			certificate.setMaternalId(""+6009012);
+			certificate.setCollectReady(false);
+			certificate.setCreationDate(new Date());
+			repo.save(certificate);
+			System.out.println("Entity  saved");
+		} catch (Exception e) {
+			System.out.println("Could not create an application' \n "
+					+ e.getClass());
+			message.setMessage(MessageType.Exception);
+			message.setMessage(e.getMessage());
+		}
+		return message;
 	}
 
 	public useraccount.soap.services.Person findParent(String fullName) {
@@ -105,14 +150,16 @@ public class BCService {
 		DocManClient client = new DocManClient();
 		return client.getDocument(requester, docOwner);
 	}
-	@Transactional
-public int updateCollectionStatus(boolean status, String parent){
-		return repo.updateCollectionStatus(status, parent);
-	
-}
-@Transactional
-public int updateCollectionStatus(boolean status,  int certificateNo){
-	return repo.updateCollectionStatus(status, certificateNo);
 
-}
+	@Transactional
+	public int updateCollectionStatus(boolean status, String parent) {
+		return repo.updateCollectionStatus(status, parent);
+
+	}
+
+	@Transactional
+	public int updateCollectionStatus(boolean status, int certificateNo) {
+		return repo.updateCollectionStatus(status, certificateNo);
+
+	}
 }

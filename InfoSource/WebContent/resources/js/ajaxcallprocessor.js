@@ -56,8 +56,7 @@ function loadUserProfile() {
 					showUserProfile(xhttprequest.responseText);
 				} else {
 					console.log("no records found");
-					alert("no records found");
-				}
+							}
 			}
 
 		}
@@ -68,18 +67,32 @@ function loadUserProfile() {
 
 function showUserProfile(response) {
 	var jsonObject = JSON.parse(response);
-
 	// need to confirm if this is areal json object
 	var userInfo = jsonObject["useraccount.soap.services.Person"];
-	alert(response);
-	$("#surname").val(userInfo["lastName"]);
-	$("#name").val(userInfo["firstName"]);
-	$("#idNumber").val(userInfo["idNumber"]);
-	$("#gender").val(userInfo["gender"]);
-	$("#cellnumber").val(userInfo["cell"]);
-	$("#email").val(userInfo["email"]);
+	var keys= Object.keys(userInfo);
+	var table=document.createElement("tbody");
+	 
+	for(x=0;x<keys.length;x++){
+		var tr= document.createElement("tr");
+		var td1 =document.createElement("td");
+		var td2 =document.createElement("td");
+		td1.appendChild(document.createTextNode(keys[x]));
+		td2.appendChild(document.createTextNode(userInfo[keys[x]]));
+		tr.appendChild(td1);
+		tr.appendChild(td2);
+		table.appendChild(tr);
+		
+	}
+	 $("#userinfotable").empty();
+	$("#userinfotable").append(table);
+	//$("#surname").val(userInfo["lastName"]);
+	///$("#name").val(userInfo["firstName"]);
+	//$("#idNumber").val(userInfo["idNumber"]);
+	//$("#gender").val(userInfo["gender"]);
+	//$("#cellnumber").val(userInfo["cell"]);
+	//$("#email").val(userInfo["email"]);
 
-	$(".userprofiletable").toggle();
+	//$(".userprofiletable").toggle();
 
 	// process document information
 	var userDocumentsTest = jsonObject["document"];
