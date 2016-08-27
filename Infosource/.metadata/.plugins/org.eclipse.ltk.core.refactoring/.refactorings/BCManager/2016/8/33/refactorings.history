@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename package &apos;birthcertificate.ws.rest&apos; to &apos;birthcertificate.ews.soap&apos;&#x0A;- Original project: &apos;BCManager&apos;&#x0A;- Original element: &apos;BCManager/src/main/java/birthcertificate.ws.rest&apos;&#x0A;- Renamed element: &apos;BCManager/src/main/java/birthcertificate.ews.soap&apos;&#x0A;- Update references to refactored element&#x0A;- Update fully qualified names in &apos;*&apos; files&#x0A;- Update textual occurrences in comments and strings&#x0A;- Rename subpackages of the package" description="Rename package &apos;birthcertificate.ws.rest&apos;" flags="589830" hierarchical="true" id="org.eclipse.jdt.ui.rename.package" input="/src\/main\/java&lt;birthcertificate.ws.rest" name="birthcertificate.ews.soap" patterns="*" qualified="true" references="true" stamp="1470577986020" textual="true" version="1.0"/>
+</session>

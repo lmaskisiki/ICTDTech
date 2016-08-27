@@ -1,0 +1,10 @@
+//com.springsource.config.ui.prefs.activePageIndex\:/InfoSource/src/main/resources/META-INF/service-endpoints.xml=<?xml version\="1.0" encoding\="UTF-8"?>\n<activePage index\="0"/>
+//com.springsource.config.ui.prefs.activePageIndex\:/MessageAgent/src/main/resources/META-INF/spring/camel-context.xml=<?xml version\="1.0" encoding\="UTF-8"?>\n<activePage index\="0"/>
+//com.springsource.config.ui.prefs.activePageIndex\:/MessageAgent/src/main/resources/META-INF/spring/route-context.xml=<?xml version\="1.0" encoding\="UTF-8"?>\n<activePage index\="0"/>
+//com.springsource.config.ui.prefs.activePageIndex\:/MessageAgent/src/main/resources/META-INF/spring/spring-beans.xml=<?xml version\="1.0" encoding\="UTF-8"?>\n<activePage index\="0"/>
+//com.springsource.config.ui.prefs.activePageIndex\:/MessageAgent/src/main/resources/OSGI-INF/blueprint/blueprint.xml=<?xml version\="1.0" encoding\="UTF-8"?>\n<activePage index\="0"/>
+//com.springsource.config.ui.prefs.activePageIndex\:/UPClient/src/main/resources/OSGI-INF/blueprint/camelContext.xml=<?xml version\="1.0" encoding\="UTF-8"?>\n<activePage index\="0"/>
+//com.springsource.config.ui.prefs.activePageIndex\:/UPClient/src/main/resources/OSGI-INF/blueprint/sss.xml=<?xml version\="1.0" encoding\="UTF-8"?>\n<activePage index\="0"/>
+//com.springsource.config.ui.prefs.activePageIndex\:/UPService/src/main/resources/META-INF/spring-beans.xml=<?xml version\="1.0" encoding\="UTF-8"?>\n<activePage index\="0"/>
+//com.springsource.config.ui.prefs.activePageIndex\:/UPService/src/main/resources/META-INF/spring/camel-context.xml=<?xml version\="1.0" encoding\="UTF-8"?>\n<activePage index\="0"/>
+eclipse.preferences.version=1

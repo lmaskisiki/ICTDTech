@@ -1,0 +1,28 @@
+package infosource.upservice.routes;
+
+public class RouteBuilder extends org.apache.camel.builder.RouteBuilder {
+
+	@Override
+	public void configure() throws Exception {
+from("direct:userProfile")
+	 .choice()
+	 	.when(header("${header.profileMode}").isEqualTo("all"))
+	 		.to("direct:subRoutes")
+	 	.when(header("${header.profileMode}").isEqualTo("docsOnly"))
+	 		 .process(new DocManProcessor())
+	 		.to("stream:out")
+	 	.when(header("${header.profileMode}").isEqualTo("basic"))
+	 		 .process(new UAServiceProcessor())
+	 		.to("stream:out")
+	 	.otherwise().setBody().simple("could not understand your request")
+.to("stream:out");
+
+from("direct:subRoutes")
+	.multicast().aggregationStrategy(null).to("direct:DocEndpoint","direct:UAEndpoint");
+
+from("direct:DocManEndpoint").process(new DocManProcessor()).to("cxf:DocMan");
+from("direct:UAEndpoint").process(new UAServiceProcessor()).to("cxf:UAService");
+		
+	}
+
+}

@@ -1,0 +1,40 @@
+package infosource.messaging.router;
+
+import infosourse.messaging.soap.RequestResponseMessage;
+
+import org.apache.camel.Exchange;
+import org.apache.camel.Processor;
+import org.apache.camel.builder.RouteBuilder;
+import org.apache.camel.dataformat.soap.SoapJaxbDataFormat;
+import org.springframework.stereotype.Component;
+import org.springframework.stereotype.Service;
+
+import birthcertificate.ews.soap.Applications;
+import birthcertificate.ews.soap.Approved;
+import birthcertificate.ews.soap.IBEService;
+
+@Component
+public class RouteManager extends RouteBuilder {
+
+	@Override
+	public void configure() throws Exception {
+		SoapJaxbDataFormat sfmt = new SoapJaxbDataFormat(IBEService.class
+				.getPackage().getName());
+		
+		from("start:test").process( new infosource.messaging.rest.Processor()).to("cxfrs:bean:rsClient").to("stream:out");
+		
+		// from("direct:start").marshal(sfmt).to("cxf:bean:homeAffairs").marshal().json().to("stream:out");
+		/* GET PROCESSED APPLICATIONS */
+		//from("timer:poll?fixedRate=90000")
+		//		.process(new Processor() {
+		//			@Override
+		//			public void process(Exchange exchange) throws Exception {
+		//				RequestResponseMessage req = new RequestResponseMessage();
+		//				exchange.getIn().setBody(req.RequestApproved(),Approved.class);
+		//			}
+		//		})
+		//		.marshal(sfmt).to("cxf:bean:homeAffairs")
+		//		.to("activemq:queue:GrantApplication");
+	}
+
+}

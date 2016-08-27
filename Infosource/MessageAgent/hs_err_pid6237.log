@@ -1,0 +1,875 @@
+#
+# There is insufficient memory for the Java Runtime Environment to continue.
+# Native memory allocation (malloc) failed to allocate 80740352 bytes for committing reserved memory.
+# Possible reasons:
+#   The system is out of physical RAM or swap space
+#   In 32 bit mode, the process size limit was hit
+# Possible solutions:
+#   Reduce memory load on the system
+#   Increase physical memory or swap space
+#   Check if swap backing store is full
+#   Use 64 bit Java on a 64 bit OS
+#   Decrease Java heap size (-Xmx/-Xms)
+#   Decrease number of Java threads
+#   Decrease Java thread stack sizes (-Xss)
+#   Set larger code cache with -XX:ReservedCodeCacheSize=
+# This output file may be truncated or incomplete.
+#
+#  Out of Memory Error (os_linux.cpp:2756), pid=6237, tid=1847589696
+#
+# JRE version: Java(TM) SE Runtime Environment (7.0_76-b13) (build 1.7.0_76-b13)
+# Java VM: Java HotSpot(TM) Server VM (24.76-b04 mixed mode linux-x86 )
+# Failed to write core dump. Core dumps have been disabled. To enable core dumping, try "ulimit -c unlimited" before starting Java again
+#
+
+---------------  T H R E A D  ---------------
+
+Current thread (0x6e280400):  VMThread [stack: 0x6e17f000,0x6e200000] [id=6248]
+
+Stack: [0x6e17f000,0x6e200000],  sp=0x6e1fea30,  free space=510k
+Native frames: (J=compiled Java code, j=interpreted, Vv=VM code, C=native code)
+V  [libjvm.so+0x7eab56]  VMError::report_and_die()+0x1a6
+V  [libjvm.so+0x33e222]  report_vm_out_of_memory(char const*, int, unsigned int, char const*)+0x72
+V  [libjvm.so+0x686a41]  os::Linux::commit_memory_impl(char*, unsigned int, bool)+0xe1
+V  [libjvm.so+0x686f08]  os::pd_commit_memory(char*, unsigned int, unsigned int, bool)+0x28
+V  [libjvm.so+0x68064c]  os::commit_memory(char*, unsigned int, unsigned int, bool)+0x2c
+V  [libjvm.so+0x6eaed8]  PSVirtualSpace::expand_by(unsigned int)+0x48
+V  [libjvm.so+0x6ebfda]  PSYoungGen::resize_generation(unsigned int, unsigned int)+0xda
+V  [libjvm.so+0x6eb319]  PSYoungGen::resize(unsigned int, unsigned int)+0x19
+V  [libjvm.so+0x6e8c49]  PSScavenge::invoke_no_policy()+0xcf9
+V  [libjvm.so+0x6e94a8]  PSScavenge::invoke()+0x28
+V  [libjvm.so+0x6a702a]  ParallelScavengeHeap::failed_mem_allocate(unsigned int)+0x5a
+V  [libjvm.so+0x7ec3ea]  VM_ParallelGCFailedAllocation::doit()+0x7a
+V  [libjvm.so+0x7f5207]  VM_Operation::evaluate()+0x47
+V  [libjvm.so+0x7f32a3]  VMThread::evaluate_operation(VM_Operation*)+0xb3
+V  [libjvm.so+0x7f3640]  VMThread::loop()+0x1b0
+V  [libjvm.so+0x7f3aa5]  VMThread::run()+0x85
+V  [libjvm.so+0x688d19]  java_start(Thread*)+0x119
+C  [libpthread.so.0+0x6d4c]  start_thread+0xcc
+
+VM_Operation (0xb682e804): ParallelGCFailedAllocation, mode: safepoint, requested by thread 0xb6607800
+
+
+---------------  P R O C E S S  ---------------
+
+Java Threads: ( => current thread )
+  0x6bdc1800 JavaThread "GC Daemon" daemon [_thread_blocked, id=6260, stack(0x6d4af000,0x6d500000)]
+  0x6e29a800 JavaThread "Service Thread" daemon [_thread_blocked, id=6254, stack(0x6df2e000,0x6df7f000)]
+  0x6e298c00 JavaThread "C2 CompilerThread1" daemon [_thread_blocked, id=6253, stack(0x6db7f000,0x6dc00000)]
+  0x6e296c00 JavaThread "C2 CompilerThread0" daemon [_thread_blocked, id=6252, stack(0x6df7f000,0x6e000000)]
+  0x6e295400 JavaThread "Signal Dispatcher" daemon [_thread_blocked, id=6251, stack(0x6e12e000,0x6e17f000)]
+  0x6e284800 JavaThread "Finalizer" daemon [_thread_blocked, id=6250, stack(0x70b2e000,0x70b7f000)]
+  0x6e283000 JavaThread "Reference Handler" daemon [_thread_blocked, id=6249, stack(0x70d2e000,0x70d7f000)]
+  0xb6607800 JavaThread "main" [_thread_blocked, id=6243, stack(0xb67e0000,0xb6831000)]
+
+Other Threads:
+=>0x6e280400 VMThread [stack: 0x6e17f000,0x6e200000] [id=6248]
+  0x6e29c400 WatcherThread [stack: 0x6dafe000,0x6db7f000] [id=6255]
+
+VM state:at safepoint (normal execution)
+
+VM Mutex/Monitor currently owned by a thread:  ([mutex/lock_event])
+[0xb6604e08] Threads_lock - owner thread: 0x6e280400
+[0xb6605218] Heap_lock - owner thread: 0xb6607800
+
+Heap
+ PSYoungGen      total 138240K, used 13554K [0x9ea80000, 0xa8100000, 0xb3540000)
+  eden space 124672K, 0% used [0x9ea80000,0x9ea80000,0xa6440000)
+  from space 13568K, 99% used [0xa73c0000,0xa80fcb88,0xa8100000)
+  to   space 11776K, 0% used [0xa6440000,0xa6440000,0xa6fc0000)
+ ParOldGen       total 42240K, used 21944K [0x75540000, 0x77e80000, 0x9ea80000)
+  object space 42240K, 51% used [0x75540000,0x76aae0d8,0x77e80000)
+ PSPermGen       total 23040K, used 13784K [0x71540000, 0x72bc0000, 0x75540000)
+  object space 23040K, 59% used [0x71540000,0x722b6120,0x72bc0000)
+
+Card table byte_map: [0x7132f000,0x71540000] byte_map_base: 0x70fa4600
+
+Polling page: 0xb7754000
+
+Code Cache  [0xb3600000, 0xb3848000, 0xb6600000)
+ total_blobs=891 nmethods=753 adapters=90 free_code_cache=46888Kb largest_free_block=47942720
+
+Compilation events (10 events):
+Event: 26,174 Thread 0x6e298c00  791             aQute.lib.osgi.Clazz::parseReferences (29 bytes)
+Event: 26,177 Thread 0x6e298c00 nmethod 791 0xb381efc8 code [0xb381f0e0, 0xb381f1fc]
+Event: 26,202 Thread 0x6e298c00  792             java.nio.charset.CharsetEncoder::maxBytesPerChar (5 bytes)
+Event: 26,203 Thread 0x6e298c00 nmethod 792 0xb381ee48 code [0xb381ef20, 0xb381ef70]
+Event: 26,344 Thread 0x6e298c00  793  s          java.lang.StringBuffer::charAt (28 bytes)
+Event: 26,346 Thread 0x6e298c00 nmethod 793 0xb3830708 code [0xb3830820, 0xb3830a10]
+Event: 26,357 Thread 0x6e296c00 nmethod 785 0xb383bdc8 code [0xb383c6c0, 0xb3840c74]
+Event: 26,738 Thread 0x6e298c00  794             java.util.Arrays::fill (28 bytes)
+Event: 26,740 Thread 0x6e298c00 nmethod 794 0xb38303c8 code [0xb38304c0, 0xb38305b0]
+Event: 26,937 Thread 0x6e296c00  795 %           com.sun.org.apache.xalan.internal.xsltc.compiler.XPathLexer::unpackFromString @ 28 (181 bytes)
+
+GC Heap History (10 events):
+Event: 8,391 GC heap after
+Heap after GC invocations=6 (full 0):
+ PSYoungGen      total 69888K, used 6266K [0x9ea80000, 0xa3800000, 0xb3540000)
+  eden space 63488K, 0% used [0x9ea80000,0x9ea80000,0xa2880000)
+  from space 6400K, 97% used [0xa2fc0000,0xa35deac8,0xa3600000)
+  to   space 7424K, 0% used [0xa2880000,0xa2880000,0xa2fc0000)
+ ParOldGen       total 42240K, used 6488K [0x75540000, 0x77e80000, 0x9ea80000)
+  object space 42240K, 15% used [0x75540000,0x75b96320,0x77e80000)
+ PSPermGen       total 16384K, used 9499K [0x71540000, 0x72540000, 0x75540000)
+  object space 16384K, 57% used [0x71540000,0x71e86ce0,0x72540000)
+}
+Event: 11,718 GC heap before
+{Heap before GC invocations=7 (full 0):
+ PSYoungGen      total 69888K, used 69754K [0x9ea80000, 0xa3800000, 0xb3540000)
+  eden space 63488K, 100% used [0x9ea80000,0xa2880000,0xa2880000)
+  from space 6400K, 97% used [0xa2fc0000,0xa35deac8,0xa3600000)
+  to   space 7424K, 0% used [0xa2880000,0xa2880000,0xa2fc0000)
+ ParOldGen       total 42240K, used 6488K [0x75540000, 0x77e80000, 0x9ea80000)
+  object space 42240K, 15% used [0x75540000,0x75b96320,0x77e80000)
+ PSPermGen       total 16384K, used 9548K [0x71540000, 0x72540000, 0x75540000)
+  object space 16384K, 58% used [0x71540000,0x71e93140,0x72540000)
+Event: 11,734 GC heap after
+Heap after GC invocations=7 (full 0):
+ PSYoungGen      total 70912K, used 7418K [0x9ea80000, 0xa7900000, 0xb3540000)
+  eden space 63488K, 0% used [0x9ea80000,0x9ea80000,0xa2880000)
+  from space 7424K, 99% used [0xa2880000,0xa2fbe810,0xa2fc0000)
+  to   space 9472K, 0% used [0xa6fc0000,0xa6fc0000,0xa7900000)
+ ParOldGen       total 42240K, used 8261K [0x75540000, 0x77e80000, 0x9ea80000)
+  object space 42240K, 19% used [0x75540000,0x75d515d8,0x77e80000)
+ PSPermGen       total 16384K, used 9548K [0x71540000, 0x72540000, 0x75540000)
+  object space 16384K, 58% used [0x71540000,0x71e93140,0x72540000)
+}
+Event: 13,490 GC heap before
+{Heap before GC invocations=8 (full 0):
+ PSYoungGen      total 70912K, used 70906K [0x9ea80000, 0xa7900000, 0xb3540000)
+  eden space 63488K, 100% used [0x9ea80000,0xa2880000,0xa2880000)
+  from space 7424K, 99% used [0xa2880000,0xa2fbe810,0xa2fc0000)
+  to   space 9472K, 0% used [0xa6fc0000,0xa6fc0000,0xa7900000)
+ ParOldGen       total 42240K, used 8261K [0x75540000, 0x77e80000, 0x9ea80000)
+  object space 42240K, 19% used [0x75540000,0x75d515d8,0x77e80000)
+ PSPermGen       total 16384K, used 9562K [0x71540000, 0x72540000, 0x75540000)
+  object space 16384K, 58% used [0x71540000,0x71e96840,0x72540000)
+Event: 13,525 GC heap after
+Heap after GC invocations=8 (full 0):
+ PSYoungGen      total 134144K, used 9472K [0x9ea80000, 0xa7d80000, 0xb3540000)
+  eden space 124672K, 0% used [0x9ea80000,0x9ea80000,0xa6440000)
+  from space 9472K, 100% used [0xa6fc0000,0xa7900000,0xa7900000)
+  to   space 11776K, 0% used [0xa6440000,0xa6440000,0xa6fc0000)
+ ParOldGen       total 42240K, used 10141K [0x75540000, 0x77e80000, 0x9ea80000)
+  object space 42240K, 24% used [0x75540000,0x75f27618,0x77e80000)
+ PSPermGen       total 16384K, used 9562K [0x71540000, 0x72540000, 0x75540000)
+  object space 16384K, 58% used [0x71540000,0x71e96840,0x72540000)
+}
+Event: 18,226 GC heap before
+{Heap before GC invocations=9 (full 0):
+ PSYoungGen      total 134144K, used 72137K [0x9ea80000, 0xa7d80000, 0xb3540000)
+  eden space 124672K, 50% used [0x9ea80000,0xa27b26a0,0xa6440000)
+  from space 9472K, 100% used [0xa6fc0000,0xa7900000,0xa7900000)
+  to   space 11776K, 0% used [0xa6440000,0xa6440000,0xa6fc0000)
+ ParOldGen       total 42240K, used 10141K [0x75540000, 0x77e80000, 0x9ea80000)
+  object space 42240K, 24% used [0x75540000,0x75f27618,0x77e80000)
+ PSPermGen       total 16384K, used 11435K [0x71540000, 0x72540000, 0x75540000)
+  object space 16384K, 69% used [0x71540000,0x7206acc8,0x72540000)
+Event: 18,528 GC heap after
+Heap after GC invocations=9 (full 0):
+ PSYoungGen      total 136448K, used 11336K [0x9ea80000, 0xa8100000, 0xb3540000)
+  eden space 124672K, 0% used [0x9ea80000,0x9ea80000,0xa6440000)
+  from space 11776K, 96% used [0xa6440000,0xa6f52080,0xa6fc0000)
+  to   space 13568K, 0% used [0xa73c0000,0xa73c0000,0xa8100000)
+ ParOldGen       total 42240K, used 13172K [0x75540000, 0x77e80000, 0x9ea80000)
+  object space 42240K, 31% used [0x75540000,0x7621d338,0x77e80000)
+ PSPermGen       total 16384K, used 11435K [0x71540000, 0x72540000, 0x75540000)
+  object space 16384K, 69% used [0x71540000,0x7206acc8,0x72540000)
+}
+Event: 18,528 GC heap before
+{Heap before GC invocations=10 (full 1):
+ PSYoungGen      total 136448K, used 11336K [0x9ea80000, 0xa8100000, 0xb3540000)
+  eden space 124672K, 0% used [0x9ea80000,0x9ea80000,0xa6440000)
+  from space 11776K, 96% used [0xa6440000,0xa6f52080,0xa6fc0000)
+  to   space 13568K, 0% used [0xa73c0000,0xa73c0000,0xa8100000)
+ ParOldGen       total 42240K, used 13172K [0x75540000, 0x77e80000, 0x9ea80000)
+  object space 42240K, 31% used [0x75540000,0x7621d338,0x77e80000)
+ PSPermGen       total 16384K, used 11435K [0x71540000, 0x72540000, 0x75540000)
+  object space 16384K, 69% used [0x71540000,0x7206acc8,0x72540000)
+Event: 18,641 GC heap after
+Heap after GC invocations=10 (full 1):
+ PSYoungGen      total 136448K, used 0K [0x9ea80000, 0xa8100000, 0xb3540000)
+  eden space 124672K, 0% used [0x9ea80000,0x9ea80000,0xa6440000)
+  from space 11776K, 0% used [0xa6440000,0xa6440000,0xa6fc0000)
+  to   space 13568K, 0% used [0xa73c0000,0xa73c0000,0xa8100000)
+ ParOldGen       total 42240K, used 18892K [0x75540000, 0x77e80000, 0x9ea80000)
+  object space 42240K, 44% used [0x75540000,0x767b32a8,0x77e80000)
+ PSPermGen       total 23040K, used 11430K [0x71540000, 0x72bc0000, 0x75540000)
+  object space 23040K, 49% used [0x71540000,0x72069968,0x72bc0000)
+}
+Event: 26,945 GC heap before
+{Heap before GC invocations=11 (full 1):
+ PSYoungGen      total 136448K, used 124672K [0x9ea80000, 0xa8100000, 0xb3540000)
+  eden space 124672K, 100% used [0x9ea80000,0xa6440000,0xa6440000)
+  from space 11776K, 0% used [0xa6440000,0xa6440000,0xa6fc0000)
+  to   space 13568K, 0% used [0xa73c0000,0xa73c0000,0xa8100000)
+ ParOldGen       total 42240K, used 18892K [0x75540000, 0x77e80000, 0x9ea80000)
+  object space 42240K, 44% used [0x75540000,0x767b32a8,0x77e80000)
+ PSPermGen       total 23040K, used 13784K [0x71540000, 0x72bc0000, 0x75540000)
+  object space 23040K, 59% used [0x71540000,0x722b6120,0x72bc0000)
+
+Deoptimization events (10 events):
+Event: 26,149 Thread 0xb6607800 Uncommon trap: reason=class_check action=maybe_recompile pc=0xb381ebd0 method=java.io.DataInputStream.readUnsignedShort()I @ 4
+Event: 26,149 Thread 0xb6607800 Uncommon trap: reason=class_check action=maybe_recompile pc=0xb381ebd0 method=java.io.DataInputStream.readUnsignedShort()I @ 4
+Event: 26,182 Thread 0xb6607800 Uncommon trap: reason=class_check action=maybe_recompile pc=0xb375b254 method=java.util.TreeMap.put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object; @ 127
+Event: 26,182 Thread 0xb6607800 Uncommon trap: reason=class_check action=maybe_recompile pc=0xb375b254 method=java.util.TreeMap.put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object; @ 127
+Event: 26,182 Thread 0xb6607800 Uncommon trap: reason=class_check action=maybe_recompile pc=0xb375b254 method=java.util.TreeMap.put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object; @ 127
+Event: 26,182 Thread 0xb6607800 Uncommon trap: reason=class_check action=maybe_recompile pc=0xb375b254 method=java.util.TreeMap.put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object; @ 127
+Event: 26,745 Thread 0xb6607800 Uncommon trap: reason=class_check action=maybe_recompile pc=0xb36d35b4 method=java.util.Hashtable.get(Ljava/lang/Object;)Ljava/lang/Object; @ 46
+Event: 26,787 Thread 0xb6607800 Uncommon trap: reason=class_check action=maybe_recompile pc=0xb36d35b4 method=java.util.Hashtable.get(Ljava/lang/Object;)Ljava/lang/Object; @ 46
+Event: 26,792 Thread 0xb6607800 Uncommon trap: reason=class_check action=maybe_recompile pc=0xb36d35b4 method=java.util.Hashtable.get(Ljava/lang/Object;)Ljava/lang/Object; @ 46
+Event: 26,795 Thread 0xb6607800 Uncommon trap: reason=class_check action=maybe_recompile pc=0xb36d35b4 method=java.util.Hashtable.get(Ljava/lang/Object;)Ljava/lang/Object; @ 46
+
+Internal exceptions (10 events):
+Event: 25,583 Thread 0xb6607800 Threw 0xa4d901d8 at /HUDSON/workspace/7u-2-build-linux-i586/jdk7u76/1941/hotspot/src/share/vm/prims/jvm.cpp:1304
+Event: 25,583 Thread 0xb6607800 Threw 0xa4d90c18 at /HUDSON/workspace/7u-2-build-linux-i586/jdk7u76/1941/hotspot/src/share/vm/prims/jvm.cpp:1304
+Event: 25,583 Thread 0xb6607800 Threw 0xa4d932d0 at /HUDSON/workspace/7u-2-build-linux-i586/jdk7u76/1941/hotspot/src/share/vm/prims/jvm.cpp:1304
+Event: 25,583 Thread 0xb6607800 Threw 0xa4d93d10 at /HUDSON/workspace/7u-2-build-linux-i586/jdk7u76/1941/hotspot/src/share/vm/prims/jvm.cpp:1304
+Event: 26,064 Thread 0xb6607800 Threw 0xa4eeef58 at /HUDSON/workspace/7u-2-build-linux-i586/jdk7u76/1941/hotspot/src/share/vm/prims/jvm.cpp:1304
+Event: 26,064 Thread 0xb6607800 Threw 0xa4eef948 at /HUDSON/workspace/7u-2-build-linux-i586/jdk7u76/1941/hotspot/src/share/vm/prims/jvm.cpp:1304
+Event: 26,181 Thread 0xb6607800 Threw 0xa5afe558 at /HUDSON/workspace/7u-2-build-linux-i586/jdk7u76/1941/hotspot/src/share/vm/prims/jvm.cpp:1304
+Event: 26,181 Thread 0xb6607800 Threw 0xa5afef10 at /HUDSON/workspace/7u-2-build-linux-i586/jdk7u76/1941/hotspot/src/share/vm/prims/jvm.cpp:1304
+Event: 26,184 Thread 0xb6607800 Threw 0xa5b064e0 at /HUDSON/workspace/7u-2-build-linux-i586/jdk7u76/1941/hotspot/src/share/vm/prims/jvm.cpp:1304
+Event: 26,184 Thread 0xb6607800 Threw 0xa5b06eb0 at /HUDSON/workspace/7u-2-build-linux-i586/jdk7u76/1941/hotspot/src/share/vm/prims/jvm.cpp:1304
+
+Events (10 events):
+Event: 26,823 loading class 0x6e0165e8 done
+Event: 26,823 loading class 0x6e016558
+Event: 26,826 loading class 0x6e016558 done
+Event: 26,830 loading class 0x6d5c8988
+Event: 26,929 loading class 0x6d5c8988 done
+Event: 26,929 loading class 0x6c7218f8
+Event: 26,930 loading class 0x6b7bc130
+Event: 26,935 loading class 0x6b7bc130 done
+Event: 26,935 loading class 0x6c7218f8 done
+Event: 26,945 Executing VM operation: ParallelGCFailedAllocation
+
+
+Dynamic libraries:
+08048000-08049000 r-xp 00000000 08:06 3148208    /usr/local/java/jdk1.7.0_76/bin/java
+08049000-0804a000 rw-p 00000000 08:06 3148208    /usr/local/java/jdk1.7.0_76/bin/java
+096cb000-0978c000 rw-p 00000000 00:00 0          [heap]
+6b700000-6b7d5000 rw-p 00000000 00:00 0 
+6b7d5000-6b800000 ---p 00000000 00:00 0 
+6b900000-6bafe000 rw-p 00000000 00:00 0 
+6bafe000-6bb00000 ---p 00000000 00:00 0 
+6bb00000-6bc00000 rw-p 00000000 00:00 0 
+6bd00000-6bdff000 rw-p 00000000 00:00 0 
+6bdff000-6be00000 ---p 00000000 00:00 0 
+6bf00000-6bffd000 rw-p 00000000 00:00 0 
+6bffd000-6c000000 ---p 00000000 00:00 0 
+6c000000-6c0f3000 rw-p 00000000 00:00 0 
+6c0f3000-6c100000 ---p 00000000 00:00 0 
+6c100000-6c1ef000 rw-p 00000000 00:00 0 
+6c1ef000-6c200000 ---p 00000000 00:00 0 
+6c300000-6c4f1000 rw-p 00000000 00:00 0 
+6c4f1000-6c500000 ---p 00000000 00:00 0 
+6c500000-6c5eb000 rw-p 00000000 00:00 0 
+6c5eb000-6c600000 ---p 00000000 00:00 0 
+6c600000-6c6f6000 rw-p 00000000 00:00 0 
+6c6f6000-6c700000 ---p 00000000 00:00 0 
+6c700000-6c7f9000 rw-p 00000000 00:00 0 
+6c7f9000-6c800000 ---p 00000000 00:00 0 
+6c900000-6ca00000 rw-p 00000000 00:00 0 
+6cb00000-6cc00000 rw-p 00000000 00:00 0 
+6cc21000-6cc25000 r--s 00027000 08:06 2234731    /home/lizo/.m2/repository/com/google/code/gson/gson/1.7.2/gson-1.7.2.jar
+6cc25000-6cc2e000 r--s 0006f000 08:06 1968750    /home/lizo/.m2/repository/log4j/log4j/1.2.17/log4j-1.2.17.jar
+6cc2e000-6cc30000 r--s 00001000 08:06 2230331    /home/lizo/.m2/repository/org/slf4j/slf4j-log4j12/1.7.10/slf4j-log4j12-1.7.10.jar
+6cc30000-6cc31000 r--s 00007000 08:06 2230166    /home/lizo/.m2/repository/org/slf4j/slf4j-api/1.7.10/slf4j-api-1.7.10.jar
+6cc31000-6cc3c000 r--s 0008b000 08:06 2235586    /home/lizo/.m2/repository/c3p0/c3p0/0.9.1.2/c3p0-0.9.1.2.jar
+6cc3c000-6cc46000 r--s 00098000 08:06 2235583    /home/lizo/.m2/repository/org/quartz-scheduler/quartz/2.2.1/quartz-2.2.1.jar
+6cc46000-6cc48000 r--s 0000d000 08:06 2235580    /home/lizo/.m2/repository/org/apache/camel/camel-quartz2/2.15.1/camel-quartz2-2.15.1.jar
+6cc48000-6cc80000 r--s 002c7000 08:06 2100912    /home/lizo/.m2/repository/org/apache/camel/camel-core/2.15.1.redhat-620133/camel-core-2.15.1.redhat-620133.jar
+6cc80000-6cc95000 r--s 000e2000 08:06 2493678    /home/lizo/.m2/repository/org/springframework/spring-core/4.1.5.RELEASE/spring-core-4.1.5.RELEASE.jar
+6cc95000-6cca5000 r--s 000a0000 08:06 2493039    /home/lizo/.m2/repository/org/springframework/spring-web/4.1.5.RELEASE/spring-web-4.1.5.RELEASE.jar
+6cca5000-6ccb4000 r--s 000b0000 08:06 2494327    /home/lizo/.m2/repository/org/springframework/spring-webmvc/4.1.5.RELEASE/spring-webmvc-4.1.5.RELEASE.jar
+6ccb4000-6ccb9000 r--s 0003b000 08:06 2493914    /home/lizo/.m2/repository/org/springframework/spring-expression/4.1.5.RELEASE/spring-expression-4.1.5.RELEASE.jar
+6ccb9000-6ccc2000 r--s 0004f000 08:06 2493100    /home/lizo/.m2/repository/org/springframework/spring-aop/4.1.5.RELEASE/spring-aop-4.1.5.RELEASE.jar
+6ccc2000-6ccda000 r--s 000e3000 08:06 2492776    /home/lizo/.m2/repository/org/springframework/spring-context/4.1.5.RELEASE/spring-context-4.1.5.RELEASE.jar
+6ccda000-6ccdc000 r--s 00010000 08:06 2498026    /home/lizo/.m2/repository/net/minidev/asm/1.0.2/asm-1.0.2.jar
+6ccdc000-6ccdf000 r--s 0001c000 08:06 2498023    /home/lizo/.m2/repository/net/minidev/json-smart/2.1.1/json-smart-2.1.1.jar
+6ccdf000-6cce3000 r--s 0001e000 08:06 2235678    /home/lizo/.m2/repository/com/jayway/jsonpath/json-path/1.2.0/json-path-1.2.0.jar
+6cce3000-6cce5000 r--s 00005000 08:06 2495409    /home/lizo/.m2/repository/javax/annotation/javax.annotation-api/1.2/javax.annotation-api-1.2.jar
+6cce5000-6cce9000 r--s 00019000 08:06 2495453    /home/lizo/.m2/repository/javax/ws/rs/javax.ws.rs-api/2.0.1/javax.ws.rs-api-2.0.1.jar
+6cce9000-6ccf1000 r--s 00089000 08:06 2233040    /home/lizo/.m2/repository/org/apache/cxf/cxf-rt-frontend-jaxrs/3.0.4/cxf-rt-frontend-jaxrs-3.0.4.jar
+6ccf1000-6ccf3000 r--s 00005000 08:06 2233229    /home/lizo/.m2/repository/org/eclipse/jetty/jetty-jmx/8.1.16.v20140903/jetty-jmx-8.1.16.v20140903.jar
+6ccf3000-6ccf5000 r--s 00014000 08:06 2233227    /home/lizo/.m2/repository/org/eclipse/jetty/jetty-client/8.1.16.v20140903/jetty-client-8.1.16.v20140903.jar
+6ccf5000-6ccfa000 r--s 00042000 08:06 2234814    /home/lizo/.m2/repository/org/eclipse/jetty/jetty-util/8.1.16.v20140903/jetty-util-8.1.16.v20140903.jar
+6ccfa000-6ccfc000 r--s 00016000 08:06 2233225    /home/lizo/.m2/repository/org/eclipse/jetty/jetty-servlets/8.1.16.v20140903/jetty-servlets-8.1.16.v20140903.jar
+6ccfc000-6ccfe000 r--s 00014000 08:06 2235081    /home/lizo/.m2/repository/org/eclipse/jetty/jetty-security/8.1.16.v20140903/jetty-security-8.1.16.v20140903.jar
+6ccfe000-6cd00000 r--s 00017000 08:06 2233223    /home/lizo/.m2/repository/org/eclipse/jetty/jetty-servlet/8.1.16.v20140903/jetty-servlet-8.1.16.v20140903.jar
+6cd00000-6cdfe000 rw-p 00000000 00:00 0 
+6cdfe000-6ce00000 ---p 00000000 00:00 0 
+6ce00000-6cefc000 rw-p 00000000 00:00 0 
+6cefc000-6cf00000 ---p 00000000 00:00 0 
+6cf00000-6cffd000 rw-p 00000000 00:00 0 
+6cffd000-6d000000 ---p 00000000 00:00 0 
+6d000000-6d001000 r--s 00004000 08:06 2235675    /home/lizo/.m2/repository/org/apache/camel/camel-jsonpath/2.15.1/camel-jsonpath-2.15.1.jar
+6d001000-6d003000 r--s 00018000 08:06 2235078    /home/lizo/.m2/repository/org/eclipse/jetty/jetty-io/8.1.16.v20140903/jetty-io-8.1.16.v20140903.jar
+6d003000-6d005000 r--s 00016000 08:06 2235075    /home/lizo/.m2/repository/org/eclipse/jetty/jetty-http/8.1.16.v20140903/jetty-http-8.1.16.v20140903.jar
+6d005000-6d007000 r--s 00004000 08:06 2235067    /home/lizo/.m2/repository/org/eclipse/jetty/jetty-continuation/8.1.16.v20140903/jetty-continuation-8.1.16.v20140903.jar
+6d007000-6d00c000 r--s 00053000 08:06 2235053    /home/lizo/.m2/repository/org/eclipse/jetty/jetty-server/8.1.16.v20140903/jetty-server-8.1.16.v20140903.jar
+6d00c000-6d00f000 r--s 00015000 08:06 2098753    /home/lizo/.m2/repository/org/apache/geronimo/specs/geronimo-servlet_3.0_spec/1.0/geronimo-servlet_3.0_spec-1.0.jar
+6d00f000-6d010000 r--s 0000c000 08:06 2114948    /home/lizo/.m2/repository/org/apache/camel/camel-jetty-common/2.15.1/camel-jetty-common-2.15.1.jar
+6d010000-6d017000 r--s 0003f000 08:06 1968427    /home/lizo/.m2/repository/commons-codec/commons-codec/1.10/commons-codec-1.10.jar
+6d017000-6d01d000 r--s 00045000 08:06 1980254    /home/lizo/.m2/repository/commons-httpclient/commons-httpclient/3.1/commons-httpclient-3.1.jar
+6d01d000-6d020000 r--s 00011000 08:06 2114946    /home/lizo/.m2/repository/org/apache/camel/camel-http/2.15.1/camel-http-2.15.1.jar
+6d020000-6d022000 r--s 00006000 08:06 2114944    /home/lizo/.m2/repository/org/apache/camel/camel-jetty8/2.15.1/camel-jetty8-2.15.1.jar
+6d022000-6d024000 r--s 00004000 08:06 2114942    /home/lizo/.m2/repository/org/apache/camel/camel-jetty/2.15.1/camel-jetty-2.15.1.jar
+6d024000-6d027000 r--s 00012000 08:06 2497590    /home/lizo/.m2/repository/org/codehaus/jettison/jettison/1.3.6/jettison-1.3.6.jar
+6d027000-6d029000 r--s 00005000 08:06 1966541    /home/lizo/.m2/repository/stax/stax-api/1.0.1/stax-api-1.0.1.jar
+6d029000-6d02b000 r--s 00005000 08:06 2621729    /home/lizo/.m2/repository/xpp3/xpp3_min/1.1.4c/xpp3_min-1.1.4c.jar
+6d02b000-6d02c000 r--s 00001000 08:06 1968583    /home/lizo/.m2/repository/xmlpull/xmlpull/1.1.3.1/xmlpull-1.1.3.1.jar
+6d02c000-6d039000 r--s 00075000 08:06 2097913    /home/lizo/.m2/repository/com/thoughtworks/xstream/xstream/1.4.7/xstream-1.4.7.jar
+6d039000-6d03b000 r--s 00005000 08:06 2114807    /home/lizo/.m2/repository/org/apache/camel/camel-xstream/2.15.1/camel-xstream-2.15.1.jar
+6d03b000-6d04c000 r--s 000f6000 08:06 2114792    /home/lizo/.m2/repository/com/fasterxml/jackson/core/jackson-databind/2.4.3/jackson-databind-2.4.3.jar
+6d04c000-6d100000 r--s 005ae000 08:06 2101007    /home/lizo/.m2/repository/org/apache/camel/camel-core/2.15.1.redhat-620133/camel-core-2.15.1.redhat-620133-tests.jar
+6d100000-6d200000 rw-p 00000000 00:00 0 
+6d200000-6d201000 r--s 00007000 08:06 2114796    /home/lizo/.m2/repository/com/fasterxml/jackson/module/jackson-module-jaxb-annotations/2.4.3/jackson-module-jaxb-annotations-2.4.3.jar
+6d201000-6d205000 r--s 00034000 08:06 2114794    /home/lizo/.m2/repository/com/fasterxml/jackson/core/jackson-core/2.4.3/jackson-core-2.4.3.jar
+6d205000-6d208000 r--s 00007000 08:06 2112730    /home/lizo/.m2/repository/com/fasterxml/jackson/core/jackson-annotations/2.4.0/jackson-annotations-2.4.0.jar
+6d208000-6d209000 r--s 00005000 08:06 2114790    /home/lizo/.m2/repository/org/apache/camel/camel-jackson/2.15.1/camel-jackson-2.15.1.jar
+6d209000-6d20b000 r--s 00010000 08:06 2114658    /home/lizo/.m2/repository/org/apache/camel/camel-soap/2.15.1/camel-soap-2.15.1.jar
+6d20b000-6d20d000 r--s 0000e000 08:06 2101352    /home/lizo/.m2/repository/org/apache/camel/camel-cxf-transport/2.15.1/camel-cxf-transport-2.15.1.jar
+6d20d000-6d20f000 r--s 00016000 08:06 2235041    /home/lizo/.m2/repository/org/apache/cxf/cxf-rt-rs-extension-providers/3.0.4/cxf-rt-rs-extension-providers-3.0.4.jar
+6d20f000-6d211000 r--s 00015000 08:06 2098603    /home/lizo/.m2/repository/org/apache/felix/org.apache.felix.fileinstall/3.2.8/org.apache.felix.fileinstall-3.2.8.jar
+6d211000-6d214000 r--s 0001a000 08:06 2098600    /home/lizo/.m2/repository/org/apache/felix/org.apache.felix.configadmin/1.8.0/org.apache.felix.configadmin-1.8.0.jar
+6d214000-6d21a000 r--s 00036000 08:06 2097949    /home/lizo/.m2/repository/junit/junit/4.11/junit-4.11.jar
+6d21a000-6d21c000 r--s 0000e000 08:06 1968900    /home/lizo/.m2/repository/commons-logging/commons-logging/1.1.3/commons-logging-1.1.3.jar
+6d21c000-6d220000 r--s 00041000 08:06 2621470    /home/lizo/.m2/repository/biz/aQute/bndlib/0.0.357/bndlib-0.0.357.jar
+6d220000-6d222000 r--s 00001000 08:06 2229672    /home/lizo/.m2/repository/org/ops4j/pax/swissbox/pax-swissbox-bnd/1.3.1/pax-swissbox-bnd-1.3.1.jar
+6d222000-6d223000 r--s 00001000 08:06 2229636    /home/lizo/.m2/repository/org/ops4j/base/ops4j-base-store/1.2.2/ops4j-base-store-1.2.2.jar
+6d223000-6d224000 r--s 00001000 08:06 2229619    /home/lizo/.m2/repository/org/ops4j/base/ops4j-base-monitors/1.2.2/ops4j-base-monitors-1.2.2.jar
+6d224000-6d225000 r--s 00003000 08:06 2229631    /home/lizo/.m2/repository/org/ops4j/base/ops4j-base-io/1.2.2/ops4j-base-io-1.2.2.jar
+6d225000-6d226000 r--s 00001000 08:06 2229613    /home/lizo/.m2/repository/org/ops4j/base/ops4j-base-lang/1.2.2/ops4j-base-lang-1.2.2.jar
+6d226000-6d228000 r--s 00006000 08:06 2229664    /home/lizo/.m2/repository/org/ops4j/pax/swissbox/pax-swissbox-tinybundles/1.3.1/pax-swissbox-tinybundles-1.3.1.jar
+6d228000-6d22d000 r--s 00034000 08:06 2097675    /home/lizo/.m2/repository/com/googlecode/pojosr/de.kalpatec.pojosr.framework/0.2.1/de.kalpatec.pojosr.framework-0.2.1.jar
+6d22d000-6d22f000 r--s 00002000 08:06 2098563    /home/lizo/.m2/repository/org/apache/aries/proxy/org.apache.aries.proxy.api/1.0.0/org.apache.aries.proxy.api-1.0.0.jar
+6d22f000-6d231000 r--s 00013000 08:06 2098500    /home/lizo/.m2/repository/org/apache/aries/proxy/org.apache.aries.proxy.impl/1.0.1/org.apache.aries.proxy.impl-1.0.1.jar
+6d231000-6d234000 r--s 00018000 08:06 2098574    /home/lizo/.m2/repository/org/apache/aries/org.apache.aries.util/1.1.0/org.apache.aries.util-1.1.0.jar
+6d234000-6d23e000 r--s 00065000 08:06 2098496    /home/lizo/.m2/repository/org/apache/aries/blueprint/org.apache.aries.blueprint/1.1.0/org.apache.aries.blueprint-1.1.0.jar
+6d23e000-6d23f000 r--s 0000a000 08:06 2101203    /home/lizo/.m2/repository/org/apache/camel/camel-test/2.15.1.redhat-620133/camel-test-2.15.1.redhat-620133.jar
+6d23f000-6d240000 r--s 00008000 08:06 2101123    /home/lizo/.m2/repository/org/apache/camel/camel-test-blueprint/2.15.1.redhat-620133/camel-test-blueprint-2.15.1.redhat-620133.jar
+6d240000-6d242000 r--s 0000b000 08:06 2101275    /home/lizo/.m2/repository/org/apache/camel/camel-core-osgi/2.15.1.redhat-620133/camel-core-osgi-2.15.1.redhat-620133.jar
+6d242000-6d244000 r--s 0000e000 08:06 2101249    /home/lizo/.m2/repository/org/apache/camel/camel-core-xml/2.15.1.redhat-620133/camel-core-xml-2.15.1.redhat-620133.jar
+6d244000-6d247000 r--s 00031000 08:06 2101067    /home/lizo/.m2/repository/org/apache/camel/camel-blueprint/2.15.1.redhat-620133/camel-blueprint-2.15.1.redhat-620133.jar
+6d247000-6d249000 r--s 00010000 08:06 2098595    /home/lizo/.m2/repository/org/apache/neethi/neethi/3.0.3/neethi-3.0.3.jar
+6d249000-6d24d000 r--s 00030000 08:06 2233063    /home/lizo/.m2/repository/org/apache/cxf/cxf-rt-ws-policy/3.0.4/cxf-rt-ws-policy-3.0.4.jar
+6d24d000-6d24f000 r--s 00011000 08:06 2233061    /home/lizo/.m2/repository/org/apache/cxf/cxf-rt-ws-addr/3.0.4/cxf-rt-ws-addr-3.0.4.jar
+6d24f000-6d252000 r--s 00016000 08:06 2233059    /home/lizo/.m2/repository/org/apache/cxf/cxf-rt-frontend-simple/3.0.4/cxf-rt-frontend-simple-3.0.4.jar
+6d252000-6d254000 r--s 00008000 08:06 2233057    /home/lizo/.m2/repository/org/apache/cxf/cxf-rt-bindings-xml/3.0.4/cxf-rt-bindings-xml-3.0.4.jar
+6d254000-6d255000 r--s 0000a000 08:06 1968633    /home/lizo/.m2/repository/asm/asm/3.3.1/asm-3.3.1.jar
+6d255000-6d25a000 r--s 0004f000 08:06 2233046    /home/lizo/.m2/repository/org/apache/cxf/cxf-rt-frontend-jaxws/3.0.4/cxf-rt-frontend-jaxws-3.0.4.jar
+6d25a000-6d25f000 r--s 0004a000 08:06 2233044    /home/lizo/.m2/repository/org/apache/cxf/cxf-rt-transports-http/3.0.4/cxf-rt-transports-http-3.0.4.jar
+6d25f000-6d262000 r--s 00023000 08:06 2232976    /home/lizo/.m2/repository/org/apache/cxf/cxf-rt-rs-client/3.0.4.redhat-621084/cxf-rt-rs-client-3.0.4.redhat-621084.jar
+6d262000-6d264000 r--s 00018000 08:06 2233075    /home/lizo/.m2/repository/org/apache/cxf/cxf-rt-databinding-jaxb/3.0.4/cxf-rt-databinding-jaxb-3.0.4.jar
+6d264000-6d266000 r--s 00028000 08:06 2233073    /home/lizo/.m2/repository/org/apache/cxf/cxf-rt-wsdl/3.0.4/cxf-rt-wsdl-3.0.4.jar
+6d266000-6d27e000 r--s 0012f000 08:06 2233042    /home/lizo/.m2/repository/org/apache/cxf/cxf-core/3.0.4/cxf-core-3.0.4.jar
+6d27e000-6d282000 r--s 00027000 08:06 2233071    /home/lizo/.m2/repository/org/apache/cxf/cxf-rt-bindings-soap/3.0.4/cxf-rt-bindings-soap-3.0.4.jar
+6d282000-6d284000 r--s 00008000 08:06 2114649    /home/lizo/.m2/repository/org/apache/camel/camel-jaxb/2.15.1/camel-jaxb-2.15.1.jar
+6d284000-6d286000 r--s 00006000 08:06 2113369    /home/lizo/.m2/repository/org/apache/camel/camel-stream/2.15.1/camel-stream-2.15.1.jar
+6d286000-6d288000 r--s 00003000 08:06 2098814    /home/lizo/.m2/repository/org/apache/geronimo/specs/geronimo-j2ee-management_1.1_spec/1.0.1/geronimo-j2ee-management_1.1_spec-1.0.1.jar
+6d288000-6d28a000 r--s 0000b000 08:06 2497101    /home/lizo/.m2/repository/org/fusesource/hawtbuf/hawtbuf/1.11/hawtbuf-1.11.jar
+6d28a000-6d29f000 r--s 0010c000 08:06 2233139    /home/lizo/.m2/repository/org/apache/activemq/activemq-client/5.11.1/activemq-client-5.11.1.jar
+6d29f000-6d2a1000 r--s 00006000 08:06 2098860    /home/lizo/.m2/repository/org/apache/geronimo/specs/geronimo-jms_1.1_spec/1.1.1/geronimo-jms_1.1_spec-1.1.1.jar
+6d2a1000-6d2a3000 r--s 0000b000 08:06 2233110    /home/lizo/.m2/repository/org/apache/activemq/activemq-jms-pool/5.11.1/activemq-jms-pool-5.11.1.jar
+6d2a3000-6d2a4000 r--s 00004000 08:06 2233108    /home/lizo/.m2/repository/org/apache/activemq/activemq-pool/5.11.1/activemq-pool-5.11.1.jar
+6d2a4000-6d2a7000 r--s 00019000 08:06 2621557    /home/lizo/.m2/repository/commons-pool/commons-pool/1.6/commons-pool-1.6.jar
+6d2a7000-6d2a9000 r--s 00002000 08:06 2098844    /home/lizo/.m2/repository/org/apache/geronimo/specs/geronimo-jta_1.0.1B_spec/1.0.1/geronimo-jta_1.0.1B_spec-1.0.1.jar
+6d2a9000-6d2b6000 r--s 0009b000 08:06 2233166    /home/lizo/.m2/repository/org/apache/activemq/activemq-openwire-legacy/5.11.1/activemq-openwire-legacy-5.11.1.jar
+6d2b6000-6d2c7000 r--s 000f4000 08:06 2233164    /home/lizo/.m2/repository/org/apache/activemq/activemq-broker/5.11.1/activemq-broker-5.11.1.jar
+6d2c7000-6d2cb000 r--s 0001d000 08:06 2113360    /home/lizo/.m2/repository/org/apache/xbean/xbean-spring/3.18/xbean-spring-3.18.jar
+6d2cb000-6d2cd000 r--s 00027000 08:06 2233106    /home/lizo/.m2/repository/org/apache/activemq/activemq-spring/5.11.1/activemq-spring-5.11.1.jar
+6d2cd000-6d2cf000 r--s 0000c000 08:06 2233104    /home/lizo/.m2/repository/org/apache/activemq/activemq-camel/5.11.1/activemq-camel-5.11.1.jar
+6d2cf000-6d2d6000 r--s 00037000 08:06 2491115    /home/lizo/.m2/repository/org/springframework/spring-tx/4.1.5.RELEASE/spring-tx-4.1.5.RELEASE.jar
+6d2d6000-6d2dd000 r--s 0003f000 08:06 2496982    /home/lizo/.m2/repository/org/springframework/spring-messaging/4.1.5.RELEASE/spring-messaging-4.1.5.RELEASE.jar
+6d2dd000-6d2e3000 r--s 0003c000 08:06 2492425    /home/lizo/.m2/repository/org/springframework/spring-jms/4.1.5.RELEASE/spring-jms-4.1.5.RELEASE.jar
+6d2e3000-6d2e7000 r--s 00022000 08:06 2110588    /home/lizo/.m2/repository/org/apache/camel/camel-jms/2.15.1/camel-jms-2.15.1.jar
+6d2e7000-6d2e8000 r--s 00008000 08:06 2233069    /home/lizo/.m2/repository/org/apache/cxf/cxf-rt-features-clustering/3.0.4/cxf-rt-features-clustering-3.0.4.jar
+6d2e8000-6d2f5000 r--s 000a0000 08:06 2492382    /home/lizo/.m2/repository/org/springframework/spring-beans/4.1.5.RELEASE/spring-beans-4.1.5.RELEASE.jar
+6d2f5000-6d2f6000 r--s 0000a000 08:06 2495638    /home/lizo/.m2/repository/net/oauth/core/oauth/20100527/oauth-20100527.jar
+6d2f6000-6d2f7000 r--s 00002000 08:06 2495646    /home/lizo/.m2/repository/net/oauth/core/oauth-provider/20100527/oauth-provider-20100527.jar
+6d2f7000-6d2fa000 r--s 0000e000 08:06 2233065    /home/lizo/.m2/repository/org/apache/cxf/cxf-rt-rs-security-oauth/3.0.4/cxf-rt-rs-security-oauth-3.0.4.jar
+6d2fa000-6d300000 r--s 00045000 08:06 2110575    /home/lizo/.m2/repository/org/apache/camel/camel-spring/2.15.1/camel-spring-2.15.1.jar
+6d300000-6d3fb000 rw-p 00000000 00:00 0 
+6d3fb000-6d400000 ---p 00000000 00:00 0 
+6d400000-6d404000 r--s 00032000 08:06 2110573    /home/lizo/.m2/repository/org/apache/camel/camel-cxf/2.15.1/camel-cxf-2.15.1.jar
+6d404000-6d412000 r--s 000ad000 08:06 2497944    /home/lizo/.m2/repository/org/codehaus/jackson/jackson-mapper-asl/1.9.2/jackson-mapper-asl-1.9.2.jar
+6d412000-6d416000 r--s 00034000 08:06 2497941    /home/lizo/.m2/repository/org/codehaus/jackson/jackson-core-asl/1.9.2/jackson-core-asl-1.9.2.jar
+6d416000-6d417000 r--s 00004000 08:06 2497836    /home/lizo/.m2/repository/org/codehaus/jackson/jackson-jaxrs/1.9.2/jackson-jaxrs-1.9.2.jar
+6d417000-6d419000 r--s 00002000 08:06 2100610    /home/lizo/.m2/repository/org/apache/maven/plugin-tools/maven-plugin-annotations/3.3/maven-plugin-annotations-3.3.jar
+6d419000-6d41e000 r--s 0002b000 08:06 2159762    /home/lizo/.m2/repository/org/apache/maven/surefire/surefire-api/2.19.1/surefire-api-2.19.1.jar
+6d41e000-6d424000 r--s 00048000 08:06 2098481    /home/lizo/.m2/repository/org/apache/commons/commons-lang3/3.1/commons-lang3-3.1.jar
+6d424000-6d426000 r--s 00002000 08:06 2230641    /home/lizo/.m2/repository/org/sonatype/plexus/plexus-cipher/1.4/plexus-cipher-1.4.jar
+6d426000-6d428000 r--s 00003000 08:06 2230527    /home/lizo/.m2/repository/org/slf4j/jcl-over-slf4j/1.5.6/jcl-over-slf4j-1.5.6.jar
+6d428000-6d42a000 r--s 00004000 08:06 2230271    /home/lizo/.m2/repository/org/slf4j/slf4j-api/1.5.6/slf4j-api-1.5.6.jar
+6d42a000-6d42c000 r--s 00001000 08:06 2229984    /home/lizo/.m2/repository/org/slf4j/slf4j-jdk14/1.5.6/slf4j-jdk14-1.5.6.jar
+6d42c000-6d42e000 r--s 0000b000 08:06 2364762    /home/lizo/.m2/repository/org/codehaus/plexus/plexus-interpolation/1.11/plexus-interpolation-1.11.jar
+6d42e000-6d436000 r--s 00049000 08:06 2621476    /home/lizo/.m2/repository/backport-util-concurrent/backport-util-concurrent/3.1/backport-util-concurrent-3.1.jar
+6d436000-6d438000 r--s 00009000 08:06 2490766    /home/lizo/.m2/repository/org/hamcrest/hamcrest-core/1.3/hamcrest-core-1.3.jar
+6d438000-6d440000 r--s 00045000 08:06 2097937    /home/lizo/.m2/repository/junit/junit/4.12/junit-4.12.jar
+6d440000-6d45c000 r-xp 00000000 08:06 7471289    /lib/i386-linux-gnu/libgcc_s.so.1
+6d45c000-6d45d000 r--p 0001b000 08:06 7471289    /lib/i386-linux-gnu/libgcc_s.so.1
+6d45d000-6d45e000 rw-p 0001c000 08:06 7471289    /lib/i386-linux-gnu/libgcc_s.so.1
+6d45e000-6d45f000 r--s 00002000 08:06 2100587    /home/lizo/.m2/repository/org/apache/maven/reporting/maven-reporting-api/3.0/maven-reporting-api-3.0.jar
+6d45f000-6d463000 r--s 00034000 08:06 2364782    /home/lizo/.m2/repository/org/codehaus/plexus/plexus-utils/1.5.15/plexus-utils-1.5.15.jar
+6d463000-6d465000 r--s 0000a000 08:06 2159759    /home/lizo/.m2/repository/org/apache/maven/surefire/surefire-booter/2.19.1/surefire-booter-2.19.1.jar
+6d465000-6d466000 r--s 00006000 08:06 2230628    /home/lizo/.m2/repository/org/sonatype/plexus/plexus-sec-dispatcher/1.3/plexus-sec-dispatcher-1.3.jar
+6d466000-6d46c000 r--s 00042000 08:06 2159756    /home/lizo/.m2/repository/org/apache/maven/surefire/maven-surefire-common/2.19.1/maven-surefire-common-2.19.1.jar
+6d46c000-6d46d000 r--s 00009000 08:06 2110423    /home/lizo/.m2/repository/org/apache/maven/plugins/maven-surefire-plugin/2.19.1/maven-surefire-plugin-2.19.1.jar
+6d46d000-6d46e000 r--s 00003000 08:06 2364514    /home/lizo/.m2/repository/org/codehaus/plexus/plexus-compiler-javac/1.9.1/plexus-compiler-javac-1.9.1.jar
+6d46e000-6d470000 r--s 00004000 08:06 2364929    /home/lizo/.m2/repository/org/codehaus/plexus/plexus-compiler-api/1.9.1/plexus-compiler-api-1.9.1.jar
+6d470000-6d474000 r--s 00034000 08:06 2364798    /home/lizo/.m2/repository/org/codehaus/plexus/plexus-utils/3.0/plexus-utils-3.0.jar
+6d474000-6d4a7000 r-xp 00000000 08:06 3146868    /usr/local/java/jdk1.7.0_76/jre/lib/i386/libsunec.so
+6d4a7000-6d4ab000 rw-p 00032000 08:06 3146868    /usr/local/java/jdk1.7.0_76/jre/lib/i386/libsunec.so
+6d4ab000-6d4af000 rw-p 00000000 00:00 0 
+6d4af000-6d4b2000 ---p 00000000 00:00 0 
+6d4b2000-6d500000 rw-p 00000000 00:00 0          [stack:6260]
+6d500000-6d5f6000 rw-p 00000000 00:00 0 
+6d5f6000-6d600000 ---p 00000000 00:00 0 
+6d600000-6d700000 rw-p 00000000 00:00 0 
+6d700000-6d800000 rw-p 00000000 00:00 0 
+6d800000-6d8f6000 rw-p 00000000 00:00 0 
+6d8f6000-6d900000 ---p 00000000 00:00 0 
+6d900000-6d9ff000 rw-p 00000000 00:00 0 
+6d9ff000-6da00000 ---p 00000000 00:00 0 
+6da00000-6da02000 r--s 00000000 08:06 2490535    /home/lizo/.m2/repository/org/codehaus/plexus/plexus-compiler-manager/1.9.1/plexus-compiler-manager-1.9.1.jar
+6da02000-6da03000 r--s 00007000 08:06 2100406    /home/lizo/.m2/repository/org/apache/maven/plugins/maven-compiler-plugin/2.5.1/maven-compiler-plugin-2.5.1.jar
+6da03000-6da04000 r--s 00001000 08:06 2230648    /home/lizo/.m2/repository/org/sonatype/plexus/plexus-build-api/0.0.4/plexus-build-api-0.0.4.jar
+6da04000-6da06000 r--s 00009000 08:06 2099248    /home/lizo/.m2/repository/org/apache/maven/shared/maven-filtering/1.1/maven-filtering-1.1.jar
+6da06000-6da07000 r--s 00002000 08:06 2100574    /home/lizo/.m2/repository/org/apache/maven/reporting/maven-reporting-api/2.0.6/maven-reporting-api-2.0.6.jar
+6da07000-6da09000 r--s 00006000 08:06 2100479    /home/lizo/.m2/repository/org/apache/maven/plugins/maven-resources-plugin/2.6/maven-resources-plugin-2.6.jar
+6da09000-6da0d000 r--s 0002d000 08:06 3146790    /usr/local/java/jdk1.7.0_76/jre/lib/ext/sunjce_provider.jar
+6da0d000-6da0e000 r--s 00003000 08:06 3146837    /usr/local/java/jdk1.7.0_76/jre/lib/ext/sunec.jar
+6da0e000-6da12000 r--s 00037000 08:06 3146787    /usr/local/java/jdk1.7.0_76/jre/lib/ext/sunpkcs11.jar
+6da12000-6da15000 r--s 00019000 08:06 3146925    /usr/local/java/jdk1.7.0_76/jre/lib/jce.jar
+6da15000-6da1f000 r--s 00251000 08:06 3146962    /usr/local/java/jdk1.7.0_76/jre/lib/resources.jar
+6da1f000-6da21000 r--s 00001000 08:06 2230654    /home/lizo/.m2/repository/org/sonatype/plexus/plexus-build-api/0.0.7/plexus-build-api-0.0.7.jar
+6da21000-6da28000 r--s 0005d000 08:06 2101329    /home/lizo/.m2/repository/org/apache/ant/ant-nodeps/1.8.1/ant-nodeps-1.8.1.jar
+6da28000-6da29000 r--s 00004000 08:06 2235433    /home/lizo/.m2/repository/org/apache/ant/ant-launcher/1.9.6/ant-launcher-1.9.6.jar
+6da29000-6da48000 r--s 001d1000 08:06 2235430    /home/lizo/.m2/repository/org/apache/ant/ant/1.9.6/ant-1.9.6.jar
+6da48000-6da4d000 r--s 0003b000 08:06 2497998    /home/lizo/.m2/repository/org/springframework/spring-expression/4.1.9.RELEASE/spring-expression-4.1.9.RELEASE.jar
+6da4d000-6da4f000 r--s 00000000 08:06 2495818    /home/lizo/.m2/repository/aopalliance/aopalliance/1.0/aopalliance-1.0.jar
+6da4f000-6da58000 r--s 0004f000 08:06 2497995    /home/lizo/.m2/repository/org/springframework/spring-aop/4.1.9.RELEASE/spring-aop-4.1.9.RELEASE.jar
+6da58000-6da70000 r--s 000e3000 08:06 2497992    /home/lizo/.m2/repository/org/springframework/spring-context/4.1.9.RELEASE/spring-context-4.1.9.RELEASE.jar
+6da70000-6da7d000 r--s 000a1000 08:06 2497989    /home/lizo/.m2/repository/org/springframework/spring-beans/4.1.9.RELEASE/spring-beans-4.1.9.RELEASE.jar
+6da7d000-6da92000 r--s 000e2000 08:06 2497986    /home/lizo/.m2/repository/org/springframework/spring-core/4.1.9.RELEASE/spring-core-4.1.9.RELEASE.jar
+6da92000-6da94000 r--s 00011000 08:06 2235427    /home/lizo/.m2/repository/org/apache/cxf/cxf-rt-javascript/3.1.7/cxf-rt-javascript-3.1.7.jar
+6da94000-6da95000 r--s 00005000 08:06 2235424    /home/lizo/.m2/repository/org/apache/cxf/cxf-tools-wsdlto-frontend-javascript/3.1.7/cxf-tools-wsdlto-frontend-javascript-3.1.7.jar
+6da95000-6da97000 r--s 00013000 08:06 2097170    /home/lizo/.m2/repository/xml-resolver/xml-resolver/1.2/xml-resolver-1.2.jar
+6da97000-6da9a000 r--s 00027000 08:06 2235421    /home/lizo/.m2/repository/org/apache/cxf/cxf-tools-wsdlto-frontend-jaxws/3.1.7/cxf-tools-wsdlto-frontend-jaxws-3.1.7.jar
+6da9a000-6da9c000 r--s 0000c000 08:06 2235415    /home/lizo/.m2/repository/org/ow2/asm/asm/5.0.4/asm-5.0.4.jar
+6da9c000-6da9f000 r--s 00028000 08:06 2235412    /home/lizo/.m2/repository/org/apache/cxf/cxf-rt-wsdl/3.1.7/cxf-rt-wsdl-3.1.7.jar
+6da9f000-6daa1000 r--s 00018000 08:06 2235409    /home/lizo/.m2/repository/org/apache/cxf/cxf-rt-databinding-jaxb/3.1.7/cxf-rt-databinding-jaxb-3.1.7.jar
+6daa1000-6daa5000 r--s 00028000 08:06 2235406    /home/lizo/.m2/repository/org/apache/cxf/cxf-rt-bindings-soap/3.1.7/cxf-rt-bindings-soap-3.1.7.jar
+6daa5000-6daa8000 r--s 00010000 08:06 2235403    /home/lizo/.m2/repository/org/apache/cxf/cxf-tools-validator/3.1.7/cxf-tools-validator-3.1.7.jar
+6daa8000-6daaa000 r--s 0000e000 08:06 2235400    /home/lizo/.m2/repository/org/apache/cxf/cxf-tools-wsdlto-core/3.1.7/cxf-tools-wsdlto-core-3.1.7.jar
+6daaa000-6dabc000 r--s 000ee000 08:06 2097300    /home/lizo/.m2/repository/com/sun/xml/bind/jaxb-impl/2.2.11/jaxb-impl-2.2.11.jar
+6dabc000-6dac2000 r--s 00038000 08:06 2097292    /home/lizo/.m2/repository/com/sun/xml/bind/jaxb-core/2.2.11/jaxb-core-2.2.11.jar
+6dac2000-6dae5000 r--s 001ce000 08:06 2097284    /home/lizo/.m2/repository/com/sun/xml/bind/jaxb-xjc/2.2.11/jaxb-xjc-2.2.11.jar
+6dae5000-6dae9000 r--s 0002a000 08:06 2097156    /home/lizo/.m2/repository/wsdl4j/wsdl4j/1.6.3/wsdl4j-1.6.3.jar
+6dae9000-6daf6000 r--s 00083000 08:06 2497983    /home/lizo/.m2/repository/commons-collections/commons-collections/3.2.2/commons-collections-3.2.2.jar
+6daf6000-6dafe000 r--s 00066000 08:06 2229437    /home/lizo/.m2/repository/org/apache/velocity/velocity/1.7/velocity-1.7.jar
+6dafe000-6daff000 ---p 00000000 00:00 0 
+6daff000-6db7f000 rw-p 00000000 00:00 0          [stack:6255]
+6db7f000-6db82000 ---p 00000000 00:00 0 
+6db82000-6dc00000 rw-p 00000000 00:00 0          [stack:6253]
+6dc00000-6de00000 r--p 00000000 08:06 6822382    /usr/lib/locale/locale-archive
+6de00000-6de21000 rw-p 00000000 00:00 0 
+6de21000-6df00000 ---p 00000000 00:00 0 
+6df00000-6df05000 r--s 00041000 08:06 1968555    /home/lizo/.m2/repository/commons-lang/commons-lang/2.6/commons-lang-2.6.jar
+6df05000-6df09000 r--s 00025000 08:06 2235397    /home/lizo/.m2/repository/org/apache/cxf/cxf-tools-common/3.1.7/cxf-tools-common-3.1.7.jar
+6df09000-6df0d000 r--s 00026000 08:06 2101442    /home/lizo/.m2/repository/org/apache/ws/xmlschema/xmlschema-core/2.2.1/xmlschema-core-2.2.1.jar
+6df0d000-6df11000 r--s 00024000 08:06 2490426    /home/lizo/.m2/repository/org/codehaus/woodstox/stax2-api/3.1.4/stax2-api-3.1.4.jar
+6df11000-6df17000 r--s 00071000 08:06 2490418    /home/lizo/.m2/repository/org/codehaus/woodstox/woodstox-core-asl/4.4.1/woodstox-core-asl-4.4.1.jar
+6df17000-6df2e000 r--s 00134000 08:06 2235394    /home/lizo/.m2/repository/org/apache/cxf/cxf-core/3.1.7/cxf-core-3.1.7.jar
+6df2e000-6df31000 ---p 00000000 00:00 0 
+6df31000-6df7f000 rw-p 00000000 00:00 0          [stack:6254]
+6df7f000-6df82000 ---p 00000000 00:00 0 
+6df82000-6e000000 rw-p 00000000 00:00 0          [stack:6252]
+6e000000-6e0fb000 rw-p 00000000 00:00 0 
+6e0fb000-6e100000 ---p 00000000 00:00 0 
+6e100000-6e101000 r--s 0000a000 08:06 2235418    /home/lizo/.m2/repository/org/apache/cxf/cxf-tools-wsdlto-databinding-jaxb/3.1.7/cxf-tools-wsdlto-databinding-jaxb-3.1.7.jar
+6e101000-6e104000 r--s 0000a000 08:06 2364996    /home/lizo/.m2/repository/org/codehaus/plexus/plexus-io/1.0.1/plexus-io-1.0.1.jar
+6e104000-6e108000 r--s 00029000 08:06 2364473    /home/lizo/.m2/repository/org/codehaus/plexus/plexus-archiver/1.2/plexus-archiver-1.2.jar
+6e108000-6e10c000 r--s 00033000 08:06 2364777    /home/lizo/.m2/repository/org/codehaus/plexus/plexus-utils/2.0.5/plexus-utils-2.0.5.jar
+6e10c000-6e10e000 r--s 00002000 08:06 2099206    /home/lizo/.m2/repository/org/apache/maven/shared/maven-artifact-resolver/1.0/maven-artifact-resolver-1.0.jar
+6e10e000-6e110000 r--s 00011000 08:06 2235285    /home/lizo/.m2/repository/org/apache/cxf/cxf-codegen-plugin/3.1.7/cxf-codegen-plugin-3.1.7.jar
+6e110000-6e113000 r--s 00034000 08:06 2364804    /home/lizo/.m2/repository/org/codehaus/plexus/plexus-utils/2.1/plexus-utils-2.1.jar
+6e113000-6e115000 r--s 00007000 08:06 2099237    /home/lizo/.m2/repository/org/apache/maven/shared/maven-dependency-tree/1.2/maven-dependency-tree-1.2.jar
+6e115000-6e117000 r--s 0000d000 08:06 2364749    /home/lizo/.m2/repository/org/codehaus/plexus/plexus-interpolation/1.13/plexus-interpolation-1.13.jar
+6e117000-6e11a000 r--s 0000a000 08:06 2365027    /home/lizo/.m2/repository/org/codehaus/plexus/plexus-io/1.0/plexus-io-1.0.jar
+6e11a000-6e11e000 r--s 00028000 08:06 2364479    /home/lizo/.m2/repository/org/codehaus/plexus/plexus-archiver/1.0/plexus-archiver-1.0.jar
+6e11e000-6e11f000 r--s 00004000 08:06 2100753    /home/lizo/.m2/repository/org/apache/maven/maven-archiver/2.4.1/maven-archiver-2.4.1.jar
+6e11f000-6e12e000 r--s 000d2000 08:06 2621468    /home/lizo/.m2/repository/biz/aQute/bndlib/1.50.0/bndlib-1.50.0.jar
+6e12e000-6e131000 ---p 00000000 00:00 0 
+6e131000-6e17f000 rw-p 00000000 00:00 0          [stack:6251]
+6e17f000-6e180000 ---p 00000000 00:00 0 
+6e180000-6e200000 rw-p 00000000 00:00 0          [stack:6248]
+6e200000-6e2ff000 rw-p 00000000 00:00 0 
+6e2ff000-6e300000 ---p 00000000 00:00 0 
+6e300000-6e302000 r--s 00002000 08:06 2365043    /home/lizo/.m2/repository/org/codehaus/plexus/plexus-interactivity-api/1.0-alpha-4/plexus-interactivity-api-1.0-alpha-4.jar
+6e302000-6e304000 r--s 00006000 08:06 2495590    /home/lizo/.m2/repository/commons-cli/commons-cli/1.0/commons-cli-1.0.jar
+6e304000-6e307000 r--s 0001b000 08:06 2097939    /home/lizo/.m2/repository/junit/junit/3.8.1/junit-3.8.1.jar
+6e307000-6e308000 r--s 00001000 08:06 2100738    /home/lizo/.m2/repository/org/apache/maven/doxia/doxia-sink-api/1.0-alpha-7/doxia-sink-api-1.0-alpha-7.jar
+6e308000-6e309000 r--s 00002000 08:06 2100569    /home/lizo/.m2/repository/org/apache/maven/reporting/maven-reporting-api/2.0.7/maven-reporting-api-2.0.7.jar
+6e309000-6e30b000 r--s 00012000 08:06 2229884    /home/lizo/.m2/repository/org/easymock/easymock/2.4/easymock-2.4.jar
+6e30b000-6e320000 r-xp 00000000 08:06 3146922    /usr/local/java/jdk1.7.0_76/jre/lib/i386/libnet.so
+6e320000-6e321000 rw-p 00014000 08:06 3146922    /usr/local/java/jdk1.7.0_76/jre/lib/i386/libnet.so
+6e321000-6e4e0000 r--s 039f0000 08:06 3146820    /usr/local/java/jdk1.7.0_76/jre/lib/rt.jar
+6e4e0000-70a00000 rw-p 00000000 00:00 0 
+70a00000-70afe000 rw-p 00000000 00:00 0 
+70afe000-70b00000 ---p 00000000 00:00 0 
+70b00000-70b04000 r--s 00024000 08:06 2491069    /home/lizo/.m2/repository/org/osgi/org.osgi.core/4.1.0/org.osgi.core-4.1.0.jar
+70b04000-70b08000 r--s 00026000 08:06 2098611    /home/lizo/.m2/repository/org/apache/felix/org.apache.felix.bundlerepository/1.6.6/org.apache.felix.bundlerepository-1.6.6.jar
+70b08000-70b0b000 r--s 0001c000 08:06 2098608    /home/lizo/.m2/repository/org/apache/felix/maven-bundle-plugin/2.3.7/maven-bundle-plugin-2.3.7.jar
+70b0b000-70b0f000 r--s 0008b000 08:06 3147040    /usr/local/java/jdk1.7.0_76/jre/lib/jsse.jar
+70b0f000-70b1d000 r-xp 00000000 08:06 3146859    /usr/local/java/jdk1.7.0_76/jre/lib/i386/libnio.so
+70b1d000-70b1e000 rw-p 0000e000 08:06 3146859    /usr/local/java/jdk1.7.0_76/jre/lib/i386/libnio.so
+70b1e000-70b23000 r--s 00041000 08:06 6430652    /home/lizo/dev-tools/JBDS8-1/studio/plugins/org.eclipse.m2e.maven.runtime_1.5.1.20150109-1819/jars/commons-lang-2.6.jar
+70b23000-70b25000 r--s 00007000 08:06 6430669    /home/lizo/dev-tools/JBDS8-1/studio/plugins/org.eclipse.m2e.maven.runtime_1.5.1.20150109-1819/jars/aether-connector-wagon-0.9.0.M2.jar
+70b25000-70b2a000 r--s 00047000 08:06 6430675    /home/lizo/dev-tools/JBDS8-1/studio/plugins/org.eclipse.m2e.maven.runtime_1.5.1.20150109-1819/jars/okhttp-1.5.4.jar
+70b2a000-70b2c000 r--s 0000d000 08:06 6430668    /home/lizo/dev-tools/JBDS8-1/studio/plugins/org.eclipse.m2e.maven.runtime_1.5.1.20150109-1819/jars/aether-connector-okhttp-0.12.0.jar
+70b2c000-70b2e000 r--s 00003000 08:06 6430663    /home/lizo/dev-tools/JBDS8-1/studio/plugins/org.eclipse.m2e.maven.runtime_1.5.1.20150109-1819/jars/aether-spi-0.9.0.M2.jar
+70b2e000-70b31000 ---p 00000000 00:00 0 
+70b31000-70b7f000 rw-p 00000000 00:00 0          [stack:6250]
+70b7f000-70b80000 ---p 00000000 00:00 0 
+70b80000-70c00000 rw-p 00000000 00:00 0          [stack:6247]
+70c00000-70c21000 rw-p 00000000 00:00 0 
+70c21000-70d00000 ---p 00000000 00:00 0 
+70d00000-70d01000 r--s 00002000 08:06 7485085    /home/lizo/dev-tools/JBDS8-1/studio/plugins/org.eclipse.m2e.maven.runtime.slf4j.simple_1.5.1.20150109-1819/jars/slf4j-simple-1.7.5.jar
+70d01000-70d05000 r--s 00020000 08:06 6430653    /home/lizo/dev-tools/JBDS8-1/studio/plugins/org.eclipse.m2e.maven.runtime_1.5.1.20150109-1819/jars/aether-impl-0.9.0.M2.jar
+70d05000-70d2e000 r--s 001ee000 08:06 6430651    /home/lizo/dev-tools/JBDS8-1/studio/plugins/org.eclipse.m2e.maven.runtime_1.5.1.20150109-1819/jars/guava-14.0.1.jar
+70d2e000-70d31000 ---p 00000000 00:00 0 
+70d31000-70d7f000 rw-p 00000000 00:00 0          [stack:6249]
+70d7f000-70d80000 ---p 00000000 00:00 0 
+70d80000-70e00000 rw-p 00000000 00:00 0          [stack:6246]
+70e00000-70e21000 rw-p 00000000 00:00 0 
+70e21000-70f00000 ---p 00000000 00:00 0 
+70f00000-70f01000 r--s 00002000 08:06 6430655    /home/lizo/dev-tools/JBDS8-1/studio/plugins/org.eclipse.m2e.maven.runtime_1.5.1.20150109-1819/jars/wagon-file-2.6.jar
+70f01000-70f02000 r--s 00000000 08:06 6430670    /home/lizo/dev-tools/JBDS8-1/studio/plugins/org.eclipse.m2e.maven.runtime_1.5.1.20150109-1819/jars/javax.inject-1.jar
+70f02000-70f0a000 r--s 00050000 08:06 6430658    /home/lizo/dev-tools/JBDS8-1/studio/plugins/org.eclipse.m2e.maven.runtime_1.5.1.20150109-1819/jars/sisu-guice-3.1.3-no_aop.jar
+70f0a000-70f10000 r--s 00042000 08:06 6430673    /home/lizo/dev-tools/JBDS8-1/studio/plugins/org.eclipse.m2e.maven.runtime_1.5.1.20150109-1819/jars/org.eclipse.sisu.inject-0.0.0.M5.jar
+70f10000-70f11000 r--s 00001000 08:06 6430684    /home/lizo/dev-tools/JBDS8-1/studio/plugins/org.eclipse.m2e.maven.runtime_1.5.1.20150109-1819/jars/jsr250-api-1.0.jar
+70f11000-70f14000 r--s 00008000 08:06 6430683    /home/lizo/dev-tools/JBDS8-1/studio/plugins/org.eclipse.m2e.maven.runtime_1.5.1.20150109-1819/jars/cdi-api-1.0.jar
+70f14000-70f1a000 r--s 0002a000 08:06 6430672    /home/lizo/dev-tools/JBDS8-1/studio/plugins/org.eclipse.m2e.maven.runtime_1.5.1.20150109-1819/jars/org.eclipse.sisu.plexus-0.0.0.M5.jar
+70f1a000-70f1c000 r--s 0000b000 08:06 6430664    /home/lizo/dev-tools/JBDS8-1/studio/plugins/org.eclipse.m2e.maven.runtime_1.5.1.20150109-1819/jars/wagon-provider-api-2.6.jar
+70f1c000-70f23000 r--s 0003f000 08:06 6430648    /home/lizo/dev-tools/JBDS8-1/studio/plugins/org.eclipse.m2e.maven.runtime_1.5.1.20150109-1819/jars/maven-compat-3.2.1.jar
+70f23000-70f25000 r--s 00009000 08:06 6430656    /home/lizo/dev-tools/JBDS8-1/studio/plugins/org.eclipse.m2e.maven.runtime_1.5.1.20150109-1819/jars/commons-cli-1.2.jar
+70f25000-70f27000 r--s 00002000 08:06 6430678    /home/lizo/dev-tools/JBDS8-1/studio/plugins/org.eclipse.m2e.maven.runtime_1.5.1.20150109-1819/jars/plexus-cipher-1.7.jar
+70f27000-70f29000 r--s 0000d000 08:06 6430677    /home/lizo/dev-tools/JBDS8-1/studio/plugins/org.eclipse.m2e.maven.runtime_1.5.1.20150109-1819/jars/maven-embedder-3.2.1.jar
+70f29000-70f2a000 r--s 00006000 08:06 6430661    /home/lizo/dev-tools/JBDS8-1/studio/plugins/org.eclipse.m2e.maven.runtime_1.5.1.20150109-1819/jars/plexus-sec-dispatcher-1.3.jar
+70f2a000-70f2c000 r--s 00000000 08:06 6430682    /home/lizo/dev-tools/JBDS8-1/studio/plugins/org.eclipse.m2e.maven.runtime_1.5.1.20150109-1819/jars/plexus-component-annotations-1.5.5.jar
+70f2c000-70f30000 r--s 0003a000 08:06 6430674    /home/lizo/dev-tools/JBDS8-1/studio/plugins/org.eclipse.m2e.maven.runtime_1.5.1.20150109-1819/jars/plexus-utils-3.0.17.jar
+70f30000-70f34000 r--s 0001d000 08:06 6430665    /home/lizo/dev-tools/JBDS8-1/studio/plugins/org.eclipse.m2e.maven.runtime_1.5.1.20150109-1819/jars/aether-util-0.9.0.M2.jar
+70f34000-70f7f000 rw-p 00000000 00:00 0 
+70f7f000-70f80000 ---p 00000000 00:00 0 
+70f80000-71000000 rw-p 00000000 00:00 0          [stack:6245]
+71000000-71021000 rw-p 00000000 00:00 0 
+71021000-71100000 ---p 00000000 00:00 0 
+71100000-71103000 r--s 0000d000 08:06 6430666    /home/lizo/dev-tools/JBDS8-1/studio/plugins/org.eclipse.m2e.maven.runtime_1.5.1.20150109-1819/jars/plexus-interpolation-1.19.jar
+71103000-71107000 r--s 0001d000 08:06 6430647    /home/lizo/dev-tools/JBDS8-1/studio/plugins/org.eclipse.m2e.maven.runtime_1.5.1.20150109-1819/jars/aether-api-0.9.0.M2.jar
+71107000-71108000 r--s 0000e000 08:06 6430657    /home/lizo/dev-tools/JBDS8-1/studio/plugins/org.eclipse.m2e.maven.runtime_1.5.1.20150109-1819/jars/maven-aether-provider-3.2.1.jar
+71108000-71163000 rw-p 00000000 00:00 0 
+71163000-71164000 ---p 00000000 00:00 0 
+71164000-711f9000 rw-p 00000000 00:00 0          [stack:6244]
+711f9000-7132f000 rw-p 00000000 00:00 0 
+7132f000-7133b000 rw-p 00000000 00:00 0 
+7133b000-7134f000 rw-p 00000000 00:00 0 
+7134f000-71364000 rw-p 00000000 00:00 0 
+71364000-71499000 rw-p 00000000 00:00 0 
+71499000-714e5000 rw-p 00000000 00:00 0 
+714e5000-7153f000 rw-p 00000000 00:00 0 
+7153f000-72bc0000 rw-p 00000000 00:00 0 
+72bc0000-75540000 rw-p 00000000 00:00 0 
+75540000-77e80000 rw-p 00000000 00:00 0 
+77e80000-9ea80000 rw-p 00000000 00:00 0 
+9ea80000-a8100000 rw-p 00000000 00:00 0 
+acc8b000-ace00000 rw-p 00000000 00:00 0 
+ace00000-b3540000 rw-p 00000000 00:00 0 
+b3540000-b354a000 rw-p 00000000 00:00 0 
+b354a000-b3600000 rw-p 00000000 00:00 0 
+b3600000-b3848000 rwxp 00000000 00:00 0 
+b3848000-b66f6000 rw-p 00000000 00:00 0 
+b66f6000-b6700000 ---p 00000000 00:00 0 
+b6700000-b6705000 r--s 00024000 08:06 6430650    /home/lizo/dev-tools/JBDS8-1/studio/plugins/org.eclipse.m2e.maven.runtime_1.5.1.20150109-1819/jars/maven-model-builder-3.2.1.jar
+b6705000-b6707000 r--s 0000a000 08:06 6430680    /home/lizo/dev-tools/JBDS8-1/studio/plugins/org.eclipse.m2e.maven.runtime_1.5.1.20150109-1819/jars/maven-plugin-api-3.2.1.jar
+b6707000-b670a000 r--s 0000b000 08:06 6430671    /home/lizo/dev-tools/JBDS8-1/studio/plugins/org.eclipse.m2e.maven.runtime_1.5.1.20150109-1819/jars/maven-artifact-3.2.1.jar
+b670a000-b670c000 r--s 00005000 08:06 6430660    /home/lizo/dev-tools/JBDS8-1/studio/plugins/org.eclipse.m2e.maven.runtime_1.5.1.20150109-1819/jars/maven-repository-metadata-3.2.1.jar
+b670c000-b670e000 r--s 00009000 08:06 6430679    /home/lizo/dev-tools/JBDS8-1/studio/plugins/org.eclipse.m2e.maven.runtime_1.5.1.20150109-1819/jars/maven-settings-builder-3.2.1.jar
+b670e000-b6710000 r--s 00009000 08:06 6430662    /home/lizo/dev-tools/JBDS8-1/studio/plugins/org.eclipse.m2e.maven.runtime_1.5.1.20150109-1819/jars/maven-settings-3.2.1.jar
+b6710000-b6735000 rw-p 00000000 00:00 0 
+b6735000-b6749000 rw-p 00000000 00:00 0 
+b6749000-b6760000 r-xp 00000000 08:06 3146877    /usr/local/java/jdk1.7.0_76/jre/lib/i386/libzip.so
+b6760000-b6761000 rw-p 00017000 08:06 3146877    /usr/local/java/jdk1.7.0_76/jre/lib/i386/libzip.so
+b6761000-b676c000 r-xp 00000000 08:06 7471296    /lib/i386-linux-gnu/libnss_files-2.15.so
+b676c000-b676d000 r--p 0000a000 08:06 7471296    /lib/i386-linux-gnu/libnss_files-2.15.so
+b676d000-b676e000 rw-p 0000b000 08:06 7471296    /lib/i386-linux-gnu/libnss_files-2.15.so
+b676e000-b6778000 r-xp 00000000 08:06 7471151    /lib/i386-linux-gnu/libnss_nis-2.15.so
+b6778000-b6779000 r--p 00009000 08:06 7471151    /lib/i386-linux-gnu/libnss_nis-2.15.so
+b6779000-b677a000 rw-p 0000a000 08:06 7471151    /lib/i386-linux-gnu/libnss_nis-2.15.so
+b677a000-b6790000 r-xp 00000000 08:06 7471288    /lib/i386-linux-gnu/libnsl-2.15.so
+b6790000-b6791000 r--p 00015000 08:06 7471288    /lib/i386-linux-gnu/libnsl-2.15.so
+b6791000-b6792000 rw-p 00016000 08:06 7471288    /lib/i386-linux-gnu/libnsl-2.15.so
+b6792000-b6794000 rw-p 00000000 00:00 0 
+b6794000-b679b000 r-xp 00000000 08:06 7471146    /lib/i386-linux-gnu/libnss_compat-2.15.so
+b679b000-b679c000 r--p 00006000 08:06 7471146    /lib/i386-linux-gnu/libnss_compat-2.15.so
+b679c000-b679d000 rw-p 00007000 08:06 7471146    /lib/i386-linux-gnu/libnss_compat-2.15.so
+b679d000-b67a0000 r--s 00025000 08:06 6430649    /home/lizo/dev-tools/JBDS8-1/studio/plugins/org.eclipse.m2e.maven.runtime_1.5.1.20150109-1819/jars/maven-model-3.2.1.jar
+b67a0000-b67ac000 r--s 00081000 08:06 6430676    /home/lizo/dev-tools/JBDS8-1/studio/plugins/org.eclipse.m2e.maven.runtime_1.5.1.20150109-1819/jars/maven-core-3.2.1.jar
+b67ac000-b67ad000 r--s 00003000 08:06 6430681    /home/lizo/dev-tools/JBDS8-1/studio/plugins/org.eclipse.m2e.maven.runtime_1.5.1.20150109-1819/jars/takari-filemanager-0.7.0.jar
+b67ad000-b67af000 r--s 00001000 08:06 6430667    /home/lizo/dev-tools/JBDS8-1/studio/plugins/org.eclipse.m2e.maven.runtime_1.5.1.20150109-1819/jars/takari-local-repository-0.9.0.jar
+b67af000-b67b2000 r--s 0000a000 08:06 6430659    /home/lizo/dev-tools/JBDS8-1/studio/plugins/org.eclipse.m2e.maven.runtime_1.5.1.20150109-1819/jars/plexus-classworlds-2.5.1.jar
+b67b2000-b67b3000 r--p 005e1000 08:06 6822382    /usr/lib/locale/locale-archive
+b67b3000-b67d6000 r-xp 00000000 08:06 3146891    /usr/local/java/jdk1.7.0_76/jre/lib/i386/libjava.so
+b67d6000-b67d7000 rw-p 00023000 08:06 3146891    /usr/local/java/jdk1.7.0_76/jre/lib/i386/libjava.so
+b67d7000-b67de000 r-xp 00000000 08:06 7471133    /lib/i386-linux-gnu/librt-2.15.so
+b67de000-b67df000 r--p 00006000 08:06 7471133    /lib/i386-linux-gnu/librt-2.15.so
+b67df000-b67e0000 rw-p 00007000 08:06 7471133    /lib/i386-linux-gnu/librt-2.15.so
+b67e0000-b67e3000 ---p 00000000 00:00 0 
+b67e3000-b6831000 rw-p 00000000 00:00 0          [stack:6243]
+b6831000-b685b000 r-xp 00000000 08:06 7471285    /lib/i386-linux-gnu/libm-2.15.so
+b685b000-b685c000 r--p 00029000 08:06 7471285    /lib/i386-linux-gnu/libm-2.15.so
+b685c000-b685d000 rw-p 0002a000 08:06 7471285    /lib/i386-linux-gnu/libm-2.15.so
+b685d000-b70e4000 r-xp 00000000 08:06 3146876    /usr/local/java/jdk1.7.0_76/jre/lib/i386/server/libjvm.so
+b70e4000-b7149000 rw-p 00886000 08:06 3146876    /usr/local/java/jdk1.7.0_76/jre/lib/i386/server/libjvm.so
+b7149000-b756c000 rw-p 00000000 00:00 0 
+b756c000-b770f000 r-xp 00000000 08:06 7471196    /lib/i386-linux-gnu/libc-2.15.so
+b770f000-b7710000 ---p 001a3000 08:06 7471196    /lib/i386-linux-gnu/libc-2.15.so
+b7710000-b7712000 r--p 001a3000 08:06 7471196    /lib/i386-linux-gnu/libc-2.15.so
+b7712000-b7713000 rw-p 001a5000 08:06 7471196    /lib/i386-linux-gnu/libc-2.15.so
+b7713000-b7716000 rw-p 00000000 00:00 0 
+b7716000-b7719000 r-xp 00000000 08:06 7471255    /lib/i386-linux-gnu/libdl-2.15.so
+b7719000-b771a000 r--p 00002000 08:06 7471255    /lib/i386-linux-gnu/libdl-2.15.so
+b771a000-b771b000 rw-p 00003000 08:06 7471255    /lib/i386-linux-gnu/libdl-2.15.so
+b771b000-b771c000 rw-p 00000000 00:00 0 
+b771c000-b772f000 r-xp 00000000 08:06 3148168    /usr/local/java/jdk1.7.0_76/lib/i386/jli/libjli.so
+b772f000-b7730000 rw-p 00012000 08:06 3148168    /usr/local/java/jdk1.7.0_76/lib/i386/jli/libjli.so
+b7730000-b7747000 r-xp 00000000 08:06 7471202    /lib/i386-linux-gnu/libpthread-2.15.so
+b7747000-b7748000 r--p 00016000 08:06 7471202    /lib/i386-linux-gnu/libpthread-2.15.so
+b7748000-b7749000 rw-p 00017000 08:06 7471202    /lib/i386-linux-gnu/libpthread-2.15.so
+b7749000-b774b000 rw-p 00000000 00:00 0 
+b774b000-b7753000 rw-s 00000000 08:06 8524774    /tmp/hsperfdata_lizo/6237
+b7753000-b7754000 rw-p 00000000 00:00 0 
+b7754000-b7755000 ---p 00000000 00:00 0 
+b7755000-b7760000 r-xp 00000000 08:06 3146881    /usr/local/java/jdk1.7.0_76/jre/lib/i386/libverify.so
+b7760000-b7761000 rw-p 0000b000 08:06 3146881    /usr/local/java/jdk1.7.0_76/jre/lib/i386/libverify.so
+b7761000-b7763000 rw-p 00000000 00:00 0 
+b7763000-b7764000 r-xp 00000000 00:00 0          [vdso]
+b7764000-b7784000 r-xp 00000000 08:06 7471141    /lib/i386-linux-gnu/ld-2.15.so
+b7784000-b7785000 r--p 0001f000 08:06 7471141    /lib/i386-linux-gnu/ld-2.15.so
+b7785000-b7786000 rw-p 00020000 08:06 7471141    /lib/i386-linux-gnu/ld-2.15.so
+bf80d000-bf80e000 rwxp 00000000 00:00 0 
+bf840000-bf861000 rw-p 00000000 00:00 0          [stack]
+
+VM Arguments:
+jvm_args: -Dmaven.home=EMBEDDED -Dclassworlds.conf=/home/lizo/Infosource/.metadata/.plugins/org.eclipse.m2e.launching/launches/m2conf6651250759481335157.tmp -Dfile.encoding=UTF-8 
+java_command: org.codehaus.plexus.classworlds.launcher.Launcher -B install
+Launcher Type: SUN_STANDARD
+
+Environment Variables:
+PATH=/usr/lib/lightdm/lightdm:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games
+SHELL=/bin/bash
+DISPLAY=:0.0
+
+Signal Handlers:
+SIGSEGV: [libjvm.so+0x7eb660], sa_mask[0]=0x7ffbfeff, sa_flags=0x10000004
+SIGBUS: [libjvm.so+0x7eb660], sa_mask[0]=0x7ffbfeff, sa_flags=0x10000004
+SIGFPE: [libjvm.so+0x6835c0], sa_mask[0]=0x7ffbfeff, sa_flags=0x10000004
+SIGPIPE: [libjvm.so+0x6835c0], sa_mask[0]=0x7ffbfeff, sa_flags=0x10000004
+SIGXFSZ: [libjvm.so+0x6835c0], sa_mask[0]=0x7ffbfeff, sa_flags=0x10000004
+SIGILL: [libjvm.so+0x6835c0], sa_mask[0]=0x7ffbfeff, sa_flags=0x10000004
+SIGUSR1: SIG_DFL, sa_mask[0]=0x00000000, sa_flags=0x00000000
+SIGUSR2: [libjvm.so+0x684dc0], sa_mask[0]=0x00000004, sa_flags=0x10000004
+SIGHUP: [libjvm.so+0x6860f0], sa_mask[0]=0x7ffbfeff, sa_flags=0x10000004
+SIGINT: [libjvm.so+0x6860f0], sa_mask[0]=0x7ffbfeff, sa_flags=0x10000004
+SIGTERM: [libjvm.so+0x6860f0], sa_mask[0]=0x7ffbfeff, sa_flags=0x10000004
+SIGQUIT: [libjvm.so+0x6860f0], sa_mask[0]=0x7ffbfeff, sa_flags=0x10000004
+
+
+---------------  S Y S T E M  ---------------
+
+OS:wheezy/sid
+
+uname:Linux 3.13.0-46-generic #77~precise1-Ubuntu SMP Mon Mar 2 23:25:21 UTC 2015 i686
+libc:glibc 2.15 NPTL 2.15 
+rlimit: STACK 8192k, CORE 0k, NPROC 31591, NOFILE 4096, AS infinity
+load average:1,40 1,09 0,72
+
+/proc/meminfo:
+MemTotal:        4062756 kB
+MemFree:          222072 kB
+Buffers:            2056 kB
+Cached:           134976 kB
+SwapCached:            0 kB
+Active:          3604928 kB
+Inactive:         120132 kB
+Active(anon):    3590832 kB
+Inactive(anon):    94732 kB
+Active(file):      14096 kB
+Inactive(file):    25400 kB
+Unevictable:           0 kB
+Mlocked:               0 kB
+HighTotal:       3214088 kB
+HighFree:          55320 kB
+LowTotal:         848668 kB
+LowFree:          166752 kB
+SwapTotal:             0 kB
+SwapFree:              0 kB
+Dirty:               108 kB
+Writeback:             0 kB
+AnonPages:       3588216 kB
+Mapped:            62148 kB
+Shmem:             97348 kB
+Slab:              54800 kB
+SReclaimable:      29268 kB
+SUnreclaim:        25532 kB
+KernelStack:        8472 kB
+PageTables:        17048 kB
+NFS_Unstable:          0 kB
+Bounce:               20 kB
+WritebackTmp:          0 kB
+CommitLimit:     2031376 kB
+Committed_AS:    7812312 kB
+VmallocTotal:     122880 kB
+VmallocUsed:       17288 kB
+VmallocChunk:     100884 kB
+HardwareCorrupted:     0 kB
+AnonHugePages:   2183168 kB
+HugePages_Total:       0
+HugePages_Free:        0
+HugePages_Rsvd:        0
+HugePages_Surp:        0
+Hugepagesize:       2048 kB
+DirectMap4k:       16376 kB
+DirectMap2M:      897024 kB
+
+
+CPU:total 4 (2 cores per cpu, 2 threads per core) family 6 model 42 stepping 7, cmov, cx8, fxsr, mmx, sse, sse2, sse3, ssse3, sse4.1, sse4.2, popcnt, avx, aes, ht, tsc, tscinvbit
+
+/proc/cpuinfo:
+processor	: 0
+vendor_id	: GenuineIntel
+cpu family	: 6
+model		: 42
+model name	: Intel(R) Core(TM) i5-2430M CPU @ 2.40GHz
+stepping	: 7
+microcode	: 0x14
+cpu MHz		: 2401.000
+cache size	: 3072 KB
+physical id	: 0
+siblings	: 4
+core id		: 0
+cpu cores	: 2
+apicid		: 0
+initial apicid	: 0
+fdiv_bug	: no
+f00f_bug	: no
+coma_bug	: no
+fpu		: yes
+fpu_exception	: yes
+cpuid level	: 13
+wp		: yes
+flags		: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe nx rdtscp lm constant_tsc arch_perfmon pebs bts xtopology nonstop_tsc aperfmperf eagerfpu pni pclmulqdq dtes64 monitor ds_cpl vmx est tm2 ssse3 cx16 xtpr pdcm pcid sse4_1 sse4_2 x2apic popcnt tsc_deadline_timer aes xsave avx lahf_lm ida arat epb xsaveopt pln pts dtherm tpr_shadow vnmi flexpriority ept vpid
+bogomips	: 4788.83
+clflush size	: 64
+cache_alignment	: 64
+address sizes	: 36 bits physical, 48 bits virtual
+power management:
+
+processor	: 1
+vendor_id	: GenuineIntel
+cpu family	: 6
+model		: 42
+model name	: Intel(R) Core(TM) i5-2430M CPU @ 2.40GHz
+stepping	: 7
+microcode	: 0x14
+cpu MHz		: 800.000
+cache size	: 3072 KB
+physical id	: 0
+siblings	: 4
+core id		: 0
+cpu cores	: 2
+apicid		: 1
+initial apicid	: 1
+fdiv_bug	: no
+f00f_bug	: no
+coma_bug	: no
+fpu		: yes
+fpu_exception	: yes
+cpuid level	: 13
+wp		: yes
+flags		: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe nx rdtscp lm constant_tsc arch_perfmon pebs bts xtopology nonstop_tsc aperfmperf eagerfpu pni pclmulqdq dtes64 monitor ds_cpl vmx est tm2 ssse3 cx16 xtpr pdcm pcid sse4_1 sse4_2 x2apic popcnt tsc_deadline_timer aes xsave avx lahf_lm ida arat epb xsaveopt pln pts dtherm tpr_shadow vnmi flexpriority ept vpid
+bogomips	: 4788.83
+clflush size	: 64
+cache_alignment	: 64
+address sizes	: 36 bits physical, 48 bits virtual
+power management:
+
+processor	: 2
+vendor_id	: GenuineIntel
+cpu family	: 6
+model		: 42
+model name	: Intel(R) Core(TM) i5-2430M CPU @ 2.40GHz
+stepping	: 7
+microcode	: 0x14
+cpu MHz		: 800.000
+cache size	: 3072 KB
+physical id	: 0
+siblings	: 4
+core id		: 1
+cpu cores	: 2
+apicid		: 2
+initial apicid	: 2
+fdiv_bug	: no
+f00f_bug	: no
+coma_bug	: no
+fpu		: yes
+fpu_exception	: yes
+cpuid level	: 13
+wp		: yes
+flags		: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe nx rdtscp lm constant_tsc arch_perfmon pebs bts xtopology nonstop_tsc aperfmperf eagerfpu pni pclmulqdq dtes64 monitor ds_cpl vmx est tm2 ssse3 cx16 xtpr pdcm pcid sse4_1 sse4_2 x2apic popcnt tsc_deadline_timer aes xsave avx lahf_lm ida arat epb xsaveopt pln pts dtherm tpr_shadow vnmi flexpriority ept vpid
+bogomips	: 4788.83
+clflush size	: 64
+cache_alignment	: 64
+address sizes	: 36 bits physical, 48 bits virtual
+power management:
+
+processor	: 3
+vendor_id	: GenuineIntel
+cpu family	: 6
+model		: 42
+model name	: Intel(R) Core(TM) i5-2430M CPU @ 2.40GHz
+stepping	: 7
+microcode	: 0x14
+cpu MHz		: 800.000
+cache size	: 3072 KB
+physical id	: 0
+siblings	: 4
+core id		: 1
+cpu cores	: 2
+apicid		: 3
+initial apicid	: 3
+fdiv_bug	: no
+f00f_bug	: no
+coma_bug	: no
+fpu		: yes
+fpu_exception	: yes
+cpuid level	: 13
+wp		: yes
+flags		: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe nx rdtscp lm constant_tsc arch_perfmon pebs bts xtopology nonstop_tsc aperfmperf eagerfpu pni pclmulqdq dtes64 monitor ds_cpl vmx est tm2 ssse3 cx16 xtpr pdcm pcid sse4_1 sse4_2 x2apic popcnt tsc_deadline_timer aes xsave avx lahf_lm ida arat epb xsaveopt pln pts dtherm tpr_shadow vnmi flexpriority ept vpid
+bogomips	: 4788.83
+clflush size	: 64
+cache_alignment	: 64
+address sizes	: 36 bits physical, 48 bits virtual
+power management:
+
+
+
+Memory: 4k page, physical 4062756k(222072k free), swap 0k(0k free)
+
+vm_info: Java HotSpot(TM) Server VM (24.76-b04) for linux-x86 JRE (1.7.0_76-b13), built on Dec 18 2014 17:29:38 by "java_re" with gcc 4.3.0 20080428 (Red Hat 4.3.0-8)
+
+time: Thu Aug 25 18:35:42 2016
+elapsed time: 29 seconds
+

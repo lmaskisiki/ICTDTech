@@ -1,0 +1,29 @@
+<blueprint xmlns="http://www.osgi.org/xmlns/blueprint/v1.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:camel="http://camel.apache.org/schema/blueprint"
+	xmlns:cxf="http://camel.apache.org/schema/blueprint/cxf" xmlns:cm="http://aries.apache.org/blueprint/xmlns/blueprint-cm/v1.0.0"
+	xsi:schemaLocation="
+http://camel.apache.org/schema/blueprint http://camel.apache.org/schema/blueprint/camel-blueprint.xsd
+http://camel.apache.org/schema/blueprint/cxf http://camel.apache.org/schema/blueprint/cxf/camel-cxf.xsd
+http://aries.apache.org/blueprint/xmlns/blueprint-cm/v1.0.0 http://aries.apache.org/schemas/blueprint-cm/blueprint-cm-1.0.0.xsd
+http://www.osgi.org/xmlns/blueprint/v1.0.0 https://www.osgi.org/xmlns/blueprint/v1.0.0/blueprint.xsd">
+	
+	<cxf:rsServer id="routerEndpoint" address="http://localhost:8182"
+		serviceClass="infosource.upsclient.rest.UPService"
+		loggingFeatureEnabled="true">
+		<cxf:providers>
+			<ref component-id="jsonProvider" />
+		</cxf:providers>
+	</cxf:rsServer>
+	<bean id="serviceBean" class="infosource.upsclient.rest.UPService" />
+
+	<bean id="jsonProvider" class="org.apache.cxf.jaxrs.provider.json.JSONProvider" />
+	<camel:camelContext id="camel">
+		<camel:route>
+			<camel:from uri="direct:start" />
+			<camel:to uri="stream:out" />
+		</camel:route>
+	</camel:camelContext>
+
+</blueprint>
+ 
+ 

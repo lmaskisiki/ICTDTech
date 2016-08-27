@@ -1,0 +1,5 @@
+package infosource.upservice.rest;
+
+public class UPService {
+
+}

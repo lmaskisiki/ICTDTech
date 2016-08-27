@@ -1,0 +1,27 @@
+1470567329112	Copy file
+1470567367044	Rename resource 'camel-context.xml'
+1470569826535	Copy file
+1470572110167	Move compilation unit
+1470572381701	Move compilation unit
+1470573567851	Delete element
+1470574066564	Move file
+1470574072832	Move file
+1470576959134	Delete elements
+1470576967158	Delete element
+1470722778382	Rename package 'infosourse.messaging.rest'
+1470767938098	Rename local variable 'jsonResponse'
+1470851885297	Delete element
+1470929423646	Delete elements
+1470933962094	Delete element
+1470935691968	Copy compilation unit
+1471030450016	Delete elements
+1471030994048	Rename package 'infosourse.messaging.models'
+1471031008753	Rename package 'infosourse.messaging.soap'
+1471031317620	Move file
+1471073123852	Move 'camel-context.xml' to 'soap'
+1471073127499	Move 'spring-beans.xml' to 'spring'
+1471084731115	Move 'spring-beans.xml' to 'META-INF'
+1471096598745	Copy file
+1471099504335	Delete element
+1471100152366	Delete element
+1471100538246	Move 'camel-context.xml' to 'META-INF'

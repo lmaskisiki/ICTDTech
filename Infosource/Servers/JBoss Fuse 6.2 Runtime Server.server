@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<server hostname="localhost" id="JBoss Fuse 6.2 Runtime Server" name="JBoss Fuse 6.2 Runtime Server" runtime-id="JBoss Fuse 6.2 Runtime" server-type="org.fusesource.ide.fuseesb.server.62" server-type-id="org.fusesource.ide.fuseesb.server.62" sshPort="8101" start-timeout="90" stop-timeout="45" timestamp="1" userId="admin"/>

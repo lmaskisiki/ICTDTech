@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Copy element &apos;timerRouting.java&apos; to &apos;MessageAgent/src/main/java/infosource.messaging.tests&apos;&#x0A;- Original project: &apos;InfoSource&apos;&#x0A;- Destination element: &apos;MessageAgent/src/main/java/infosource.messaging.tests&apos;&#x0A;- Original element: &apos;infosource.starters.timerRouting.java&apos;" description="Copy compilation unit" destination="=MessageAgent/src\/main\/java&lt;infosource.messaging.tests" element1="/src\/main\/java&lt;infosource.starters{timerRouting.java" files="0" flags="589830" folders="0" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyResources" stamp="1470568152317" units="1" version="1.0"/>
+</session>

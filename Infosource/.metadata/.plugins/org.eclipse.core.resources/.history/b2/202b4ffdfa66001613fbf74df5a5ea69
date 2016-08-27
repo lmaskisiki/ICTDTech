@@ -1,0 +1,55 @@
+
+<blueprint default-activation="lazy"
+	xmlns="http://www.osgi.org/xmlns/blueprint/v1.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:cxf="http://camel.apache.org/schema/blueprint/cxf" xmlns:camel="http://camel.apache.org/schema/blueprint"
+	xsi:schemaLocation="
+        http://www.osgi.org/xmlns/blueprint/v1.0.0 http://www.osgi.org/xmlns/blueprint/v1.0.0/blueprint.xsd
+         http://camel.apache.org/schema/blueprint/cxf http://camel.apache.org/schema/cxf/camel-cxf-blueprint.xsd
+       http://camel.apache.org/schema/blueprint http://camel.apache.org/schema/blueprint/camel-blueprint.xsd">
+
+
+	<camelContext xmlns="http://camel.apache.org/schema/blueprint">
+		<routeBuilder ref="routeBuilder" />
+
+	</camelContext>
+
+	<cxf:rsClient id="rsClient"
+		address="http://localhost:8080/BirthTech/services/rest"
+		loggingFeatureEnabled="true" serviceClass="infosource.messaging.rest.WClinicService">
+		<cxf:providers>
+			<ref component-id="jsonProvider" />
+		</cxf:providers>
+	</cxf:rsClient>
+
+
+	<!-- Doc Man -->
+	<cxf:cxfEndpoint id="DocManEndpoint"
+		address="http://localhost:8080/DocMan/FileService/FileService"
+		wsdlURL="http://localhost:8080/DocMan/FileService/FileService?wsdl"
+		serviceClass="docman.services.FileServiceRemote" serviceName="ws:FileService"
+		endpointName="ws:SOAPFileService" xmlns:ws="http://services.docman/">
+
+	</cxf:cxfEndpoint>
+
+
+	<!-- User Account Manager System -->
+	<cxf:cxfEndpoint id="UAService"
+		address="http://localhost:8080/userGate/AccountService" wsdlURL="http://localhost:8080/userGate/AccountService?wsdl"
+		serviceName="ws:AccountService" endpointName="ws:AccountServicePort"
+		serviceClass="useraccount.soap.services.PersonInterface" xmlns:ws="http://services.soap.useraccount/">
+		<cxf:properties>
+			<entry key="dataFormat" value="POJO"></entry>
+		</cxf:properties>
+	</cxf:cxfEndpoint>
+
+
+	<cxf:cxfEndpoint id="homeAffairs"
+		address="http://localhost:8080/BCManager/services/bcs" wsdlURL="http://localhost:8080/BCManager/services/bcs?wsdl"
+		serviceName="ws:BEServiceService" endpointName="ws:ibcservice"
+		serviceClass="birthcertificate.ews.soap.IBEService" xmlns:ws="http://soap.ews.birthcertificate/">
+	</cxf:cxfEndpoint>
+
+	<bean id="jsonProvider" class="org.codehaus.jackson.jaxrs.JacksonJsonProvider" />
+	 
+
+</blueprint>

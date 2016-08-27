@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:osgi="http://www.springframework.org/schema/osgi"
+	xmlns:camel="http://cxf.apache.org/transports/camel"
+	xmlns:core="http://cxf.apache.org/core"
+	xmlns:cxf="http://camel.apache.org/schema/cxf"
+	xmlns:jaxrs="http://cxf.apache.org/jaxrs"
+	xmlns:jaxrs-client="http://cxf.apache.org/jaxrs-client"
+	xmlns:jaxws="http://cxf.apache.org/jaxws"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://cxf.apache.org/jaxrs-client http://cxf.apache.org/schemas/jaxrs-client.xsd
+		http://cxf.apache.org/core http://cxf.apache.org/schemas/core.xsd
+		http://activemq.apache.org/schema/core http://activemq.apache.org/schema/core
+		http://www.springframework.org/schema/osgi http://www.springframework.org/schema/osgi/spring-osgi.xsd
+		http://cxf.apache.org/transports/camel http://cxf.apache.org/transports/camel.xsd
+		http://camel.apache.org/schema/cxf http://camel.apache.org/schema/cxf/camel-cxf-2.15.1.xsd
+		http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://cxf.apache.org/jaxws http://cxf.apache.org/schemas/jaxws.xsd
+		http://cxf.apache.org/jaxrs http://cxf.apache.org/schemas/jaxrs-common.xsd
+		http://camel.apache.org/schema/osgi http://camel.apache.org/schema/osgi/camel-osgi-2.0-M1.xsd
+		http://cxf.apache.org/transports/http-jetty/configuration http://cxf.apache.org/schemas/configuration/http-jetty.xsd
+		http://camel.apache.org/schema/spring http://camel.apache.org/schema/spring/camel-spring.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.1.xsd">
+ 
+ 
+<bean id="quartz2" class="org.apache.camel.component.quartz2.QuartzComponent">
+    <property name="startDelayedSeconds" value="5"/>
+</bean>
+	 
+	
+<bean id="pojoBean" class="infosource.messaging.soap.RequestResponseMessage"/>
+	<bean id="routeBuilder" class="infosource.messaging.router.RouteManager" />
+	<bean class="infosource.messaging.tests.timerRouting" id="tester"></bean>
+
+	<camelContext id="camelContext" xmlns="http://camel.apache.org/schema/spring">
+		<routeBuilder ref="routeBuilder" />
+	</camelContext>
+
+	 
+	<cxf:rsClient id="rsClient"
+		address="http://localhost:8080/BirthTech/services/rest" loggingFeatureEnabled="true" serviceClass="infosource.messaging.rest.WClinicService">
+		<cxf:providers>
+			<ref bean="jsonProvider" />
+		</cxf:providers>
+	</cxf:rsClient>
+	<!-- Doc Man -->
+	<cxf:cxfEndpoint id="DocManEndpoint"
+		address="http://localhost:8080/DocMan/FileService/FileService"
+		wsdlURL="http://localhost:8080/DocMan/FileService/FileService?wsdl"
+		serviceClass="docman.services.FileServiceRemote" serviceName="ws:FileService"
+		endpointName="ws:SOAPFileService" xmlns:ws="http://services.docman/">
+
+	</cxf:cxfEndpoint>
+
+
+	<!-- User Account Manager System -->
+	<cxf:cxfEndpoint id="UAService"
+		address="http://localhost:8080/userGate/AccountService" wsdlURL="http://localhost:8080/userGate/AccountService?wsdl"
+		serviceName="ws:AccountService" endpointName="ws:AccountServicePort"
+		serviceClass="useraccount.soap.services.PersonInterface" xmlns:ws="http://services.soap.useraccount/">
+		<cxf:properties>
+			<entry key="dataFormat" value="POJO"></entry>
+		</cxf:properties>
+	</cxf:cxfEndpoint>
+	<cxf:cxfEndpoint id="homeAffairs"
+		address="http://localhost:8080/BCManager/services/bcs" wsdlURL="http://localhost:8080/BCManager/services/bcs?wsdl"
+		serviceName="ws:BEServiceService" endpointName="ws:ibcservice"
+		serviceClass="birthcertificate.ews.soap.IBEService" xmlns:ws="http://soap.ews.birthcertificate/">
+		 
+	</cxf:cxfEndpoint>
+		<bean id="jsonProvider" class="org.codehaus.jackson.jaxrs.JacksonJsonProvider" />
+	
+ 	<bean id="activemq" class="org.apache.activemq.camel.component.ActiveMQComponent">
+		<property name="brokerURL" value="tcp://localhost:61616" />
+		<property name="userName" value="admin" />
+		<property name="password" value="admin" />
+	</bean>
+ 
+</beans>

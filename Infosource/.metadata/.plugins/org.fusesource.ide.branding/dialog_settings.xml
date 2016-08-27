@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<section name="MavenProjectWizardArchetypePage">
+		<list key="groupId">
+			<item value="infosource.messaging"/>
+			<item value="com.mycompany"/>
+		</list>
+		<list key="package">
+			<item value="infosource.messaging.message.agent"/>
+			<item value="com.mycompany"/>
+		</list>
+		<list key="artifactId">
+			<item value="message-agent"/>
+		</list>
+		<list key="version">
+			<item value="1.0.0-SNAPSHOT"/>
+		</list>
+	</section>
+	<section name="MavenProjectWizardLocationPage">
+		<list key="location">
+			<item value="/home/lizo/ICTDLab/InfoSource"/>
+			<item value="/home/lizo/Infosource/MessageAgent/pom.xml"/>
+			<item value="/home/lizo/Infosource/MMS"/>
+		</list>
+		<list key="projectNameCombo">
+			<item value="MessageAgent"/>
+			<item value="nn"/>
+		</list>
+	</section>
+</section>

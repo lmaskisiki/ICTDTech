@@ -1,0 +1,5 @@
+package com.mycompany.camel.cxf.code.first.blueprint.incident;
+
+public class RestService {
+
+}

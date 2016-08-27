@@ -1,0 +1,28 @@
+package infosource.upservice.rest;
+
+import javax.ws.rs.GET;
+import javax.ws.rs.Path;
+import javax.ws.rs.Produces;
+
+@Path("/upservice")
+public class UPService {
+
+	@Path("/fullprofile")
+	@GET
+	@Produces("application/json")
+	public String  fullprofile(){
+		return null;
+	}
+	@Path("/docs")
+	@GET
+	@Produces("application/json")
+	public String userdocs(){
+		return null;
+	}
+	@Path("/basic")
+	@GET
+	@Produces("application/json")
+	public String personaldetails(){
+		return null;
+	}
+}

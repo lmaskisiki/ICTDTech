@@ -1,0 +1,24 @@
+package infosource.upservice.routes;
+
+import java.io.Serializable;
+import java.util.ArrayList;
+import java.util.List;
+
+import javax.xml.bind.annotation.XmlRootElement;
+
+import docman.services.FileInfo;
+
+@XmlRootElement
+public class Files implements Serializable {
+
+	List<FileInfo> files= new ArrayList<FileInfo>();
+
+	public List<FileInfo> getFiles() {
+		return files;
+	}
+
+	public void setFiles(List<FileInfo> files) {
+		this.files = files;
+	}
+	
+}

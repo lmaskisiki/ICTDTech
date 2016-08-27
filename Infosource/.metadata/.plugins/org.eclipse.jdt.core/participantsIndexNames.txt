@@ -1,0 +1,7 @@
+INDEX VERSION 1.126
+/home/lizo/Infosource/.metadata/.plugins/org.eclipse.jst.jsp.core/jspsearch/2528791670.index
+/InfoSource/src/main/java
+/home/lizo/Infosource/.metadata/.plugins/org.eclipse.jst.jsp.core/jspsearch/1534136298.index
+/hhhh/src
+/home/lizo/Infosource/.metadata/.plugins/org.eclipse.jst.jsp.core/jspsearch/1452530998.index
+/MMS/src/main/java

@@ -1,0 +1,63 @@
+package infosource.upservice.routes;
+
+ 
+import java.io.File;
+
+import org.apache.camel.Exchange;
+import org.apache.camel.Message;
+import org.apache.camel.Processor;
+import org.apache.camel.dataformat.soap.SoapJaxbDataFormat;
+import org.apache.camel.processor.aggregate.AggregationStrategy;
+import org.apache.cxf.message.MessageContentsList;
+import org.apache.cxf.service.model.MessagePartInfo;
+
+import docman.services.FileInfo;
+import docman.services.GetFilesByOwner;
+import docman.services.GetFilesByOwnerResponse;
+import useraccount.soap.services.Person;
+
+public class RouteBuilder extends org.apache.camel.builder.RouteBuilder {
+SoapJaxbDataFormat fmt= new SoapJaxbDataFormat("docman.services");
+	@Override
+	public void configure() throws Exception {
+from("direct:userProfile")
+	 .choice()
+		 	.when(header("profileMode").isEqualTo("all"))
+		 	  .process(new SetBodyProcessor())
+	 		.to("direct:subRoutes")
+	 	.when(header("profileMode").isEqualTo("docsOnly"))
+	 		//  .process(new DocManProcessor())
+	 		.setHeader("operationName").simple("getFilesByOwner").to("cxf:bean:DocMan")
+	 	.when(header("profileMode").isEqualTo("basic"))
+	 		  .process(new UAServiceProcessor())
+	 		  .to("direct:UAEndpoint")//beanRef("usergateClient", "findUserResponse")
+	 	.otherwise().end()
+	// .marshal().json()
+.to("stream:out");
+
+from("direct:subRoutes")
+	.multicast().aggregationStrategy( new AggregationStrategy() {
+		
+		@Override
+		public Exchange aggregate(Exchange oldExchange, Exchange newExchange) {
+			if (oldExchange == null) {
+				System.out.println("old is null"+newExchange.getIn().getBody());
+				return newExchange;
+				
+			}
+   Object list=oldExchange.getIn().getBody( );
+//list.toArray();
+ Person p=newExchange.getIn().getBody(Person.class);
+ Message m = oldExchange.getIn();
+ System.out.println("old  is not null: "+p.getCell()+" "+list );
+
+			return oldExchange;
+		}
+	}).to("direct:DocManEndpoint","direct:UAEndpoint");
+
+from("direct:DocManEndpoint").setHeader("operationName").simple("getFilesByOwner").to("cxf:bean:DocMan").marshal().json();
+from("direct:UAEndpoint").setHeader("operationName").simple("findByUsername").to("cxf:bean:UserGate").marshal().json();
+
+	}
+
+}

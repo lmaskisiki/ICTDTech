@@ -1,0 +1,14 @@
+Manifest-Version: 1.0
+Bnd-LastModified: 1472230449764
+Build-Jdk: 1.7.0_76
+Built-By: lizo
+Bundle-ManifestVersion: 2
+Bundle-Name: infosource-upsclient
+Bundle-SymbolicName: Infosource-upsclient
+Bundle-Version: 1.0.0.SNAPSHOT
+Created-By: Apache Maven Bundle Plugin
+Export-Package: infosource.upsclient.rest;uses:="javax.ws.rs";version="1
+ .0.0.SNAPSHOT"
+Import-Package: javax.ws.rs;version="[2.0,3)",org.apache.cxf.jaxrs.provi
+ der.json,org.osgi.service.blueprint;version="[1.0.0,2.0.0)"
+Tool: Bnd-1.50.0

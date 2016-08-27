@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:osgi="http://www.springframework.org/schema/osgi"
+	xmlns:jaxrs-client="http://cxf.apache.org/jaxrs-client" xmlns:cxf="http://camel.apache.org/schema/cxf"
+	xsi:schemaLocation="http://cxf.apache.org/jaxrs-client http://cxf.apache.org/schemas/jaxrs-client.xsd
+		http://www.springframework.org/schema/osgi http://www.springframework.org/schema/osgi/spring-osgi.xsd
+		http://camel.apache.org/schema/cxf http://camel.apache.org/schema/cxf/camel-cxf-2.15.1.xsd
+		http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://camel.apache.org/schema/osgi http://camel.apache.org/schema/osgi/camel-osgi-2.0-M1.xsd
+		http://camel.apache.org/schema/spring http://camel.apache.org/schema/spring/camel-spring.xsd">
+
+	<import resource="classpath:META-INF/cxf/cxf.xml" />
+
+
+	<bean id="helloBean" class="com.mycompany.camel.spring.dm.HelloBean">
+		<property name="say" value="Hi from Camel" />
+	</bean>
+
+	<camelContext xmlns="http://camel.apache.org/schema/spring">
+		<route>
+			<from uri="timer:foo?period=5000" />
+			<setBody>
+				<method ref="helloBean" method="hello" />
+			</setBody>
+			<log message="The message contains ${body}" />
+		</route>
+	</camelContext>
+
+	<jaxrs-client:client id="rsClient"
+		address="http://localhost:8080/BirthTech/services/rest" serviceClass="infosource.messaging.rest.WClinicService">
+		<jaxrs-client:providers>
+			<ref bean="jsonProvider" />
+		</jaxrs-client:providers>
+	</jaxrs-client:client>
+	
+	<jaxrs-client:client id="homeAffairs" 
+		address="http://localhost:8080/BCManager/services/bcs" 
+		serviceName="ws:BEServiceService" endpointName="ws:ibcservice"
+		serviceClass="birthcertificate.ews.soap.IBEService" xmlns:ws="http://soap.ews.birthcertificate/">
+		<jaxrs-client:properties>
+			<entry key="dataFormat" value="MESSAGE"/>
+		</jaxrs-client:properties>
+	</jaxrs-client:client>
+
+
+	<bean id="jsonProvider" class="org.codehaus.jackson.jaxrs.JacksonJsonProvider" />
+	<bean id="routeBuilder" class="infosource.messaging.router.RouteManager" />
+	<bean class="infosource.messaging.tests.timerRouting" id="tester"></bean>
+</beans>

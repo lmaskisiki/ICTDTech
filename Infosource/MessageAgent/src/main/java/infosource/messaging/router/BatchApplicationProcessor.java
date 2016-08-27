@@ -1,0 +1,53 @@
+package infosource.messaging.router;
+
+import infosource.messaging.models.Labour;
+
+import java.util.Arrays;
+import java.util.Date;
+import java.util.List;
+
+import org.apache.camel.Exchange;
+import org.apache.camel.Message;
+import org.apache.camel.Processor;
+import org.codehaus.jettison.json.JSONArray;
+import org.codehaus.jettison.json.JSONObject;
+
+import birthcertificate.ews.soap.BatchApplication;
+
+import com.google.gson.Gson;
+import com.google.gson.GsonBuilder;
+
+public class BatchApplicationProcessor implements Processor {
+
+	@Override
+	public void process(Exchange exchange) throws Exception {
+		Message msg = exchange.getIn();
+		JSONObject jobject = new JSONObject(msg.getBody(String.class))
+				.getJSONObject("list");
+		JSONArray jArray;
+		String jsonStr = "";
+		if (jobject.length() > 1) {
+
+			System.out
+					.println("The sidze of this json is :" + jobject.length()
+							+ "  below is the actual string \n \n"
+							+ jobject.toString());
+			jArray = jobject.getJSONArray("infosource.messaging.models.Labour");
+			jsonStr = jArray.toString();
+		} else {
+			JSONObject obj = jobject
+					.getJSONObject("infosource.messaging.models.Labour");
+			jsonStr = obj.toString();
+		}
+		Gson gson = new GsonBuilder().registerTypeAdapter(Date.class,
+				new GsonUTCdateAdapter()).create();
+		Labour[] response = gson.fromJson(jsonStr, Labour[].class);
+		BatchApplication app = new BatchApplication();
+		app.setArg0(gson.toJson(response));
+		List<Labour> list = Arrays.asList(response);
+		msg.setBody(app, BatchApplication.class);
+
+		exchange.setOut(msg);
+	}
+
+}

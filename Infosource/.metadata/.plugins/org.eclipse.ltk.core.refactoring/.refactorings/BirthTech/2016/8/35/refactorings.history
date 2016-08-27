@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Copy 3 elements to &apos;BCManager/src/main/java/birthcertificate.entities&apos;&#x0A;- Original project: &apos;BirthTech&apos;&#x0A;- Destination element: &apos;BCManager/src/main/java/birthcertificate.entities&apos;&#x0A;- Original elements:&#x0A;     birthtech.entities.Labour.java&#x0A;     birthtech.entities.Patient.java&#x0A;     birthtech.entities.Checkup.java" description="Copy compilation units" destination="=BCManager/src\/main\/java&lt;birthcertificate.entities" element1="/src\/main\/java&lt;birthtech.entities{Labour.java" element2="/src\/main\/java&lt;birthtech.entities{Patient.java" element3="/src\/main\/java&lt;birthtech.entities{Checkup.java" files="0" flags="589830" folders="0" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyResources" stamp="1472147412415" units="3" version="1.0"/>
+</session>

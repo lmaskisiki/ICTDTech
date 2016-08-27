@@ -1,0 +1,49 @@
+<blueprint default-activation="eager"
+	xmlns="http://www.osgi.org/xmlns/blueprint/v1.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:cxf="http://camel.apache.org/schema/blueprint/cxf"
+	xmlns:jaxrs="http://cxf.apache.org/blueprint/jaxrs"
+	xmlns:camel="http://cxf.apache.org/transports/camel"
+	xsi:schemaLocation="http://cxf.apache.org/transports/camel http://cxf.apache.org/transports/camel.xsd
+		http://www.osgi.org/xmlns/blueprint/v1.0.0 
+		http://camel.apache.org/schema/cxf http://camel.apache.org/schema/cxf/camel-cxf-2.15.1.redhat-620133.xsd
+		http://camel.apache.org/schema/blueprint/cxf http://camel.apache.org/schema/blueprint/cxf/camel-cxf.xsd
+		http://cxf.apache.org/jaxrs http://cxf.apache.org/schemas/jaxrs.xsd">
+	<camelContext trace="false" xmlns="http://camel.apache.org/schema/blueprint">
+  <route>
+    <from uri="timer:me?period=6000"/>
+    <setHeader headerName="message">
+      <simple>masikisiki is the best</simple>
+    </setHeader>
+    <log message="${header.message}"/>
+    <setBody>
+      <simple>this is the body</simple>
+    </setBody>
+    <marshal>
+      <json library="Jackson"/>
+    </marshal>
+  </route>
+  <route>
+    <from uri="cxfrs:bean:rsOne"/>
+    <log message="${header.operationName} this is the username to search"/>
+     <setBody>
+      <simple>the is the body</simple>
+    </setBody>
+    <marshal>
+      <json library="Jackson"/>
+    </marshal>
+  </route>
+</camelContext>
+	<bean id="jsonProvider" class="org.codehaus.jackson.jaxrs.JacksonJsonProvider" />
+	<jaxrs:server address="/rest" id="rsOne">
+		<jaxrs:serviceBeans>
+			<ref component-id="serviceBean" />
+		</jaxrs:serviceBeans>
+		<jaxrs:providers>
+			<ref component-id="jsonProvider" />
+		</jaxrs:providers>
+	</jaxrs:server>
+	<bean id="serviceBean" class="infosource.upsclient.rest.UPService" />
+	 
+
+</blueprint>

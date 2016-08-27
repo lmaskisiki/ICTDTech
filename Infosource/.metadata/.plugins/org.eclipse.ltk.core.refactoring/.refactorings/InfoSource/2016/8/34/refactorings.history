@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Copy element &apos;JsonBuilder.java&apos; to &apos;UPService/src/main/java/infosource.upservice.routes&apos;&#x0A;- Original project: &apos;InfoSource&apos;&#x0A;- Destination element: &apos;UPService/src/main/java/infosource.upservice.routes&apos;&#x0A;- Original element: &apos;infosource.processors.JsonBuilder.java&apos;" description="Copy compilation unit" destination="=UPService/src\/main\/java&lt;infosource.upservice.routes" element1="/src\/main\/java&lt;infosource.processors{JsonBuilder.java" files="0" flags="589830" folders="0" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyResources" stamp="1471630413864" units="1" version="1.0"/>
+</session>

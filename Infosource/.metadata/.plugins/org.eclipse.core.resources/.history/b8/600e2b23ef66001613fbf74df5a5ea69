@@ -1,0 +1,29 @@
+package infosource.upclient.rest;
+
+import javax.ws.rs.GET;
+import javax.ws.rs.Path;
+import javax.ws.rs.PathParam;
+import javax.ws.rs.Produces;
+
+@Path("/upservice")
+public class UPService {
+
+	@Path("/fullprofile/{username}")
+	@GET
+	@Produces("application/json")
+	public String  full(@PathParam("username")String username){
+		return null;
+	}
+	@Path("/docs/{username}")
+	@GET
+	@Produces("application/json")
+	public String userdocs(@PathParam("username")String username){
+		return null;
+	}
+	@Path("/basic/{username}")
+	@GET
+	@Produces("application/json")
+	public String  basic(@PathParam("username")String username){
+		return null;
+	}
+}

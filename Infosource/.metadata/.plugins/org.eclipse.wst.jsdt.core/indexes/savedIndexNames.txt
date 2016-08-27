@@ -1,0 +1,10 @@
+INDEX VERSION 1.3+/home/lizo/Infosource/.metadata/.plugins/org.eclipse.wst.jsdt.core/indexes
+1611123054.index
+2313555666.index
+3265896487.index
+2093514411.index
+1487142655.index
+175370871.index
+2724142591.index
+3936069889.index
+667963987.index

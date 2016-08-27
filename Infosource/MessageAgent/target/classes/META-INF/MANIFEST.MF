@@ -1,0 +1,27 @@
+Manifest-Version: 1.0
+Bnd-LastModified: 1472229557763
+Build-Jdk: 1.7.0_76
+Built-By: lizo
+Bundle-ClassPath: .,gson-1.7.2.jar
+Bundle-ManifestVersion: 2
+Bundle-Name: infosource-messaging
+Bundle-SymbolicName: Infosource-Messanger
+Bundle-Version: 1.0.0.SNAPSHOT
+Created-By: Apache Maven Bundle Plugin
+Embed-Dependency: gson
+Embedded-Artifacts: gson-1.7.2.jar;g="com.google.code.gson";a="gson";v="
+ 1.7.2"
+Export-Package: birthcertificate.ews.soap;uses:="javax.xml.bind.annotati
+ on,javax.xml.datatype,javax.xml.ws,javax.xml.namespace,javax.jws,javax.
+ xml.bind";version="1.0.0.SNAPSHOT"
+Import-Package: birthcertificate.ews.soap,javax.jws,javax.ws.rs;version=
+ "[2.0,3)",javax.xml.bind,javax.xml.bind.annotation,javax.xml.datatype,j
+ avax.xml.namespace,javax.xml.ws,org.apache.activemq.camel.component;ver
+ sion="[5.11,6)",org.apache.camel;version="[2.15,3)",org.apache.camel.bu
+ ilder;version="[2.15,3)",org.apache.camel.model;version="[2.15,3)",org.
+ apache.camel.spring;version="[2.15,3)",org.apache.cxf.message;version="
+ [3.0,4)",org.codehaus.jackson.jaxrs;version="[1.9,2)",org.codehaus.jett
+ ison.json;version="[1.3,2)",org.osgi.service.blueprint;version="[1.0.0,
+ 2.0.0)",org.springframework.context,org.springframework.context.support
+ ,org.springframework.stereotype,org.springframework.web.bind.annotation
+Tool: Bnd-1.50.0

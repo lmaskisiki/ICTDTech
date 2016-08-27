@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:soap="http://cxf.apache.org/bindings/soap"
+	xmlns:spring="http://camel.apache.org/schema/spring"
+	xmlns:v2.15="http://camel.apache.org/schema/spring/v2.15"
+	xmlns:cxf="http://camel.apache.org/schema/cxf"
+	xmlns:core="http://activemq.apache.org/schema/core"
+	xmlns:jaxrs-client="http://cxf.apache.org/jaxrs-client"
+	xmlns:jaxrs="http://cxf.apache.org/jaxrs"
+	xsi:schemaLocation="http://cxf.apache.org/jaxrs-client http://cxf.apache.org/schemas/jaxrs-client.xsd
+		http://camel.apache.org/schema/spring/v2.15 http://camel.apache.org/schema/spring/v2.15
+		http://cxf.apache.org/core http://cxf.apache.org/schemas/core.xsd
+		http://activemq.apache.org/schema/core http://activemq.apache.org/schema/core
+		http://camel.apache.org/schema/cxf http://camel.apache.org/schema/cxf/camel-cxf-2.15.1.xsd
+		http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://cxf.apache.org/bindings/soap http://cxf.apache.org/schemas/configuration/soap.xsd
+		http://cxf.apache.org/jaxrs http://cxf.apache.org/schemas/jaxrs-common.xsd
+		http://camel.apache.org/schema/spring http://camel.apache.org/schema/spring/camel-spring.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.1.xsd">
+ 
+<bean id="quartz2" class="org.apache.camel.component.quartz2.QuartzComponent">
+    <property name="startDelayedSeconds" value="5"/>
+</bean>
+
+	<bean id="elenamestrategy" 
+		class="org.apache.camel.dataformat.soap.name.ServiceInterfaceStrategy">
+ <constructor-arg value="w"/>	
+  <constructor-arg value="true"/>		 
+ 	 
+	</bean>
+
+  <camelContext xmlns="http://camel.apache.org/schema/blueprint">
+	</camelContext>
+
+	 
+	<cxf:rsClient id="rsClient"
+		address="http://localhost:8080/BirthTech/services/rest" loggingFeatureEnabled="true" serviceClass="infosource.messaging.rest.WClinicService">
+		<cxf:providers>
+			<ref bean="jsonProvider" />
+		</cxf:providers>
+	</cxf:rsClient>
+
+	<cxf:cxfEndpoint id="homeAffairs"
+		address="http://localhost:8080/BCManager/services/bcs" wsdlURL="http://localhost:8080/BCManager/services/bcs?wsdl"
+		serviceName="ws:BEServiceService" endpointName="ws:ibcservice"
+		serviceClass="birthcertificate.ews.soap.IBEService" xmlns:ws="http://soap.ews.birthcertificate/">
+		<cxf:properties>
+			<entry key="dataFormat" value="MESSAGE"></entry>
+		</cxf:properties>
+	</cxf:cxfEndpoint>
+	 
+		<bean id="jsonProvider" class="org.codehaus.jackson.jaxrs.JacksonJsonProvider" />
+	
+	<bean id="routeBuilder" class="infosource.messaging.router.RouteManager" />
+	<bean class="infosource.messaging.tests.timerRouting" id="tester"></bean>
+ 	<bean id="activemq" class="org.apache.activemq.camel.component.ActiveMQComponent">
+		<property name="brokerURL" value="tcp://localhost:61616" />
+		<property name="userName" value="admin" />
+		<property name="password" value="admin" />
+	</bean>
+	 
+</beans>

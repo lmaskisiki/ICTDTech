@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<blueprint xmlns="http://www.osgi.org/xmlns/blueprint/v1.0.0"
+	xmlns:camel="http://camel.apache.org/schema/blueprint"
+	xmlns:cxf="http://camel.apache.org/schema/blueprint/cxf"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:jaxrs="http://cxf.apache.org/jaxrs"
+	xsi:schemaLocation="http://camel.apache.org/schema/blueprint http://camel.apache.org/schema/blueprint/camel-blueprint.xsd
+		http://cxf.apache.org/transports/camel http://cxf.apache.org/transports/camel.xsd
+		http://camel.apache.org/schema/cxf http://camel.apache.org/schema/cxf/camel-cxf-2.15.1.redhat-620133.xsd
+		http://www.osgi.org/xmlns/blueprint/v1.0.0 http://www.osgi.org/xmlns/blueprint/v1.0.0/blueprint.xsd
+		http://cxf.apache.org/jaxrs http://cxf.apache.org/schemas/jaxrs.xsd">
+
+	<camelContext trace="false"
+		xmlns="http://camel.apache.org/schema/blueprint">
+		<route>
+			<from uri="timer:me?period=6000" />
+			<setHeader headerName="message">
+				<simple>masikisiki is the best</simple>
+			</setHeader>
+			<log message="${header.message}" />
+		</route>
+	</camelContext>
+	<bean id="jsonProvider" class="org.codehaus.jackson.jaxrs.JacksonJsonProvider" />
+ <jaxrs:server address="/rest" id="helloService">
+        <jaxrs:serviceBeans>
+            <ref component-id="serviceBean" />
+        </jaxrs:serviceBeans>
+        <jaxrs:providers>
+        	<ref component-id="jsonProvider" />
+        </jaxrs:providers>
+    </jaxrs:server>
+    <bean id="serviceBean" class="infosource.upsclient.rest.UPService"/>
+	<cxf:rsServer address="/rest"
+		serviceClass="infosource.upsclient.rest.UPService" id="rsServer"   loggingFeatureEnabled="true"  activation="eager">
+		<cxf:providers>
+			<ref component-id="jsonProvider" />
+		</cxf:providers>
+	</cxf:rsServer>
+</blueprint>

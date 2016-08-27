@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<publish-info>
+  <server id="JBoss Fuse 6.2.1 Runtime" path="publish1.dat"/>
+  <server id="WildFly 8.x1471019082667" path="publish2.dat"/>
+  <server id="JBoss Fuse 6.2 Runtime Server" path="publish0.dat"/>
+</publish-info>

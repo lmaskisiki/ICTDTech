@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename local variable &apos;serializeableFmt&apos; in &apos;birthtech.services.rest.WClinic.labourevent(...)&apos; to &apos;fmt2&apos;&#x0A;- Original project: &apos;BirthTech&apos;&#x0A;- Original element: &apos;birthtech.services.rest.WClinic.labourevent(String).serializeableFmt&apos;&#x0A;- Renamed element: &apos;serializeableFmt&apos;&#x0A;- Update references to refactored element" description="Rename local variable &apos;serializeableFmt&apos;" id="org.eclipse.jdt.ui.rename.local.variable" input="/src\/main\/java&lt;birthtech.services.rest{WClinic.java[WClinic~labourevent~QString;@serializeableFmt!1598!1682!1615!1630!QSimpleDateFormat;!0!false" name="fmt2" references="true" stamp="1471027846720" version="1.0"/>
+</session>

@@ -1,0 +1,61 @@
+
+<blueprint default-activation="lazy"
+	xmlns="http://www.osgi.org/xmlns/blueprint/v1.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:cxf="http://camel.apache.org/schema/blueprint/cxf" xmlns:camel="http://camel.apache.org/schema/blueprint"
+	xsi:schemaLocation="
+        http://www.osgi.org/xmlns/blueprint/v1.0.0 http://www.osgi.org/xmlns/blueprint/v1.0.0/blueprint.xsd
+         http://camel.apache.org/schema/blueprint/cxf http://camel.apache.org/schema/cxf/camel-cxf-blueprint.xsd
+       http://camel.apache.org/schema/blueprint http://camel.apache.org/schema/blueprint/camel-blueprint.xsd">
+
+
+	<camelContext xmlns="http://camel.apache.org/schema/blueprint">
+  <routeBuilder ref="routeBuilder"/>
+ <!--  <route/>
+  <route>
+    <from uri="cxfrs:bean:upservice"/>
+    <choice>
+      <when>
+        <simple>${header.operationName}=="all"</simple>
+        <setHeader headerName="profileMode">
+          <simple>all</simple>
+        </setHeader>
+        <to uri="direct:userProfile"/>
+      </when>
+    </choice>
+  </route> -->
+</camelContext>
+ <cxf:rsServer id="upservice" address="/upservice"
+		serviceClass="infosource.upservice.rest.UPService">
+
+
+	</cxf:rsServer>
+ 
+ 	<!-- Doc Man -->
+	<cxf:cxfEndpoint id="DocMan"
+		address="http://localhost:8080/DocMan/FileService/FileService"
+		wsdlURL="http://localhost:8080/DocMan/FileService/FileService?wsdl"
+		serviceClass="docman.services.FileServiceRemote" 
+		serviceName="ws:FileService"
+		endpointName="ws:SOAPFileService" xmlns:ws="http://services.docman/">
+
+	</cxf:cxfEndpoint>
+	<!-- User Account Manager System -->
+	<cxf:cxfEndpoint id="UserGate"
+		address="http://localhost:8080/userGate/AccountService" 
+		wsdlURL="http://localhost:8080/userGate/AccountService?wsdl"
+		serviceName="ws:AccountService" endpointName="ws:AccountServicePort"
+		serviceClass="useraccount.soap.services.PersonInterface" xmlns:ws="http://services.soap.useraccount/">
+		<cxf:properties>
+			<entry key="dataFormat" value="POJO"></entry>
+		</cxf:properties>
+	</cxf:cxfEndpoint>
+	 <bean id="routeBuilder" class="infosource.upservice.routes.RouteBuilder"></bean>
+
+	<bean id="jsonProvider" class="org.codehaus.jackson.jaxrs.JacksonJsonProvider" />
+	<bean id="activemq" class="org.apache.activemq.camel.component.ActiveMQComponent">
+		<property name="brokerURL" value="tcp://localhost:61616" />
+		<property name="userName" value="admin" />
+		<property name="password" value="admin" />
+	</bean>
+
+</blueprint>

@@ -1,0 +1,69 @@
+package infosource.messaging.router;
+
+import java.io.File;
+import java.io.IOException;
+import java.lang.reflect.Type;
+import java.nio.file.Files;
+import java.text.DateFormat;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Date;
+import java.util.List;
+import java.util.Locale;
+
+import javax.xml.bind.JAXBContext;
+import javax.xml.bind.JAXBException;
+import javax.xml.bind.Marshaller;
+
+import infosource.messaging.models.Labour;
+import infosource.messaging.soap.PrepareSoapProcessor;
+import infosource.messaging.soap.RequestResponseMessage;
+
+import org.apache.camel.Exchange;
+import org.apache.camel.Message;
+import org.apache.camel.Processor;
+import org.apache.camel.builder.RouteBuilder;
+import org.apache.cxf.message.MessageContentsList;
+import org.codehaus.jackson.map.ObjectMapper;
+import org.codehaus.jettison.json.JSONArray;
+import org.codehaus.jettison.json.JSONObject;
+import org.springframework.stereotype.Component;
+import org.springframework.stereotype.Service;
+
+import com.google.gson.Gson;
+import com.google.gson.GsonBuilder;
+import com.google.gson.reflect.TypeToken;
+
+import birthcertificate.ews.soap.Applications;
+import birthcertificate.ews.soap.Approved;
+import birthcertificate.ews.soap.BatchApplication;
+import birthcertificate.ews.soap.CreateApplication;
+import birthcertificate.ews.soap.IBEService;
+import birthcertificate.ews.soap.ObjectFactory;
+
+@Component
+public class RouteManager extends RouteBuilder {
+
+	@Override
+	public void configure() throws Exception {
+		from("timer:myTime?period=20000")
+				.process(new infosource.messaging.rest.PrepareRestProcessor())
+				.to("cxfrs:bean:rsClient").marshal().json().process(new PrepareSoapProcessor())
+				.choice()
+					.when().jsonpath("$.[?(@.child.childId==55)]")
+				.to("cxf:bean:homeAffairs").endChoice();
+
+		// from("quartz2://collectReady/schedular?cron=0/15+*+*+*+*+?")
+		from("timer://collectReady?period=10000").process(new Processor() {
+			@Override
+			public void process(Exchange exchange) throws Exception {
+				MessageContentsList msg = new MessageContentsList();
+				// msg.add(null);
+				exchange.getOut().setHeader("operationName", "approved");
+				exchange.getOut().setBody(msg);
+			}
+		}).to("cxf:bean:homeAffairs").marshal().json()
+				.to("activemq:queue:GrantApplication");
+		//
+	}
+}

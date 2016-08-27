@@ -1,0 +1,89 @@
+package infosource.upservice.routes;
+
+import java.io.File;
+
+import org.apache.camel.Exchange;
+import org.apache.camel.Message;
+import org.apache.camel.Processor;
+import org.apache.camel.dataformat.soap.SoapJaxbDataFormat;
+import org.apache.camel.processor.aggregate.AggregationStrategy;
+import org.apache.cxf.message.MessageContentsList;
+import org.apache.cxf.service.model.MessagePartInfo;
+import org.codehaus.jettison.json.JSONArray;
+import org.codehaus.jettison.json.JSONException;
+import org.codehaus.jettison.json.JSONObject;
+import org.eclipse.jetty.util.ajax.JSON;
+
+import com.google.gson.Gson;
+
+import docman.services.FileInfo;
+import docman.services.GetFilesByOwner;
+import docman.services.GetFilesByOwnerResponse;
+import useraccount.soap.services.Person;
+
+public class RouteBuilder extends org.apache.camel.builder.RouteBuilder {
+	SoapJaxbDataFormat fmt = new SoapJaxbDataFormat("docman.services");
+
+	@Override
+	public void configure() throws Exception {
+		from("vm:userProfile").choice()
+				.when(header("profileMode").isEqualTo("full"))
+					.process(new SetBodyProcessor())
+					.to("direct:subRoutes")
+				.when(header("profileMode").isEqualTo("docs"))
+					.process(new DocManProcessor())
+				 	.to("direct:DocManEndpoint")
+				.when(header("profileMode").isEqualTo("basic"))
+				.process(new UAServiceProcessor()).to("direct:UAEndpoint") 
+			.otherwise().end()
+			.to("stream:out");
+ 		from("direct:subRoutes").multicast()
+				.aggregationStrategy(new AggregationStrategy() {
+					@Override
+					public Exchange aggregate(Exchange oldExchange,
+							Exchange newExchange) {
+						if (oldExchange == null) {
+							return newExchange;
+						}
+						try {
+							JSONObject DocManListJson = new JSONObject(oldExchange.getIn()
+									.getBody(String.class));
+						 	JSONArray fileList = DocManListJson
+						 		.getJSONObject(
+						 					"org.apache.cxf.message.MessageContentsList")
+						 			.getJSONObject("list")
+						 			.getJSONObject("list")
+						 			.getJSONArray("docman.services.FileInfo");
+                       
+							System.out.println("Ok below is your doc response : \n \n"+DocManListJson.toString());
+
+							JSONObject personJson = new JSONObject(newExchange
+									.getIn().getBody(String.class));
+							JSONObject arr = personJson
+									.getJSONObject(
+											"org.apache.cxf.message.MessageContentsList")
+									.getJSONObject("list")
+									.getJSONObject(
+											"useraccount.soap.services.Person");
+							JSONObject response = new JSONObject();
+							response.append("personalDetails", arr);
+							response.append("documents", /*fileList*/"[]");
+							oldExchange.getOut().setBody(response);
+						} catch (JSONException e) {
+							e.printStackTrace();
+						}
+						return oldExchange;
+					}
+				}).to("direct:DocManEndpoint", "direct:UAEndpoint");
+
+		from("direct:DocManEndpoint")
+			.setHeader("operationName").simple("getFilesByOwner")
+		.to("cxf:bean:DocMan").marshal().json();
+		
+		from("direct:UAEndpoint")
+			.setHeader("operationName").simple("findByUsername")
+		.to("cxf:bean:UserGate").marshal().json();
+
+	}
+
+}

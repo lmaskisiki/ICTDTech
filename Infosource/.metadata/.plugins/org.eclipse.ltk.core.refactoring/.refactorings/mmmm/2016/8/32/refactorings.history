@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Move &apos;blueprint.xml&apos; to &apos;mmmm&apos;" description="Move &apos;blueprint.xml&apos; to &apos;mmmm&apos;" destination="/mmmm" element1="/MMS/src/main/resources/OSGI-INF/blueprint/blueprint.xml" flags="7" id="org.eclipse.ltk.core.refactoring.move.resources" resources="1" stamp="1470218059628" updateReferences="true"/>
+</session>
