@@ -18,23 +18,29 @@ import javax.xml.bind.annotation.XmlSeeAlso;
  *
  */
 @XmlRootElement
- @Entity
+
+@Entity
 public class Labour implements Serializable {
+
+	/**
+	 * 
+	 */
 	private static final long serialVersionUID = 1L;
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	private int labourId;
-	@ManyToOne
-	private Maternity maternal;
-	@ManyToOne
-	private Child child;
-
-
 	private Date labourDate;
 	private int birthNo;
 	private String nurse;
 	private int labourStatus;
 	private String birthPlace;
+	@ManyToOne
+	private Patient patient;
+	@ManyToOne
+	private Child child;
+
+
+	
 
 	public Labour() {
 		super();
@@ -49,12 +55,12 @@ public class Labour implements Serializable {
 	}
  
 
-	public Maternity getMaternal() {
-		return maternal;
+	public Patient getMaternal() {
+		return patient;
 	}
 
-	public void setMaternal(Maternity maternal) {
-		this.maternal = maternal;
+	public void setMaternal(Patient patient) {
+		this.patient =patient;
 	}
 
 	public Child getChild() {

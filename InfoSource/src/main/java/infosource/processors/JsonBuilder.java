@@ -13,18 +13,17 @@ public class JsonBuilder {
 	}
 
 	public JsonBuilder(String exchange1, String exchange2) {
- 		JSONObject json1;
-json1= extractData(exchange1);
- 		try {
+		JSONObject json1;
+		json1 = extractData(exchange1);
+		try {
 			json1.append("document", extractData(exchange2));
 		} catch (JSONException e) {
 			hasErrors = true;
 			errorMessage = e.getMessage() + "\n class:" + e.getClass();
 		}
-		 
-		 
-		results =json1.toString();
-		
+
+		results = json1.toString();
+
 	}
 
 	public JSONObject extractData(String message) {
@@ -38,7 +37,7 @@ json1= extractData(exchange1);
 				data = data.getJSONObject("list");
 			}
 			extractedMessage = data;
-		 
+
 		} catch (JSONException e) {
 			hasErrors = true;
 			errorMessage = e.getMessage() + "\n class:" + e.getClass();

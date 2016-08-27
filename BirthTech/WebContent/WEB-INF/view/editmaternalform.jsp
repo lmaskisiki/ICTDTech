@@ -9,7 +9,7 @@
 <body>
 	<div id="container">
 		<form action="">
-			<input type="hidden" name="mid" value="${maternal.mid}" />
+			<input type="hidden" name="mid" value="${maternal.pid}" />
 			<table>
 				<tr>
 					<td>Names</td>

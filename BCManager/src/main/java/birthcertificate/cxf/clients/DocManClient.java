@@ -1,5 +1,6 @@
 package birthcertificate.cxf.clients;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import org.springframework.context.support.ClassPathXmlApplicationContext;
@@ -19,6 +20,12 @@ public class DocManClient {
 	}
 	
 	 public List<FileInfo> getDocument(String requester,String docOwner){
-	 return client.getUserDocuments(requester,docOwner);
+		 List<FileInfo> docs= new ArrayList<FileInfo>();
+		 try{
+			docs= client.getUserDocuments(requester,docOwner);
+		 }catch(Exception ex){
+			 System.out.println("Exception thrown while searching for docmument : \n"+ex.getClass());
+		 }
+	 return docs;
 	 }
 }

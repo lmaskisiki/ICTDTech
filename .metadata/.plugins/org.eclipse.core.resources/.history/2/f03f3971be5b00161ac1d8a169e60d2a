@@ -1,5 +1,0 @@
-package birthtech.services.rest;
-
-public interface IWclinic {
-
-}

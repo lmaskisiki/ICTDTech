@@ -1,9 +1,0 @@
-package birthcertificate.ws.rest;
-
-import java.util.List;
-
-public interface IBEService {
-
-		public List<CollectionStatus> application();
-		
-}

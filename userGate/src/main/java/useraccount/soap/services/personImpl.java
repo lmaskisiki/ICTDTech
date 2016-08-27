@@ -25,6 +25,7 @@ import org.springframework.ldap.core.LdapTemplate;
 import org.springframework.ldap.core.support.LdapContextSource;
 import org.springframework.ldap.filter.AndFilter;
 import org.springframework.ldap.filter.EqualsFilter;
+import org.springframework.ldap.filter.OrFilter;
 import org.springframework.stereotype.Service;
 import org.springframework.web.context.support.SpringBeanAutowiringSupport;
 
@@ -123,12 +124,12 @@ public class personImpl extends SpringBeanAutowiringSupport implements
 		try {
 			controls.setSearchScope(SearchControls.SUBTREE_SCOPE);
 			AndFilter filter = new AndFilter();
-			filter.and(new EqualsFilter("objectclass", "inetOrgPerson"))
-				.and(new EqualsFilter("uid", User));
+			filter.and(new EqualsFilter("objectclass", "inetOrgPerson")).and(
+					new EqualsFilter("uid", User));
 			users = ldapTemplate.search("", filter.toString(), controls,
 					new UserContextMapper());
 		} catch (Exception e) {
-		System.out.println("Exception thrown :"+e.getMessage());
+			System.out.println("Exception thrown :" + e.getMessage());
 		}
 		return users.get(0);
 	}
@@ -179,12 +180,18 @@ public class personImpl extends SpringBeanAutowiringSupport implements
 	@WebMethod
 	public Person findUserByFullName(
 			@WebParam(name = "fullname") String fullName) {
+		String[] other = fullName.split(" ");
+		String otherPosiblieFullname = other[1] + " " + other[0];
 		SearchControls controls = new SearchControls();
 		controls.setSearchScope(SearchControls.SUBTREE_SCOPE);
 		AndFilter filter = new AndFilter();
-		filter.and(new EqualsFilter("objectclass", "inetOrgPerson")).and(
-				new EqualsFilter("cn", fullName));
-		List<Person> users = ldapTemplate.search("", filter.toString(),
+		OrFilter orf = new OrFilter();
+		orf.or(new EqualsFilter("cn", otherPosiblieFullname)).or(new EqualsFilter("cn",fullName));
+		
+		//filter.and(new EqualsFilter("objectclass", "inetOrgPerson")).and(
+			//	new EqualsFilter("cn", fullName));
+		 
+		List<Person> users = ldapTemplate.search("", orf.toString(),
 				controls, new UserContextMapper());
 		return users.get(0);
 	}

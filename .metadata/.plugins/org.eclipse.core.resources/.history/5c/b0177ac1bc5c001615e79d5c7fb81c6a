@@ -1,2 +1,0 @@
-@javax.xml.bind.annotation.XmlSchema(namespace = "http://rest.ws.birthcertificate/")
-package birthcertificate.ws.rest;

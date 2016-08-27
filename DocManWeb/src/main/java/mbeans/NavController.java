@@ -17,7 +17,6 @@ import javax.jms.JMSException;
 import javax.jms.Message;
 import javax.jms.MessageListener;
 import javax.jms.Queue;
-
 import javax.jms.TextMessage;
 
 import docman.services.FileService;
@@ -77,25 +76,12 @@ public class NavController implements Serializable {
 	}
 
 	public String browseFiles() throws JMSException {
-
+		String user = FacesContext.getCurrentInstance()
+				.getExternalContext().getRemoteUser();
 		files = fileservice.getFilesByOwner(FacesContext.getCurrentInstance()
 				.getExternalContext().getRemoteUser());
-		files = fileservice.getFilesByOwner("admin");
-		System.out.println("what :" + files.get(0).getFilePath());
-		System.out.println("\n \n the size is " + files.size());
-		System.out.println("Q name is:" + requestQ.getQueueName());
-		context.createProducer().send(requestQ, "admin");
-		Queue q = context.createQueue("SearchResponse");
-		Message ms = (Message) context.createConsumer(q).receive(10000);
-		context.createProducer().send(requestQ, "admin");
-		if (ms != null) {
-			System.out.println("Response Recieved.. :"
-					+ ((TextMessage) ms).getText());
-		} else {
-			System.out.println("I could not find anything from :"
-					+ q.getQueueName());
-
-		}
+		files = fileservice.getFilesByOwner(user);
+	 
 		return "listfiles";
 	}
 

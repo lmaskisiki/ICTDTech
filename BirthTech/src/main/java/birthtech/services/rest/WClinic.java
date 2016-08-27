@@ -72,8 +72,7 @@ public class WClinic implements IWclinic {
 				if (isValid(lab)) {
 				
 					if ((fmt.format(lab.getLabourDate())).contains(day)) {
-						Date fmtDate = fmt2.parse(fmt2.format(lab
-								.getLabourDate()));
+						Date fmtDate = fmt2.parse(fmt2.format(lab.getLabourDate()));
 						countValid++;
 						lab.setLabourDate(fmtDate);
 						list.add(lab);

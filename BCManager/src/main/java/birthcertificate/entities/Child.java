@@ -11,18 +11,26 @@ import javax.xml.bind.annotation.XmlSeeAlso;
  *
  */
 @XmlRootElement
-@XmlSeeAlso(Maternity.class)
+@XmlSeeAlso(Patient.class)
 @Entity
 public class Child implements Serializable {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	private int childId;
+	public int getMother() {
+		return mother;
+	}
+
+	public void setMother(int mother) {
+		this.mother = mother;
+	}
+
 	private String name;
 	private String surname;
 	 
 	private String gender;
-
+	private int mother;
 	private static final long serialVersionUID = 1L;
 
 	public Child() {

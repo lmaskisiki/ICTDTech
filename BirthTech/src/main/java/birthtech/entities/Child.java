@@ -20,8 +20,15 @@ public class Child implements Serializable {
 	private int childId;
 	private String name;
 	private String surname;
-	 
 	private String gender;
+	private int mother;
+	public int getMother() {
+		return mother;
+	}
+
+	public void setMother(int mother) {
+		this.mother = mother;
+	}
 
 	private static final long serialVersionUID = 1L;
 

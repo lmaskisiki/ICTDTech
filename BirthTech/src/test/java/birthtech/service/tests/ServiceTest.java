@@ -45,7 +45,7 @@ public class ServiceTest {
 		Person psn = null;
 		Patient patient = new Patient();
 		try {
-			psn = service.findByUsername("pnomngasss");
+			psn = service.findByUsername("pnomnga");
 		} catch (Exception e) {
 		System.out.print(""+e.getClass()+" :was thrown\n");
 		}

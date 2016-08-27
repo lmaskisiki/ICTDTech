@@ -87,22 +87,29 @@ public class LabourService implements ILabourService {
 
 	@Override
 	public Labour add(Labour lab) {
+		List<Labour> labs = labourRepo.findAll();
+		if (labs != null) {
+			lab.setBirthNo(labs.get(labs.size() - 1).getBirthNo() + 1);
+		} else {
+			lab.setBirthNo(1);
+		}
 		Labour labour = labourRepo.save(lab);
-	//	if(labour.getChild()!=null){
-			MessageSender sender = new MessageSender();
-					UniversalMarshaller marshal = new UniversalMarshaller();
-					sender.sendMessage(marshal.toXML(labour));
-					System.out.println("\n \n \n \n \n done !!! \n \n \n");
-		//	}
-	//f (labour != null) {
-	//	Gson jsonMapper = new Gson();
-	//	System.out.println("\n \n \n  sending jms message "
-	//			+ jsonMapper.toJson(labour) + " \n \n");
-	//	MessageSender sender = new MessageSender();
-	//	UniversalMarshaller marshal = new UniversalMarshaller();
-	//	sender.sendMessage(marshal.toXML(lab));
-    //
-	//
+
+		// if(labour.getChild()!=null){
+		MessageSender sender = new MessageSender();
+		UniversalMarshaller marshal = new UniversalMarshaller();
+		sender.sendMessage(marshal.toXML(labour));
+		System.out.println("\n \n \n \n \n done !!! \n \n \n");
+		// }
+		// f (labour != null) {
+		// Gson jsonMapper = new Gson();
+		// System.out.println("\n \n \n  sending jms message "
+		// + jsonMapper.toJson(labour) + " \n \n");
+		// MessageSender sender = new MessageSender();
+		// UniversalMarshaller marshal = new UniversalMarshaller();
+		// sender.sendMessage(marshal.toXML(lab));
+		//
+		//
 		return labour;
 	}
 

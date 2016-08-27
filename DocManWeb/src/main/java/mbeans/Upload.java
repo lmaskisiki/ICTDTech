@@ -19,9 +19,7 @@ import javax.xml.namespace.QName;
 import javax.xml.ws.Service;
 
 import docman.services.FileService;
-import usergate.classes.Person;
-import usergate.classes.PersonInterface;
-import entities.FileInfo;
+ import entities.FileInfo;
 
 @ManagedBean
 @ViewScoped
@@ -88,13 +86,13 @@ public class Upload implements Serializable {
 	public void uploadFile() {
 		try {
 			Service ser = Service.create(new URL(
-					"http://localhost:8080/userGate/personImpl?wsdl"),
-					new QName("http://classes.userGate/", "personImplService"));
-			PersonInterface userService = ser.getPort(PersonInterface.class);
+					"http://localhost:8080/userGate/AccountService?wsdl"),
+					new QName("http://services.soap.useraccount/", "AccountService"));
+			useraccount.soap.services.PersonInterface userService = ser.getPort(useraccount.soap.services.PersonInterface.class);
 			String user = FacesContext.getCurrentInstance()
 					.getExternalContext().getRemoteUser();
 			if (user != null) {
-				Person person = null;
+				useraccount.soap.services.Person person = null;
 				person = userService.findByUsername(user);
 				String fullname = null;
 				if (person != null) {
@@ -103,7 +101,7 @@ public class Upload implements Serializable {
 					if (!fullname.equals(null)) {
 						FileInfo fi = new FileInfo();
 						fi.setUploaded(new java.util.Date());
-						fi.setUploadedBy(fullname);
+						fi.setUploadedBy(user);
 						fi.setFilePath(fi.getUploadedBy().replace(" ", "_")+"/"+FileName);
 						fi.setFileName(FileName);
 						InputStream in = file.getInputStream();

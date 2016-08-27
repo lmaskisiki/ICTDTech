@@ -44,7 +44,7 @@
 								<td>${item.surname}</td>
 								<td>${item.idnumber}</td>
 								<td>${item.registration}</td>
-                                <td><a href="edit/${item.mid}">Edit</a></a></td>
+                                <td><a href="edit/${item.pid}">Edit</a></a></td>
 								<td><a href="#">Delete</a></a></td>
 							</tr>
 						</c:forEach>

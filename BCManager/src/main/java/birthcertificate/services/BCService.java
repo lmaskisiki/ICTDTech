@@ -90,15 +90,17 @@ public class BCService {
 
 	public SystemMessage batchApplications(Labour[] applications) {
 		SystemMessage message = new SystemMessage();
-		int countValid=-1;
+		int countValid = -1;
 		try {
 			for (Labour lab : applications) {
 				if (lab.getChild() != null) {
 					countValid++;
-					message = createCerticate(lab);
+					if (!exists(lab)) {
+						message = createCerticate(lab);
+					}
 				}
 			}
-		System.out.println(countValid+"  entities were processed!!!");
+			System.out.println(countValid + "  entities were processed!!!");
 		} catch (Exception e) {
 			System.out.println("Something went wrong! >> 'batchApplication'");
 			message.setMessage(MessageType.Exception);
@@ -114,18 +116,19 @@ public class BCService {
 		BCertificate certificate = new BCertificate();
 		try {
 
-			// certificate.setBcNumber(generateBCNumber(labour));
+			certificate.setBcNumber(generateBCNumber(labour));
 			certificate.setBcNumber(labour.getBirthNo());
 			System.out.println("Id generated...");
 
 			certificate.setBirthNumber("" + labour.getBirthNo());
-			certificate.setChildNames("lizo");
-			certificate.setSurname("sikza");
-			certificate.setGender("Male");
-			certificate.setParentFullNames("Masikiki Baphumele	");
+			certificate.setChildNames(labour.getChild().getName());
+			certificate.setSurname(labour.getChild().getSurname());
+			certificate.setGender(labour.getChild().getGender());
+			certificate.setParentFullNames(labour.getMaternal().getSurname()
+					+ " " + labour.getMaternal().getNames());
 			System.out.println("\n \n almost done in service");
 
-			certificate.setMaternalId(""+6009012);
+			certificate.setMaternalId("" + labour.getMaternal().getPid());
 			certificate.setCollectReady(false);
 			certificate.setCreationDate(new Date());
 			repo.save(certificate);
@@ -161,5 +164,15 @@ public class BCService {
 	public int updateCollectionStatus(boolean status, int certificateNo) {
 		return repo.updateCollectionStatus(status, certificateNo);
 
+	}
+
+	// TODO
+	public boolean exists(Labour lab) {
+		for (BCertificate cert : repo.findAll()) {
+			if ((Integer.parseInt(cert.getBirthNumber())) == (lab.getBirthNo())) {
+				return true;
+			}
+		}
+		return false;
 	}
 }

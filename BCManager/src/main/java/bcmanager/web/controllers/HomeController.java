@@ -43,13 +43,13 @@ public class HomeController {
 		List<BCertificate> certificates = new ArrayList<BCertificate>();
 		try {
 			String parent = request.getParameter("parent");
-			if (parent  == null || parent.trim().equals("")) {
+			if (parent == null || parent.trim().equals("")) {
 				certificates = service.getAll();
 
 			} else {
 				for (BCertificate cert : service.getAll()) {
 					if (cert.getParentFullNames().contains(parent)) {
-						 
+
 						certificates.add(cert);
 					}
 				}
@@ -59,7 +59,7 @@ public class HomeController {
 
 			System.out.println("Something went wrong \n" + e.getClass());
 		}
-		  return certificates;
+		return certificates;
 
 	}
 
@@ -76,11 +76,13 @@ public class HomeController {
 	@RequestMapping(value = "application/parent/profile", method = RequestMethod.GET)
 	public ModelAndView profile(HttpServletRequest request) {
 		ModelAndView model = new ModelAndView("profile");
-		List<FileInfo> docs = null;
+		List<FileInfo> docs = new ArrayList<FileInfo>();
 		String fullname = request.getParameter("fullname");
 		useraccount.soap.services.Person person = service.findParent(fullname);
 		try {
-			docs = service.getUserDocument("admin", person.getUsername());
+			if (person != null) {
+				docs = service.getUserDocument("admin", person.getUsername());
+			}
 		} catch (Exception e) {
 			System.out.println("error occured while loading documents");
 		}

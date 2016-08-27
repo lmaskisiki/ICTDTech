@@ -1,5 +1,0 @@
-package birthcertificate.ws.rest;
-
-public interface IBEService {
-
-}

@@ -3,11 +3,13 @@ package birthtech.web.controller;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
+import java.util.Random;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.ws.rs.MatrixParam;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -18,6 +20,8 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.servlet.ModelAndView;
 
+import useraccount.soap.services.Person;
+import useraccount.soap.services.PersonInterface;
 import birthtech.entities.Checkup;
 import birthtech.entities.Child;
 import birthtech.entities.Labour;
@@ -37,6 +41,11 @@ public class HomeController {
 	private LabourService labService;
 	@Autowired
 	private ChildService childService;
+
+	ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext(
+			"META-INF/cxf-context.xml");
+	PersonInterface Accountservice = (PersonInterface) context
+			.getBean("UAServiceClient");
 
 	@RequestMapping(value = "/", method = RequestMethod.GET)
 	public ModelAndView homepage() {
@@ -61,16 +70,26 @@ public class HomeController {
 	public ModelAndView newrecord(ModelMap modelmap,
 			HttpServletRequest request, Patient mat) {
 		ModelAndView model = new ModelAndView("viewmaternal");
-		modelmap.addAttribute(mat.getNames(), "names");
-		modelmap.addAttribute(mat.getSurname(), "surname");
-		modelmap.addAttribute(mat.getEmployementStatus(), "employment");
- 		int idNumber = Integer.parseInt(request.getParameter("idNumber"));
-		Date date = new Date();
-		mat.setIdnumber(idNumber);
-		mat.setRegistration(date);
-		mat.setNurse("Lizo Masikisiki");
-		boolean saved = matService.addMaternity(mat);
-		model.addObject("maternal", mat);
+		Random rnd = new Random();
+		String username = request.getParameter("username");
+		String employment = request.getParameter("employementStatus");
+		Person psn = Accountservice.findByUsername(username);
+		Patient patient = new Patient();
+		String msg = null;
+		if (psn != null) {
+			patient.setEmployementStatus(employment);
+			patient.setIdnumber(rnd.nextInt(10000));
+			patient.setPid(patient.getIdnumber());
+			patient.setRegistration(new Date());
+			patient.setSurname(psn.getLastName());
+			patient.setNames(psn.getFirstName());
+			patient.setNurse("Lele Masikisiki");
+		} else {
+			msg = "User with that username does not exist, please register on UAMS";
+		}
+		boolean saved = matService.addMaternity(patient);
+		model.addObject("message", msg);
+		model.addObject("patient", patient);
 		return model;
 	}
 
@@ -126,23 +145,25 @@ public class HomeController {
 
 		return false;
 	}
+
 	@RequestMapping(value = "maternity/all", method = RequestMethod.GET)
-	public ModelAndView  getmatrenity() {
-			List<Patient> list= new ArrayList<Patient>();
-			ModelAndView model = new ModelAndView("getallmaternity");
-			try{
-				list= matService.getMartenal();
-			}
-			catch(Exception ex){
-				System.out.println("Something went wrong");
-			}
-			model.addObject("results", list);
+	public ModelAndView getmatrenity() {
+		List<Patient> list = new ArrayList<Patient>();
+		ModelAndView model = new ModelAndView("getallmaternity");
+		try {
+			list = matService.getMartenal();
+		} catch (Exception ex) {
+			System.out.println("Something went wrong");
+		}
+		model.addObject("results", list);
 		return model;
 	}
+
 	// CRUD ends
 	@RequestMapping(value = "maternity/checkup/add", method = RequestMethod.GET)
 	public ModelAndView addCheckup(ModelMap map, Checkup checkup,
 			HttpServletRequest request) {
+		Random r = new Random();
 		String id = request.getParameter("maternity");
 		map.addAttribute("maternity", checkup.getMartenalId());
 		map.addAttribute("nurse", checkup.getNurse());
@@ -152,28 +173,33 @@ public class HomeController {
 		checkup.setDate(new Date());
 		checkup.setDelivered(false);
 		String delivery = request.getParameter("delivered");
-	
+
 		Patient patient = matService.getMaternityById(Integer.parseInt(id));
 		if (delivery.trim().equals("yes")) {
-			String labourstatus= request.getParameter("labourstatus");
-			
+			String labourstatus = request.getParameter("labourstatus");
+
 			checkup.setDelivered(true);
 			Labour lab = new Labour();
 			lab.setMaternal(patient);
-			lab.setBirthNo(1862);
+			lab.setBirthNo(r.nextInt());
 			lab.setBirthPlace(checkup.getPlace());
-		 if(labourstatus.trim().equals("success")){lab.setStatus(1);}else{lab.setStatus(0);}
+			if (labourstatus.trim().equals("success")) {
+				lab.setStatus(1);
+			} else {
+				lab.setStatus(0);
+			}
 			lab.setLabourDate(new Date());
 			lab.setNurse(checkup.getNurse());
 			checkService.addCheckup(checkup);
-			
-			if(labourstatus.trim().equals("success")){
-			Child child = new Child();
-			child.setGender(request.getParameter("gender"));
-			child.setName(request.getParameter("childNames"));
-			child.setSurname(request.getParameter("childSurname"));
-			Child chld = childService.save(child);
-			lab.setChild(chld);
+
+			if (labourstatus.trim().equals("success")) {
+				Child child = new Child();
+				child.setGender(request.getParameter("gender"));
+				child.setName(request.getParameter("childNames"));
+				child.setSurname(request.getParameter("childSurname"));
+				child.setMother(patient.getIdnumber());
+				Child chld = childService.save(child);
+				lab.setChild(chld);
 			}
 			lab = labService.add(lab);
 		} else {

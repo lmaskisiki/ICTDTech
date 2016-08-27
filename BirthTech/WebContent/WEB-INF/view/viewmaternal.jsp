@@ -14,10 +14,10 @@
 	<div class=”container”>
 		<table>
 			<tr>
-				<td>${maternal.names}</td>
-				<td>${maternal.surname}</td>
-				<td>${maternal.idnumber}</td>
-				<td>${maternal.registration}</td>
+				<td>${patient.surname}</td>
+				<td>${patient.names}</td>
+				<td>${patient.idnumber}</td>
+				 
 
 				<td><a href="#">Modify</a></td>
 				<td><a href="#">Delete</a></td>

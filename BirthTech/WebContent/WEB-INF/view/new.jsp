@@ -18,37 +18,31 @@
 	<div class=”container”>
 		<div id="nav">
 			<ul class="nav nav-tabs">
-					<li><a href="http://localhost:8080/BirthTech/">Home</a></li>
+				<li><a href="http://localhost:8080/BirthTech/">Home</a></li>
 			</ul>
 		</div>
 		<div id="main">
-		<form action="add" method="get">
-			<table class="table table-condensed">
-
-				<tr>
-					<td>Surname</td>
-					<td><input type="text" name="surname"></input></td>
-				</tr>
-				<tr>
-					<td>Name</td>
-					<td><input type="text" name="names"></input></td>
-				</tr>
-				<tr>
-					<td>Id Number</td>
-					<td><input type="text" name="idNumber"></input></td>
-				</tr>
-				<tr>
-					<td>Employment Status</td>
-					<td><select name="employementStatus">
-							<option value="">Select</option>
-							<option value="GOVERNMENT">Government</option>
-							<option value="SELF">Self</option>
-							<option value="PRIVATE">Private</option>
-							<option value="UNEMPLOYED">Unemployed</option>
-					</select></td>
-				</tr>
-				<tr><td colspan="2"><input type="submit"  value="Add Maternity"/></td></tr>
-			</table>
+			<form action="add" method="get">
+				<table class="table table-condensed">
+					<tr>
+						<td>Username</td>
+						<td><input type="text" name="username"></input></td>
+					</tr>
+					 
+					<tr>
+						<td>Employment Status</td>
+						<td><select name="employementStatus">
+								<option value="">Select</option>
+								<option value="GOVERNMENT">Government</option>
+								<option value="SELF">Self</option>
+								<option value="PRIVATE">Private</option>
+								<option value="UNEMPLOYED">Unemployed</option>
+						</select></td>
+					</tr>
+					<tr>
+						<td colspan="2"><input type="submit" value="Add Maternity" /></td>
+					</tr>
+				</table>
 			</form>
 		</div>
 	</div>
