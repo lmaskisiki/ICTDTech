@@ -8,8 +8,10 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
+import webFrameApp.entites.Domain;
 import webFrameApp.entites.FeedComment;
 import webFrameApp.entites.FeedPost;
+import webFrameApp.serviceLgoic.DomainDAOImpl;
 import webFrameApp.serviceLgoic.FeedPostImpl;
 @Transactional
 @RunWith(SpringJUnit4ClassRunner.class)
@@ -17,14 +19,15 @@ import webFrameApp.serviceLgoic.FeedPostImpl;
 public class feedTest  {
 	 @Autowired
 	 private FeedPostImpl service;
+	 @Autowired
+	 private DomainDAOImpl domain;
 	@Test
 	@Transactional
 	public void testPost(){
-	 FeedPost p=service.findById(6);
-		  System.out.println(service.listPosts().get(0).getBody());
-			
-		
-	}
+	 Domain d= new Domain();
+	 d.setDomainName("newDN");
+			//domain.createDomain(null, "newDB2",null, null,null, null);
+ 	}
 
 
 }

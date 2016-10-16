@@ -1,0 +1,190 @@
+var app = angular.module("InfoWeb", [ "ngRoute" ]);
+
+app
+		.controller('accessCntrl', function($rootScope, $scope, $location) {
+
+			$scope.user = {};
+			$rootScope.authenticated = false;
+			$scope.login = function() {
+				if ($scope.user.username && $scope.user.password) {
+					$rootScope.authenticated = true;
+					$location.path("/search");
+				}
+			};
+
+		})
+		.controller(
+				'haCntrl',
+				function($rootScope, $scope, $http) {
+					$scope.userId;
+					$scope.statusinfo = {};
+					$scope.statusCheck = {};
+					$scope.statusCheck.hideForm = false;
+					$scope.statusCheck.showForm = false;
+					$scope.checkstatus = function() {
+						$http(
+								{
+									Method : "GET",
+									url : "http://localhost:8181/cxf/bcservice/application/status/"
+											+ $scope.userId,
+									headers : {
+										'Accept' : 'application/json'
+									}
+								}).success(function(data) {
+							showstatusdata(data);
+						}).error(function(status) {
+							$scope.statusinfo.message = status;
+						});
+					}
+					$scope.applicationstatus = function() {
+						$scope.statusCheck.showForm = !$scope.statusCheck.showForm;
+						$scope.statusCheck.hideForm = $scope.statusCheck.hideForm ? false
+								: true;
+						console.log(" Changes :" + $scope.statusCheck.showForm);
+
+					}
+					showstatusdata = function(data) {
+						if (data["org.apache.cxf.message.MessageContentsList"]) {
+							if (data["org.apache.cxf.message.MessageContentsList"]["list"]) {
+								if (data["org.apache.cxf.message.MessageContentsList"]["list"]["birthcertificate.ews.soap.CollectionStatus"]) {
+									var datas = data["org.apache.cxf.message.MessageContentsList"]["list"]["birthcertificate.ews.soap.CollectionStatus"];
+									$scope.statusinfo.message = datas["message"];
+								}
+
+							}
+						}
+					}
+
+				})
+		.controller(
+				'martenityCntrl',
+				function($rootScope, $scope, $http) {
+					$scope.checkups = [];
+					$scope.showcheckups = true;
+					$scope.userId = ""
+					$scope.loadCheckups = function() {
+						$http(
+								{
+									Method : "GET",
+									url : "http://localhost:8181/cxf/healthservice/checkups/"
+											+ $scope.userId,
+									headers : {
+										'Accept' : 'application/json'
+									}
+								}).success(function(data) {
+							$scope.showcheckups = false;
+							loadWomanData(data);
+						});
+					};
+					loadWomanData = function(data) {
+						if (data["list"]) {
+							if (data["list"]["birthtech.entities.Checkup"]) {
+								var datas = data["list"]["birthtech.entities.Checkup"];
+								for (var x = 0; x < datas.length; x++) {
+									var checkup = {};
+									checkup.id = datas[x]["checkupId"];
+									checkup.date = datas[x]["date"];
+									checkup.comments = datas[x]["comments"];
+									$scope.checkups.push(checkup);
+								}
+
+							}
+						}
+					}
+				})
+		.controller('profileController', function($scope, $rootScope) {
+			$scope.profile = $rootScope.profile;
+			$scope.hasdocuments = $rootScope.hasdocuments;
+			$scope.profile.documents = [];
+			$scope.showprofile = $rootScope.showprofile;
+		})
+		.controller('homeController', function($scope) {
+			$scope.message = "Welcome to Infosource Web";
+			$scope.showappform = false;
+			$scope.applyform = function() {
+				$scope.showappform = $scope.showappform ? false : true;
+			};
+
+		})
+		.controller(
+				"serviceController",
+				function($scope, $http, $location, $rootScope) {
+					$scope.modeOptions = [ "Select", "Basic", "Docs", "Full" ];
+					$scope.pmode = $scope.modeOptions[0];
+					$scope.showprofile = true;
+					$scope.user = "";
+					$scope.profile = {};
+					$scope.searchuser = function() {
+						$http(
+								{
+									method : 'GET',
+									url : 'http://localhost:8181/cxf/upservice/'
+											+ $scope.pmode.toLowerCase()
+											+ '/'
+											+ $scope.user.toLowerCase(),
+									headers : {
+										'Accept' : 'application/json'
+									}
+
+								}).success(function(data) {
+							displayProfile(data);
+							$rootScope.profile = $scope.profile;
+							$location.path("/showprofile");
+						}).error(function(data, status) {
+							$scope.rs = "Error " + status;
+						});
+
+					}
+
+					function displayProfile(data) {
+						if (data['personalDetails']) {
+							var result = data['personalDetails'][0];
+							$scope.profile.name = result['firstName'];
+							$scope.profile.surname = result['lastName'];
+							$scope.profile.idnumber = result['idNumber'];
+							$scope.profile.username = result['username'];
+							$scope.profile.mobile = result['cell'];
+							$scope.profile.email = result['email'];
+							$rootScope.showprofile = true;
+
+						}
+						$scope.profile.documents = [];
+						if (data["documents"]) {
+							for (var index = 0; index < data["documents"].length; index++) {
+								$scope.profile.documents
+										.push(data['documents'][index][index]['fileName']);
+							}
+
+							$rootScope.hasdocuments = true;
+
+						}
+					}
+
+				}).config(function($routeProvider, $locationProvider) {
+
+			$routeProvider.when("/woman", {
+				templateUrl : "app/pages/woman.html"
+
+			}).when("/homeaffairs", {
+				templateUrl : "app/pages/homeaffairs.html",
+				controller : "haCntrl"
+
+			}).when("/homeaffairs/status", {
+				templateUrl : "app/pages/homeaffairs.html",
+				controller : "haCntrl"
+
+			}).when("/homeaffairs/applicationlist", {
+				templateUrl : "app/pages/homeaffairs.html",
+				controller : "haCntrl"
+
+			}).when("/search", {
+				templateUrl : "app/pages/basic.html"
+			}).when("/showprofile", {
+				templateUrl : "app/pages/showprofile.html",
+				controller : "profileController"
+
+			}).when("/login", {
+				templateUrl : "http://localhost:8080/userGate/user",
+				controller : "accessCntrl"
+			});
+		});

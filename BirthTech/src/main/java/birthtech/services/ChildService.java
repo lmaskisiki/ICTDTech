@@ -22,12 +22,8 @@ public class ChildService implements IChildService {
 	@Override
 	public Child addChild(String gender, String name, String surname,
 			Patient mother, Labour labour) {
-		Child child = new Child();
-		child.setGender(gender);
-		child.setSurname(surname);
-		child.setName(name);
-			Child savedChild = repo.save(child);
-		return savedChild;
+ 
+		return null;
 	}
 
 	@Override
@@ -39,9 +35,10 @@ public class ChildService implements IChildService {
 	@Override
 	public List<Child> getChildren(Patient mother) {
 		List<Child> children = new ArrayList<Child>();
-		
+
 		return children;
 	}
+
 	@Override
 	public Child getChil(int id) {
 		List<Child> children = new ArrayList<Child>();
@@ -52,14 +49,13 @@ public class ChildService implements IChildService {
 		}
 		return children.get(0);
 	}
+
 	@Override
 	public Child save(Child newchild) {
-		Child child=repo.save(newchild);
-		if(child !=null){
-		MessageSender sender = new MessageSender();
-				UniversalMarshaller marshal = new UniversalMarshaller();
-			//	sender.sendMessage(marshal.toXML(child));
+		if (newchild==null || newchild.getChildId()<1 || newchild.getMother() < 1 ) {
+			throw new NullPointerException("No Identifiers Defined");
 		}
+		Child child = repo.save(newchild);
 		return child;
 	}
 }

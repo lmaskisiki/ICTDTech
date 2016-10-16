@@ -5,13 +5,14 @@ import java.util.List;
 import javax.jws.WebService;
   
 
+
 import webFrameApp.entites.Domain;
+import webframe.sys.SystemMessage;
 
 @WebService
 public interface DomainDAO {
 
-	public void createDomain(String creator, String dominName, String category,
-			String domainOrg, String contact, String description);
+	public SystemMessage createDomain(Domain domain);
 	public boolean updateDomain();
 	public boolean login(String u, String p);
 	public boolean purgeDomain(Domain dom);

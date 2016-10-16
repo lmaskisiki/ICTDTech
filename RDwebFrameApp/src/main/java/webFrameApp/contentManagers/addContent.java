@@ -70,31 +70,35 @@ public class addContent {
 	public ArrayList<String> getTableAttributes(OrgEntity ent) {
 
 		String[] attribute = ent.getAttributes();
+		ArrayList<String> attributeList = new ArrayList<String>();
+		String[] other = ent.getOther();
+		for (int x = 0; x < attribute.length; x++) {
+			if (!other[x].contains("auto_increment")
+					|| !other[x].contains("AUTO_INCREMENT ")) {
+				attributeList.add(attribute[x]);
+			}
+		}
 		GetAutoIncrement incrementCheck = new GetAutoIncrement();
 		// remove any column that auto_increments-- using the method defined in
 		// class 'GetAutoIncrement'
-		//attribute = incrementCheck.validateColumns(ent.getName(), attribute);
+		// attribute = incrementCheck.validateColumns(ent.getName(), attribute);
 
 		ArrayList<String> attributes = new ArrayList<String>();
 		for (int x = 0; x < attribute.length; x++) {
 			attributes.add(attribute[x]);
 
 		}
-		for (String arr : attributes) {
-			System.out.println("Found int ArrayAttributes " + arr);
-		}
-
-		return attributes;
+		return attributeList;
 	}
 
 	public boolean UpdateContent(Domain domain, OrgEntity entity, String[] data) {
 
 		String[] entityAttributes = entity.getAttributes();
-		//GetAutoIncrement incrementCheck = new GetAutoIncrement();
+		// GetAutoIncrement incrementCheck = new GetAutoIncrement();
 		// remove any column that auto_increments-- using the method defined in
 		// class 'GetAutoIncrement'
-		//entityAttributes = incrementCheck.validateColumns(entity.getName(),
-			//	entityAttributes);
+		// entityAttributes = incrementCheck.validateColumns(entity.getName(),
+		// entityAttributes);
 
 		String attributeString = "";
 		String Qmarks = "";
@@ -113,12 +117,12 @@ public class addContent {
 				+ attributeString + ")   values  (" + Qmarks + ")";
 
 		boolean saved = false;
-		saved = saveUpdate(sql, data, domain.getDomainName(), entity.getName());
+		saved = saveContent(sql, data, domain.getDomainName(), entity.getName());
 		System.out.println(sql);
 		return saved;
 	}
 
-	public boolean saveUpdate(String sql, String[] data, String domainName,
+	public boolean saveContent(String sql, String[] data, String domainName,
 			String entityName) {
 		JdbcTemplate jdbc = new JdbcTemplate(jdbcTemplate.getDataSource());
 		Connection con = null;
@@ -130,26 +134,17 @@ public class addContent {
 		try {
 			con = jdbc.getDataSource().getConnection();
 			con.setCatalog(catalog);
-			System.out.println("prepare statment next>>>>>>>>>>");
 			PreparedStatement statement = con.prepareStatement(sql);
 			for (int x = 1; x <= data.length; x++) {
 				statement.setObject(x, data[x - 1]);
-				System.out.println("set value to preparedStatement  \n  >>>>"
-						+ data[x - 1]);
 			}
 			results = statement.executeUpdate();
 
 			con.close();
 		} catch (SQLException e) {
-			// TODO Auto-generated catch block
 			System.out.println("There is a problem with sql Connection");
 			e.printStackTrace();
 		}
-		if (results == 0) {
-			return false;
-		} else {
-			return true;
-
-		}
+		return results == 1 ? true : false;
 	}
 }

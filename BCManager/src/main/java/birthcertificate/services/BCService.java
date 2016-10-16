@@ -110,32 +110,24 @@ public class BCService {
 	}
 
 	public SystemMessage createCerticate(Labour labour) {
-		System.out.println("Start below");
-
 		SystemMessage message = new SystemMessage();
-		BCertificate certificate = new BCertificate();
+		BCertificate application = new BCertificate();
 		try {
-
-			certificate.setBcNumber(generateBCNumber(labour));
-			certificate.setBcNumber(labour.getBirthNo());
-			System.out.println("Id generated...");
-
-			certificate.setBirthNumber("" + labour.getBirthNo());
-			certificate.setChildNames(labour.getChild().getName());
-			certificate.setSurname(labour.getChild().getSurname());
-			certificate.setGender(labour.getChild().getGender());
-			certificate.setParentFullNames(labour.getMaternal().getSurname()
-					+ " " + labour.getMaternal().getNames());
-			System.out.println("\n \n almost done in service");
-
-			certificate.setMaternalId("" + labour.getMaternal().getPid());
-			certificate.setCollectReady(false);
-			certificate.setCreationDate(new Date());
-			repo.save(certificate);
-			System.out.println("Entity  saved");
+			String fullName = labour.getMaternal().getSurname() + " "
+					+ labour.getMaternal().getNames();
+			application.setBcNumber(generateBCNumber(labour));
+			application.setBcNumber(labour.getBirthNo());
+			application.setBirthNumber("" + labour.getBirthNo());
+			application.setChildNames(labour.getChild().getName());
+			application.setSurname(labour.getChild().getSurname());
+			application.setGender(labour.getChild().getGender());
+			application.setParentFullNames(fullName);
+			application.setMaternalId(labour.getMaternal().getPid() + "");
+			application.setCollectReady(false);
+			application.setCreationDate(new Date());
+			BCertificate certificate = repo.save(application);
+			message.setMessage("Completed :" + certificate.getBirthNumber());
 		} catch (Exception e) {
-			System.out.println("Could not create an application' \n "
-					+ e.getClass());
 			message.setMessage(MessageType.Exception);
 			message.setMessage(e.getMessage());
 		}

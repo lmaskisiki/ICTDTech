@@ -29,7 +29,7 @@ public class OfServiceTest2 {
 	@Test
 	public void test() throws NamingException, IOException {
 		FileService fs = new FileService();
-		 FileInfo fi=fs.getFileById("user3", 22);
+		// FileInfo fi=fs.getFileById("user3", 22);
 		// boolean dwn=fs.downloadFile(fi.getFilePath(), "/home/Desktop/testDownload");
 
 	}

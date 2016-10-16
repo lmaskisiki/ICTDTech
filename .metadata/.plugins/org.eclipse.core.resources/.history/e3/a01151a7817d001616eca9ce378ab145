@@ -1,0 +1,73 @@
+var app = angular.module("InfoWeb", [ "ngRoute" ]);
+
+app.controller('homeController', function($scope) {
+	$scope.message = "Welcome to Infosource Web";
+
+	$scope.search = {
+		value : 'll',
+		mode : 'll',
+		test : function() {
+			console.log("Im happ happy");
+		}
+	};
+
+	// Maanage Application Form
+	$scope.showappform = false;
+	$scope.applyform = function() {
+		$scope.showappform = $scope.showappform ? false : true;
+	};
+
+	$scope.person = {
+		firstname : '',
+		lastname : '',
+		idnumber : ''
+	};
+	$scope.submit_application = function() {
+		alert("you are close" + $scope.person.lastname);
+	}
+
+});
+app.controller("serviceController", function($scope, $http) {
+ 	$scope.modeOptions = [ "Select", "Basic", "Docs", "Full" ];
+	$scope.pmode = $scope.modeOptions[0];
+ 
+	$scope.searchuser = function() {
+		$scope.rs = "no data";
+		$http({
+			method : 'GET',
+			url : 'http://localhost:8181/cxf/upservice/'+$scope.pmode+'/'+$scope.user
+
+		}).success(function(data) {
+			$scope.rs = data;
+		});
+	}
+ 
+	
+	// $http
+	// .get("http://localhost:8080/BirthTech/services/rest/labour/list/")
+	// .then(function(response){
+	// $scope.rs=response.data;
+	// });
+
+});
+// ROUTES
+app.config(function($routeProvider) {
+	$routeProvider
+
+	.when("/search", {
+		templateUrl : "app/pages/basic.html"
+	});
+});
+
+// allowCrossDomain = function(req, res, next) {
+// res.header('Access-Control-Allow-Origin', '*');
+// res.header('Access-Control-Allow-Methods', 'GET,PUT,POST,DELETE,OPTIONS');
+// res.header('Access-Control-Allow-Headers', 'Content-Type, Authorization,
+// Content-Length, X-Requested-With');
+// if ('OPTIONS' === req.method) {
+// res.send(200);
+// } else {
+// next();
+// }
+// };
+// app.use(allowCrossDomain);

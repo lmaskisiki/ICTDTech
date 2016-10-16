@@ -8,13 +8,19 @@ import javax.xml.bind.annotation.XmlRootElement;
 
 @XmlRootElement
 public class Person implements Serializable {
+	private String first_name;
+	private String last_name;
+	private String idNumber;
+	private String gender;
+	private String cell;
+	private String email;
+	private String username;
+	private String password;
+	private String orgUnit;
+	private String dn;
+	private String member;
 
-	/**
-	 * 
-	 */
 	private static final long serialVersionUID = 1L;
-	private String first_name, last_name, gender,cell, email, username, password,
-			orgUnit, dn, member, idNumber;
 
 	public String getIdNumber() {
 		return idNumber;
@@ -109,11 +115,10 @@ public class Person implements Serializable {
 	public String getGender() {
 		return gender;
 	}
+
 	@XmlElement
 	public void setGender(String gender) {
 		this.gender = gender;
 	}
-
-	 
 
 }

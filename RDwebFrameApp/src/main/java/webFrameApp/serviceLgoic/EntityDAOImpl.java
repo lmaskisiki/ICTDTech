@@ -24,16 +24,16 @@ import webFrameApp.jdbcTemplate.DomainJDBC;
 import webFrameApp.repositories.EntityRepo;
 
 @Service
-@WebService( serviceName="EntityService",endpointInterface="webFrameApp.interfaces.EntityDAO",portName="SOAPOverHTTP")
+@WebService(serviceName = "EntityService", endpointInterface = "webFrameApp.interfaces.EntityDAO", portName = "SOAPOverHTTP")
 public class EntityDAOImpl implements EntityDAO {
 	@Autowired
 	private EntityRepo repository;
 
 	@Override
-	public void CreateEntity(Domain Domain, String entityName,String accessType,
-			String[] attributes, String[] types,
+	public void CreateEntity(Domain Domain, String entityName,
+			String accessType, String[] attributes, String[] types,
 			List<SqldataTypes> sqlDataTypes, int[] att_value_length,
-			String[] other,String [] optionValues, int att_number) {
+			String[] other, String[] optionValues, int att_number) {
 		ApplicationContext context = new ClassPathXmlApplicationContext(
 				"classpath:META-INF/applicationContext.xml");
 		DomainJDBC jdbcTemplate = (DomainJDBC) context.getBean("DomainJDBC");
@@ -179,7 +179,8 @@ public class EntityDAOImpl implements EntityDAO {
 	}
 
 	@Override
-	public boolean newRelationship(String domain,String entity,String attribute,String refEntity, String refAttribute) {
+	public boolean newRelationship(String domain, String entity,
+			String attribute, String refEntity, String refAttribute) {
 		ApplicationContext context = new ClassPathXmlApplicationContext(
 				"classpath:META-INF/applicationContext.xml");
 		DomainJDBC jdbcTemplate = (DomainJDBC) context.getBean("DomainJDBC");
@@ -187,13 +188,14 @@ public class EntityDAOImpl implements EntityDAO {
 
 		String dbSuffix = "_db";
 		String tablePreffix = "tbl_";
-		domain= domain + dbSuffix;
-			entity = tablePreffix + entity;
-		refEntity= tablePreffix + refEntity;
+		domain = domain + dbSuffix;
+		entity = tablePreffix + entity;
+		refEntity = tablePreffix + refEntity;
 
 		String Catalog = domain;
-		String sqlAlter = "ALTER TABLE " + entity
-				+ " ADD FOREIGN KEY (" + attribute +") REFERENCES " + refEntity+" ("+refAttribute+")";
+		String sqlAlter = "ALTER TABLE " + entity + " ADD FOREIGN KEY ("
+				+ attribute + ") REFERENCES " + refEntity + " (" + refAttribute
+				+ ")";
 
 		Connection connect = null;
 		try {

@@ -36,22 +36,32 @@ public class testing {
 		System.out.println(userService.updateUserAttribute("bl", "uid", "bukhanye"));
 	}
 	
+	 @Test
 	public void test() {
 		ApplicationContext context = new ClassPathXmlApplicationContext(
 				"classpath:META-INF/applicationContext.xml");
 		BeanFactory factory = context;
 		personInterface userService = (personInterface) factory
 				.getBean("ldapUser");
-		Person p=userService.findByUsername("lmasikisiki");
-		UniversalMarshaller um=new UniversalMarshaller();
-		String output=um.toXML(p);
-		System.out.println("The out put  is: \n"+output);
-		
+		Person p= new Person();
+		p.setCell("0395003291");
+		p.setEmail("mxm@mail.com");
+		p.setFirst_name("lname");
+		p.setLast_name("fname");
+		p.setPassword("lizzzzzz");
+		p.setUsername("uname");
+		p.setGender("Male");
+		userService.createAccount(p);
+		//Person p=userService.findByUsername("lmasikisiki");
+		//UniversalMarshaller um=new UniversalMarshaller();
+		//String output=um.toXML(p);
+		//System.out.println("The out put  is: \n"+output);
+		//
 		
 		System.out.println(userService.findByUsername("admin"));
 
 	}
-	@Test
+	//@Test
 public void should_find_user_by_fullname(){
 		ApplicationContext context = new ClassPathXmlApplicationContext(
 				"classpath:META-INF/applicationContext.xml");

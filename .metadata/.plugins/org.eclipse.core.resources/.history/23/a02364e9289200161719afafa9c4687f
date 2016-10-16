@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html ng-app="InfoWeb">
+<script src="app/lib/angular.min.js"></script>
+<script src="app/lib/angular-route.js"></script>
+<script type="text/javascript">
+
+function test(){
+
+ var xhttp= new XMLHttpRequest();
+ xhttp.onreadystatechange=function(){
+		if(xhttp.readyState==4){
+
+			if(xhttp.status==200){
+					alert(xhttp.responseText);
+				}
+			
+			}
+
+	 };
+ xhttp.open("GET", "http://localhost:8181/cxf/upservice/basic/admin", true);
+ xhttp.send(null);
+	
+}
+
+</script>
+<body>
+
+<div ng-controller="homeController">
+ 	<b>{{message}}</b>
+ 	<div id="nav">
+ 		<ul>
+ 		<li><a href="#login" ng-click>Login</a></li>
+ 		<li><a href="#search" ng-click>search</a></li>
+ 		<li><a href="#woman" ng-click>Woman</a></li>
+ 		<li><a href="/homeaffairs" ng-click>Home Affairs</a></li>
+ 		<li><a href="#apply"  ng-click="applyform()">Apply</a><a href="#" onclick="test()">Test</a></li>
+ 		</ul>
+ 	</div>
+
+ 	 
+
+ 	<div ng-view>
+ 	
+ 	</div>
+
+
+
+</div>
+<script src="app/js/modules/HomeModule.js"></script>
+</body>	
+</html>

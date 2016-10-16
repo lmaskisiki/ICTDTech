@@ -3084,3 +3084,298 @@ org.eclipse.debug.core.DebugException: Terminate failed
 
 !ENTRY org.jboss.ide.eclipse.as.core 1 16842769 2016-08-26 15:29:52.947
 !MESSAGE Server Startup Succeeded
+!SESSION 
+
+!ENTRY org.jboss.ide.eclipse.as.core 4 1644298244 2016-09-10 15:32:39.647
+!MESSAGE Incremental publish failed for module BCManager
+!SUBENTRY 1 org.jboss.ide.eclipse.as.wtp.core 4 1644298251 2016-09-10 15:32:39.647
+!MESSAGE Could not delete /home/lizo/dev-tools/Servers/wildfly-8.2.1.final/standalone/deployments/BCManager.war/WEB-INF/classes/birthcertificate/entities/Maternity.class. May be locked by another process.
+
+!ENTRY org.jboss.ide.eclipse.as.core 4 1644298244 2016-09-10 15:32:40.586
+!MESSAGE Incremental publish failed for module BirthTech
+!SUBENTRY 1 org.jboss.ide.eclipse.as.wtp.core 4 1644298251 2016-09-10 15:32:40.586
+!MESSAGE Could not delete /home/lizo/dev-tools/Servers/wildfly-8.2.1.final/standalone/deployments/BirthTech.war/WEB-INF/classes/useraccount/soap/services/CreatePerson.class. May be locked by another process.
+!SUBENTRY 1 org.jboss.ide.eclipse.as.wtp.core 4 1644298251 2016-09-10 15:32:40.586
+!MESSAGE Could not delete /home/lizo/dev-tools/Servers/wildfly-8.2.1.final/standalone/deployments/BirthTech.war/WEB-INF/classes/useraccount/soap/services/CreatePersonResponse.class. May be locked by another process.
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842760 2016-09-10 15:32:47.004
+!MESSAGE Server Starting
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842769 2016-09-10 15:33:14.753
+!MESSAGE Server Startup Succeeded
+
+!ENTRY org.jboss.ide.eclipse.as.core 4 1644298244 2016-09-10 15:33:17.680
+!MESSAGE Incremental publish failed for module BCManager
+!SUBENTRY 1 org.jboss.ide.eclipse.as.wtp.core 4 1644298251 2016-09-10 15:33:17.680
+!MESSAGE Could not delete /home/lizo/dev-tools/Servers/wildfly-8.2.1.final/standalone/deployments/BCManager.war/WEB-INF/classes/birthcertificate/entities/Maternity.class. May be locked by another process.
+
+!ENTRY org.jboss.ide.eclipse.as.core 4 1644298244 2016-09-10 15:33:18.354
+!MESSAGE Incremental publish failed for module BirthTech
+!SUBENTRY 1 org.jboss.ide.eclipse.as.wtp.core 4 1644298251 2016-09-10 15:33:18.354
+!MESSAGE Could not delete /home/lizo/dev-tools/Servers/wildfly-8.2.1.final/standalone/deployments/BirthTech.war/WEB-INF/classes/useraccount/soap/services/CreatePerson.class. May be locked by another process.
+!SUBENTRY 1 org.jboss.ide.eclipse.as.wtp.core 4 1644298251 2016-09-10 15:33:18.354
+!MESSAGE Could not delete /home/lizo/dev-tools/Servers/wildfly-8.2.1.final/standalone/deployments/BirthTech.war/WEB-INF/classes/useraccount/soap/services/CreatePersonResponse.class. May be locked by another process.
+!SESSION 
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842760 2016-09-10 18:27:00.332
+!MESSAGE Server Starting
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842769 2016-09-10 18:27:18.850
+!MESSAGE Server Startup Succeeded
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842776 2016-09-10 20:14:08.898
+!MESSAGE Server shutting down
+
+!ENTRY org.jboss.ide.eclipse.as.wtp.core 1 16973825 2016-09-10 20:14:09.277
+!MESSAGE Server processes have been terminated.
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842760 2016-09-10 20:14:09.318
+!MESSAGE Server Starting
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842769 2016-09-10 20:14:13.726
+!MESSAGE Server Startup Succeeded
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842776 2016-09-10 20:40:21.684
+!MESSAGE Server shutting down
+
+!ENTRY org.jboss.ide.eclipse.as.wtp.core 1 16973825 2016-09-10 20:40:21.944
+!MESSAGE Server processes have been terminated.
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842760 2016-09-10 20:40:21.982
+!MESSAGE Server Starting
+
+!ENTRY org.jboss.ide.eclipse.as.core 2 16842768 2016-09-10 20:40:21.985
+!MESSAGE Poll Thread Aborted: null
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842769 2016-09-10 20:40:25.086
+!MESSAGE Server Startup Succeeded
+!SESSION 
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842760 2016-09-11 06:54:44.621
+!MESSAGE Server Starting
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842769 2016-09-11 06:55:00.400
+!MESSAGE Server Startup Succeeded
+!SESSION 
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842760 2016-09-11 18:55:20.525
+!MESSAGE Server Starting
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842769 2016-09-11 18:56:10.447
+!MESSAGE Server Startup Succeeded
+!SESSION 
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842776 2016-09-11 19:21:48.485
+!MESSAGE Server shutting down
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842785 2016-09-11 19:21:48.892
+!MESSAGE Server Shutdown Succeeded
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842760 2016-09-11 19:21:49.041
+!MESSAGE Server Starting
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842769 2016-09-11 19:21:51.949
+!MESSAGE Server Startup Succeeded
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842776 2016-09-11 19:34:32.594
+!MESSAGE Server shutting down
+
+!ENTRY org.jboss.ide.eclipse.as.wtp.core 1 16973825 2016-09-11 19:34:32.936
+!MESSAGE Server processes have been terminated.
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842760 2016-09-11 19:34:32.983
+!MESSAGE Server Starting
+
+!ENTRY org.jboss.ide.eclipse.as.core 2 16842768 2016-09-11 19:34:32.998
+!MESSAGE Poll Thread Aborted: null
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842769 2016-09-11 19:34:36.499
+!MESSAGE Server Startup Succeeded
+!SESSION 
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842760 2016-09-11 20:42:41.624
+!MESSAGE Server Starting
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842769 2016-09-11 20:42:58.675
+!MESSAGE Server Startup Succeeded
+!SESSION 
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842760 2016-09-12 18:32:07.279
+!MESSAGE Server Starting
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842769 2016-09-12 18:32:24.242
+!MESSAGE Server Startup Succeeded
+!SESSION 
+
+!ENTRY org.jboss.ide.eclipse.as.core 4 1644298244 2016-09-17 20:55:00.829
+!MESSAGE Full publish failed for module BirthTech
+!SUBENTRY 1 org.jboss.ide.eclipse.as.wtp.core 4 1644298251 2016-09-17 20:55:00.829
+!MESSAGE Error reading file /home/lizo/ICTDLab/BirthTech/target/classes/birthtech/security/cxf/CORSFilter.class
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842760 2016-09-17 20:55:02.044
+!MESSAGE Server Starting
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842769 2016-09-17 20:55:20.007
+!MESSAGE Server Startup Succeeded
+
+!ENTRY org.jboss.ide.eclipse.as.core 4 1644298244 2016-09-17 20:56:57.461
+!MESSAGE Full publish failed for module BirthTech
+!SUBENTRY 1 org.jboss.ide.eclipse.as.wtp.core 4 1644298251 2016-09-17 20:56:57.461
+!MESSAGE Error reading file /home/lizo/ICTDLab/BirthTech/target/classes/birthtech/security/cxf/CORSFilter.class
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 0 2016-09-17 20:56:57.928
+!MESSAGE Module InfoWeb on WildFly 8.x not yet fully deployed. Waiting...
+
+!ENTRY org.jboss.ide.eclipse.as.core 4 1644298244 2016-09-17 20:57:35.967
+!MESSAGE Full publish failed for module BirthTech
+!SUBENTRY 1 org.jboss.ide.eclipse.as.wtp.core 4 1644298251 2016-09-17 20:57:35.967
+!MESSAGE Error reading file /home/lizo/ICTDLab/BirthTech/target/classes/birthtech/security/cxf/CORSFilter.class
+
+!ENTRY org.jboss.ide.eclipse.as.core 4 1644298244 2016-09-17 20:58:37.720
+!MESSAGE Full publish failed for module BirthTech
+!SUBENTRY 1 org.jboss.ide.eclipse.as.wtp.core 4 1644298251 2016-09-17 20:58:37.720
+!MESSAGE Error reading file /home/lizo/ICTDLab/BirthTech/target/classes/birthtech/security/cxf/CORSFilter.class
+
+!ENTRY org.jboss.ide.eclipse.as.core 4 1644298244 2016-09-17 21:00:20.624
+!MESSAGE Full publish failed for module BirthTech
+!SUBENTRY 1 org.jboss.ide.eclipse.as.wtp.core 4 1644298251 2016-09-17 21:00:20.624
+!MESSAGE Error reading file /home/lizo/ICTDLab/BirthTech/target/classes/birthtech/security/cxf/CORSFilter.class
+
+!ENTRY org.jboss.ide.eclipse.as.core 4 1644298244 2016-09-17 21:01:04.022
+!MESSAGE Full publish failed for module BirthTech
+!SUBENTRY 1 org.jboss.ide.eclipse.as.wtp.core 4 1644298251 2016-09-17 21:01:04.022
+!MESSAGE Error reading file /home/lizo/ICTDLab/BirthTech/target/classes/birthtech/security/cxf/CORSFilter.class
+
+!ENTRY org.jboss.ide.eclipse.as.core 4 1644298244 2016-09-17 21:01:19.620
+!MESSAGE Full publish failed for module BirthTech
+!SUBENTRY 1 org.jboss.ide.eclipse.as.wtp.core 4 1644298251 2016-09-17 21:01:19.621
+!MESSAGE Error reading file /home/lizo/ICTDLab/BirthTech/target/classes/birthtech/security/cxf/CORSFilter.class
+
+!ENTRY org.jboss.ide.eclipse.as.core 4 1644298244 2016-09-17 21:01:38.662
+!MESSAGE Full publish failed for module BirthTech
+!SUBENTRY 1 org.jboss.ide.eclipse.as.wtp.core 4 1644298251 2016-09-17 21:01:38.662
+!MESSAGE Error reading file /home/lizo/ICTDLab/BirthTech/target/classes/birthtech/security/cxf/CORSFilter.class
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842776 2016-09-17 21:05:38.244
+!MESSAGE Server shutting down
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842785 2016-09-17 21:05:38.953
+!MESSAGE Server Shutdown Succeeded
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842760 2016-09-17 21:05:39.055
+!MESSAGE Server Starting
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842769 2016-09-17 21:05:48.579
+!MESSAGE Server Startup Succeeded
+
+!ENTRY org.jboss.ide.eclipse.as.core 4 1644298244 2016-09-17 21:12:38.024
+!MESSAGE Full publish failed for module BirthTech
+!SUBENTRY 1 org.jboss.ide.eclipse.as.wtp.core 4 1644298251 2016-09-17 21:12:38.024
+!MESSAGE Error reading file /home/lizo/ICTDLab/BirthTech/target/classes/birthtech/security/cxf/CORSFilter.class
+!SESSION 
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842760 2016-09-18 08:04:38.999
+!MESSAGE Server Starting
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842769 2016-09-18 08:05:01.195
+!MESSAGE Server Startup Succeeded
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842776 2016-09-18 08:10:08.926
+!MESSAGE Server shutting down
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842785 2016-09-18 08:10:10.135
+!MESSAGE Server Shutdown Succeeded
+!SESSION 
+
+!ENTRY org.jboss.ide.eclipse.as.core 4 1644298244 2016-09-19 18:20:29.861
+!MESSAGE Incremental publish failed for module DocMan
+!SUBENTRY 1 org.jboss.ide.eclipse.as.wtp.core 4 1644298251 2016-09-19 18:20:29.862
+!MESSAGE Could not delete /home/lizo/dev-tools/Servers/wildfly-8.2.1.final/standalone/deployments/DocManEAR.ear/DocMan.jar/META-INF/maven/DocMan/DocMan/pom.properties. May be locked by another process.
+!SUBENTRY 1 org.jboss.ide.eclipse.as.wtp.core 4 1644298251 2016-09-19 18:20:29.862
+!MESSAGE Could not delete /home/lizo/dev-tools/Servers/wildfly-8.2.1.final/standalone/deployments/DocManEAR.ear/DocMan.jar/META-INF/maven/DocMan/DocMan/pom.xml. May be locked by another process.
+!SUBENTRY 1 org.jboss.ide.eclipse.as.wtp.core 4 1644298251 2016-09-19 18:20:29.862
+!MESSAGE Could not delete /home/lizo/dev-tools/Servers/wildfly-8.2.1.final/standalone/deployments/DocManEAR.ear/DocMan.jar/META-INF/maven/DocMan/DocMan. May be locked by another process.
+!SUBENTRY 1 org.jboss.ide.eclipse.as.wtp.core 4 1644298251 2016-09-19 18:20:29.862
+!MESSAGE Could not delete /home/lizo/dev-tools/Servers/wildfly-8.2.1.final/standalone/deployments/DocManEAR.ear/DocMan.jar/META-INF/maven/DocMan. May be locked by another process.
+!SUBENTRY 1 org.jboss.ide.eclipse.as.wtp.core 4 1644298251 2016-09-19 18:20:29.862
+!MESSAGE Could not delete /home/lizo/dev-tools/Servers/wildfly-8.2.1.final/standalone/deployments/DocManEAR.ear/DocMan.jar/META-INF/maven. May be locked by another process.
+!SESSION 
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842760 2016-09-25 17:54:07.565
+!MESSAGE Server Starting
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842769 2016-09-25 17:54:27.119
+!MESSAGE Server Startup Succeeded
+!SESSION 
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842776 2016-09-26 17:45:25.830
+!MESSAGE Server shutting down
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842785 2016-09-26 17:45:30.542
+!MESSAGE Server Shutdown Succeeded
+!SESSION 
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842760 2016-10-09 06:11:03.331
+!MESSAGE Server Starting
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842769 2016-10-09 06:11:55.359
+!MESSAGE Server Startup Succeeded
+!SESSION 
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842760 2016-10-09 06:26:32.692
+!MESSAGE Server Starting
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842769 2016-10-09 06:27:04.655
+!MESSAGE Server Startup Succeeded
+!SESSION 
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842760 2016-10-10 20:43:28.065
+!MESSAGE Server Starting
+
+!ENTRY org.jboss.ide.eclipse.as.core 2 16842784 2016-10-10 20:45:27.509
+!MESSAGE Poll Thread Aborted: null
+
+!ENTRY org.jboss.ide.eclipse.as.wtp.core 1 16973825 2016-10-10 20:45:32.824
+!MESSAGE Server processes have been terminated.
+
+!ENTRY org.jboss.ide.eclipse.as.core 4 16973826 2016-10-10 20:45:32.988
+!MESSAGE The server was shutdown forcefully. All processes were terminated.
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842760 2016-10-10 20:45:41.991
+!MESSAGE Server Starting
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842769 2016-10-10 20:45:57.055
+!MESSAGE Server Startup Succeeded
+
+!ENTRY org.jboss.ide.eclipse.as.wtp.core 1 16973825 2016-10-13 18:49:55.771
+!MESSAGE Server processes have been terminated.
+!SESSION 
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842760 2016-10-14 17:53:25.985
+!MESSAGE Server Starting
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842769 2016-10-14 17:53:50.597
+!MESSAGE Server Startup Succeeded
+!SESSION 
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842760 2016-10-15 13:16:40.945
+!MESSAGE Server Starting
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842769 2016-10-15 13:17:04.375
+!MESSAGE Server Startup Succeeded
+!SESSION 
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842760 2016-10-15 13:57:03.887
+!MESSAGE Server Starting
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842769 2016-10-15 13:57:21.954
+!MESSAGE Server Startup Succeeded
+
+!ENTRY org.jboss.ide.eclipse.as.wtp.core 1 16973825 2016-10-15 14:25:22.075
+!MESSAGE Server processes have been terminated.
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842760 2016-10-15 15:09:09.980
+!MESSAGE Server Starting
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842769 2016-10-15 15:09:48.134
+!MESSAGE Server Startup Succeeded

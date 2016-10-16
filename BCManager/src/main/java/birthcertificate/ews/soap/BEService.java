@@ -96,11 +96,10 @@ public class BEService implements IBEService {
 			message = service.batchApplications(list);
 		} else {
 			Labour lab = gson.fromJson(jsonData, Labour.class);
-			if(!service.exists(lab)){
+			if (!service.exists(lab)) {
 				message = service.createCerticate(lab);
 			}
-		 
-			
+
 		}
 		System.out.println("Batch Processing Complete...(:");
 		return message;

@@ -27,6 +27,7 @@ import birthtech.services.PatientService;
 @ContextConfiguration("/META-INF/applicationContext.xml")
 @Transactional
 @TransactionConfiguration(defaultRollback = false)
+@Ignore
 public class ServiceTest {
 
 	@Autowired
@@ -36,7 +37,7 @@ public class ServiceTest {
 	@Autowired
 	private LabourService labourService = null;
 
-	 @Test
+	// @Test
 	public void should_create_maternity() {
 		ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext(
 				"META-INF/cxf-context.xml");

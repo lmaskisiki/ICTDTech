@@ -125,16 +125,7 @@ System.out.println("Gnder supplied"+ person.getGender());
 				.getBean("ldapUser");
 		List<Person> people = personList.getPersons();
 
-		System.out.println("security Context is :"
-				+ SecurityContextHolder.getContext().getAuthentication()
-						.getName());
-
-		for (Person p : people) {
-
-			System.out.print(p.getFirst_name() + " ");
-			System.out.print(p.getLast_name() + " ");
-			System.out.println();
-		}
+	
 		request.setAttribute("users", people);
 
 		ModelAndView model = new ModelAndView("showAllusers");

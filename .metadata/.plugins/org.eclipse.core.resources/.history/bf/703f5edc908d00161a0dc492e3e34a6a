@@ -1,0 +1,11 @@
+package userGate.security.authprovider;
+
+import org.springframework.security.core.Authentication;
+
+public class Authenticate {
+
+	public Authentication authenticate() {
+		return null;
+
+	}
+}

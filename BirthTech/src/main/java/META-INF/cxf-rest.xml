@@ -11,19 +11,18 @@
 
 	<context:annotation-config />
 	<context:component-scan base-package="birthtech.services.rest" />
-
-
-	<jaxrs:server id="service" address="/rest"
+	<jaxrs:server id="service"
+		address="/rest"
 		serviceClass="birthtech.services.rest.WClinic">
 	</jaxrs:server>
-	<cxf:rsServer id="rsServer" address="/rest/service"
-		serviceClass="birthtech.services.rest.WClinic" loggingFeatureEnabled="true"
-		loggingSizeLimit="20" skipFaultLogging="true">
-		<cxf:providers>
-			<ref bean="jsonProvider" />
-		</cxf:providers>
-	</cxf:rsServer>
-
+	
+	
+	
+	<!-- <cxf:rsServer id="rsServer" address="/rest/service" serviceClass="birthtech.services.rest.WClinic" 
+		loggingFeatureEnabled="true" loggingSizeLimit="20" skipFaultLogging="true"> 
+		<cxf:providers> <ref bean="jsonProvider" /> <ref bean="filter"/> </cxf:providers> 
+		</cxf:rsServer> -->
+	<bean id="filter" class="birthtech.security.cxf.CORSFilter"></bean>
 	<bean id="jsonProvider" class="org.codehaus.jackson.jaxrs.JacksonJsonProvider" />
 	<bean id="wclinicservice" class="birthtech.services.rest.WClinic"></bean>
 </beans>

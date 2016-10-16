@@ -1,0 +1,59 @@
+package birthtech.unit.tests;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import org.junit.Assert;
+import org.junit.Before;
+import org.junit.Test;
+import org.junit.runner.RunWith;
+import org.mockito.InjectMocks;
+import org.mockito.Matchers;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.test.context.ContextConfiguration;
+import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
+
+import static org.mockito.Mockito.*;
+import birthtech.entities.Patient;
+import birthtech.interfaces.IMartenalService;
+import birthtech.repositories.MartenalRepository;
+
+@RunWith(SpringJUnit4ClassRunner.class)
+@ContextConfiguration("/META-INF/applicationContext.xml")
+public class When_registering_a_patient {
+
+	private IMartenalService service;
+
+	@Before
+	public void BeforeTest() {
+		service = mock(IMartenalService.class);
+	}
+
+	@Test
+	public void should_suucessfully_create_an_account() {
+		Patient patient = new Patient();
+		patient.setIdnumber(123);
+		when(service.addMaternity(Matchers.<Patient> any())).thenReturn(true);
+
+		Assert.assertEquals(true, service.addMaternity(patient));
+	}
+
+	@Test
+	public void when_getting_all_patients() {
+	List<Patient> patientList= getPatientList();
+	when(service.getMartenal()).thenReturn(patientList);
+	
+	List<Patient> results=service.getMartenal();
+	Assert.assertNotNull(results);
+	Assert.assertTrue(results.get(0).getIdnumber()>0);
+	}
+	
+	//Test Data -- patient list
+	public List<Patient> getPatientList(){
+		List<Patient> patientList= new ArrayList<Patient>();
+		Patient p = new Patient();
+		p.setIdnumber(123);
+		patientList.add(p);
+		return patientList;
+	}
+}

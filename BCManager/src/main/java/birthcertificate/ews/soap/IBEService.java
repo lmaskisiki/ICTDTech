@@ -11,7 +11,6 @@ import org.springframework.stereotype.Service;
 import bcmanager.system.SystemMessage;
 import birthcertificate.entities.BCertificate;
 import birthcertificate.entities.Labour;
- 
 
 @Service
 @WebService(portName = "IBEServicePort", serviceName = "IBEService")
@@ -25,10 +24,12 @@ public interface IBEService {
 			@WebParam(name = "parentId") int parentId);
 
 	@WebMethod
-	public SystemMessage createApplication(@WebParam(name = "labour") Labour labour);
+	public SystemMessage createApplication(
+			@WebParam(name = "labour") Labour labour);
+
 	@WebMethod
-public List<BCertificate> approved();
-	
+	public List<BCertificate> approved();
+
 	@WebMethod
-	public SystemMessage  BatchApplication(String jsonData);
+	public SystemMessage BatchApplication(String jsonData);
 }

@@ -6,6 +6,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>Insert title here</title>
+<script src="/RDwebFrameApp/resources/js/helpers.js" type="text/javascript"></script>
 <script type="text/javascript">
 	function laodEntities(object) {
 		var parentCategory = document.getElementById(object);
@@ -126,11 +127,11 @@
 				}
 
 			}
-
-			//	table.appendChild(headerrow);
 			table.appendChild(datarow);
 			table.insertBefore(headerrow, table.firstChild)
-
+			while (contentHolder.firstChild) {
+				contentHolder.removeChild(contentHolder.firstChild)
+			}
 			contentHolder.appendChild(table);
 		}
 	}
@@ -149,7 +150,6 @@
 #nav {
 	width: 100%;
 	height: 80px;
-
 }
 
 #nav #bar {
@@ -185,7 +185,6 @@
 	min-height: 90%;
 	float: left;
 	/*background-color: buttonface;*/
-	 
 	/*overflow: auto;*/
 	display: block;
 }
@@ -223,37 +222,35 @@
 #sidebar1  li a:HOVER {
 	background-color: buttonface;
 }
-tfoot{
- font: small;
- 
- color: blue;
 
-
+tfoot {
+	font: small;
+	color: blue;
 }
 </style>
- <link rel="stylesheet" type="text/css"
+<link rel="stylesheet" type="text/css"
 	href="<c:url value ="/resources/theme/css/table1.css"/>" />
- <link rel="stylesheet" type="text/css"
+<link rel="stylesheet" type="text/css"
 	href="<c:url value ="/resources/theme/css/menu.css"/>" />
 </head>
 <body>
 	<div class="wrapper">
 		<div id="nav">
-	
-			 
-				<ul id="menu">
-					<li><a href="#">Account</a>
-						<ul id="nav-drop">
-							<li><a href="#">Login</a></li>
-							<li><a href="#">Sign Up</a></li>
-						</ul></li>
-					<li><a href="#">About</a></li>
-					<li><a href="#">Report Issues</a></li>
-					<li><a href="web/admin">Domain</a></li>
-				</ul>
+
+
+			<ul id="menu">
+				<li><a href="#">Account</a>
+					<ul id="nav-drop">
+						<li><a href="#">Login</a></li>
+						<li><a href="#">Sign Up</a></li>
+					</ul></li>
+				<li><a href="#">About</a></li>
+				<li><a href="#">Report Issues</a></li>
+				<li><a href="web/admin">Domain</a></li>
+			</ul>
 
 		</div>
-			 
+
 		<div id="container">
 			<div id="sidebar1">
 				<ul id="categoryList">
@@ -266,27 +263,38 @@ tfoot{
 				</ul>
 			</div>
 			<div id="main">
-			
-			<c:forEach items="${feeds}" var="feed">
-			<table>
-				<thead><tr><td colspan="2" >${feed.title}</td> </tr></thead>
-				<tbody>
-				
-				<tr><td colspan="3">${feed.body}</td></tr>
-				</tbody>
-				<tfoot><tr><td>Post Date: ${feed.postDate }</td> <td>Author: ${feed.author}</td></tr></tfoot>
-			</table>
-			
-			<br/>
-			
-			</c:forEach>
-			
+
+				<c:forEach items="${feeds}" var="feed">
+					<table>
+						<thead>
+							<tr>
+								<td colspan="2">${feed.title}</td>
+							</tr>
+						</thead>
+						<tbody>
+
+							<tr>
+								<td colspan="3">${feed.body}</td>
+							</tr>
+						</tbody>
+						<tfoot>
+							<tr>
+								<td>Post Date: ${feed.postDate }</td>
+								<td>Author: ${feed.author}</td>
+							</tr>
+						</tfoot>
+					</table>
+
+					<br />
+
+				</c:forEach>
+
 			</div>
 			<div id="sidebar2">
 				<h2>Announcements</h2>
 			</div>
 		</div>
-	 
+
 	</div>
 </body>
 </html>

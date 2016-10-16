@@ -24,7 +24,7 @@ import entities.FileInfo;
 public class ServiceTest {
  
 
-	@Test
+	//@Test
 	public void test() throws NamingException, IOException {
 		FileService fs = new FileService();
 		System.out.println("Done...");

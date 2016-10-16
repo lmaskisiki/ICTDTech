@@ -14,26 +14,35 @@ import birthtech.repositories.CheckupRepository;
 @Service
 public class CheckupService implements ICheckupService {
 	@Autowired
-	private CheckupRepository repo;
+	private CheckupRepository checkupRepo;
 
 	@Autowired
 	private PatientService MartenalService;
 
 	@Override
 	public Checkup addCheckup(Checkup checkup) {
-		Checkup savedCheckup=repo.save(checkup);
-		
-		return savedCheckup;
+		Checkup result = null;
+		if (checkup == null) {
+			throw new NullPointerException("Checkup object not initialized");
+		}
+		try {
+			result = checkupRepo.save(checkup);
+		} catch (Exception e) {
+			
+			System.out.print("\n Exception Thrown");
+		}
+
+		return result;
 	}
 
 	@Override
 	public List<Checkup> getCheckups() {
-		return repo.findAll();
+		return checkupRepo.findAll();
 	}
 
 	@Override
 	public List<Checkup> getCheckups(String fullname) {
-		List<Checkup> checkups = repo.findAll();
+		List<Checkup> checkups = checkupRepo.findAll();
 		List<Checkup> checkupsFound = new ArrayList<Checkup>();
 		if (checkups != null) {
 			for (Checkup checkup : checkups) {
@@ -42,22 +51,24 @@ public class CheckupService implements ICheckupService {
 		}
 		return checkupsFound;
 	}
+
 	@Override
 	public List<Checkup> getCheckups(int maternalId) {
-		List<Checkup> checkups = repo.findAll();
+		List<Checkup> checkups = checkupRepo.findAll();
 		List<Checkup> checkupsFound = new ArrayList<Checkup>();
 		if (checkups != null) {
 			for (Checkup checkup : checkups) {
-				if(checkup.getMartenalId()==maternalId){
-				checkupsFound.add(checkup);
+				if (checkup.getMartenalId() == maternalId) {
+					checkupsFound.add(checkup);
 				}
 			}
 		}
 		return checkupsFound;
 	}
+
 	@Override
 	public Checkup getCheckupById(int key) {
-		List<Checkup> checkups = repo.findAll();
+		List<Checkup> checkups = checkupRepo.findAll();
 		List<Checkup> checkupsFound = new ArrayList<Checkup>();
 		if (checkups != null) {
 			for (Checkup checkup : checkups) {
@@ -81,7 +92,7 @@ public class CheckupService implements ICheckupService {
 							.equals(fullname)) {
 				martenalId = mat.getPid();
 				System.out.println("ID found :" + martenalId);
-				checkup = repo.findOne(martenalId);
+				checkup = checkupRepo.findOne(martenalId);
 				break;
 			}
 		}

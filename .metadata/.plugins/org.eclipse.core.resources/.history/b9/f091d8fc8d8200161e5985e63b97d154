@@ -1,0 +1,82 @@
+package birthtech.unit.tests;
+
+import static org.junit.Assert.*;
+import static org.mockito.Mockito.when;
+import static org.mockito.Mockito.verify;
+import static org.mockito.Mockito.only;
+import static org.mockito.Mockito.mock;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import org.junit.Assert;
+import org.junit.Before;
+import org.junit.Rule;
+import org.junit.Test;
+import org.junit.rules.ExpectedException;
+import org.junit.runner.RunWith;
+import org.mockito.*;
+import org.mockito.internal.verification.AtLeast;
+import org.mockito.runners.MockitoJUnitRunner;
+
+import birthtech.entities.Child;
+import birthtech.entities.Patient;
+import birthtech.repositories.ChildRepository;
+import birthtech.services.ChildService;
+@RunWith(MockitoJUnitRunner.class)
+public class ChildServiceTests {
+
+	@InjectMocks
+	private ChildService SUT;
+	@Mock
+	private  ChildRepository ChildRepo;
+	
+	@Rule
+	public final ExpectedException exception = ExpectedException.none();
+
+	@Before
+	public void setUp() throws Exception {
+		MockitoAnnotations.initMocks(this);
+	 when(ChildRepo.save(Matchers.<Child>any())).thenReturn(mock(Child.class));
+	 when(ChildRepo.findAll()).thenReturn(GetChildList());
+	}
+
+	@Test
+	public void should_successfully_save_a_valid_child() {
+	 Child child= new Child();
+	 child.setChildId(123);
+	 child.setMother(123);
+	 SUT.save(child);
+	 verify(ChildRepo, only()).save(Matchers.<Child>any());
+
+	}
+	@Test
+	public void given_invald_child_details_should_throw_exception(){
+		Child child= new Child();
+		 exception.expect(NullPointerException.class);
+		 exception.expectMessage("No Identifiers Defined");
+		 SUT.save(child);
+
+	}
+	@Test
+	public void given_a_valid_search_id_should_return_one_maching_entry(){
+		Child child=SUT.getChil(123);
+		
+		verify(ChildRepo, only()).findAll(); 
+		Assert.assertNotNull(child);
+		 Assert.assertTrue(child.getChildId()==123);
+		 
+	}
+	public List<Child> GetChildList(){
+		Child child = new Child();
+		child.setChildId(123);
+		child.setGender("Male");
+		child.setName("Name");
+		child.setSurname("Surname");
+		child.setMother(123);
+		List<Child> list= new ArrayList<Child>();
+		list.add(child);
+		return list;
+	}
+
+}

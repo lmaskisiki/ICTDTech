@@ -1,0 +1,15 @@
+<div ng-controller="serviceController">
+
+	<table>
+		<tr>
+			<td><select ng-model="pmode" id="pmode">
+					<option ng-repeat="mode in modeOptions" value="{{mode}}">{{mode}}</option>
+			</select></td>
+
+			<td><input type="text" ng-model="user"></input><br /></td>
+			<td><button  ng-click="searchuser()" >Search</button></td>
+		</tr>
+	</table>
+ {{rs}}
+
+</div>

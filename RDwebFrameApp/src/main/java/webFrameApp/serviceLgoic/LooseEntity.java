@@ -19,13 +19,10 @@ import webFrameApp.entites.SqldataTypes;
 import webFrameApp.jdbcTemplate.DomainJDBC;
 
 public class LooseEntity {
-	// @Autowired
-	// TypeDAOImpl typeDoaIMPL;
 	ApplicationContext context = new ClassPathXmlApplicationContext(
 			"classpath:META-INF/applicationContext.xml");
 	DomainJDBC jdbcTemplate = (DomainJDBC) context.getBean("DomainJDBC");
 	JdbcTemplate jdbc = new JdbcTemplate(jdbcTemplate.getDataSource());
-
 
 	public void createLooseObjects(Domain Domain, String ObjectName,
 			String[] attributes, String[] types,
@@ -60,12 +57,11 @@ public class LooseEntity {
 		createEnity = createEnity + query + ")";
 		createEnity.replaceAll("null", "");
 		System.out.println("Statement to create table: " + createEnity);
-		Connection connect=null;
+		Connection connect = null;
 		try {
 			connect = jdbc.getDataSource().getConnection();
 			connect.setCatalog(catalog);
-			PreparedStatement statement = connect
-					.prepareStatement(createEnity);
+			PreparedStatement statement = connect.prepareStatement(createEnity);
 			int update = statement.executeUpdate();
 			statement.close();
 			System.out.println("Query Updated::  to this catalog"

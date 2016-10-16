@@ -11,7 +11,7 @@ import webFrame.ws.integration.UniversalMarshaller;
 
 public class TestWrapper {
 
-	@Test
+	//@Test
 	public void test() {
 		 UASclient cl=new UASclient(); 
 		 Person ps=cl.findPerson("admin");

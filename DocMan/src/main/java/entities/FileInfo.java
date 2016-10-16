@@ -18,17 +18,14 @@ import javax.xml.bind.annotation.XmlRootElement;
 @Entity
 @XmlRootElement
 public class FileInfo implements Serializable {
-
+	@Id
+	@GeneratedValue(strategy = GenerationType.AUTO)
+	private int fileId;
 	private String fileName;
 	private Date uploaded;
 	private String uploadedBy;
 	private String fileDir;
-	 
 
-	@Id
-	@GeneratedValue(strategy=GenerationType.AUTO)
-	private int fileId;
-	
 	public int getFileId() {
 		return fileId;
 	}
@@ -68,9 +65,7 @@ public class FileInfo implements Serializable {
 	public void setFilePath(String filePath) {
 		this.fileDir = filePath;
 	}
- 
-	private static final long serialVersionUID = 1L;
 
-	
+	private static final long serialVersionUID = 1L;
 
 }

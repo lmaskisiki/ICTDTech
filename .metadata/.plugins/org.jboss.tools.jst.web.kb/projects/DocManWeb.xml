@@ -5,38 +5,10 @@
  </depends-on-projects>
  <used-by-projects/>
  <paths>
-  <path value="/home/lizo/wildfly-8.2.1.Final/modules/system/layers/base/org/jboss/resteasy/resteasy-jaxb-provider/main/resteasy-jaxb-provider-3.0.10.Final.jar"/>
-  <path value="/home/lizo/wildfly-8.2.1.Final/modules/system/layers/base/org/picketbox/main/picketbox-4.0.21.Final.jar"/>
-  <path value="/home/lizo/wildfly-8.2.1.Final/modules/system/layers/base/org/jboss/dmr/main/jboss-dmr-1.2.0.Final.jar"/>
-  <path value="/home/lizo/wildfly-8.2.1.Final/modules/system/layers/base/org/jboss/as/controller-client/main/wildfly-controller-client-8.2.1.Final.jar"/>
-  <path value="/home/lizo/wildfly-8.2.1.Final/modules/system/layers/base/javax/security/auth/message/api/main/jboss-jaspi-api_1.1_spec-1.0.0.Final.jar"/>
-  <path value="/home/lizo/wildfly-8.2.1.Final/modules/system/layers/base/org/jboss/logging/main/jboss-logging-3.1.4.GA.jar"/>
-  <path value="/home/lizo/wildfly-8.2.1.Final/modules/system/layers/base/javax/ejb/api/main/jboss-ejb-api_3.2_spec-1.0.0.Final.jar"/>
-  <path value="/home/lizo/wildfly-8.2.1.Final/modules/system/layers/base/org/jboss/resteasy/resteasy-multipart-provider/main/resteasy-multipart-provider-3.0.10.Final-jandex.jar"/>
-  <path value="/home/lizo/wildfly-8.2.1.Final/modules/system/layers/base/javax/resource/api/main/jboss-connector-api_1.7_spec-1.0.0.Final.jar"/>
   <path value="/home/lizo/wildfly-8.2.1.Final/modules/system/layers/base/javax/management/j2ee/api/main/jboss-j2eemgmt-api_1.1_spec-1.0.1.Final.jar"/>
-  <path value="/home/lizo/ICTDLab/DocManWeb/WebContent/WEB-INF/lib/common-annotations.jar"/>
-  <path value="/home/lizo/ICTDLab/DocManWeb/WebContent/WEB-INF/lib/commons-logging.jar"/>
-  <path value="/home/lizo/wildfly-8.2.1.Final/modules/system/layers/base/javax/persistence/api/main/hibernate-jpa-2.1-api-1.0.0.Final.jar"/>
-  <path value="/home/lizo/wildfly-8.2.1.Final/modules/system/layers/base/javax/servlet/api/main/jboss-servlet-api_3.1_spec-1.0.0.Final.jar"/>
-  <path value="/home/lizo/wildfly-8.2.1.Final/modules/system/layers/base/javax/servlet/jsp/api/main/jboss-jsp-api_2.3_spec-1.0.1.Final.jar"/>
-  <path value="/home/lizo/wildfly-8.2.1.Final/modules/system/layers/base/javax/jms/api/main/jboss-jms-api_2.0_spec-1.0.0.Final.jar"/>
-  <path value="/home/lizo/wildfly-8.2.1.Final/modules/system/layers/base/javax/enterprise/concurrent/api/main/jboss-concurrency-api_1.0_spec-1.0.0.Final.jar"/>
-  <path value="/home/lizo/wildfly-8.2.1.Final/modules/system/layers/base/javax/jws/api/main/jsr181-api-1.0-MR1.jar"/>
-  <path value="/home/lizo/wildfly-8.2.1.Final/modules/system/layers/base/javax/enterprise/api/main/cdi-api-1.1.jar"/>
-  <path value="/home/lizo/wildfly-8.2.1.Final/modules/system/layers/base/org/glassfish/javax/json/main/javax.json-1.0.3.jar"/>
-  <path value="/home/lizo/wildfly-8.2.1.Final/modules/system/layers/base/javax/annotation/api/main/jboss-annotations-api_1.2_spec-1.0.0.Final.jar"/>
-  <path value="/home/lizo/wildfly-8.2.1.Final/modules/system/layers/base/org/picketbox/main/picketbox-infinispan-4.0.21.Final.jar"/>
-  <path value="/home/lizo/wildfly-8.2.1.Final/modules/system/layers/base/javax/transaction/api/main/jboss-transaction-api_1.2_spec-1.0.0.Final.jar"/>
-  <path value="/home/lizo/wildfly-8.2.1.Final/modules/system/layers/base/javax/mail/api/main/javax.mail-1.5.1.jar"/>
-  <path value="/home/lizo/wildfly-8.2.1.Final/modules/system/layers/base/javax/faces/api/main/jboss-jsf-api_2.2_spec-2.2.8.jar"/>
-  <path value="/home/lizo/wildfly-8.2.1.Final/modules/system/layers/base/javax/security/jacc/api/main/jboss-jacc-api_1.5_spec-1.0.0.Final.jar"/>
-  <path value="/home/lizo/wildfly-8.2.1.Final/modules/system/layers/base/org/picketbox/main/picketbox-commons-1.0.0.final.jar"/>
-  <path value="/home/lizo/wildfly-8.2.1.Final/modules/system/layers/base/javax/websocket/api/main/jboss-websocket-api_1.1_spec-1.1.0.Final.jar"/>
   <path value="/home/lizo/wildfly-8.2.1.Final/modules/system/layers/base/javax/wsdl4j/api/main/wsdl4j-1.6.3.jar"/>
-  <path value="/home/lizo/wildfly-8.2.1.Final/modules/system/layers/base/javax/xml/rpc/api/main/jboss-jaxrpc-api_1.1_spec-1.0.1.Final.jar"/>
-  <path value="/home/lizo/wildfly-8.2.1.Final/modules/system/layers/base/org/jboss/resteasy/resteasy-multipart-provider/main/resteasy-multipart-provider-3.0.10.Final.jar"/>
-  <path value="/home/lizo/wildfly-8.2.1.Final/modules/system/layers/base/javax/xml/bind/api/main/jboss-jaxb-api_2.2_spec-1.0.4.Final.jar"/>
+  <path value="/home/lizo/ICTDLab/DocManWeb/WebContent/WEB-INF/lib/commons-digester.jar"/>
+  <path value="/home/lizo/wildfly-8.2.1.Final/modules/system/layers/base/javax/ejb/api/main/jboss-ejb-api_3.2_spec-1.0.0.Final.jar"/>
   <path value="/home/lizo/ICTDLab/DocManWeb/WebContent/WEB-INF/lib/standard.jar">
    <libraries>
     <library class="tld">
@@ -101,13 +73,108 @@
     </library>
    </libraries>
   </path>
-  <path value="/home/lizo/ICTDLab/DocManWeb/WebContent/WEB-INF/lib/commons-digester.jar"/>
-  <path value="/home/lizo/wildfly-8.2.1.Final/modules/system/layers/base/org/jboss/resteasy/resteasy-jaxrs/main/resteasy-client-3.0.10.Final.jar"/>
+  <path value="/home/lizo/wildfly-8.2.1.Final/modules/system/layers/base/org/jboss/resteasy/resteasy-multipart-provider/main/resteasy-multipart-provider-3.0.10.Final-jandex.jar"/>
+  <path value="/home/lizo/wildfly-8.2.1.Final/modules/system/layers/base/javax/resource/api/main/jboss-connector-api_1.7_spec-1.0.0.Final.jar"/>
+  <path value="/home/lizo/wildfly-8.2.1.Final/modules/system/layers/base/org/jboss/resteasy/resteasy-multipart-provider/main/resteasy-multipart-provider-3.0.10.Final.jar"/>
+  <path value="/home/lizo/wildfly-8.2.1.Final/modules/system/layers/base/javax/jws/api/main/jsr181-api-1.0-MR1.jar"/>
+  <path value="/home/lizo/wildfly-8.2.1.Final/modules/system/layers/base/org/picketbox/main/picketbox-commons-1.0.0.final.jar"/>
+  <path value="/home/lizo/wildfly-8.2.1.Final/modules/system/layers/base/javax/servlet/jstl/api/main/jboss-jstl-api_1.2_spec-1.1.2.Final.jar">
+   <libraries>
+    <library class="tld">
+     <id class="model-object"
+      path="FileSystems/lib-jboss-jstl-api_1.2_spec-1.1.2.Final.jar/META-INF/c-1_0-rt.tld" project="DocManWeb"/>
+    </library>
+    <library class="tld">
+     <id class="model-object"
+      path="FileSystems/lib-jboss-jstl-api_1.2_spec-1.1.2.Final.jar/META-INF/c-1_0.tld" project="DocManWeb"/>
+    </library>
+    <library class="tld">
+     <id class="model-object"
+      path="FileSystems/lib-jboss-jstl-api_1.2_spec-1.1.2.Final.jar/META-INF/c-1_1.tld" project="DocManWeb"/>
+    </library>
+    <library class="tld">
+     <id class="model-object"
+      path="FileSystems/lib-jboss-jstl-api_1.2_spec-1.1.2.Final.jar/META-INF/c.tld" project="DocManWeb"/>
+    </library>
+    <library class="tld">
+     <id class="model-object"
+      path="FileSystems/lib-jboss-jstl-api_1.2_spec-1.1.2.Final.jar/META-INF/fmt-1_0-rt.tld" project="DocManWeb"/>
+    </library>
+    <library class="tld">
+     <id class="model-object"
+      path="FileSystems/lib-jboss-jstl-api_1.2_spec-1.1.2.Final.jar/META-INF/fmt-1_0.tld" project="DocManWeb"/>
+    </library>
+    <library class="tld">
+     <id class="model-object"
+      path="FileSystems/lib-jboss-jstl-api_1.2_spec-1.1.2.Final.jar/META-INF/fmt.tld" project="DocManWeb"/>
+    </library>
+    <library class="tld">
+     <id class="model-object"
+      path="FileSystems/lib-jboss-jstl-api_1.2_spec-1.1.2.Final.jar/META-INF/fn.tld" project="DocManWeb"/>
+    </library>
+    <library class="tld">
+     <id class="model-object"
+      path="FileSystems/lib-jboss-jstl-api_1.2_spec-1.1.2.Final.jar/META-INF/permittedTaglibs.tld" project="DocManWeb"/>
+    </library>
+    <library class="tld">
+     <id class="model-object"
+      path="FileSystems/lib-jboss-jstl-api_1.2_spec-1.1.2.Final.jar/META-INF/scriptfree.tld" project="DocManWeb"/>
+    </library>
+    <library class="tld">
+     <id class="model-object"
+      path="FileSystems/lib-jboss-jstl-api_1.2_spec-1.1.2.Final.jar/META-INF/sql-1_0-rt.tld" project="DocManWeb"/>
+    </library>
+    <library class="tld">
+     <id class="model-object"
+      path="FileSystems/lib-jboss-jstl-api_1.2_spec-1.1.2.Final.jar/META-INF/sql-1_0.tld" project="DocManWeb"/>
+    </library>
+    <library class="tld">
+     <id class="model-object"
+      path="FileSystems/lib-jboss-jstl-api_1.2_spec-1.1.2.Final.jar/META-INF/sql.tld" project="DocManWeb"/>
+    </library>
+    <library class="tld">
+     <id class="model-object"
+      path="FileSystems/lib-jboss-jstl-api_1.2_spec-1.1.2.Final.jar/META-INF/x-1_0-rt.tld" project="DocManWeb"/>
+    </library>
+    <library class="tld">
+     <id class="model-object"
+      path="FileSystems/lib-jboss-jstl-api_1.2_spec-1.1.2.Final.jar/META-INF/x-1_0.tld" project="DocManWeb"/>
+    </library>
+    <library class="tld">
+     <id class="model-object"
+      path="FileSystems/lib-jboss-jstl-api_1.2_spec-1.1.2.Final.jar/META-INF/x.tld" project="DocManWeb"/>
+    </library>
+   </libraries>
+  </path>
+  <path value="/home/lizo/wildfly-8.2.1.Final/modules/system/layers/base/javax/mail/api/main/javax.mail-1.5.1.jar"/>
   <path value="/home/lizo/wildfly-8.2.1.Final/modules/system/layers/base/javax/interceptor/api/main/jboss-interceptors-api_1.2_spec-1.0.0.Final.jar"/>
-  <path value="/home/lizo/wildfly-8.2.1.Final/modules/system/layers/base/javax/xml/ws/api/main/jboss-jaxws-api_2.2_spec-2.0.2.Final.jar"/>
+  <path value="/home/lizo/wildfly-8.2.1.Final/modules/system/layers/base/javax/faces/api/main/jboss-jsf-api_2.2_spec-2.2.8.jar"/>
+  <path value="/home/lizo/wildfly-8.2.1.Final/modules/system/layers/base/javax/xml/bind/api/main/jboss-jaxb-api_2.2_spec-1.0.4.Final.jar"/>
+  <path value="/home/lizo/wildfly-8.2.1.Final/modules/system/layers/base/org/jboss/as/controller-client/main/wildfly-controller-client-8.2.1.Final.jar"/>
+  <path value="/home/lizo/wildfly-8.2.1.Final/modules/system/layers/base/org/picketbox/main/picketbox-infinispan-4.0.21.Final.jar"/>
+  <path value="/home/lizo/wildfly-8.2.1.Final/modules/system/layers/base/org/jboss/ejb3/main/jboss-ejb3-ext-api-2.1.0.jar"/>
   <path value="/home/lizo/wildfly-8.2.1.Final/modules/system/layers/base/org/jboss/resteasy/resteasy-jaxrs/main/async-http-servlet-3.0-3.0.10.Final.jar"/>
-  <path value="/home/lizo/ICTDLab/DocManWeb/WebContent/WEB-INF/lib/commons-collections.jar"/>
+  <path value="/home/lizo/wildfly-8.2.1.Final/modules/system/layers/base/javax/annotation/api/main/jboss-annotations-api_1.2_spec-1.0.0.Final.jar"/>
+  <path value="/home/lizo/wildfly-8.2.1.Final/modules/system/layers/base/javax/websocket/api/main/jboss-websocket-api_1.1_spec-1.1.0.Final.jar"/>
+  <path value="/home/lizo/wildfly-8.2.1.Final/modules/system/layers/base/javax/ws/rs/api/main/jaxrs-api-3.0.10.Final.jar"/>
+  <path value="/home/lizo/wildfly-8.2.1.Final/modules/system/layers/base/org/jboss/dmr/main/jboss-dmr-1.2.0.Final.jar"/>
+  <path value="/home/lizo/wildfly-8.2.1.Final/modules/system/layers/base/javax/xml/soap/api/main/jboss-saaj-api_1.3_spec-1.0.3.Final.jar"/>
+  <path value="/home/lizo/wildfly-8.2.1.Final/modules/system/layers/base/javax/xml/ws/api/main/jboss-jaxws-api_2.2_spec-2.0.2.Final.jar"/>
+  <path value="/home/lizo/wildfly-8.2.1.Final/modules/system/layers/base/javax/enterprise/concurrent/api/main/jboss-concurrency-api_1.0_spec-1.0.0.Final.jar"/>
+  <path value="/home/lizo/wildfly-8.2.1.Final/modules/system/layers/base/org/picketbox/main/picketbox-4.0.21.Final.jar"/>
+  <path value="/home/lizo/wildfly-8.2.1.Final/modules/system/layers/base/javax/batch/api/main/jboss-batch-api_1.0_spec-1.0.0.Final.jar"/>
+  <path value="/home/lizo/wildfly-8.2.1.Final/modules/system/layers/base/javax/inject/api/main/javax.inject-1.jar"/>
+  <path value="/home/lizo/wildfly-8.2.1.Final/modules/system/layers/base/org/glassfish/javax/json/main/javax.json-1.0.3.jar"/>
+  <path value="/home/lizo/wildfly-8.2.1.Final/modules/system/layers/base/javax/security/auth/message/api/main/jboss-jaspi-api_1.1_spec-1.0.0.Final.jar"/>
+  <path value="/home/lizo/ICTDLab/DocManWeb/WebContent/WEB-INF/lib/common-annotations.jar"/>
+  <path value="/home/lizo/wildfly-8.2.1.Final/modules/system/layers/base/javax/security/jacc/api/main/jboss-jacc-api_1.5_spec-1.0.0.Final.jar"/>
+  <path value="/home/lizo/wildfly-8.2.1.Final/modules/system/layers/base/javax/el/api/main/jboss-el-api_3.0_spec-1.0.3.Final.jar"/>
+  <path value="/home/lizo/wildfly-8.2.1.Final/modules/system/layers/base/org/jboss/resteasy/resteasy-jaxb-provider/main/resteasy-jaxb-provider-3.0.10.Final-jandex.jar"/>
   <path value="/home/lizo/wildfly-8.2.1.Final/modules/system/layers/base/javax/validation/api/main/validation-api-1.1.0.Final.jar"/>
+  <path value="/home/lizo/wildfly-8.2.1.Final/modules/system/layers/base/org/jboss/resteasy/resteasy-jaxrs/main/resteasy-client-3.0.10.Final.jar"/>
+  <path value="/home/lizo/ICTDLab/DocManWeb/WebContent/WEB-INF/lib/commons-logging.jar"/>
+  <path value="/home/lizo/wildfly-8.2.1.Final/modules/system/layers/base/javax/activation/api/main/activation-1.1.1.jar"/>
+  <path value="/home/lizo/wildfly-8.2.1.Final/modules/system/layers/base/javax/transaction/api/main/jboss-transaction-api_1.2_spec-1.0.0.Final.jar"/>
   <path value="/DocManWeb/WebContent/WEB-INF/faces-config.xml">
    <libraries>
     <library class="faces-config">
@@ -116,292 +183,113 @@
     </library>
    </libraries>
   </path>
-  <path value="/home/lizo/wildfly-8.2.1.Final/modules/system/layers/base/javax/inject/api/main/javax.inject-1.jar"/>
-  <path value="/home/lizo/wildfly-8.2.1.Final/modules/system/layers/base/javax/ws/rs/api/main/jaxrs-api-3.0.10.Final.jar"/>
+  <path value="/home/lizo/wildfly-8.2.1.Final/modules/system/layers/base/javax/jms/api/main/jboss-jms-api_2.0_spec-1.0.0.Final.jar"/>
   <path value="/home/lizo/wildfly-8.2.1.Final/modules/system/layers/base/org/hibernate/validator/main/hibernate-validator-5.1.3.Final.jar"/>
-  <path value="/home/lizo/ICTDLab/DocManWeb/WebContent/WEB-INF/lib/jstl.jar"/>
-  <path value="/home/lizo/wildfly-8.2.1.Final/modules/system/layers/base/org/jboss/ejb3/main/jboss-ejb3-ext-api-2.1.0.jar"/>
-  <path value="/home/lizo/wildfly-8.2.1.Final/modules/system/layers/base/javax/rmi/api/main/jboss-rmi-api_1.0_spec-1.0.4.Final.jar"/>
-  <path value="/home/lizo/wildfly-8.2.1.Final/modules/system/layers/base/javax/batch/api/main/jboss-batch-api_1.0_spec-1.0.0.Final.jar"/>
-  <path value="/home/lizo/wildfly-8.2.1.Final/modules/system/layers/base/javax/el/api/main/jboss-el-api_3.0_spec-1.0.3.Final.jar"/>
+  <path value="/home/lizo/ICTDLab/DocManWeb/WebContent/WEB-INF/lib/commons-collections.jar"/>
   <path value="/home/lizo/wildfly-8.2.1.Final/modules/system/layers/base/org/jboss/resteasy/resteasy-jaxrs/main/resteasy-jaxrs-3.0.10.Final.jar"/>
-  <path value="/home/lizo/wildfly-8.2.1.Final/modules/system/layers/base/javax/activation/api/main/activation-1.1.1.jar"/>
+  <path value="/home/lizo/wildfly-8.2.1.Final/modules/system/layers/base/javax/xml/rpc/api/main/jboss-jaxrpc-api_1.1_spec-1.0.1.Final.jar"/>
   <path value="/home/lizo/ICTDLab/DocManWeb/WebContent/WEB-INF/lib/commons-beanutils.jar"/>
-  <path value="/home/lizo/wildfly-8.2.1.Final/modules/system/layers/base/javax/servlet/jstl/api/main/jboss-jstl-api_1.2_spec-1.1.2.Final.jar">
-   <libraries>
-    <library class="tld">
-     <id class="model-object"
-      path="FileSystems/lib-jboss-jstl-api_1.2_spec-1.1.2.Final.jar/META-INF/c-1_0-rt.tld" project="BCManager"/>
-    </library>
-    <library class="tld">
-     <id class="model-object"
-      path="FileSystems/lib-jboss-jstl-api_1.2_spec-1.1.2.Final.jar/META-INF/c-1_0.tld" project="BCManager"/>
-    </library>
-    <library class="tld">
-     <id class="model-object"
-      path="FileSystems/lib-jboss-jstl-api_1.2_spec-1.1.2.Final.jar/META-INF/c-1_1.tld" project="BCManager"/>
-    </library>
-    <library class="tld">
-     <id class="model-object"
-      path="FileSystems/lib-jboss-jstl-api_1.2_spec-1.1.2.Final.jar/META-INF/c.tld" project="BCManager"/>
-    </library>
-    <library class="tld">
-     <id class="model-object"
-      path="FileSystems/lib-jboss-jstl-api_1.2_spec-1.1.2.Final.jar/META-INF/fmt-1_0-rt.tld" project="BCManager"/>
-    </library>
-    <library class="tld">
-     <id class="model-object"
-      path="FileSystems/lib-jboss-jstl-api_1.2_spec-1.1.2.Final.jar/META-INF/fmt-1_0.tld" project="BCManager"/>
-    </library>
-    <library class="tld">
-     <id class="model-object"
-      path="FileSystems/lib-jboss-jstl-api_1.2_spec-1.1.2.Final.jar/META-INF/fmt.tld" project="BCManager"/>
-    </library>
-    <library class="tld">
-     <id class="model-object"
-      path="FileSystems/lib-jboss-jstl-api_1.2_spec-1.1.2.Final.jar/META-INF/fn.tld" project="BCManager"/>
-    </library>
-    <library class="tld">
-     <id class="model-object"
-      path="FileSystems/lib-jboss-jstl-api_1.2_spec-1.1.2.Final.jar/META-INF/permittedTaglibs.tld" project="BCManager"/>
-    </library>
-    <library class="tld">
-     <id class="model-object"
-      path="FileSystems/lib-jboss-jstl-api_1.2_spec-1.1.2.Final.jar/META-INF/scriptfree.tld" project="BCManager"/>
-    </library>
-    <library class="tld">
-     <id class="model-object"
-      path="FileSystems/lib-jboss-jstl-api_1.2_spec-1.1.2.Final.jar/META-INF/sql-1_0-rt.tld" project="BCManager"/>
-    </library>
-    <library class="tld">
-     <id class="model-object"
-      path="FileSystems/lib-jboss-jstl-api_1.2_spec-1.1.2.Final.jar/META-INF/sql-1_0.tld" project="BCManager"/>
-    </library>
-    <library class="tld">
-     <id class="model-object"
-      path="FileSystems/lib-jboss-jstl-api_1.2_spec-1.1.2.Final.jar/META-INF/sql.tld" project="BCManager"/>
-    </library>
-    <library class="tld">
-     <id class="model-object"
-      path="FileSystems/lib-jboss-jstl-api_1.2_spec-1.1.2.Final.jar/META-INF/x-1_0-rt.tld" project="BCManager"/>
-    </library>
-    <library class="tld">
-     <id class="model-object"
-      path="FileSystems/lib-jboss-jstl-api_1.2_spec-1.1.2.Final.jar/META-INF/x-1_0.tld" project="BCManager"/>
-    </library>
-    <library class="tld">
-     <id class="model-object"
-      path="FileSystems/lib-jboss-jstl-api_1.2_spec-1.1.2.Final.jar/META-INF/x.tld" project="BCManager"/>
-    </library>
-   </libraries>
-  </path>
-  <path value="/home/lizo/wildfly-8.2.1.Final/modules/system/layers/base/org/jboss/resteasy/resteasy-jaxb-provider/main/resteasy-jaxb-provider-3.0.10.Final-jandex.jar"/>
-  <path value="/home/lizo/wildfly-8.2.1.Final/modules/system/layers/base/javax/xml/soap/api/main/jboss-saaj-api_1.3_spec-1.0.3.Final.jar"/>
+  <path value="/home/lizo/wildfly-8.2.1.Final/modules/system/layers/base/org/jboss/resteasy/resteasy-jaxb-provider/main/resteasy-jaxb-provider-3.0.10.Final.jar"/>
+  <path value="/home/lizo/wildfly-8.2.1.Final/modules/system/layers/base/javax/servlet/api/main/jboss-servlet-api_3.1_spec-1.0.0.Final.jar"/>
+  <path value="/home/lizo/ICTDLab/DocManWeb/WebContent/WEB-INF/lib/jstl.jar"/>
+  <path value="/home/lizo/wildfly-8.2.1.Final/modules/system/layers/base/javax/rmi/api/main/jboss-rmi-api_1.0_spec-1.0.4.Final.jar"/>
+  <path value="/home/lizo/wildfly-8.2.1.Final/modules/system/layers/base/org/jboss/logging/main/jboss-logging-3.1.4.GA.jar"/>
+  <path value="/home/lizo/wildfly-8.2.1.Final/modules/system/layers/base/javax/enterprise/api/main/cdi-api-1.1.jar"/>
+  <path value="/home/lizo/wildfly-8.2.1.Final/modules/system/layers/base/javax/persistence/api/main/hibernate-jpa-2.1-api-1.0.0.Final.jar"/>
+  <path value="/home/lizo/wildfly-8.2.1.Final/modules/system/layers/base/javax/servlet/jsp/api/main/jboss-jsp-api_2.3_spec-1.0.1.Final.jar"/>
  </paths>
  <validation>
-  <core validator-id="jsf-verification"/>
-  <core validator-id="jboss.cdi.core">
-   <linked-resource
-    name="%1;%2;%3;%4;%5;%6;%7;%8;%9;%10;%11;%12;%13;%14;%15;%16;%17;%18;%19;%20;%21;%22;%23;%24;%25;%26;%27;%28;%29;%30;%31;%32;%33;%34;%35;%36;%37;%38;%39;%40;%41;%42;%43;%44;%45;%46;%47;%48;%49;%50;%51;%52;" path="%0"/>
-  </core>
-  <core validator-id="jboss.jsf.core"/>
   <el>
-   <linked-el length="32" name="%53" offset="497" path="%54"/>
-   <linked-el length="44" name="%53" offset="857" path="%55"/>
-   <linked-el length="33" name="%53" offset="464" path="%55"/>
-   <linked-el length="25" name="%53" offset="454" path="%56"/>
-   <linked-el length="38" name="%53" offset="807" path="%57"/>
-   <linked-el length="38" name="%53" offset="546" path="%55"/>
-   <linked-el length="26" name="%53" offset="497" path="%58"/>
-   <linked-el length="38" name="%53" offset="567" path="%57"/>
-   <linked-el length="74" name="%53" offset="882" path="%58"/>
-   <linked-el length="73" name="%53" offset="955" path="%54"/>
-   <linked-el length="24" name="%53" offset="726" path="%55"/>
-   <linked-el length="52" name="%53" offset="952" path="%57"/>
-   <linked-el length="46" name="%53" offset="524" path="%56"/>
-   <linked-el length="35" name="%53" offset="911" path="%57"/>
-   <linked-el length="47" name="%53" offset="624" path="%55"/>
-   <linked-el length="17" name="%59" offset="753" path="%54"/>
-   <linked-el length="23" name="%59" offset="628" path="%54"/>
-   <linked-el length="21" name="%59" offset="885" path="%54"/>
-   <linked-el length="73" name="%59" offset="955" path="%54"/>
-   <linked-el length="16" name="%60" offset="523" path="%61"/>
-   <linked-el length="21" name="%60" offset="449" path="%61"/>
-   <linked-el length="25" name="%60" offset="652" path="%61"/>
-   <linked-el length="25" name="%62" offset="742" path="%58"/>
-   <linked-el length="74" name="%62" offset="882" path="%58"/>
-   <linked-el length="27" name="%62" offset="616" path="%58"/>
-   <linked-el length="44" name="%63" offset="857" path="%55"/>
-   <linked-el length="25" name="%63" offset="742" path="%58"/>
-   <linked-el length="18" name="%63" offset="576" path="%56"/>
-   <linked-el length="46" name="%63" offset="524" path="%56"/>
-   <linked-el length="23" name="%63" offset="628" path="%54"/>
-   <linked-el length="21" name="%63" offset="885" path="%54"/>
-   <linked-el length="74" name="%63" offset="882" path="%58"/>
-   <linked-el length="73" name="%63" offset="955" path="%54"/>
-   <linked-el length="27" name="%63" offset="616" path="%58"/>
-   <linked-el length="19" name="%63" offset="785" path="%55"/>
-   <linked-el length="32" name="%64" offset="497" path="%54"/>
-   <linked-el length="44" name="%64" offset="857" path="%55"/>
-   <linked-el length="33" name="%64" offset="464" path="%55"/>
-   <linked-el length="18" name="%64" offset="576" path="%56"/>
-   <linked-el length="38" name="%64" offset="807" path="%57"/>
-   <linked-el length="25" name="%64" offset="454" path="%56"/>
-   <linked-el length="38" name="%64" offset="546" path="%55"/>
-   <linked-el length="21" name="%64" offset="885" path="%54"/>
-   <linked-el length="26" name="%64" offset="497" path="%58"/>
-   <linked-el length="38" name="%64" offset="567" path="%57"/>
-   <linked-el length="74" name="%64" offset="882" path="%58"/>
-   <linked-el length="73" name="%64" offset="955" path="%54"/>
-   <linked-el length="19" name="%64" offset="785" path="%55"/>
-   <linked-el length="52" name="%64" offset="952" path="%57"/>
-   <linked-el length="24" name="%64" offset="726" path="%55"/>
-   <linked-el length="17" name="%64" offset="753" path="%54"/>
-   <linked-el length="25" name="%64" offset="742" path="%58"/>
-   <linked-el length="46" name="%64" offset="524" path="%56"/>
-   <linked-el length="23" name="%64" offset="628" path="%54"/>
-   <linked-el length="35" name="%64" offset="911" path="%57"/>
-   <linked-el length="47" name="%64" offset="624" path="%55"/>
-   <linked-el length="27" name="%64" offset="616" path="%58"/>
-   <linked-el length="16" name="%65" offset="523" path="%61"/>
-   <linked-el length="21" name="%65" offset="449" path="%61"/>
-   <linked-el length="25" name="%65" offset="652" path="%61"/>
+   <linked-el length="27" name="%0" offset="616" path="%1"/>
+   <linked-el length="46" name="%0" offset="524" path="%2"/>
+   <linked-el length="19" name="%0" offset="785" path="%3"/>
+   <linked-el length="23" name="%0" offset="628" path="%4"/>
+   <linked-el length="21" name="%0" offset="885" path="%4"/>
+   <linked-el length="74" name="%0" offset="882" path="%1"/>
+   <linked-el length="44" name="%0" offset="857" path="%3"/>
+   <linked-el length="73" name="%0" offset="955" path="%4"/>
+   <linked-el length="25" name="%0" offset="742" path="%1"/>
+   <linked-el length="18" name="%0" offset="576" path="%2"/>
+   <linked-el length="17" name="%5" offset="753" path="%4"/>
+   <linked-el length="23" name="%5" offset="628" path="%4"/>
+   <linked-el length="21" name="%5" offset="885" path="%4"/>
+   <linked-el length="73" name="%5" offset="955" path="%4"/>
+   <linked-el length="16" name="%6" offset="523" path="%7"/>
+   <linked-el length="25" name="%6" offset="652" path="%7"/>
+   <linked-el length="21" name="%6" offset="449" path="%7"/>
+   <linked-el length="27" name="%8" offset="616" path="%1"/>
+   <linked-el length="74" name="%8" offset="882" path="%1"/>
+   <linked-el length="25" name="%8" offset="742" path="%1"/>
+   <linked-el length="33" name="%9" offset="464" path="%3"/>
+   <linked-el length="47" name="%9" offset="624" path="%3"/>
+   <linked-el length="32" name="%9" offset="497" path="%4"/>
+   <linked-el length="17" name="%9" offset="753" path="%4"/>
+   <linked-el length="19" name="%9" offset="785" path="%3"/>
+   <linked-el length="23" name="%9" offset="628" path="%4"/>
+   <linked-el length="24" name="%9" offset="726" path="%3"/>
+   <linked-el length="21" name="%9" offset="885" path="%4"/>
+   <linked-el length="25" name="%9" offset="454" path="%2"/>
+   <linked-el length="74" name="%9" offset="882" path="%1"/>
+   <linked-el length="38" name="%9" offset="807" path="%10"/>
+   <linked-el length="44" name="%9" offset="857" path="%3"/>
+   <linked-el length="26" name="%9" offset="497" path="%1"/>
+   <linked-el length="73" name="%9" offset="955" path="%4"/>
+   <linked-el length="18" name="%9" offset="576" path="%2"/>
+   <linked-el length="27" name="%9" offset="616" path="%1"/>
+   <linked-el length="38" name="%9" offset="546" path="%3"/>
+   <linked-el length="35" name="%9" offset="911" path="%10"/>
+   <linked-el length="46" name="%9" offset="524" path="%2"/>
+   <linked-el length="52" name="%9" offset="952" path="%10"/>
+   <linked-el length="38" name="%9" offset="567" path="%10"/>
+   <linked-el length="25" name="%9" offset="742" path="%1"/>
+   <linked-el length="33" name="%11" offset="464" path="%3"/>
+   <linked-el length="47" name="%11" offset="624" path="%3"/>
+   <linked-el length="32" name="%11" offset="497" path="%4"/>
+   <linked-el length="24" name="%11" offset="726" path="%3"/>
+   <linked-el length="25" name="%11" offset="454" path="%2"/>
+   <linked-el length="74" name="%11" offset="882" path="%1"/>
+   <linked-el length="38" name="%11" offset="807" path="%10"/>
+   <linked-el length="44" name="%11" offset="857" path="%3"/>
+   <linked-el length="26" name="%11" offset="497" path="%1"/>
+   <linked-el length="73" name="%11" offset="955" path="%4"/>
+   <linked-el length="38" name="%11" offset="546" path="%3"/>
+   <linked-el length="35" name="%11" offset="911" path="%10"/>
+   <linked-el length="46" name="%11" offset="524" path="%2"/>
+   <linked-el length="52" name="%11" offset="952" path="%10"/>
+   <linked-el length="38" name="%11" offset="567" path="%10"/>
+   <linked-el length="16" name="%12" offset="523" path="%7"/>
+   <linked-el length="25" name="%12" offset="652" path="%7"/>
+   <linked-el length="21" name="%12" offset="449" path="%7"/>
   </el>
  </validation>
  <aliases>
-  <alias path="/DocManWeb/WebContent/view/shares.xhtml" value="%58"/>
-  <alias path="/DocManWeb/WebContent/view/listfiles.xhtml" value="%56"/>
-  <alias
-   path="/DocManWeb/src/main/java/useraccount/soap/services/AssignRoleResponse.java" value="%1"/>
-  <alias
-   path="/DocManWeb/src/main/java/useraccount/soap/services/AddUserAttributeResponse.java" value="%2"/>
-  <alias
-   path="/DocManWeb/src/main/java/useraccount/soap/services/GetOrgsResponse.java" value="%3"/>
-  <alias
-   path="/DocManWeb/src/main/java/useraccount/soap/services/ObjectFactory.java" value="%4"/>
-  <alias
-   path="/DocManWeb/src/main/java/useraccount/soap/services/GetPersonsResponse.java" value="%5"/>
-  <alias
-   path="/DocManWeb/src/main/java/useraccount/soap/services/GetRoles.java" value="%6"/>
-  <alias
-   path="/DocManWeb/src/main/java/useraccount/soap/services/GetGroupDNfromResponse.java" value="%7"/>
-  <alias
-   path="/DocManWeb/src/main/java/useraccount/soap/services/CreateAccountResponse.java" value="%8"/>
-  <alias
-   path="/DocManWeb/src/main/java/useraccount/soap/services/RemoveRole.java" value="%9"/>
-  <alias
-   path="/DocManWeb/src/main/java/useraccount/soap/services/FindSomeoneResponse.java" value="%10"/>
-  <alias
-   path="/DocManWeb/src/main/java/useraccount/soap/services/UpdateUserResponse.java" value="%11"/>
-  <alias
-   path="/DocManWeb/src/main/java/useraccount/soap/services/FindByUsernameResponse.java" value="%12"/>
-  <alias
-   path="/DocManWeb/src/main/java/useraccount/soap/services/PersonRoles.java" value="%13"/>
-  <alias
-   path="/DocManWeb/src/main/java/useraccount/soap/services/GetRoleByNameResponse.java" value="%14"/>
-  <alias path="/DocManWeb/WebContent/view/search.xhtml" value="%55"/>
-  <alias
-   path="/DocManWeb/src/main/java/useraccount/soap/services/AccountService.java" value="%16"/>
-  <alias
-   path="/DocManWeb/src/main/java/useraccount/soap/services/AddUserToGroup.java" value="%15"/>
-  <alias
-   path="/DocManWeb/src/main/java/useraccount/soap/services/GetOrgUnitResponse.java" value="%17"/>
-  <alias path="/DocMan/src/main/java/entities/FileInfo.java" value="%63"/>
-  <alias
-   path="/DocManWeb/src/main/java/useraccount/soap/services/AddUserAttribute.java" value="%18"/>
-  <alias
-   path="/DocManWeb/src/main/java/useraccount/soap/services/UserRoles.java" value="%19"/>
-  <alias
-   path="/DocManWeb/src/main/java/useraccount/soap/services/GetOrgs.java" value="%20"/>
-  <alias
-   path="/DocManWeb/src/main/java/useraccount/soap/services/PersonRolesResponse.java" value="%22"/>
-  <alias
-   path="/DocManWeb/src/main/java/useraccount/soap/services/CreateAccount.java" value="%21"/>
-  <alias
-   path="/DocManWeb/src/main/java/useraccount/soap/services/FindUserByFullNameResponse.java" value="%23"/>
-  <alias
-   path="/DocManWeb/src/main/java/useraccount/soap/services/Login.java" value="%24"/>
-  <alias
-   path="/DocManWeb/src/main/java/useraccount/soap/services/IsUserMemberOf.java" value="%25"/>
-  <alias
-   path="/DocManWeb/src/main/java/useraccount/soap/services/UserProfile.java" value="%26"/>
-  <alias
-   path="/DocManWeb/src/main/java/useraccount/soap/services/FindSomeone.java" value="%27"/>
-  <alias
-   path="/DocManWeb/src/main/java/useraccount/soap/services/UpdateUserAttributeResponse.java" value="%28"/>
-  <alias
-   path="/DocManWeb/src/main/java/useraccount/soap/services/GetPersons.java" value="%29"/>
-  <alias
-   path="/DocManWeb/src/main/java/useraccount/soap/services/UserProfileResponse.java" value="%30"/>
-  <alias path="/DocMan/src/main/java/entities/FileRequest.java" value="%59"/>
-  <alias path="/DocManWeb/WebContent/view/requests.xhtml" value="%54"/>
-  <alias
-   path="/DocManWeb/src/main/java/useraccount/soap/services/UserGroup.java" value="%31"/>
-  <alias
-   path="/DocManWeb/src/main/java/useraccount/soap/services/GetOrgUnit.java" value="%32"/>
-  <alias
-   path="/DocManWeb/src/main/java/useraccount/soap/services/RemoveRoleResponse.java" value="%33"/>
-  <alias
-   path="/DocManWeb/src/main/java/useraccount/soap/services/FindRoleResponse.java" value="%34"/>
-  <alias
-   path="/DocManWeb/src/main/java/useraccount/soap/services/LoginResponse.java" value="%35"/>
-  <alias
-   path="/DocManWeb/src/main/java/useraccount/soap/services/FindUserByFullName.java" value="%36"/>
-  <alias path="upload" value="%65"/>
-  <alias
-   path="/DocManWeb/src/main/java/useraccount/soap/services/Groups.java" value="%37"/>
-  <alias
-   path="/DocManWeb/src/main/java/useraccount/soap/services/PersonInterface.java" value="%38"/>
-  <alias
-   path="/DocManWeb/src/main/java/useraccount/soap/services/IsUserMemberOfResponse.java" value="%39"/>
-  <alias path="/DocMan/src/main/java/entities/FileShare.java" value="%62"/>
-  <alias path="/DocManWeb/src/main/java/mbeans/Upload.java" value="%60"/>
-  <alias
-   path="/DocManWeb/src/main/java/useraccount/soap/services/MigrateUser.java" value="%40"/>
-  <alias
-   path="/DocManWeb/src/main/java/useraccount/soap/services/Person.java" value="%41"/>
-  <alias
-   path="/DocManWeb/src/main/java/useraccount/soap/services/UserGroupResponse.java" value="%42"/>
-  <alias
-   path="/DocManWeb/src/main/java/useraccount/soap/services/GetGroupDNfrom.java" value="%43"/>
-  <alias
-   path="/DocManWeb/src/main/java/useraccount/soap/services/package-info.java" value="%0"/>
-  <alias
-   path="/DocManWeb/src/main/java/useraccount/soap/services/AssignRole.java" value="%44"/>
-  <alias
-   path="/DocManWeb/src/main/java/useraccount/soap/services/UpdateUser.java" value="%45"/>
-  <alias
-   path="/DocManWeb/src/main/java/useraccount/soap/services/GetRoleByName.java" value="%46"/>
-  <alias
-   path="/DocManWeb/src/main/java/useraccount/soap/services/UpdateUserAttribute.java" value="%47"/>
-  <alias path="/DocManWeb/WebContent/view/index.xhtml" value="%57"/>
-  <alias
-   path="/DocManWeb/src/main/java/useraccount/soap/services/MigrateUserResponse.java" value="%48"/>
-  <alias path="/DocManWeb/src/main/java/mbeans/NavController.java" value="%53"/>
-  <alias
-   path="/DocManWeb/src/main/java/useraccount/soap/services/AddUserToGroupResponse.java" value="%49"/>
-  <alias path="/DocManWeb/WebContent/view/fileupload.xhtml" value="%61"/>
-  <alias path="navController" value="%64"/>
-  <alias
-   path="/DocManWeb/src/main/java/useraccount/soap/services/GetRolesResponse.java" value="%50"/>
-  <alias
-   path="/DocManWeb/src/main/java/useraccount/soap/services/FindByUsername.java" value="%51"/>
-  <alias
-   path="/DocManWeb/src/main/java/useraccount/soap/services/FindRole.java" value="%52"/>
+  <alias path="/DocMan/src/main/java/entities/FileInfo.java" value="%0"/>
+  <alias path="/DocManWeb/WebContent/view/search.xhtml" value="%3"/>
+  <alias path="upload" value="%6"/>
+  <alias path="/DocManWeb/WebContent/view/requests.xhtml" value="%4"/>
+  <alias path="navController" value="%9"/>
+  <alias path="/DocManWeb/WebContent/view/shares.xhtml" value="%1"/>
+  <alias path="/DocManWeb/src/main/java/mbeans/Upload.java" value="%12"/>
+  <alias path="/DocMan/src/main/java/entities/FileRequest.java" value="%5"/>
+  <alias path="/DocManWeb/WebContent/view/index.xhtml" value="%10"/>
+  <alias path="/DocMan/src/main/java/entities/FileShare.java" value="%8"/>
+  <alias path="/DocManWeb/WebContent/view/listfiles.xhtml" value="%2"/>
+  <alias path="/DocManWeb/src/main/java/mbeans/NavController.java" value="%11"/>
+  <alias path="/DocManWeb/WebContent/view/fileupload.xhtml" value="%7"/>
  </aliases>
  <includes/>
  <uris>
-  <uri value="http://java.sun.com/jsf/html">
-   <prefix>h</prefix>
-  </uri>
   <uri value="http://java.sun.com/jsp/jstl/sql">
    <prefix>sql</prefix>
+  </uri>
+  <uri value="http://java.sun.com/jsp/jstl/core">
+   <prefix>c</prefix>
   </uri>
   <uri value="http://java.sun.com/jsf/core">
    <prefix>f</prefix>
   </uri>
-  <uri value="http://java.sun.com/jsp/jstl/core">
-   <prefix>c</prefix>
+  <uri value="http://java.sun.com/jsf/html">
+   <prefix>h</prefix>
   </uri>
  </uris>
 </kb-project>

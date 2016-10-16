@@ -1,0 +1,5 @@
+package userGate.security.authprovider;
+
+public class Authenticate {
+
+}

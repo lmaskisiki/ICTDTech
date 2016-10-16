@@ -3,6 +3,7 @@ package webFrameApp.mvcControllers;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
 
 import javax.servlet.http.HttpServletRequest;
@@ -19,6 +20,9 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.servlet.ModelAndView;
 
+import com.google.gson.Gson;
+
+import webFrame.helpers.InputPresenterHelper;
 import webFrameApp.contentManagers.addContent;
 import webFrameApp.contentManagers.contentLoader;
 import webFrameApp.entites.Domain;
@@ -35,12 +39,12 @@ public class contentController {
 	@Autowired
 	private DomainDAOImpl domainIMPL;
 	@Autowired
-	private EntityDAOImpl entityIMPL;
+	private EntityDAOImpl OrgEntityService;
 
 	@Autowired
 	private TypeDAOImpl typeIMPL;
 
-	// /////////////////////Get Content////////////////////////////////////
+	// Show all domains >> user selects one to view content
 	@RequestMapping(value = "requestContent", method = RequestMethod.POST)
 	public ModelAndView requestContent(HttpServletRequest request) {
 		ModelAndView model = new ModelAndView("requestContent");
@@ -53,114 +57,35 @@ public class contentController {
 			user = auth.getName();
 			if (user != null && roles.contains("ROLE_Master")) {
 				doms = domainIMPL.getAllDomains();
-
 			} else {
 				doms = domainIMPL.findByCreator(user);
-
 			}
-
 		}
 		model.addObject("AllDomains", doms);
-
 		return model;
 	}
 
-	@RequestMapping(value = "JSONContent", method = RequestMethod.GET, produces = "application/json")
-	public @ResponseBody String JSONContent(HttpServletRequest request,
-			HttpServletResponse response) {
-		contentLoader load = new contentLoader();
-		String getDataFrom = request.getParameter("getDataFrom");
-		System.out.println(getDataFrom);
-		List<OrgEntity> ents = entityIMPL.findByName(getDataFrom);
-		OrgEntity ent = ents.get(0);
-		String domain = ent.getDomain();
-		String[] columns = load.getCoulumn(domain, getDataFrom);
-		List<List<Object>> allData = load.getData(domain, getDataFrom);
-		StringBuffer jsnObject = null;
-		jsnObject = new StringBuffer("{ \"content\" : [");
-		int dataSize = allData.size();
-		int currentRecord = 0;
-		for (List<Object> object : allData) {
-			currentRecord += 1;
-			jsnObject.append("{");
-			for (int x = 0; x < object.size(); x++) {
-
-				jsnObject.append("\"" + columns[x] + "\" :  \""
-						+ object.get(x).toString() + "\"");
-				if (x < object.size() - 1) {
-					jsnObject.append(",");
-				}
-			}
-			jsnObject.append("}");
-			/*
-			 * if (currentRecord < dataSize) { jsnObject.append(","); } this
-			 * makes sure that the comma that separates records is not put on
-			 * the last record, so if the loop is on the last record not comma
-			 * should be put at the end
-			 */
-			if (currentRecord < dataSize) {
-
-				jsnObject.append(",");
-			}
-		}
-		jsnObject.append("]}");
-		response.setContentType("application/json");
-		response.setCharacterEncoding("utf-8");
-		System.out.println("the converted json ;" + jsnObject.toString());
-		return jsnObject.toString();
-	}
-
-	@RequestMapping(value = "getContent")
-	public ModelAndView getContent(HttpServletRequest request) {
-		ModelAndView model = new ModelAndView();
-		String viewContentReq = request.getParameter("viewContent");
-		if (viewContentReq == null) {
-			String table = request.getParameter("getDataFrom");
-			model = new ModelAndView("contentUpdate");
-		} else {
-			model = new ModelAndView("showcontent");
-
-		}
-
-		contentLoader load = new contentLoader();
-		String getDataFrom = request.getParameter("getDataFrom");
-		System.out.println(getDataFrom);
-		List<OrgEntity> ents = entityIMPL.findByName(getDataFrom);
-		OrgEntity ent = ents.get(0);
-		String domain = ent.getDomain();
-		String[] columns = load.getCoulumn(domain, getDataFrom);
-		List<List<Object>> allData = load.getData(domain, getDataFrom);
-		System.out.println(" \n \n \n  there are " + allData.size()
-				+ "  records  found \n \n");
-		model.addObject("labels", columns);
-		model.addObject("data", allData);
-
-		return model;
-	}
-
+	// Load data for given entity
+	
 	@RequestMapping(value = "web/viewcontent", method = RequestMethod.GET)
 	public ModelAndView viewContent(HttpServletRequest request) {
 		ModelAndView model = new ModelAndView("viewcontent");
-		contentLoader load = new contentLoader();
 		String getDataFrom = request.getParameter("entity");
-		System.out.println("ajax Request Found : active Entity here:"
-				+ getDataFrom);
-		System.out.println(getDataFrom);
-		List<OrgEntity> ents = entityIMPL.findByName(getDataFrom);
+		List<OrgEntity> ents = OrgEntityService.findByName(getDataFrom);
 		OrgEntity ent = ents.get(0);
 		String domain = ent.getDomain();
-		String[] columns = load.getCoulumn(domain, getDataFrom);
-		List<List<Object>> allData = load.getData(domain, getDataFrom);
+		contentLoader loader = new contentLoader();
+		String[] columns = loader.getCoulumn(domain, getDataFrom);
+		List<List<Object>> allData = loader.getData(domain, getDataFrom);
 		model.addObject("labels", columns);
 		model.addObject("data", allData);
-
 		return model;
 	}
 
 	@RequestMapping(value = "web/viewcontentrequest", method = RequestMethod.GET)
 	public ModelAndView viewContentrequest(HttpServletRequest request) {
 		ModelAndView model = new ModelAndView("viewcontentrequest");
-				Authentication auth = SecurityContextHolder.getContext()
+		Authentication auth = SecurityContextHolder.getContext()
 				.getAuthentication();
 		List<Domain> doms = null;
 		String user;
@@ -169,17 +94,11 @@ public class contentController {
 			user = auth.getName();
 			if (user != null && roles.contains("ROLE_Master")) {
 				doms = domainIMPL.getAllDomains();
-
 			} else {
 				doms = domainIMPL.findByCreator(user);
-
 			}
-
 		}
-		
-		
 		model.addObject("domains", doms);
-
 		return model;
 	}
 
@@ -189,40 +108,30 @@ public class contentController {
 			SqldataTypes types, HttpServletRequest request) {
 		ModelAndView model = new ModelAndView("contAddForm");
 		String table = request.getParameter("getDataFrom");
-		List<OrgEntity> ent = entityIMPL.findAll();
-		System.out.println(" this is the    " + ent.size());
-		model.addObject("entities", entityIMPL.findAll());
+		List<OrgEntity> ent = OrgEntityService.findAll();
+		model.addObject("entities", OrgEntityService.findAll());
 		return model;
-
 	}
 
 	@RequestMapping(value = "relateRequest", method = RequestMethod.POST)
 	public ModelAndView relateRequest(HttpServletRequest request) {
 		ModelAndView model = new ModelAndView("NewFile");
-
-		// model.addObject("domains", domainIMPL.getAllDomains());
-
 		return model;
 	}
 
 	@RequestMapping(value = "web/saveUpdate", method = RequestMethod.POST)
 	public ModelAndView saveUpdate(HttpServletRequest request) {
 		ModelAndView model = new ModelAndView("requestupdate");
-
 		String domainName = request.getParameter("domain");
 		String entity = request.getParameter("entity");
-		System.out.println("domain and entity found....");
-
-		String[] values = request.getParameterValues("attributes");
-		System.out.println("attributes found....");
-		int attrNumber = values.length;
 		addContent cont = new addContent();
-
-		ArrayList<String> attributes = cont.getTableAttributes(entityIMPL
+		ArrayList<String> attributes = cont.getTableAttributes(OrgEntityService
 				.findByName(entity).get(0));
-		System.out.println("table attributes for the entity were found>>>>>..");
-		System.out.println("ATTRIBUTES RETURNED:  " + attributes.size());
-
+		String[] values = new String[attributes.size()];
+		int attrNumber = values.length;
+		for (int i = 0; i < attributes.size(); i++) {
+			values[i] = request.getParameter(attributes.get(i));
+		}
 		String variables = "";
 		String Qmarks = "";
 		if (attrNumber > 1) {
@@ -235,17 +144,13 @@ public class contentController {
 		} else {
 			variables = attributes.get(0);
 			Qmarks = "?";
-
 		}
-
 		String sqlInsert = "INSERT INTO tbl_" + entity.trim() + "";
 		String fullSqlquery = sqlInsert + " (" + variables + " ) VALUES ( "
 				+ Qmarks + ")";
-		boolean save = cont
-				.saveUpdate(fullSqlquery, values, domainName, entity);
-		System.out.println("SQL QUERY STATEMENT :" + fullSqlquery);
-
-		model.addObject("domainName", domainName); /*  */
+		boolean save = cont.saveContent(fullSqlquery, values, domainName,
+				entity);
+		model.addObject("domainName", domainName);
 		return model;
 	}
 
@@ -261,15 +166,11 @@ public class contentController {
 			user = auth.getName();
 			if (user != null && roles.contains("ROLE_Master")) {
 				doms = domainIMPL.getAllDomains();
-
 			} else {
 				doms = domainIMPL.findByCreator(user);
-
 			}
-
 		}
 		model.addObject("AllDomains", doms);
-
 		return model;
 	}
 
@@ -280,20 +181,16 @@ public class contentController {
 		addContent cont = new addContent();
 		String entity = request.getParameter("entity");
 		if (!"".equals(entity) || (entity != null)) {
-			OrgEntity ent = entityIMPL.findByName(entity.trim()).get(0);
-			String[] attributes = ent.getAttributes();
+			OrgEntity ent = OrgEntityService.findByName(entity.trim()).get(0);
 			GetAutoIncrement incrementCheck = new GetAutoIncrement();
-			// remove any column that auto_increments-- using the method defined
-			// in
-			// class 'GetAutoIncrement'
-			attributes = incrementCheck.validateColumns(ent.getName(),
-					attributes);
+			String[] attributes = incrementCheck.validateColumns(ent.getName(),
+					ent.getAttributes(), ent.getTypes(), ent.getOptionValues())
+					.get("attrinutes");
 			model.addObject("attrNumber", attributes.length);
 			model.addObject("attributes", attributes);
 			model.addObject("entity", ent.getName());
 			model.addObject("domainName", ent.getDomain());
 			model.addObject("request", entity);
-
 			return model;
 		} else {
 			PrintWriter out = response.getWriter();
@@ -301,7 +198,45 @@ public class contentController {
 			out.close();
 			return model;
 		}
+	}
 
+	@RequestMapping(value = "web/Cupdate", method = RequestMethod.GET)
+	public @ResponseBody String showupdateForm(HttpServletRequest request) {
+		String entity = request.getParameter("entity");
+		List<OrgEntity> listEnts = OrgEntityService.findAll();
+		if (entity == null) {
+			System.out.println("emtity input cannot be null");
+			throw new NullPointerException();
+		}
+		OrgEntity ent = null;
+		for (OrgEntity e : listEnts) {
+			if (e.getName().trim().equals(entity.trim())) {
+				ent = e;
+				break;
+			}
+		}
+		GetAutoIncrement incrementCheck = new GetAutoIncrement();
+		String[] types = ent.getTypes();
+		String[] attributes = ent.getAttributes();
+		String[] optValues = ent.getOptionValues();
+		HashMap<String, String[]> map = incrementCheck.validateColumns(
+				ent.getName(), attributes, types, optValues);
+		attributes = map.get("attributes");
+		types = map.get("types");
+		optValues = map.get("InputOptionValues");
+		List<InputPresenterHelper> inputList = new ArrayList<InputPresenterHelper>();
+		for (int i = 0; i < attributes.length; i++) {
+			InputPresenterHelper input = new InputPresenterHelper();
+			input.setAttribute(attributes[i]);
+			input.setType(types[i]);
+			if (optValues[i].trim().length() >= 2) {
+				String[] options = optValues[i].trim().split(",|;");
+				input.setInputOptionValues(options);
+			}
+			inputList.add(input);
+		}
+		Gson gson = new Gson();
+		return gson.toJson(inputList);
 	}
 
 	@RequestMapping(value = "/web/update", method = RequestMethod.GET)
@@ -313,27 +248,13 @@ public class contentController {
 				.getAuthentication();
 		String creator = "";
 		if (auth != null) {
-			System.out.println(" \n \n \n \n \n \n");
-			System.out.print(auth.getName() + ": " + auth.getAuthorities());
-			System.out.println(" \n \n \n \n \n \n");
 			creator = auth.getName();
 		}
 		List<Domain> domains = domainIMPL.findByCreator(creator);
-		List<OrgEntity> ents = entityIMPL.findByDomain(domains.get(0)
+		List<OrgEntity> ents = OrgEntityService.findByDomain(domains.get(0)
 				.getDomainName());
 		model.addObject("domains", domains);
 		model.addObject("entities", ents);
-
-		// String getDataFrom = request.getParameter("getDataFrom");
-		// System.out.println(getDataFrom);
-		// List<OrgEntity> ents = entityIMPL.findByName(getDataFrom);
-		// OrgEntity ent = ents.get(0);
-		// String domain = ent.getDomain();
-		// String[] columns = load.getCoulumn(domain, getDataFrom);
-		// List<List<Object>> allData = load.getData(domain, getDataFrom);
-		// //System.out.println(" \n \n \n  there are " + allData.size()
-		// + "  records  found \n \n");
-
 		return model;
 	}
 }

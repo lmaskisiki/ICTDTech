@@ -1,0 +1,18 @@
+<div ng-controller="haCntrl">
+
+	<ul>
+		<li><a href="#status">Check Status</a></li>
+		<li><a href="#applicationlist">Processed Applications</a></li>
+		<li><a href="#apply">New Applications</a></li>
+	</ul>
+	<table>
+		<tr>
+			<td>What's your Id number ?</td>
+			<td><input type="text" ng-model="userId"></input><br /></td>
+			<td><button ng-click="checkstatus()">Check Status</button></td>
+		</tr>
+	</table>
+	<hr />
+	<div>{{statusinfo.message}}</div>
+
+</div>

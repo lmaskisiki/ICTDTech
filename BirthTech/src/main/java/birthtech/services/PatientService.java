@@ -19,12 +19,24 @@ public class PatientService implements IMartenalService {
 
 	@Autowired
 	private MartenalRepository repo;
-private 		AccountService remoteService;
+	private AccountService remoteService;
+
 	@Override
 	public boolean addMaternity(Patient mat) {
-	 
-	 repo.save(mat);
-		return true;
+		boolean done = false;
+		if (mat == null) {
+			throw new NullPointerException("Null Reference");
+		}
+		if(mat.getIdnumber()==0  || mat.getSurname()==null || mat.getNames()==null){
+			throw new NullPointerException("Null or Empty Idenfifier Detected");
+		}
+		try {
+			Patient patient = repo.save(mat);
+			done = (patient == null) ? false : true;
+		} catch (Exception e) {
+			System.out.println("Something went wrong");
+		}
+		return done;
 	}
 
 	@Override
@@ -43,17 +55,20 @@ private 		AccountService remoteService;
 		}
 		return found;
 	}
+
 	@Override
 	public Patient getMaternityByFullname(String fullname) {
+		if (fullname == null) {
+			throw new NullPointerException();
+		}
 		Patient found = null;
 		for (Patient mat : repo.findAll()) {
-			if (mat.getSurname()+" "+mat.getNames() == fullname) {
+			if (mat.getSurname() + " " + mat.getNames() == fullname) {
 				found = mat;
 				break;
 			}
 		}
 		return found;
 	}
-	
-	 
+
 }

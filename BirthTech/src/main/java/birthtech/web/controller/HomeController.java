@@ -6,7 +6,6 @@ import java.util.List;
 import java.util.Random;
 
 import javax.servlet.http.HttpServletRequest;
-import javax.ws.rs.MatrixParam;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
@@ -119,8 +118,6 @@ public class HomeController {
 		ModelAndView model = new ModelAndView("editmaternalform");
 		Patient mat = null;
 		mat = matService.getMaternityById(40);
-		System.out.println("\n" + mat.getNames() + " " + mat.getSurname()
-				+ " with ID " + mat.getIdnumber() + " is being edited");
 		model.addObject("maternal", mat);
 		return model;
 	}
@@ -171,27 +168,21 @@ public class HomeController {
 		map.addAttribute("comments", checkup.getComments());
 		checkup.setMartenalId(Integer.parseInt(id));
 		checkup.setDate(new Date());
-		checkup.setDelivered(false);
 		String delivery = request.getParameter("delivered");
-
-		Patient patient = matService.getMaternityById(Integer.parseInt(id));
 		if (delivery.trim().equals("yes")) {
+			Patient patient = matService.getMaternityById(Integer.parseInt(id));
 			String labourstatus = request.getParameter("labourstatus");
-
 			checkup.setDelivered(true);
 			Labour lab = new Labour();
 			lab.setMaternal(patient);
-			lab.setBirthNo(r.nextInt());
 			lab.setBirthPlace(checkup.getPlace());
 			if (labourstatus.trim().equals("success")) {
 				lab.setStatus(1);
 			} else {
 				lab.setStatus(0);
 			}
-			lab.setLabourDate(new Date());
 			lab.setNurse(checkup.getNurse());
 			checkService.addCheckup(checkup);
-
 			if (labourstatus.trim().equals("success")) {
 				Child child = new Child();
 				child.setGender(request.getParameter("gender"));

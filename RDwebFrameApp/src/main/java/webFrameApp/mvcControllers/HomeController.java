@@ -23,26 +23,25 @@ import webFrameApp.enumerations.DomainCategory;
 import webFrameApp.enumerations.ListEnumerations;
 import webFrameApp.serviceLgoic.DomainDAOImpl;
 import webFrameApp.serviceLgoic.FeedPostImpl;
+import webframe.sys.SystemMessage;
 
 @Controller
 public class HomeController {
 	@Autowired
-	private DomainDAOImpl domainImp;
+	private DomainDAOImpl domainService;
 	@Autowired
-	 private FeedPostImpl service;
-	
+	private FeedPostImpl service;
+
 	@RequestMapping(value = "/", method = RequestMethod.GET)
 	public ModelAndView homepage(HttpServletRequest request) {
-		ModelAndView model= new ModelAndView("welcome");;
-		// categories
+		ModelAndView model = new ModelAndView("welcome");
 		List<DomainCategory> domainCategories = new ArrayList<DomainCategory>();
-		 List<FeedPost> feeds=service.listPosts();
+		List<FeedPost> feeds = service.listPosts();
 		for (DomainCategory c : DomainCategory.values()) {
 			domainCategories.add(c);
 		}
-		model.addObject("categories",domainCategories);
-		model.addObject("feeds",feeds);
-		
+		model.addObject("categories", domainCategories);
+		model.addObject("feeds", feeds);
 
 		return model;
 	}
@@ -61,7 +60,7 @@ public class HomeController {
 	@RequestMapping(value = "home", method = RequestMethod.GET)
 	public ModelAndView home() {
 
-		List<Domain> d = domainImp.getAllDomains();
+		List<Domain> d = domainService.getAllDomains();
 		System.out.println("the size of domain list is:" + d.size());
 		return new ModelAndView("home");
 
@@ -71,24 +70,43 @@ public class HomeController {
 	public @ResponseBody List<Domain> getAllDomainst(
 			HttpServletRequest request, HttpServletResponse response) {
 
-		return domainImp.getAllDomains();
+		return domainService.getAllDomains();
 
 	}
 
 	@RequestMapping(value = "createdomain", method = RequestMethod.GET)
 	public ModelAndView createDomain(HttpServletRequest request,
 			HttpServletResponse response) {
-		String domainCreator = request.getParameter("domainCreator");
-		String domainName = request.getParameter("domainName");
-		String domainOrg = request.getParameter("domainOrg");
-		String contact = request.getParameter("contact");
-		String category = request.getParameter("category");
-		String description = request.getParameter("description");
+		Domain domain = new Domain();
+		ModelAndView model = new ModelAndView("home");
+		domain.setCreator(request.getParameter("domainCreator"));
+		domain.setDomainName(request.getParameter("domainName"));
+		domain.setOrgName(request.getParameter("domainOrg"));
+		domain.setContactDetails(request.getParameter("contact"));
+		domain.setCategory(request.getParameter("category"));
+		domain.setDescription(request.getParameter("description"));
+		if (isDomainModelValid(domain)) {
+			SystemMessage sysResponse = domainService.createDomain(domain);
+			if (!sysResponse.HasException() || sysResponse.isSucess()) {
+				model.addObject("message", "sucess");
+				model.addObject("domain", domain);
+			} else {
+				model.addObject("message", "Operation failed \n:"+ sysResponse.getMessages());
+			}
+		} else {
+			model.addObject("message", "Invalid domain details supplied");
+		}
+		return model;
+	}
 
-		domainImp.createDomain(domainCreator, domainName, category, domainOrg,
-				contact, description);
-
-		return new ModelAndView("home");
+	private boolean isDomainModelValid(Domain domain) {
+		if (!domain.getCategory().isEmpty() && !domain.getCreator().isEmpty()
+				&& !domain.getOrgName().isEmpty()
+				&& !domain.getContactDetails().isEmpty()) {
+			return true;
+		} else {
+			return false;
+		}
 
 	}
 }

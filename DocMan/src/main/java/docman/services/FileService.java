@@ -32,12 +32,11 @@ import ftp.FTPConnection;
 @LocalBean
 @WebService(endpointInterface = "docman.services.FileServiceRemote", portName = "SOAPFileService", serviceName = "FileService")
 public class FileService implements FileServiceRemote, FileServiceLocal {
-
 	@PersistenceContext(unitName = "DocMan")
 	private EntityManager em;
 
 	public FileService() {
-
+		super();
 	}
 
 	@Override
@@ -51,8 +50,7 @@ public class FileService implements FileServiceRemote, FileServiceLocal {
 				try {
 					ftpClient.setFileType(FTP.BINARY_FILE_TYPE);
 					ftpClient.setFileTransferMode(FTP.BINARY_FILE_TYPE);
-					ftpClient.makeDirectory(file.getUploadedBy().replace(" ",
-							"_"));
+					ftpClient.makeDirectory(file.getUploadedBy().replace(" ","_"));
 					String filePath = file.getFilePath() + ".pdf";
 					file.setFilePath(filePath);
 					done = ftpClient.storeFile(file.getFilePath(), ins);

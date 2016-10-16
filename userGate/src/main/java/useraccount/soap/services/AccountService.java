@@ -28,6 +28,10 @@ public interface AccountService {
 
 	public abstract boolean updateUserAttribute(String user,
 			String attributename, String newValue);
+	//
+	
+	
+	
 	// public abstract List<userRoles> personRoles(String username);
 
 	// public abstract List<Person> findSomeone(String surname);

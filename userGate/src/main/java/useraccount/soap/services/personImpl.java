@@ -60,6 +60,8 @@ public class personImpl extends SpringBeanAutowiringSupport implements
 	public void createAccount(@WebParam(name = "newperson") Person newPerson) {
 		try {
 			Attributes userAttributes = new BasicAttributes();
+			userAttributes.put("objectClass", "top");
+			userAttributes.put("objectClass", "posixAccount");
 			userAttributes.put("objectClass", "Person");
 			userAttributes.put("objectClass", "inetOrgPerson");
 			userAttributes.put("givenName", newPerson.getFirst_name());
@@ -73,7 +75,7 @@ public class personImpl extends SpringBeanAutowiringSupport implements
 					+ newPerson.getLast_name());
 			ldapTemplate.bind(userDn, null, userAttributes);
 		} catch (Exception e) {
-			// TODO: handle exception
+			e.printStackTrace();
 		}
 
 	}
@@ -186,13 +188,14 @@ public class personImpl extends SpringBeanAutowiringSupport implements
 		controls.setSearchScope(SearchControls.SUBTREE_SCOPE);
 		AndFilter filter = new AndFilter();
 		OrFilter orf = new OrFilter();
-		orf.or(new EqualsFilter("cn", otherPosiblieFullname)).or(new EqualsFilter("cn",fullName));
-		
-		//filter.and(new EqualsFilter("objectclass", "inetOrgPerson")).and(
-			//	new EqualsFilter("cn", fullName));
-		 
-		List<Person> users = ldapTemplate.search("", orf.toString(),
-				controls, new UserContextMapper());
+		orf.or(new EqualsFilter("cn", otherPosiblieFullname)).or(
+				new EqualsFilter("cn", fullName));
+
+		// filter.and(new EqualsFilter("objectclass", "inetOrgPerson")).and(
+		// new EqualsFilter("cn", fullName));
+
+		List<Person> users = ldapTemplate.search("", orf.toString(), controls,
+				new UserContextMapper());
 		return users.get(0);
 	}
 

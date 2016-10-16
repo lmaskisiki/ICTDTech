@@ -5,6 +5,8 @@ import java.io.PrintWriter;
 import java.util.ArrayList;
 import java.util.List;
 
+import javax.json.JsonArray;
+import javax.json.JsonArrayBuilder;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
@@ -17,6 +19,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.servlet.ModelAndView;
 
+import com.google.gson.Gson;
 import com.sun.org.apache.bcel.internal.classfile.Attribute;
 import com.sun.org.apache.xalan.internal.xsltc.runtime.Attributes;
 
@@ -80,6 +83,20 @@ public class entityController {
 		return arr;
 	}
 
+	@RequestMapping(value = "getentities", method = RequestMethod.GET)
+	public @ResponseBody String[] getentities(HttpServletRequest request,
+			HttpServletResponse response) throws IOException {
+		String domain = request.getParameter("domain");
+		List<OrgEntity> ents = entityIMPL.findByDomain(domain);
+		String[] ent = new String[ents.size()];
+		int x = 0;
+		for (OrgEntity e : ents) {
+			ent[x] = e.getName();
+			x++;
+		}
+		return ent;
+	}
+
 	@RequestMapping(value = "/web/loadEntities", method = RequestMethod.GET)
 	public @ResponseBody String loadEntities(HttpServletRequest request,
 			HttpServletResponse response) throws IOException {
@@ -137,6 +154,37 @@ public class entityController {
 				+ type + "' >" + type + "</option></select>";
 
 		return selectType;
+	}
+
+	@RequestMapping(value = "getjsoncontent", method = RequestMethod.GET)
+	public @ResponseBody String viewContent(HttpServletRequest request) {
+
+		contentLoader load = new contentLoader();
+		String getDataFrom = request.getParameter("entity");
+		List<OrgEntity> ents = entityIMPL.findByName(getDataFrom);
+		OrgEntity ent = ents.get(0);
+		String domain = ent.getDomain();
+		String[] columns = load.getCoulumn(domain, getDataFrom);
+		List<List<Object>> allData = load.getData(domain, getDataFrom);
+		StringBuilder jsnStr = new StringBuilder("");
+		jsnStr.append("{  \"data\" : [");
+		for (int x = 0; x < allData.size(); x++) {
+			jsnStr.append("{");
+			for (int z = 0; z < columns.length; z++) {
+				jsnStr.append(" \"" + columns[z] + "\":\""
+						+ allData.get(x).get(z) + "\"");
+				if (z < columns.length - 1) {
+					jsnStr.append(",");
+				}
+			}
+			jsnStr.append("}");
+			if (x < allData.size() - 1) {
+				jsnStr.append(",");
+			}
+		}
+		jsnStr.append("]}");
+		System.out.print(jsnStr.toString());
+		return jsnStr.toString();
 	}
 
 	@RequestMapping(value = "getEntities", method = RequestMethod.POST)
@@ -309,7 +357,7 @@ public class entityController {
 		String accessType = request.getParameter("accessType");
 		String[] constraints = request.getParameterValues("constraints");
 		int[] valueLegnth = new int[lengthOv.length];
-
+		String[] CustomFields = request.getParameterValues("CustomField");
 		for (int x = 0; x < lengthOv.length; x++) {
 			valueLegnth[x] = Integer.parseInt(lengthOv[x]);
 
@@ -325,12 +373,12 @@ public class entityController {
 		}
 
 		List<String> CFields = new ArrayList<String>();
-		String[] CustomFields = new String[count_att];
-		for (int v = 0; v < count_att; v++) {
-			int item = v + 1;
-			CustomFields[v] = request.getParameter("CustomField" + item);
-			// CFields.add(request.getParameter("CustomField" + v));
-		}
+		// //String[] CustomFields = new String[count_att];
+		// for (int v = 0; v < count_att; v++) {
+		// int item = v + 1;
+		// CustomFields[v] = request.getParameter("CustomField" + item);
+		// // CFields.add(request.getParameter("CustomField" + v));
+		// }
 		System.out.println("\n \n" + attribute.length + "  : "
 				+ constraints.length + " : " + lengthOv.length + " : "
 				+ type.length);
@@ -374,6 +422,34 @@ public class entityController {
 				.println("\n There are " + doms.size() + " domain found for ");
 		model.addObject("domains", doms);
 		return model;
+
+	}
+
+	@RequestMapping(value = "web/entupdate", method = RequestMethod.GET)
+	public @ResponseBody String entupdate(HttpServletRequest request) {
+		String ents = "";
+		ModelAndView model;
+		try {
+			model = new ModelAndView("requestContent");
+			String domain = request.getParameter("domainName");
+			System.out.println(domain + " was found");
+			List<OrgEntity> ent = entityIMPL.findByDomain(domain);
+
+			ents = "<select name='OrgEntity'  id='OrgEntity'  onchange='updateForm()'>";
+			String str = "";
+			for (int x = 0; x < ent.size(); x++) {
+				str = str + "<option value=" + ent.get(x).getName() + "> "
+						+ ent.get(x).getName() + "</option>";
+			}
+			ents = ents + str + "</select>";
+
+			return ents;
+
+		} catch (Exception e) {
+
+			return "Sorry...Something went wrong. try again or contact the admin";
+
+		}
 
 	}
 
@@ -486,10 +562,11 @@ public class entityController {
 	}
 
 	@RequestMapping(value = "web/getEntities", method = RequestMethod.GET, produces = "application/json")
-	public @ResponseBody String[] getEntityList(HttpServletRequest request,
+	public @ResponseBody String getEntityList(HttpServletRequest request,
 			HttpServletResponse response) throws IOException {
 		List<OrgEntity> entities = entityIMPL.findByDomain(request
 				.getParameter("domain"));
+		Gson gson = new Gson();
 		System.out.println("inside get entities");
 		String[] ents = new String[entities.size()];
 		int x = 0;
@@ -498,7 +575,7 @@ public class entityController {
 			x++;
 		}
 		System.out.println("Ajax request recieved...");
-		return ents;
+		return gson.toJson(ents);
 	}
 
 	@RequestMapping(value = "web/saveUpdates", method = RequestMethod.POST)
@@ -538,7 +615,7 @@ public class entityController {
 		String fullSqlquery = sqlInsert + " (" + variables + " ) VALUES ( "
 				+ Qmarks + ")";
 		boolean save = cont
-				.saveUpdate(fullSqlquery, values, domainName, entity);
+				.saveContent(fullSqlquery, values, domainName, entity);
 
 		model.addObject("tables", tables);
 		model.addObject("domainName", domainName);/*	*/

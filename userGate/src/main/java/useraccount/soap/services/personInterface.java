@@ -37,10 +37,8 @@ public interface personInterface {
 			@WebParam(name = "value") String newValue);
 	@WebMethod
 	public  String findRole();
-	
 	@WebMethod
 	public Person findUserByFullName(@WebParam(name="fullname")String fullName); 
-	
 	@WebMethod
 	public  List<userRoles> personRoles(
 			@WebParam(name = "username") String username);

@@ -1,4 +1,4 @@
-# List of external plug-in models previously loaded. Timestamp: 1470477000740
+# List of external plug-in models previously loaded. Timestamp: 1476532612622
 file:/home/lizo/dev-tools/sts-bundle/sts-3.6.3.SR1/plugins/ch.qos.logback.classic_1.0.7.v20121108-1250.jar
 file:/home/lizo/dev-tools/sts-bundle/sts-3.6.3.SR1/plugins/ch.qos.logback.core_1.0.7.v20121108-1250.jar
 file:/home/lizo/dev-tools/sts-bundle/sts-3.6.3.SR1/plugins/ch.qos.logback.slf4j_1.0.7.v20121108-1250.jar
@@ -1040,6 +1040,7 @@ file:/home/lizo/dev-tools/sts-bundle/sts-3.6.3.SR1/plugins/org.hibernate.eclipse
 file:/home/lizo/dev-tools/sts-bundle/sts-3.6.3.SR1/plugins/org.hibernate.eclipse.libs_4.0.0.Final-v20141016-1911-B82/
 file:/home/lizo/dev-tools/sts-bundle/sts-3.6.3.SR1/plugins/org.hibernate.eclipse.mapper_4.0.1.Final-v20150324-2307-B95/
 file:/home/lizo/dev-tools/sts-bundle/sts-3.6.3.SR1/plugins/org.hibernate.eclipse.mapper_4.0.0.Final-v20141016-1911-B82/
+file:/home/lizo/dev-tools/sts-bundle/sts-3.6.3.SR1/plugins/org.infinitest.eclipse_5.1.116/
 file:/home/lizo/dev-tools/sts-bundle/sts-3.6.3.SR1/plugins/org.jboss.ide.eclipse.archives.core_3.5.3.Final-v20150325-0035-B129/
 file:/home/lizo/dev-tools/sts-bundle/sts-3.6.3.SR1/plugins/org.jboss.ide.eclipse.archives.core_3.5.1.Final-v20141209-0156-B106/
 file:/home/lizo/dev-tools/sts-bundle/sts-3.6.3.SR1/plugins/org.jboss.ide.eclipse.archives.jdt.integration_3.5.3.Final-v20150325-0035-B129.jar

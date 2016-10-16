@@ -15,13 +15,9 @@
 		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-3.1.xsd">
 
   
-  <cxf:rsServer id="wclinic" address="/wclinic" serviceClass="birthtech.services.rest.WClinic">
-  
-  </cxf:rsServer>
- 
  <jaxws:client id="UAServiceClient"
-                  serviceClass="useraccount.soap.services.PersonInterface"
-                  address="http://localhost:8080/userGate/AccountService" />
+                 serviceClass="useraccount.soap.services.PersonInterface"
+                 address="http://localhost:8080/userGate/AccountService" />
  
 
 </beans>

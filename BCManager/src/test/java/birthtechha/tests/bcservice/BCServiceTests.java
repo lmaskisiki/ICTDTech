@@ -52,7 +52,7 @@ public class BCServiceTests {
 	System.out.println("watttt:"+cert.getSurname());
 		
 	}
-	 @Test
+	// @Test
 	 public void update(){
 		 Labour l = new Labour();
 		 l.setBirthPlace("Alice");

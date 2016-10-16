@@ -10,6 +10,10 @@ import org.apache.camel.language.Simple;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
+import com.google.gson.Gson;
+import com.google.gson.JsonArray;
+import com.google.gson.JsonObject;
+
 import birthtech.entities.Checkup;
 import birthtech.entities.Child;
 import birthtech.entities.Labour;
@@ -32,7 +36,11 @@ public class WClinic implements IWclinic {
 
 	@Override
 	public List<Checkup> checkuplist(String patientId) {
-		return checkupService.getCheckups(Integer.parseInt(patientId));
+		List<Checkup> rs=  checkupService.getCheckups(Integer.parseInt(patientId));
+		//Gson g = new Gson();
+		//String ar=g.toJson(rs);
+		//System.out.print("\n \n "+ar);
+		 return rs;
 	}
 
 	@Override

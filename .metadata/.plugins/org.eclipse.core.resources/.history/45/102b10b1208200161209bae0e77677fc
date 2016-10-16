@@ -1,0 +1,77 @@
+package birthtech.unit.tests;
+
+import static org.junit.Assert.*;
+import static org.mockito.Mockito.mock;
+import static org.mockito.Mockito.only;
+import static org.mockito.Mockito.verify;
+import static org.mockito.Mockito.when;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import org.junit.After;
+import org.junit.Assert;
+import org.junit.Before;
+import org.junit.Rule;
+import org.junit.Test;
+import org.junit.rules.ExpectedException;
+import org.mockito.InjectMocks;
+import org.mockito.Matchers;
+import org.mockito.Mock;
+import org.mockito.MockitoAnnotations;
+import org.mockito.internal.verification.AtLeast;
+
+import birthtech.entities.Child;
+import birthtech.entities.Labour;
+import birthtech.entities.Patient;
+import birthtech.repositories.LabourRepository;
+import birthtech.repositories.MartenalRepository;
+import birthtech.services.LabourService;
+import birthtech.services.PatientService;
+
+public class LabourServiceTests {
+	@InjectMocks
+	private LabourService SUTservice;
+	@Mock
+	private LabourRepository repo;
+	@Rule
+	public final ExpectedException exception = ExpectedException.none();
+
+	@Before
+	public void BeforeTest() {
+		MockitoAnnotations.initMocks(this);
+		when(repo.save(Matchers.<Labour> any())).thenReturn(mock(Labour.class));
+		when(repo.findAll()).thenReturn(GetLabourList());
+	}
+
+	@After
+	public void tearDown() throws Exception {
+	}
+
+	@Test
+	public void given_valid_labour_details_should_succefully_save() {
+		Labour lab = new Labour();
+		lab.setBirthNo(123);
+		lab.setBirthPlace("BirthPlace");
+		lab.setChild(new Child());
+		lab.setMaternal(new Patient());
+
+		Labour result = SUTservice.add(lab);
+		Assert.assertNotNull(result);
+		verify(repo, only()).findAll();
+	
+ 	}
+
+	public List<Labour> GetLabourList() {
+		List<Labour> labList = new ArrayList<Labour>();
+		Labour lab1 = new Labour();
+		lab1.setBirthNo(123);
+		lab1.setChild(new Child());
+		lab1.setStatus(1);
+		lab1.setBirthPlace("Birth Place");
+		lab1.setMaternal(new Patient());
+		labList.add(lab1);
+		return labList;
+	}
+
+}

@@ -23,7 +23,7 @@ public class ServiceTest {
 
 	@BeforeClass
 	public static void setUp() {
-		ejbC = EJBContainer.createEJBContainer();
+	//	ejbC = EJBContainer.createEJBContainer();
 
 
 		System.out.println("OK.");
