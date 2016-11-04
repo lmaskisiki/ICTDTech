@@ -1,0 +1,42 @@
+<div ng-controller="searchCntrl">
+
+	<table>
+		<tr>
+			<td><select ng-model="pmode" id="pmode">
+					<option ng-repeat="mode in modeOptions" value="{{mode}}">{{mode}}</option>
+			</select></td>
+
+			<td><input type="text" ng-model="user"></input><br /></td>
+			<td><button ng-click="searchuser()">Search</button></td>
+		</tr>
+	</table>
+	{{rs}}
+	<div ng-hide="{{showprofile}}">
+		<table>
+			<tr>
+				<td>Surname</td>
+				<td>{{profile.surname}}</td>
+			</tr>
+			<tr>
+				<td>Name</td>
+				<td>{{profile.name}}</td>
+			</tr>
+			<tr>
+				<td>Id Number</td>
+				<td>{{profile.idnumber}}</td>
+			</tr>
+			<tr>
+				<td>Username</td>
+				<td>{{profile.username}}</td>
+			</tr>
+			<tr>
+				<td>Cell</td>
+				<td>{{profile.mobile}}</td>
+			</tr>
+			<tr>
+				<td>Email</td>
+				<td>{{profile.email}}</td>
+			</tr>
+		</table>
+	</div>
+</div>

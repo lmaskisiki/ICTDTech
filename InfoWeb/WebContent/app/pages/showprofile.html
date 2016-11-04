@@ -1,0 +1,36 @@
+<div ng-controller="profileController" ng-show="{{showprofile}}">
+	<div class="table-responsive" style="width: 40%">
+		<table class="table table-hover">
+			<tr>
+				<td>Surname</td>
+				<td>{{profile.surname}}</td>
+			</tr>
+			<tr>
+				<td>Name</td>
+				<td>{{profile.name}}</td>
+			</tr>
+			<tr>
+				<td>Id Number</td>
+				<td>{{profile.idnumber}}</td>
+			</tr>
+			<tr>
+				<td>Username</td>
+				<td>{{profile.username}}</td>
+			</tr>
+			<tr>
+				<td>Cell</td>
+				<td>{{profile.mobile}}</td>
+			</tr>
+			<tr>
+				<td>Email</td>
+				<td>{{profile.email}}</td>
+			</tr>
+		</table>
+		<hr />
+		<table ng-show="true">
+			<tr ng-repeat="doc in profile.documents">
+				<td>{{doc}}</td>
+			</tr>
+		</table>
+ 	</div>
+</div>
