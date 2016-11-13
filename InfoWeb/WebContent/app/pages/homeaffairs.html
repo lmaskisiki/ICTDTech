@@ -1,0 +1,20 @@
+<div ng-controller="homeAffCntrl">
+	<div class="list-group">
+		<a href="#homeaffairs" class="list-group-item"
+			ng-click="checkstatus()">Notices</a> <a href="#homeaffairs"
+			class="list-group-item" ng-click="notices()">My BC Application</a>
+	</div>
+
+	<div class="table-responsive"  ng-show="showResults"   style="width: 40%; margin-left: auto; margin-right: auto; background-color: #FDF5E6;" >
+		<table class="table table-hover" >
+			<tbody>
+				<tr ng-repeat="appl in applications">
+					<td>{{appl.id}}</td>
+					<td>{{appl.message}}</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+
+
+</div>

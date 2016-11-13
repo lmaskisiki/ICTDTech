@@ -1,0 +1,68 @@
+<div ng-controller="searchCntrl">
+
+	<table>
+		<tr>
+			<td><select ng-model="pmode" id="pmode">
+					<option ng-repeat="mode in modeOptions" value="{{mode}}">{{mode}}</option>
+			</select></td>
+
+			<td><input type="text" ng-model="user"></input><br /></td>
+			<td><button ng-click="searchuser()">Search</button></td>
+		</tr>
+	</table>
+	{{rs}}
+	<div class="table-responsive" style="width: 40%" ng-show="showprofile">
+		<table class="table table-hover">
+			<thead>
+				<tr>
+					<th>Personal Deetails</th>
+				</tr>
+			</thead>
+			<tr>
+				<td>Surname</td>
+				<td>{{profile.surname}}</td>
+			</tr>
+			<tr>
+				<td>Name</td>
+				<td>{{profile.name}}</td>
+			</tr>
+			<tr>
+				<td>Id Number</td>
+				<td>{{profile.idnumber}}</td>
+			</tr>
+			<tr>
+				<td>Username</td>
+				<td>{{profile.username}}</td>
+			</tr>
+			<tr>
+				<td>Cell</td>
+				<td>{{profile.mobile}}</td>
+			</tr>
+			<tr>
+				<td>Email</td>
+				<td>{{profile.email}}</td>
+			</tr>
+		</table>
+		<hr />
+		<span ng-if="profile.hasDocs">
+
+			<table class="table table-hover">
+				<thead>
+					<tr>
+						<th>Document(s)</th>
+					</tr>
+				</thead>
+				<tr>
+					<td>Document Id</td>
+					<td>Doc Name</td>
+					<td>Uploaded By</td>
+				</tr>
+				<tr ng-repeat="doc in profile.documents">
+					<td>{{doc.id}}</td>
+					<td>{{doc.name}}</td>
+					<td>{{doc.uploaded}}</td>
+				</tr>
+			</table>
+		</span>
+	</div>
+</div>

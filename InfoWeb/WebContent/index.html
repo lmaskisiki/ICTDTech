@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html ng-app="InfoWeb">
+<link rel="stylesheet" href="app/lib/bootstrap.min.css">
+<script src="app/lib/angular.min.js"></script>
+<script src="app/lib/angular-route.js"></script>
+<script src="app/js/modules/controllers.js"></script>
+<script src="app/js/modules/services.js"></script>
+<script src="app/js/modules/HomeModule.js"></script>
+<script type="text/javascript">
+	function test() {
+
+		var xhttp = new XMLHttpRequest();
+		xhttp.onreadystatechange = function() {
+			if (xhttp.readyState == 4) {
+
+				if (xhttp.status == 200) {
+					alert(xhttp.responseText);
+				}
+
+			}
+
+		};
+		xhttp.open("GET", "http://localhost:8181/cxf/upservice/basic/admin",
+				true);
+		xhttp.send(null);
+
+	}
+</script>
+<body>
+
+
+	<div ng-controller="homeController">
+		<b>{{message}}</b>
+		<nav class="navbar navbar-inverse">
+			<ul class="nav navbar-nav">
+				<li><a href="#search" ng-click>search</a></li>
+				<li><a href="#woman" ng-click>Woman</a></li>
+				<li><a href="#homeaffairs" masikisiki>Home Affairs</a></li>
+				<li><a href="#usergate" ng-click="applyform()">Usergate</a>
+				<li><a href="#apply" ng-click="applyform()">Apply</a>
+					<li><a href="#masikisiki" masikisiki >Masikisiki</a>
+			</ul>
+			<ul class="nav navbar-nav navbar-right">
+				<li><a href="#login" ng-click><span
+						class="glyphicon glyphicon-log-in"></span>Login</a></li>
+				<li><a href="#"><span class="glyphicon glyphicon-user"></span>Sign
+						Up</a></li>
+			</ul>
+
+		</nav>
+
+
+		<div ng-view></div>
+
+
+
+	</div>
+	 
+	</div>
+	
+	
+ 
+</body>
+</html>

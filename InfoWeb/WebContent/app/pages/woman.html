@@ -1,0 +1,27 @@
+<div ng-controller="martenityCntrl">
+	<table>
+		<tr>
+			<td>What's your Id number ?</td>
+			<td><input type="text" ng-model="userId"></input><br /></td>
+			<td><button ng-click="loadCheckups()">Search</button></td>
+		</tr>
+	</table>
+	<hr />
+	<table class="table table-hover" ng-show="showcheckups">
+		<thead>
+			<tr>
+				<th>Checkup Id</th>
+				<th>Checkup Date</th>
+				<th>Comments</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr ng-repeat="checkup in checkups">
+				<td>{{checkup.id}}</td>
+				<td>{{checkup.date}}</td>
+				<td>{{checkup.comments}}</td>
+			</tr>
+		</tbody>
+	</table>
+
+</div>
