@@ -25,5 +25,8 @@ app.config(function($routeProvider, $locationProvider) {
 	}).when("/login", {
 		templateUrl : "app/pages/login.html",
 		controller : "loginController"
-	});
+	}).when("/createaccount", {
+		templateUrl : "app/pages/accountform.html",
+		controller : "usergateCtrl"
+	});;
 });

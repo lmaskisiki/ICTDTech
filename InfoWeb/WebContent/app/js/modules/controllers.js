@@ -191,29 +191,32 @@ angular
 
 					}
 
-				})
-		.controller(
+				}).controller(
 				"loginController",
 				function($rootScope, $http, $location, $scope, AuthService,
 						UserDetialsService) {
 					$scope.credentials = {};
 					$scope.login = function() {
-						$http
-								.post("http://192.168.43.12:8181/cxf/upservice/createaccount","lizo").success(function(responseData) {
-								alert("back");
+						alert($scope.credentials.username + ":"
+								+ $scope.credentials.password);
+						var user = AuthService.login(
+								$scope.credentials.username,
+								$scope.credentials.password, function() {
+									if ($rootScope.authenticated) {
+										$location.path("/homeaffairs");
+									} else {
+										$scope.loginError = true;
+										$location.path("/login");
+
+									}
 								});
-						// alert($scope.credentials.username+":"+$scope.credentials.password);
-						// var
-						// user=AuthService.login($scope.credentials.username,$scope.credentials.password,
-						// function(){
-						// if($rootScope.authenticated){
-						// $location.path("/homeaffairs");
-						// }else{
-						// $scope.loginError=true;
-						// $location.path("/login");
-						// 
-						// }
-						// });
 					};
+
+				}).controller("usergateCtrl",
+				function($rootScope, $location, $scope, UserDetialsService) {
+					$scope.account = {};
+ 					$scope.createaccount = function() {
+ 						UserDetialsService.create($scope.account);
+					}
 
 				});

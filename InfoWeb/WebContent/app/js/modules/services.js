@@ -118,6 +118,19 @@ appService.factory("UserDetialsService", function($rootScope, $http) {
 	return {
 		getUser : function() {
 			return $rootScope.user;
+		},
+		create : function(account) {
+			alert("servce called");
+			$http({
+				url:"http://192.168.43.12:8181/cxf/upservice/createaccount",
+				method: "POST",
+				headers:{
+					"Conent-Type":"application/json"
+				},
+				data:account
+
+			});
+			return {};
 		}
 	};
 
